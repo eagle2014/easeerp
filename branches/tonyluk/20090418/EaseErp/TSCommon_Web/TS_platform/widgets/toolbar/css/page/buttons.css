@@ -1,0 +1,61 @@
+﻿/*
+ * 分页条按钮样式配置
+ * @author dragon
+ * @date 2007-08-31
+ */
+
+/* 首页 */
+.egd-page-first {
+	background-image: url(../../images/page/page_first.gif);
+}
+.egd-pageButton-container-disabled .egd-page-first {
+	background-image: url(../../images/page/page_first_disabled.gif);
+}
+
+/* 下一页 */
+.egd-page-next {
+	background-image: url(../../images/page/page_next.gif);
+}
+.egd-pageButton-container-disabled .egd-page-next {
+	background-image: url(../../images/page/page_next_disabled.gif);
+}
+
+/* 上一页 */
+.egd-page-prev {
+	background-image: url(../../images/page/page_prev.gif);
+}
+.egd-pageButton-container-disabled .egd-page-prev {
+	background-image: url(../../images/page/page_prev_disabled.gif);
+}
+
+/* 尾页 */
+.egd-page-last {
+	background-image: url(../../images/page/page_last.gif);
+}
+.egd-pageButton-container-disabled .egd-page-last {
+	background-image: url(../../images/page/page_last_disabled.gif);
+}
+
+/* 重新加载数据 */
+.egd-page-reload {
+	background-image: url(../../images/page/page_reload.gif);
+}
+.egd-pageButton-container-disabled .egd-page-reload {
+	background-image: url(../../images/page/page_reload_disabled.gif);
+}
+
+/* 导出为Excell */
+.egd-page-exportToExcell {
+	background-image: url(../../images/page/page_exportToExcell.gif);
+}
+.egd-pageButton-container-disabled .egd-page-exportToExcell {
+	background-image: url(../../images/page/page_exportToExcell_disabled.gif);
+}
+
+/* 导出为PDF */
+.egd-page-exportToPdf {
+	background-image: url(../../images/page/page_exportToPdf.gif);
+}
+.egd-pageButton-container-disabled .egd-page-exportToPdf {
+	background-image: url(../../images/page/page_exportToPdf_disabled.gif);
+}
