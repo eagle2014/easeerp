@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<struts-config>
+  <form-objects>
+    <form-object name="policyForm" type="TSCommon_Core.SystemPolicy.Domain.Policy,TSCommon_Core">
+    </form-object>
+  </form-objects>
+  <action-mappings>
+    <!-- 权限 -->
+    <action path="/policy"
+          type="TSCommon_Web.SystemPolicy.action.PolicyAction, TSCommon_Web"
+          name="policyForm"
+          parameter="action">
+      <forward name="viewPolicy" path="/SystemPolicy/PolicyView.aspx" />
+      <forward name="editPolicy" path="/SystemPolicy/PolicyForm.aspx" />
+      <forward name="readPolicy" path="/SystemPolicy/PolicyForm.aspx" />
+    </action>
+  </action-mappings>
+</struts-config>

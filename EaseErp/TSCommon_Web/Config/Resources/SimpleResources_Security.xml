@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- 权限编码值 -->
+  <!-- 所有单位系统管理权限的编码值 -->
+  <resource name="PRIVILEDGE.CODE.ADMIN_ALL">GN_BTN_ZZJG_XTGL</resource>
+  <!-- 本级单位系统管理权限的编码值 -->
+  <resource name="PRIVILEDGE.CODE.ADMIN_LOCAL_AND_CHILD">GN_BTN_XTGL_BJXTGL</resource>
+  <!-- 本单位系统管理权限的编码值 -->
+  <resource name="PRIVILEDGE.CODE.ADMIN_LOCAL">GN_BTN_XTGL_BDWXTGL</resource>
+
+  <!-- 所有单位数据管理权限的编码值 -->
+  <resource name="PRIVILEDGE.CODE.DP_ALL">GN_BTN_XTGL_SYDWSJ</resource>
+  <!-- 本级单位数据管理权限的编码值 -->
+  <resource name="PRIVILEDGE.CODE.DP_LOCAL_AND_CHILD">GN_BTN_XTGL_BJDWSJ</resource>
+  <!-- 本单位数据管理权限的编码值 -->
+  <resource name="PRIVILEDGE.CODE.DP_LOCAL">GN_BTN_XTGL_BDWSJ</resource>
+</root>

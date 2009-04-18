@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<struts-config>
+  <form-objects>
+    <form-object name="model" type="TSCommon_Core.Security.Domain.Model,TSCommon_Core">
+    </form-object>
+  </form-objects>
+  <action-mappings>
+    <action path="/model"
+          type="TSCommon_Web.Security.action.ModelAction, TSCommon_Web"
+          name="model"
+          scope="context"
+          parameter="action">
+      <forward name="viewModel" path="/Security/ModelView.aspx" />
+      <forward name="readModel" path="/Security/ModelForm.aspx" />
+      <forward name="editModel" path="/Security/ModelForm.aspx" />
+    </action>
+  </action-mappings>
+</struts-config>

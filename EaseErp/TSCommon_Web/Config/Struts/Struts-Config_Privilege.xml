@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<struts-config>
+  <form-objects>
+    <form-object name="privilegeForm" type="TSCommon_Core.Security.Domain.Privilege,TSCommon_Core">
+    </form-object>
+  </form-objects>
+  <action-mappings>
+    <!-- 权限 -->
+    <action path="/privilege"
+          type="TSCommon_Web.Security.Action.PrivilegeAction, TSCommon_Web"
+          name="privilegeForm"
+          parameter="action">
+      <forward name="viewPrivilege" path="/Security/PrivilegeView.aspx" />
+      <forward name="editPrivilege" path="/Security/PrivilegeForm.aspx" />
+      <forward name="readPrivilege" path="/Security/PrivilegeForm.aspx" />
+    </action>
+  </action-mappings>
+</struts-config>

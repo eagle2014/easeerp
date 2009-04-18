@@ -1,0 +1,865 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TSLibWeb</name>
+    </assembly>
+    <members>
+        <member name="T:TSLibWeb.WEB.StrutsCorePage">
+            <summary>
+            结合Spring和Struts的页面基类
+            </summary>
+            <author>Tony</author>
+            <date>2008-10-04</date>
+        </member>
+        <member name="M:TSLibWeb.WEB.StrutsCorePage.GetObject(System.String)">
+            <summary>
+            获取Spring配置文件中定义的指定名称的对象
+            </summary>
+            <param name="objectName">对象名</param>
+            <returns>Spring配置文件中定义的指定名称的对象</returns>
+        </member>
+        <member name="P:TSLibWeb.WEB.StrutsCorePage.ContextPath">
+            <summary>
+            获取请求对应的根路径，该路径兼容使用虚拟路径和网站方式的部署
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.Utils.FormatUtils">
+            <summary>
+            格式化单元
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.WEB.Page">
+            <summary>
+            继承于System.Web.UI.Page的页面基类，添加获取根路径的属性ContextPath，该路径兼容使用虚拟路径和网站方式的部署
+            </summary>
+        </member>
+        <member name="M:TSLibWeb.WEB.Page.GetContextPath(System.Web.HttpRequest)">
+            <summary>
+            获取请求对应的根路径，该路径兼容使用虚拟路径和网站方式的部署
+            </summary>
+            <param name="request">Http请求</param>
+            <returns>
+            请求对应的根路径，如果使用虚拟路径方式部署(WindowXP)，返回类似“/yourWebAppName”的字符串；
+            如果使用网站方式部署(Window2003)，返回空的字符串。
+            </returns>
+        </member>
+        <member name="M:TSLibWeb.WEB.Page.GetObject(System.String)">
+            <summary>
+            获取Spring配置文件中定义的指定名称的对象
+            </summary>
+            <param name="objectName">对象名</param>
+            <returns>Spring配置文件中定义的指定名称的对象</returns>
+        </member>
+        <member name="P:TSLibWeb.WEB.Page.ContextPath">
+            <summary>
+            获取请求对应的根路径，该路径兼容使用虚拟路径和网站方式的部署
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.WEBControl.UI.Control">
+            <summary>
+            自定义控件基类
+            </summary>
+        </member>
+        <member name="M:TSLibWeb.WEBControl.UI.Control.GetObject(System.String)">
+            <summary>
+            获取Spring配置文件中定义的指定名称的对象
+            </summary>
+            <param name="objectName">对象名</param>
+            <returns>Spring配置文件中定义的指定名称的对象</returns>
+        </member>
+        <member name="P:TSLibWeb.WEBControl.IncludeCSS.Href">
+            <summary>
+            要引用的css文件的路径,使用标识符“~/”或{rootPath}代替以“/”结尾的根路径，如~/egd_platform/css/Common.css
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.WEBControl.IncludeCSS.Type">
+            <summary>
+            自定义类型,可选的值参考Egrand.Web.UI.ScriptControls.IncludeType的定义
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.Utils.RequestUtils">
+            <summary>
+            Request辅助函数
+            </summary>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetStringParameter(System.Web.HttpContext,System.String,System.String)">
+            <summary>
+            从Request中获得指定参数名称的值
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="defaultValue">默认值</param>
+            <returns>Request中指定参数名称的值，如果不存在该参数则返回defaultValue参数的值</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.ResetParameter(System.Web.HttpContext,System.String)">
+            <summary>
+            重设Request中的参数
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.ResetParameter(System.Web.HttpContext,System.String,System.String)">
+            <summary>
+            重设Request中的参数
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="defaultValue">默认值</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetStringArrayParameter(System.Web.HttpContext,System.String,System.String,System.String[])">
+            <summary>
+            从Request中获得指定参数名称的值,并按指定的分隔符分隔为数组返回
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="splitSymbol">分隔符</param>
+            <param name="defaultValue">默认值(当请求中不存在指定名称的参数时的返回值)</param>
+            <returns>将使用Regex.Split进行正则表达式方式的字符串分隔</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetLongArrayParameter(System.Web.HttpContext,System.String,System.String,System.String[])">
+            <summary>
+            从Request中获得指定参数名称的值,并按指定的分隔符分隔为数组返回
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="splitSymbol">分隔符</param>
+            <param name="defaultValue">默认值(当请求中不存在指定名称的参数时的返回值)</param>
+            <returns>将使用Regex.Split进行正则表达式方式的字符串分隔</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetBoolArrayParameter(System.Web.HttpContext,System.String,System.String,System.String[])">
+            <summary>
+            从Request中获得指定参数名称的值,并按指定的分隔符分隔为数组返回
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="splitSymbol">分隔符</param>
+            <param name="defaultValue">默认值(当请求中不存在指定名称的参数时的返回值)</param>
+            <returns>将使用Regex.Split进行正则表达式方式的字符串分隔</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetIntArrayParameter(System.Web.HttpContext,System.String,System.String,System.String[])">
+            <summary>
+            从Request中获得指定参数名称的值,并按指定的分隔符分隔为数组返回
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="splitSymbol">分隔符</param>
+            <param name="defaultValue">默认值(当请求中不存在指定名称的参数时的返回值)</param>
+            <returns>将使用Regex.Split进行正则表达式方式的字符串分隔</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetLongParameter(System.Web.HttpContext,System.String,System.Int64)">
+            <summary>
+            从Request中获得指定参数名称的值
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="defaultValue">默认值(当请求中不存在指定名称的参数时的返回值)</param>
+            <returns>Request中指定参数名称的值</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetDateTimeParameter(System.Web.HttpContext,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            从Request中获得指定参数名称的值
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="defaultValue">默认值(当请求中不存在指定名称的参数时的返回值)</param>
+            <returns>Request中指定参数名称的值</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetIntParameter(System.Web.HttpContext,System.String,System.Int32)">
+            <summary>
+            从Request中获得指定参数名称的值
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="defaultValue">默认值(当请求中不存在指定名称的参数时的返回值)</param>
+            <returns>Request中指定参数名称的值</returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.RequestUtils.GetBoolParameter(System.Web.HttpContext,System.String,System.Boolean)">
+            <summary>
+            从Request中获得指定参数名称的值
+            </summary>
+            <param name="httpContext">HttpContext</param>
+            <param name="parameterName">参数名</param>
+            <param name="defaultValue">默认值(当请求中不存在指s定名称的参数时的返回值)</param>
+            <returns>Request中指定参数名称的值</returns>
+        </member>
+        <member name="T:TSLibWeb.Utils.NullDateTimeFormatter">
+            <summary>
+            Implementation of <see cref="T:Spring.Globalization.IFormatter"/> that can be used to
+            format and parse <see cref="T:System.DateTime"/> values.
+            </summary>
+            <remarks>
+            <para>
+            <c>DateTimeFormatter</c> uses properties of the
+            <see cref="T:System.Globalization.DateTimeFormatInfo"/> to format and parse <see cref="T:System.DateTime"/> values. 
+            </para>
+            <para>
+            If you use one of the constructors that accept culture as a parameter
+            to create an instance of <c>DateTimeFormatter</c>, default <c>DateTimeFormatInfo</c>
+            for the specified culture will be used.
+            </para>
+            <para>
+            You can also use properties exposed by the <c>DateTimeFormatter</c> in order
+            to override some of the default formatting parameters.
+            </para>
+            </remarks>
+            <author>Aleksandar Seovic</author>
+            <version>$Id: DateTimeFormatter.cs,v 1.2 2006/04/09 07:18:47 markpollack Exp $</version>
+        </member>
+        <member name="M:TSLibWeb.Utils.NullDateTimeFormatter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Spring.Globalization.Formatters.DateTimeFormatter"/> class
+            using default <see cref="T:System.Globalization.DateTimeFormatInfo"/> for the current thread's culture.
+            </summary>
+            <param name="format">Date/time format string.</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.NullDateTimeFormatter.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Spring.Globalization.Formatters.DateTimeFormatter"/> class
+            using default <see cref="T:System.Globalization.DateTimeFormatInfo"/> for the specified culture.
+            </summary>
+            <param name="format">Date/time format string.</param>
+            <param name="cultureName">The culture name.</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.NullDateTimeFormatter.#ctor(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Spring.Globalization.Formatters.DateTimeFormatter"/> class
+            using default <see cref="T:System.Globalization.DateTimeFormatInfo"/> for the specified culture.
+            </summary>
+            <param name="format">Date/time format string.</param>
+            <param name="culture">The culture.</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.NullDateTimeFormatter.Format(System.Object)">
+            <summary>
+            Formats the specified <see cref="T:System.DateTime"/> value.
+            </summary>
+            <param name="value">The value to format.</param>
+            <returns>Formatted <see cref="T:System.DateTime"/> value.</returns>
+            <exception cref="T:System.ArgumentNullException">If <paramref name="value"/> is <c>null</c>.</exception>
+            <exception cref="T:System.ArgumentException">If <paramref name="value"/> is not an instance of <see cref="T:System.DateTime"/>.</exception>
+        </member>
+        <member name="M:TSLibWeb.Utils.NullDateTimeFormatter.Parse(System.String)">
+            <summary>
+            Parses the specified value.
+            </summary>
+            <param name="value">The string to parse.</param>
+            <returns>Parsed <see cref="T:System.DateTime"/> value.</returns>
+        </member>
+        <member name="T:TSLibWeb.Struts.StrutsCoreAction">
+            <summary>
+            Struts的DispatchAction结合Spring获取Spring配置的对象的Action基类
+            </summary>
+            <remarks>
+            通过GetObject方法获取对应的Spring配置的对象
+            </remarks>
+            <author>dragon</author>
+            <date>2007-10-13</date>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsCoreAction.GetObject(System.String)">
+            <summary>
+            获取Spring配置文件中定义的指定名称的对象
+            </summary>
+            <param name="objectName">对象名</param>
+            <returns>Spring配置文件中定义的指定名称的对象</returns>
+        </member>
+        <member name="T:TSLibWeb.SimpleResourceConstants">
+            <summary>
+            资源文件常量Key值
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.SimpleResourceConstants.INCLUDE_FORM_PAGE_JS">
+            <summary>
+            标准表单JS集合(简单资源文件的KEY:INCLUDE_FORM_PAGE_JS)
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.SimpleResourceConstants.INCLUDE_VIEW_PAGE_JS">
+            <summary>
+            标准视图表单JS集合(简单资源文件的KEY:INCLUDE_VIEW_PAGE_JS)
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.SimpleResourceConstants.INCLUDE_CALENDAR_JS">
+            <summary>
+            日期JS集合(简单资源文件的KEY:INCLUDE_CALENDAR_JS)
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.SimpleResourceConstants.FailLoginPage">
+            <summary>
+            登录不成功转向的页面(简单资源文件的KEY:FailLoginPage)
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.SimpleResourceConstants.UnConfigurationFailLoginPageMsg">
+            <summary>
+            没有配置不成功转向页面提示信息(简单资源文件的KEY:UnConfigurationFailLoginPageMsg)
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.WEBControl.IncludeType">
+            <summary>
+            引入JS文件的类别
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.WEBControl.IncludeType.FormPage">
+            <summary>
+            表单页面
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.WEBControl.IncludeType.ViewPage">
+            <summary>
+            视图页面
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.WEBControl.IncludeType.FormPageWithCalendar">
+            <summary>
+            有日期表单页面
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.WEBControl.IncludeType.ViewPageWithCalendar">
+            <summary>
+            有日期视图页面
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.WEBControl.IncludeType.Calendar">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.WEBControl.IncludeJS">
+            <summary>
+            JS脚本引用控件
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.WEBControl.IncludeJS.Type">
+            <summary>
+            自定义类型,可选的值参考TSCommon_Core.WEB.Controls.IncludeType的定义
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.Json.JsonUtils">
+            <summary>
+            JSON帮助类
+            </summary>
+        </member>
+        <member name="M:TSLibWeb.Json.JsonUtils.CreateJsonObject(System.Object)">
+            <summary>
+            创建对象的JavaScriptObject表示(如果属性值为null则该属性不会添加到所返回的JavaScriptObject对象中，
+            对DateTime类型属性按"yyyy-MM-dd HH:mm"格式处理)
+            </summary>
+            <param name="entity">要处理的对象</param>
+            <returns>对象的JavaScriptObject表示</returns>
+        </member>
+        <member name="M:TSLibWeb.Json.JsonUtils.GetJsonString(Newtonsoft.Json.JavaScriptObject)">
+            <summary>
+            获取JavaScriptObject对象的Json字符串
+            </summary>
+            <param name="jsonObj">JavaScriptObject对象</param>
+            <returns>指定JavaScriptObject对象的Json字符串</returns>
+        </member>
+        <member name="T:TSLibWeb.Utils.BindUtils">
+            <summary>
+            Spring自动绑定辅助类
+            </summary>
+            <author>Tony</author>
+            <date>2008-10-04</date>
+        </member>
+        <member name="F:TSLibWeb.Utils.BindUtils.PropertySeparatorInAspx">
+            <summary>页面上嵌套属性的分隔符，值为"_"。</summary>
+        </member>
+        <member name="M:TSLibWeb.Utils.BindUtils.BindDomain(Spring.DataBinding.IBindingContainer,System.Web.UI.Page,System.Object)">
+            <summary>
+            将Domain的所有公共属性和页面中对应的asp控件之间进行从Domain到asp控件的单向绑定，
+            包含对嵌套类属性的绑定，并且这里使用默认的名称“Domain”对Domain进行绑定
+            </summary>
+            <remarks>
+            对于带嵌套类属性的Domain，其对应的asp控件的ID名称需使用符号“_”分隔Domain和嵌套类属性的名称，
+            如“&lt;asp:TextBox ID="Author_Name" runat="server"&gt;&lt;/asp:TextBox&gt;”
+            </remarks>
+            <param name="bindingManager">Spring的绑定器</param>
+            <param name="page">要绑定的页面</param>
+            <param name="domain">要绑定的Domain</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.BindUtils.BindDomain(Spring.DataBinding.IBindingContainer,System.Web.UI.Page,System.Object,System.String)">
+            <summary>
+            将Domain的所有公共属性和页面中对应的asp控件之间进行从Domain到asp控件的单向绑定，包含对嵌套类属性的绑定
+            </summary>
+            <remarks>
+            对于带嵌套类属性的Domain，其对应的asp控件的ID名称需使用符号“_”分隔Domain和嵌套类属性的名称，
+            如“&lt;asp:TextBox ID="Author_Name" runat="server"&gt;&lt;/asp:TextBox&gt;”
+            </remarks>
+            <param name="bindingManager">Spring的绑定器</param>
+            <param name="page">要绑定的页面</param>
+            <param name="domain">要绑定的Domain</param>
+            <param name="domainName">绑定Damian时使用的Domain名称</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.BindUtils.BindDomain(Spring.DataBinding.IBindingContainer,System.Web.UI.Page,System.Object,System.String,Spring.DataBinding.BindingDirection,System.Boolean)">
+            <summary>
+            将Domain的所有公共属性和页面中对应的asp控件之间进行绑定，包含对嵌套类属性的绑定
+            </summary>
+            <remarks>
+            对于带嵌套类属性的Domain，其对应的asp控件的ID名称需使用符号“_”分隔Domain和嵌套类属性的名称，
+            如“&lt;asp:TextBox ID="Author_Name" runat="server"&gt;&lt;/asp:TextBox&gt;”
+            </remarks>
+            <param name="bindingManager">Spring的绑定器</param>
+            <param name="page">要绑定的页面</param>
+            <param name="domain">要绑定的Domain</param>
+            <param name="domainName">绑定Damian时使用的Domain名称</param>
+            <param name="bindingDirection">
+            数据绑定方向，参考<seealso cref="T:Spring.DataBinding.BindingDirection"/>
+            </param>
+            <param name="unBindComplexProperty">是否不要绑定Domain的非简单属性，true--不绑定非简单属性，false--绑定非简单属性</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.BindUtils.BindComplexProperty(Spring.DataBinding.IBindingContainer,System.Web.UI.Page,System.Object,System.String,System.String,Spring.DataBinding.BindingDirection,System.Boolean)">
+            <summary>
+            将一个复杂属性(非简单属性，参考<see cref="!:Egrand.Util.TypeUtils.IsEasyType(Type)"/>)与页面中对应的asp控件进行绑定
+            </summary>
+            <param name="bindingManager">Spring的绑定器</param>
+            <param name="page">要绑定的页面</param>
+            <param name="complexPropertyValue">复杂属性的值</param>
+            <param name="complexPropertyFullName">复杂属性的全路径属性名，如Author</param>
+            <param name="domainName">绑定Damian时使用的Domain名称</param>
+            <param name="bindingDirection">
+            数据绑定方向，参考<seealso cref="T:Spring.DataBinding.BindingDirection"/>
+            </param>
+            <param name="unBindComplexProperty">是否不要绑定Domain的非简单属性，true--不绑定非简单属性，false--绑定非简单属性</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.BindUtils.BindEasyProperty(Spring.DataBinding.IBindingContainer,System.Web.UI.Page,System.Type,System.String,System.String,Spring.DataBinding.BindingDirection)">
+            <summary>
+            将一个简单属性(参考<see cref="!:Egrand.Util.TypeUtils.IsEasyType(Type)"/>)与页面中对应的asp控件进行绑定
+            </summary>
+            <param name="bindingManager">Spring的绑定器</param>
+            <param name="page">要绑定的页面</param>
+            <param name="propertyType">简单属性的类型</param>
+            <param name="propertyFullName">简单属性的的全路径属性名，如Name,Author.Name</param>
+            <param name="domainName">绑定Damian时使用的Domain名称</param>
+            <param name="bindingDirection">
+            数据绑定方向，参考<seealso cref="T:Spring.DataBinding.BindingDirection"/>
+            </param>
+        </member>
+        <member name="M:TSLibWeb.Utils.BindUtils.GetValueProperty(System.Web.UI.Control)">
+            <summary>
+            根据类型取控件的取值方法
+            </summary>
+            <param name="control">控件</param>
+            <returns>取值方法字符串</returns>
+        </member>
+        <member name="T:TSLibWeb.Json.Converters.DateTimeConverter">
+            <summary>
+            DateTime类型到json字符串的转换
+            </summary>
+            <author>Tony</author>
+            <date>2008-09-26</date>
+        </member>
+        <!-- 对于成员“T:TSLibWeb.SessionCheck”忽略有格式错误的 XML 注释 -->
+        <member name="T:TSLibWeb.Utils.AjaxForwardUtils">
+            <summary>
+            通用的struts ajax转发辅助函数
+            </summary>
+        </member>
+        <member name="M:TSLibWeb.Utils.AjaxForwardUtils.InitResponse(System.Web.HttpResponse)">
+            <summary>
+            初始化请求响应的类型和头
+            </summary>
+            <param name="response">请求响应</param>
+        </member>
+        <member name="M:TSLibWeb.Utils.AjaxForwardUtils.SuccessForward(System.Web.HttpContext,Newtonsoft.Json.JavaScriptObject,System.String,System.Object[])">
+            <summary>
+            成功的通用ajax处理
+            </summary>
+            <param name="json"></param>
+            <param name="httpContext"></param>
+            <param name="sourceKey"></param>
+            <param name="formatArgs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.AjaxForwardUtils.ExceptionForward(System.Web.HttpContext,Newtonsoft.Json.JavaScriptObject,System.Exception)">
+            <summary>
+            异常的通用ajax处理
+            </summary>
+            <param name="json"></param>
+            <param name="httpContext"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.AjaxForwardUtils.ErrorForward(System.Web.HttpContext,Newtonsoft.Json.JavaScriptObject,System.String,System.Object[],System.String)">
+            <summary>
+            错误的通用ajax处理
+            </summary>
+            <param name="json"></param>
+            <param name="httpContext"></param>
+            <param name="errorKey"></param>
+            <param name="formatArgs"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.AjaxForwardUtils.ErrorRequestParameterForward(System.Web.HttpContext,Newtonsoft.Json.JavaScriptObject,System.String)">
+            <summary>
+            请求参数错误的通用ajax处理
+            </summary>
+            <param name="json"></param>
+            <param name="httpContext"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.AjaxForwardUtils.UnExitDocumentForward(System.Web.HttpContext,Newtonsoft.Json.JavaScriptObject,System.String)">
+            <summary>
+            要处理的文档不存在的通用ajax处理
+            </summary>
+            <param name="json"></param>
+            <param name="httpContext"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Utils.AjaxForwardUtils.EmptyToDeleteForward(System.Web.HttpContext,Newtonsoft.Json.JavaScriptObject,System.String)">
+            <summary>
+            要删除的文档为空的通用ajax处理
+            </summary>
+            <param name="json"></param>
+            <param name="httpContext"></param>
+            <param name="suffix"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TSLibWeb.Struts.StrutsEntityAction`1">
+            <summary>
+            struts页面转发的基类
+            </summary>
+            <typeparam name="Domain">泛型</typeparam>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.Create(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            新建对象方法
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.Open(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            Open a entity Page
+            </summary>
+            <param name="actionContext">Action Context</param>
+            <param name="httpAction">Http Context</param>
+            <returns>Forward</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.Edit(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            Open an Edit Page
+            </summary>
+            <param name="actionContext">Action Context</param>
+            <param name="httpContext">Http Context</param>
+            <returns>Forward</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.Save(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            Save Entity Action
+            </summary>
+            <param name="actionContext">Action Context</param>
+            <param name="httpContext">Http Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.SaveByAjax(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            Save entity by Ajax
+            </summary>
+            <param name="actionContext"></param>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.Delete(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            在视图中通过Ajax方式删除多个文档的Action
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <returns>恒定返回null</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.Display(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            查看视图页面的Action
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <returns>查看视图信息的Action的Forward</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.View(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            获取视图信息的Action，该Action只能通过Ajax方式进行调用
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <returns>恒定返回null</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.CreateEntity(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            创建或初始化新的Domain
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.LoadEntity(TSLibStruts.ActionContext,System.Web.HttpContext,System.String,System.String)">
+            <summary>
+            加载指定主键值的Domain
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <param name="idValue">主键值</param>
+            <param name="idName">主键名</param>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.SaveEntity(TSLibStruts.ActionContext,System.Web.HttpContext,`0)">
+            <summary>
+            加载指定主键值的Domain
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <param name="entity">要保存的Domain</param>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.Delete(TSLibStruts.ActionContext,System.Web.HttpContext,System.String[],System.String)">
+            <summary>
+            加载指定主键集的对象
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <param name="ids">要删除的所有对象的主键集</param>
+            <param name="type">请求参数中名称为“type”的参数对应的值，即Request.Params["type"]的值</param>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.GetPageInfo(TSLibStruts.ActionContext,System.Web.HttpContext,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取分页视图信息
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <param name="curUserInfo">当前操作的用户</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向,asc | desc</param>
+            <returns>分页信息</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.CreatePageInfoJson(TSLib.PageInfo)">
+            <summary>
+            创建分页对象的json表示
+            </summary>
+            <param name="pageInfo">分页对象</param>
+            <returns>分页对象的json表示</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.CreatePageInfoItemJson(System.Object)">
+            <summary>
+            创建指定对象的json表示
+            </summary>
+            <param name="pageInfoItem">源对象</param>
+            <returns>指定对象的json表示</returns>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.BeforeDelete(TSLibStruts.ActionContext,System.Web.HttpContext,System.String[],System.String)">
+            <summary>
+            删除文档前的Action预处理
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <param name="ids">要删除的所有对象的主键集</param>
+            <param name="type">请求参数中名称为“type”的参数对应的值，即Request.Params["type"]的值</param>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.BeforeDisplay(TSLibStruts.ActionContext,System.Web.HttpContext,System.String)">
+            <summary>
+            转发到视图页面前的操作
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <param name="forwardName">当前要转发到的视图的名称</param>
+        </member>
+        <member name="M:TSLibWeb.Struts.StrutsEntityAction`1.AfterSaveByAjax(TSLibStruts.ActionContext,System.Web.HttpContext,Newtonsoft.Json.JavaScriptObject,System.Object)">
+            <summary>
+            Ajax保存后的处理，注意参数json已经添加了键值为result和msg的信息处理，
+            这里只需添加你需要的额外处理，默认为执行语句“json.Add("entity", entity);”，
+            将整个实体对象返回客户端。
+            </summary>
+            <param name="actionContext">Action上下文</param>
+            <param name="httpContext">Http上下文</param>
+            <param name="json">当前要返回的json对象</param>
+            <param name="entity">当前处理的Domain</param>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.DomainName">
+            <summary>
+            取得泛型的简单类名
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.EditPageName">
+            <summary>
+            编辑页面
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.ReadPageName">
+            <summary>
+            只读页面
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.ViewPageName">
+            <summary>
+            视图页面
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.ErrorForwardName">
+            <summary>
+            错误页面的转发视图名
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.IDName">
+            <summary>
+            Domain的主键名,值为"id"
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.ResourceKey_SaveSuccessMsg">
+            <summary>保存成功的资源键名，默认为ACTION.AJAX.SAVE.SUCCESS</summary>
+        </member>
+        <member name="P:TSLibWeb.Struts.StrutsEntityAction`1.ResourceKey_DeleteSuccessMsg">
+            <summary>删除成功的资源键名，默认为ACTION.AJAX.DELETE.SUCCESS</summary>
+        </member>
+        <member name="T:TSLibWeb.Utils.SessionHelper">
+            <summary>
+            返回Session对象
+            </summary>
+        </member>
+        <member name="M:TSLibWeb.Utils.SessionHelper.GetSession(System.String)">
+            <summary>
+            获取名称为sessionName的Session的值
+            </summary>
+            <param name="sessionName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TSLibWeb.ReWriteURL">
+            <summary>
+            用于重写URL
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.Constants">
+            <summary>
+            常量类
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.FormPage">
+            <summary>
+            标准表单页面名称FormPage
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.ViewPage">
+            <summary>
+            标准视图页面名称ViewPage
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.FormPageWithCalendar">
+            <summary>
+            带日期的表单页面名称FormPageWithCalendar
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.ViewPageWithCalendar">
+            <summary>
+            带日期的视图页面名称ViewPageWithCalendar
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.Calendar">
+            <summary>
+            日期页面名称Calendar
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.Session_User">
+            <summary>
+            Session用户名User
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.YESNO_NO">
+            <summary>
+            字符串Y
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.YESNO_YES">
+            <summary>
+            字符串N
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.BLANK_INT_VALUE">
+            <summary>
+            int值-1
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.BLANK_LONG_VALUE">
+            <summary>
+            LONG值-1
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.BLANK_STRING_VALUE">
+            <summary>
+            字符串值-1
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.Session_Role">
+            <summary>
+            Session角色名Role
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.Session_Privilege">
+            <summary>
+            Session权限名Privilege
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.Constants.Session_Groups">
+            <summary>
+            岗位
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.WEB.StrutsFormPage`1">
+            <summary>
+            结合Spring和Struts的页面基类
+            </summary>
+            <author>tony</author>
+            <date>2008-10-04</date>
+        </member>
+        <member name="M:TSLibWeb.WEB.StrutsFormPage`1.InitializeDataBindings">
+            <summary>
+            复写Spring的绑定方法，自动将Domain与页面中的相应的asp控件进行绑定
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.WEB.StrutsFormPage`1.BtField">
+            <summary>
+            取得必填的CSSName
+            </summary>
+        </member>
+        <member name="F:TSLibWeb.WEB.StrutsFormPage`1.ZdField">
+            <summary>
+            取得只读CSSName
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.WEB.StrutsFormPage`1.CanEdit">
+            <summary>
+            获取或设置页面的编辑状态
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.WEB.StrutsFormPage`1.Domain">
+            <summary>
+            获取页面捆绑的Domain对象
+            </summary>
+        </member>
+        <member name="P:TSLibWeb.WEB.StrutsFormPage`1.DomainName">
+            <summary>
+            获取页面捆绑的Domain对象对应的属性名
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.AuthenticModule">
+            <summary>
+            检测Session是否存在，不存在则转到登录页面
+            系统中login.aspx为用户登录页面,用户的Session存放在Session[Constants.Session_User]中
+            </summary>
+        </member>
+        <member name="T:TSLibWeb.WEBControl.ScriptHelper">
+            <summary>
+            脚本帮助类
+            帮助自动注册
+            </summary>
+        </member>
+        <member name="M:TSLibWeb.WEBControl.ScriptHelper.WriteJS(System.Web.UI.HtmlTextWriter,System.String)">
+            <summary>
+            把javaScript引用写到请求的页面
+            </summary>
+            <param name="write"></param>
+            <param name="href"></param>
+        </member>
+        <member name="P:TSLibWeb.WEBControl.ScriptHelper.Href">
+            <summary>
+            脚本所在路径,格式:/webRootPath/js/../test.js
+            </summary>
+        </member>
+    </members>
+</doc>
