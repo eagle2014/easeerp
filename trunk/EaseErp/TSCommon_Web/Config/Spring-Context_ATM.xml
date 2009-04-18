@@ -1,0 +1,14 @@
+﻿<objects xmlns="http://www.springframework.net">
+  <description>Spring Context配置文件</description>
+  <!-- 组织架构：级别 -->
+  <object id="ATMDao" type="TSCommon_Core.ATM.Dao.Hibernate.ATMDao, TSCommon_Core">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="ATMServiceTarget" type="TSCommon_Core.ATM.Service.ATMService, TSCommon_Core">
+    <property name="ATMDao" ref="ATMDao" />
+  </object>
+  <object id="ATMService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="ATMServiceTarget"/>
+    <property name="ProxyInterfaces" value="TSCommon_Core.ATM.Service.IATMService"/>
+  </object>
+</objects>

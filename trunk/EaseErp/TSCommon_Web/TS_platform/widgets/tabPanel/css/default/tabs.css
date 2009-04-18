@@ -1,0 +1,205 @@
+﻿/*
+ * 页签样式配置
+ * @author dragon
+ * @date 2007-06-24
+ */
+
+/* 
+ * 所有页签头的容器
+ */
+.egd-tab-headers {
+	height: 22px;
+	border: 0px solid blue;
+	background-repeat: repeat-x;
+	background-image:url(../../images/default/tab-header-panel-bg.gif);
+	padding: 0;
+	overflow: hidden;
+}
+
+/* 
+ * 单个页签头的容器
+ */
+.egd-tab-header {
+	position:relative;/* 必须的设置，否则script无法控制其z-index */
+	height:22px;
+	border: 0;
+	float: left;
+	z-index: 20;
+	background-color: transparent;
+	padding: 0;
+	float: left;
+	overflow: hidden;
+}
+
+/* 
+ * 相邻页签头间的交叉
+ */
+.egd-tab-cross {
+	margin-left: -14px;
+}
+
+.egd-tab-content {
+	border-width: 0px 1px 1px 1px;
+	border-color: #98C0F4;
+	border-style: solid;
+	text-align: left;
+	background-color:#FFFFFF;
+}
+.egd-tab-hidden {
+	display: none;
+}
+.egd-tab-iframe {
+	width: 774px;
+	border: 0px;
+}
+
+.egd-tab-header-start-active {
+	width:14px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-start-active.gif);
+	float: left;
+}
+
+.egd-tab-header-label-active {
+	height:22px;
+	border: 0;
+	background-repeat: repeat-x;
+	background-image:url(../../images/default/tab-header-label-active.gif);
+	padding:5px 2px 0px 2px;
+	float: left;
+	cursor: pointer;
+}
+
+.egd-tab-header-close-active {
+	width:12px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-close-active.gif);
+	float: left;
+	display: none;
+}
+
+.egd-tab-header-end-active {
+	width:22px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-end-active.gif);
+	background-color: transparent;
+	float: left;
+}
+
+.egd-tab-header-start-inactive {
+	width:14px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-start-inactive.gif);
+	float: left;
+}
+
+.egd-tab-header-label-inactive {
+	height:22px;
+	border: 0;
+	background-repeat: repeat-x;
+	background-image:url(../../images/default/tab-header-label-inactive.gif);
+	padding:5px 2px 0px 2px;
+	float: left;
+	cursor: pointer;
+}
+
+.egd-tab-header-close-inactive {
+	width:12px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-close-inactive.gif);
+	float: left;
+	display: none;
+}
+
+.egd-tab-header-end-inactive {
+	width:22px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-end-inactive.gif);
+	float: left;
+}
+
+.egd-tab-header-start-disabled {
+	width:14px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-start-disabled.gif);
+	float: left;
+}
+
+.egd-tab-header-label-disabled {
+	height:22px;
+	border: 0;
+	background-repeat: repeat-x;
+	background-image:url(../../images/default/tab-header-label-disabled.gif);
+	padding:5px 2px 0px 2px;
+	float: left;
+	cursor: default;
+	color:#ACA899;
+}
+
+.egd-tab-header-close-disabled {
+	width:12px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-close-disabled.gif);
+	float: left;
+	display: none;
+}
+
+.egd-tab-header-end-disabled {
+	width:22px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/default/tab-header-end-disabled.gif);
+	float: left;
+}
+/*CSM 2007-8-23  卡项中的标题背景*/
+.egd-tab-tableTopBg{
+	background-image:url(../../images/default/table_top.gif); 
+	border:1px solid #ADD5EE; 
+	height:18px; 
+	line-height:18px; 
+	text-indent:5px; 
+	font-weight:bold; 
+	color:#006699;
+}
+/*按钮背景*/
+.buttom2_bg1{
+	border:0px;
+	background-image:url(../../images/default/buttom2_bg1.gif); 
+	width:56px; 
+	height:20px; 
+	margin-right:4px;
+	cursor:pointer;
+}
+.buttom2_bg2{
+	border:0px;
+	background-image:url(../../images/default/buttom2_bg2.gif); 
+	width:68px; 
+	height:20px;
+	margin-right:4px;
+	cursor:pointer;
+}
+.buttom2_bg3{
+	border:0px;
+	background-image:url(../../images/default/buttom2_bg2.gif); 
+	width:80px;
+	height:20px; 
+	margin-right:4px;
+	cursor:pointer;
+}

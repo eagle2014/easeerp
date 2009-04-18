@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="TSCommon_Core.SystemPolicy.Domain.Policy, TSCommon_Core" table="SYS_POLICIES">
+    <id name="ID" unsaved-value="-1">
+      <column name="ID" not-null="true"/>
+      <generator class="identity" />
+    </id>
+    <property name="Unid" type="String">
+      <column name="UNID" length="32" not-null="true"/>
+    </property>
+
+    <!--作者：2007-09-28 dragon 将散开的作者域合并为component方式-->
+    <component name="Author" class="TSCommon_Core.Organize.Domain.User, TSCommon_Core">
+      <property name="Unid" type="String" column="AUTHOR_UNID" length="32"/>
+      <property name="Name" type="String" column="AUTHOR_NAME" length="45"/>
+      <property name="OUUnid" type="String" column="AUTHOR_OU_UNID" length="32"/>
+      <property name="OUName" type="String" column="AUTHOR_OU_NAME" length="255"/>
+      <property name="OUCode" type="String" column="AUTHOR_OU_CODE" length="45"/>
+      <property name="OUFullName" type="String" column="AUTHOR_OU_FULLNAME" length="255"/>
+    </component>
+    
+    <property name="FileDate" type="DateTime">
+      <column name="FILE_DATE" not-null="true"/>
+    </property>    
+    <property name="Subject" type="String">
+      <column name="SUBJECT" length="255"/>
+    </property>
+    <property name="Code" type="String">
+      <column name="CODE" length="255"/>
+    </property>
+    <property name="Type" type="String">
+      <column name="TYPE" length="32"/>
+    </property>
+    <property name="Value" type="String">
+      <column name="POLICY_VALUE" length="255"/>
+    </property>
+    <property name="OptionNames" type="String">
+      <column name="OPTION_NAMES" length="255"/>
+    </property>
+    <property name="OptionValues" type="String">
+      <column name="OPTION_VALUES" length="255"/>
+    </property>
+    <property name="ValueType" type="String">
+      <column name="VALUE_TYPE" length="32"/>
+    </property>
+
+    <!--最后修改者：2007-09-28 dragon 将散开的域合并为component方式-->
+    <component name="LastChanger" class="TSCommon_Core.Organize.Domain.User, TSCommon_Core">
+      <property name="Unid" type="String" column="LAST_MODIFIER_UNID" length="32"/>
+      <property name="Name" type="String" column="LAST_MODIFIER" length="32"/>
+    </component>
+    
+    <property name="LastModifiedDate" type="DateTime">
+      <column name="LAST_MODIFIER_DATE"/>
+    </property>
+    <property name="BelongModule" column="BELONG_MODULE"/>
+    <property name="OrderNo" column="ORDERNO"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net debug="true">
+  <appender name="AspNetTraceAppender" type="log4net.Appender.AspNetTraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="[%thread] %-5level - %message" />
+    </layout>
+  </appender>
+
+  <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/log.txt" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="1MB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="TraceAppender" type="log4net.Appender.TraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%-5p: %m" />
+    </layout>
+  </appender>
+
+  <appender name="udpAppender" type="log4net.Appender.UdpAppender">
+    <param name="RemoteAddress" value="127.0.0.1" />
+    <param name="RemotePort" value="8081" />
+    <layout type="log4net.Layout.XmlLayout">
+      <param name="Prefix" value="" />
+    </layout>
+  </appender>
+  <!-- Set default logging level to DEBUG -->
+  <root>
+    <level value="WARN" />
+    <appender-ref ref="udpAppender" />
+    <appender-ref ref="AspNetTraceAppender" />
+    <appender-ref ref="TraceAppender" />
+    <appender-ref ref="RollingFileAppender" />
+  </root>
+  <!--
+		In Spring.NET there is a 1-1 correspondence between the logger name and
+		the namespace of the class doing the logging...
+	-->
+  <logger name="Spring">
+    <level value="WARN" />
+  </logger>
+  <logger name="TSCommon_Web.Security.Action">
+    <level value="ERROR" />
+  </logger>
+  <logger name="TSCommon_Web.importData.cs">
+    <level value="DEBUG" />
+  </logger>
+  <logger name="TSCommon_Core.Controls">
+    <level value="DEBUG" />
+  </logger>
+  <logger name="TSCommon_Web.WareHouse">
+    <level value="DEBUG" />
+  </logger>
+</log4net>

@@ -1,0 +1,167 @@
+﻿/*
+ * 页签样式配置
+ * @author dragon
+ * @date 2007-06-24
+ */
+
+/* 
+ * 所有页签头的容器
+ */
+.egd-tab-headers {
+	height: 25px;
+	border: 0px solid blue;
+	background-repeat: repeat-x;
+	background-image:url(../../images/window/tab-header-panel-bg.gif);
+	padding: 0;
+	overflow: hidden;
+}
+
+/* 
+ * 单个页签头的容器
+ */
+.egd-tab-header {
+	position:relative;/* 必须的设置，否则script无法控制其z-index */
+	height:22px;
+	border: 0;
+	float: left;
+	z-index: 20;
+	background-color: transparent;
+	padding: 0;
+	float: left;
+	overflow: hidden;
+}
+
+/* 
+ * 相邻页签头间的交叉
+ */
+.egd-tab-cross {
+	margin-left: -15px;
+}
+
+.egd-tab-content {
+	border-width: 0px 3px 3px 3px;
+	border-color: #0066CC;
+	border-style: solid;
+}
+
+.egd-tab-hidden {
+	display: none;
+}
+
+.egd-tab-iframe {
+	width: 100%;
+	border: 0px;
+}
+
+.egd-tab-header-start-active {
+	width:8px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-start-active.gif);
+	float: left;
+}
+
+.egd-tab-header-label-active {
+	height:22px;
+	border: 0;
+	background-repeat: repeat-x;
+	background-image:url(../../images/window/tab-header-label-active.gif);
+	padding:5px 2px 0px 2px;
+	float: left;
+	cursor: pointer;
+}
+
+.egd-tab-header-close-active {
+	width:12px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-close-active.gif);
+	float: left;
+}
+
+.egd-tab-header-end-active {
+	width:28px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-end-active.gif);
+	background-color: transparent;
+	float: left;
+}
+
+.egd-tab-header-start-inactive {
+	width:8px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-start-inactive.gif);
+	float: left;
+}
+
+.egd-tab-header-label-inactive {
+	height:22px;
+	border: 0;
+	background-repeat: repeat-x;
+	background-image:url(../../images/window/tab-header-label-inactive.gif);
+	padding:5px 2px 0px 2px;
+	float: left;
+	cursor: pointer;
+}
+
+.egd-tab-header-close-inactive {
+	width:12px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-close-inactive.gif);
+	float: left;
+}
+
+.egd-tab-header-end-inactive {
+	width:28px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-end-inactive.gif);
+	float: left;
+}
+
+.egd-tab-header-start-disabled {
+	width:8px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-start-disabled.gif);
+	float: left;
+}
+
+.egd-tab-header-label-disabled {
+	height:22px;
+	border: 0;
+	background-repeat: repeat-x;
+	background-image:url(../../images/window/tab-header-label-disabled.gif);
+	padding:5px 2px 0px 2px;
+	float: left;
+	cursor: default;
+	color:#ACA899;
+}
+
+.egd-tab-header-close-disabled {
+	width:12px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-close-disabled.gif);
+	float: left;
+}
+
+.egd-tab-header-end-disabled {
+	width:28px;
+	height:22px;
+	border: 0;
+	background-repeat: no-repeat;
+	background-image:url(../../images/window/tab-header-end-disabled.gif);
+	float: left;
+}
