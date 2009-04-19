@@ -1486,10 +1486,6 @@
       <Project>{8D7E8AB3-4202-41B3-8804-50778E5C08EA}</Project>
       <Name>TSCommon.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WareHouse\EaseErp.IC.csproj">
-      <Project>{917DD670-6E71-46CD-ADCC-BFD8C5930CF5}</Project>
-      <Name>EaseErp.IC</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="importData\cs\wareHouse\" />
