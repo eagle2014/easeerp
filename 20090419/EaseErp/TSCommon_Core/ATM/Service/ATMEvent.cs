@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TSCommon_Core.ATM.Service;
+using TSCommon.Core.ATM.Service;
 
-namespace TSCommon_Core.ATM.Service
+namespace TSCommon.Core.ATM.Service
 {
     public class ATMEvent
     {

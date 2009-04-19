@@ -4,9 +4,9 @@ using System.Text;
 using System.Collections;
 using TSLib.Dao;
 using TSLib;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.Organize.Dao
+namespace TSCommon.Core.Organize.Dao
 {
     /// <summary>
     /// 岗位配置DAO的接口定义

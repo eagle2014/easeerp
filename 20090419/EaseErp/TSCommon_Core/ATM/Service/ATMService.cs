@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using TSLib.Service;
 using Common.Logging;
-using TSCommon_Core.ATM.Dao;
+using TSCommon.Core.ATM.Dao;
 using System.Collections;
 
-namespace TSCommon_Core.ATM.Service
+namespace TSCommon.Core.ATM.Service
 {
     public class ATMService:BaseService<ATM.Domain.ATM>,IATMService
     {
@@ -32,7 +32,7 @@ namespace TSCommon_Core.ATM.Service
             return this.atmDao.GetATM(parentUnid, type);
         }
 
-        public void DeleteAll(IList<TSCommon_Core.ATM.Domain.ATM> list)
+        public void DeleteAll(IList<TSCommon.Core.ATM.Domain.ATM> list)
         {
             throw new Exception("The method or operation is not implemented.");
         }

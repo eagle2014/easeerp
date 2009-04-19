@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Common.Logging;
-using TSCommon_Core.ATM.Service;
+using TSCommon.Core.ATM.Service;
 using System.ComponentModel;
 using System.Web.UI;
 using TSLib;
 using System.Collections;
 
-namespace TSCommon_Core.Controls
+namespace TSCommon.Core.Controls
 {
     /// <summary>
     /// ¸½¼þ¿Ø¼þ
@@ -188,7 +188,7 @@ namespace TSCommon_Core.Controls
             int i = 1;
             bool isJiShuRow;
             StringBuilder temp1 = new StringBuilder();
-            foreach (TSCommon_Core.ATM.Domain.ATM atm in atms)
+            foreach (TSCommon.Core.ATM.Domain.ATM atm in atms)
             {
                 isJiShuRow = (i % 2 == 0);
                 temp1.Remove(0, temp1.Length);

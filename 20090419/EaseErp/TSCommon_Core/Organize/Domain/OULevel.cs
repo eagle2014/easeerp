@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Lib;
 
-namespace TSCommon_Core.Organize.Domain
+namespace TSCommon.Core.Organize.Domain
 {
     /// <summary>
     /// 单位级别的Domain

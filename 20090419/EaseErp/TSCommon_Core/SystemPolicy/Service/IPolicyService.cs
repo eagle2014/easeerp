@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Service;
-using TSCommon_Core.SystemPolicy.Domain;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.SystemPolicy.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.SystemPolicy.Service
+namespace TSCommon.Core.SystemPolicy.Service
 {
     /// <summary>
     /// ÏµÍ³²ßÂÔ

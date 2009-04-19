@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Dao.Hibernate;
-using TSCommon_Core.SystemPolicy.Domain;
+using TSCommon.Core.SystemPolicy.Domain;
 using Common.Logging;
 
-namespace TSCommon_Core.SystemPolicy.Dao.Hibernate
+namespace TSCommon.Core.SystemPolicy.Dao.Hibernate
 {
     /// <summary>
     /// 系统策略DAO Hibernate的实现

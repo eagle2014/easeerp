@@ -10,9 +10,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections;
 using TSLib.Service;
-using TSCommon_Core.Security.Domain;
+using TSCommon.Core.Security.Domain;
 
-namespace TSCommon_Core.Security.Service
+namespace TSCommon.Core.Security.Service
 {
     /// <summary>
     /// 角色配置Service的接口定义

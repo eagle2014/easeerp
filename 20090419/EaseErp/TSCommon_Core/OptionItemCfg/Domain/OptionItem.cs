@@ -4,7 +4,7 @@ using System.Text;
 using System.Collections;
 using TSLib;
 
-namespace TSCommon_Core.OptionItemCfg.Domain
+namespace TSCommon.Core.OptionItemCfg.Domain
 {
     public class OptionItem:FileEntry
     {

@@ -7,10 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using TSLib.Dao;
 
-namespace TSCommon_Core.Organize
+namespace TSCommon.Core.Organize
 {
     /// <summary>
     /// 关联关系DAO接口的定义

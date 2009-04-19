@@ -2,13 +2,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8D7E8AB3-4202-41B3-8804-50778E5C08EA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TSCommon_Core</RootNamespace>
-    <AssemblyName>TSCommon_Core</AssemblyName>
+    <RootNamespace>TSCommon.Core</RootNamespace>
+    <AssemblyName>TSCommon.Core</AssemblyName>
     <SccProjectName>
     </SccProjectName>
     <SccLocalPath>
@@ -31,7 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Lib\TSCommon_Core.XML</DocumentationFile>
+    <DocumentationFile>..\Lib\TSCommon.Core.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

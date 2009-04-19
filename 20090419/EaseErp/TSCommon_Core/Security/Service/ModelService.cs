@@ -9,13 +9,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Service;
-using TSCommon_Core.Security.Domain;
-using TSCommon_Core.Security.Dao;
+using TSCommon.Core.Security.Domain;
+using TSCommon.Core.Security.Dao;
 using System.Collections;
 using TS.Exceptions;
 using TSLib.Utils;
 
-namespace TSCommon_Core.Security.Service
+namespace TSCommon.Core.Security.Service
 {
     /// <summary>
     /// 模块Service的实现

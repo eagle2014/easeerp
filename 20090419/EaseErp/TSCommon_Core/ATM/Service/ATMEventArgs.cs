@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace TSCommon_Core.ATM.Service
+namespace TSCommon.Core.ATM.Service
 {
     public class ATMEventArgs : EventArgs
     {

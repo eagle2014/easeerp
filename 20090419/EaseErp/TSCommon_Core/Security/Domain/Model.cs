@@ -4,7 +4,7 @@ using System.Text;
 using TSLib.Utils;
 using Lib;
 
-namespace TSCommon_Core.Security.Domain
+namespace TSCommon.Core.Security.Domain
 {
     /// <summary>
     /// Ä£¿éÀàÐÍ

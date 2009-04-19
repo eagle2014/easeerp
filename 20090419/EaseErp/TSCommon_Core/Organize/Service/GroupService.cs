@@ -8,17 +8,17 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections;
 using TSLib.Service;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using Common.Logging;
-using TSCommon_Core.Organize.Dao;
-using TSCommon_Core.Security.Dao;
-using TSCommon_Core.Organize.RelationShips;
+using TSCommon.Core.Organize.Dao;
+using TSCommon.Core.Security.Dao;
+using TSCommon.Core.Organize.RelationShips;
 using TSLib;
 using TSLib.Utils;
-using TSCommon_Core.Security.Domain;
+using TSCommon.Core.Security.Domain;
 using TS.Exceptions;
 
-namespace TSCommon_Core.Organize.Service
+namespace TSCommon.Core.Organize.Service
 {
     /// <summary>
     /// 岗位配置Service的实现

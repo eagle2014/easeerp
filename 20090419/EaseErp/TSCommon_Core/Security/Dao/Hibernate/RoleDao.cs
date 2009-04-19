@@ -10,10 +10,10 @@ using System.Collections;
 using Common.Logging;
 using TSLib.Dao.Hibernate;
 using TSLib;
-using TSCommon_Core.Security.Domain;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Security.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.Security.Dao.Hibernate
+namespace TSCommon.Core.Security.Dao.Hibernate
 {
     /// <summary>
     /// 角色Dao的Hibernate的实现

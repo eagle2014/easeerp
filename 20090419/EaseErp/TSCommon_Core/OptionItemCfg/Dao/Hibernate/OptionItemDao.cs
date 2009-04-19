@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TSCommon_Core.OptionItemCfg.Domain;
+using TSCommon.Core.OptionItemCfg.Domain;
 using TSLib.Dao.Hibernate;
 using System.Collections;
 using TSLib;
 using TSLib.DBUtils;
 
-namespace TSCommon_Core.OptionItemCfg.Dao.Hibernate
+namespace TSCommon.Core.OptionItemCfg.Dao.Hibernate
 {
     public class OptionItemDao:BaseDao<OptionItem>,IOptionItemDao
     {

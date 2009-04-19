@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Dao.Hibernate;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using Common.Logging;
 using System.Collections;
 using TSLib.Utils;
 
-namespace TSCommon_Core.Organize.Dao.Hibernate
+namespace TSCommon.Core.Organize.Dao.Hibernate
 {
     public class OULevelDao : BaseDao<OULevel>, IOULevelDao
     {

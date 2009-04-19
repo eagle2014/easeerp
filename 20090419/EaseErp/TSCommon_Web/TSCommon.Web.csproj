@@ -91,10 +91,6 @@
     <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TSCommon_Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\TSCommon_Core.dll</HintPath>
-    </Reference>
     <Reference Include="TSLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\TSLib.dll</HintPath>
@@ -1486,9 +1482,13 @@
     <None Include="TS_platform\ext\resources\images\default\form\trigger.psd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WareHouse\EaseErp_WareHouse.csproj">
+    <ProjectReference Include="..\TSCommon_Core\TSCommon.Core.csproj">
+      <Project>{8D7E8AB3-4202-41B3-8804-50778E5C08EA}</Project>
+      <Name>TSCommon.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WareHouse\EaseErp.IC.csproj">
       <Project>{917DD670-6E71-46CD-ADCC-BFD8C5930CF5}</Project>
-      <Name>EaseErp_WareHouse</Name>
+      <Name>EaseErp.IC</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

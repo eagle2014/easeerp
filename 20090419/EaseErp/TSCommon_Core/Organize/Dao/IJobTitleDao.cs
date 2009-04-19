@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using System.Collections;
 using TSLib.Dao;
 
-namespace TSCommon_Core.Organize.Dao
+namespace TSCommon.Core.Organize.Dao
 {
     public interface IJobTitleDao : IBaseDao<JobTitle>
     {

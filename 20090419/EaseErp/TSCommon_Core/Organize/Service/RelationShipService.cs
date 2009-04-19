@@ -9,10 +9,10 @@ using System.Text;
 using System.Collections;
 using Common.Logging;
 using TS.Exceptions;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using TSLib.Service;
 
-namespace TSCommon_Core.Organize.RelationShips
+namespace TSCommon.Core.Organize.RelationShips
 {
     /// <summary>
     /// 关联关系Service的实现

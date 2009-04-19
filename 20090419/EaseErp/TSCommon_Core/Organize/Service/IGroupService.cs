@@ -9,9 +9,9 @@ using System.Text;
 using System.Collections;
 using TSLib.Service;
 using TSLib;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.Organize.Service
+namespace TSCommon.Core.Organize.Service
 {
     /// <summary>
     /// 岗位配置Service的接口定义

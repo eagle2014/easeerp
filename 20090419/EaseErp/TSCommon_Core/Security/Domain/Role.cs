@@ -4,7 +4,7 @@ using System.Text;
 using System.Collections;
 using Lib;
 
-namespace TSCommon_Core.Security.Domain
+namespace TSCommon.Core.Security.Domain
 {
     public enum RoleStatuses { Enable = 0, Disable = 1, Add = 2, Modified = 4, Delete = 8 };
 

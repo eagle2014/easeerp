@@ -7,24 +7,24 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using TSLibWeb.Struts;
-using TSCommon_Core.Organize.Service;
-using TSCommon_Core.Security.Service;
+using TSCommon.Core.Organize.Service;
+using TSCommon.Core.Security.Service;
 using log4net;
 using TSLibStruts;
 using TSLib.Utils;
 using TSLibWeb.Utils;
 using System.Collections;
 using TSLib;
-using TSCommon_Core.SystemPolicy;
+using TSCommon.Core.SystemPolicy;
 using System.Text;
-using TSCommon_Core.TSWebContext;
+using TSCommon.Core.TSWebContext;
 using Newtonsoft.Json;
 using TSLibWeb.Json;
-using TSCommon_Core.Security.Domain;
+using TSCommon.Core.Security.Domain;
 
-namespace TSCommon_Web.Organize.action
+namespace TSCommon.Web.Organize.action
 {
     public class GroupAction : StrutsEntityAction<Group>
     {

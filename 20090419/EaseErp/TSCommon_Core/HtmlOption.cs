@@ -4,7 +4,7 @@ using System.Text;
 using TSLibWeb;
 using System.Collections;
 
-namespace TSCommon_Core
+namespace TSCommon.Core
 {
     /// <summary>
     /// 为select提供选择项

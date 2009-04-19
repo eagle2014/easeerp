@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TSCommon_Core.Organize.Dao;
+using TSCommon.Core.Organize.Dao;
 using TSLib.Service;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using System.Collections;
 using TS.Exceptions;
 
-namespace TSCommon_Core.Organize.Service
+namespace TSCommon.Core.Organize.Service
 {
     public class JobTitleService : BaseService<JobTitle>, IJobTitleService
     {

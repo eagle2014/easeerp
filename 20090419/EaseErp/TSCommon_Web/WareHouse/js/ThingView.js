@@ -65,8 +65,7 @@ var thisPage = {
 	 	    reader: {root: 'rows',totalProperty: 'totalCount',id: 'ID'},
 	 	    cm:[
 	 		    {id: "Name",text: "名称", width: 50 },
-	 		    {id: "Code",text: "代码", render: renderHref},
-	 		    {id: "WHUnit.Name",text: "单位"}
+	 		    {id: "Code",text: "代码", render: renderHref}
 	 	    ],
 	 	    idColumn: {type:"int",viewType:"checkbox"},
 	 	    defaultSort:{name: 'Code',direction: 'asc'},

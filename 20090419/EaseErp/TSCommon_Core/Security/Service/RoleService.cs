@@ -9,16 +9,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Service;
-using TSCommon_Core.Security.Domain;
-using TSCommon_Core.Organize.Service;
-using TSCommon_Core.Security.Dao;
-using TSCommon_Core.Organize.Dao;
+using TSCommon.Core.Security.Domain;
+using TSCommon.Core.Organize.Service;
+using TSCommon.Core.Security.Dao;
+using TSCommon.Core.Organize.Dao;
 using System.Collections;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using TS.Exceptions;
 using TSLib.Utils;
 
-namespace TSCommon_Core.Security.Service
+namespace TSCommon.Core.Security.Service
 {
     /// <summary>
     /// 角色Service的实现
