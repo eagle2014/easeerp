@@ -1,0 +1,2360 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TSLib</name>
+    </assembly>
+    <members>
+        <member name="T:TSLib.ImportData.IImportDataBase">
+            <summary>
+            导入数据接口
+            </summary>
+        </member>
+        <member name="T:TSLib.PageInfo">
+            <summary>
+            分页对象.包含数据及分页信息.
+            </summary>
+            <author>Dragon</author>
+            <date>2006-10-15</date>
+        </member>
+        <member name="M:TSLib.PageInfo.#ctor">
+            <summary>构造方法，只构造空页</summary>
+        </member>
+        <member name="M:TSLib.PageInfo.#ctor(System.Int32,System.Int32,System.Int32,System.Collections.IList)">
+            <summary>
+            默认构造方法
+            </summary>
+            <param name="start">本页数据在数据库中的起始位置</param>
+            <param name="totalCount">数据库中总记录条数</param>
+            <param name="pageSize">本页容量</param>
+            <param name="objs">本页包含的对象集</param>
+        </member>
+        <member name="F:TSLib.PageInfo.pageSize">
+            <summary>每页的记录数</summary>
+        </member>
+        <member name="F:TSLib.PageInfo.start">
+            <summary>当前页第一条数据在数据库中的位置,从0开始</summary>
+        </member>
+        <member name="F:TSLib.PageInfo.objs">
+            <summary>当前页中存放的对象集</summary>
+        </member>
+        <member name="F:TSLib.PageInfo.totalCount">
+            <summary>总记录数</summary>
+        </member>
+        <member name="M:TSLib.PageInfo.CalculateStartOfPage(System.Int32)">
+            <summary>
+            获取任一页第一条数据在数据库的位置,起始位置从0开始,每页条数使用默认值
+            </summary>
+            <param name="pageNo">页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.PageInfo.CalculateStartOfPage(System.Int32,System.Int32)">
+            <summary>
+            获取任一页第一条数据在数据库的位置,起始位置从0开始,每页条数使用默认值
+            </summary>
+            <param name="pageNo">页码</param>
+            <param name="pageSize">每页的记录数</param>
+            <returns></returns>
+        </member>
+        <member name="P:TSLib.PageInfo.DefaultPageSize">
+            <summary>
+            视图中每页显示的默认条目数,为资源文件中键“PAGESIZE.DEFAULT”的值
+            </summary>
+        </member>
+        <member name="P:TSLib.PageInfo.MaxMainPageSize">
+            <summary>
+            首页中显示的最新条目数,为资源文件中键“PAGESIZE.MAXMAIN”的值
+            </summary>
+        </member>
+        <member name="P:TSLib.PageInfo.PageSize">
+            <summary>每页的记录数</summary>
+        </member>
+        <member name="P:TSLib.PageInfo.Objs">
+            <summary>当前页中存放的对象集</summary>
+        </member>
+        <member name="P:TSLib.PageInfo.TotalCount">
+            <summary>总记录数</summary>
+        </member>
+        <member name="P:TSLib.PageInfo.TotalPageCount">
+            <summary>总页数</summary>
+        </member>
+        <member name="P:TSLib.PageInfo.CurrentPageNo">
+            <summary>当前页码,页码从1开始</summary>
+        </member>
+        <member name="P:TSLib.PageInfo.HasNextPage">
+            <summary>是否有下一页</summary>
+        </member>
+        <member name="P:TSLib.PageInfo.HasPreviousPage">
+            <summary>是否有上一页</summary>
+        </member>
+        <member name="T:Lib.IEntry">
+            <summary>
+            数据库入口的接口
+            </summary>
+            <author>Dragon</author>
+            <date>2006-10-15</date>
+        </member>
+        <member name="P:Lib.IEntry.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Lib.IEntry.Unid">
+            <summary>
+            对象的Unid
+            </summary>
+        </member>
+        <member name="P:Lib.IEntry.IsNew">
+            <summary>
+            判断对象的主键是否已被分配
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.TypeUtils">
+            <summary>
+            类型工具
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.TypeUtils.IsEasyType(System.Type)">
+            <summary>
+            判断指定的类型是否是简单类型
+            </summary>
+            <remarks>
+            简单类型是指值类型(int,long,...,bool,DateTime,DateTime?,...)和string类型
+            </remarks>
+            <param name="type">要判断的类型</param>
+            <returns>是简单类型则返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSLib.Utils.TypeUtils.CreateInstance(System.String)">
+            <summary>
+            获取指定名称的类型的实例
+            </summary>
+            <param name="typeName">类型的名称(格式：类型的全名,类型所在程序集的名称)</param>
+            <returns>类型的实例,如果不存在该类型则返回null</returns>
+        </member>
+        <member name="M:TSLib.Utils.TypeUtils.CreateInstance(System.Type)">
+            <summary>
+            获取指定类型的实例
+            </summary>
+            <param name="type">类型</param>
+            <returns>类型的实例,如果不存在该类型则返回null</returns>
+        </member>
+        <member name="T:TSLib.Utils.Priority">
+            <summary>
+            系统优先级的定义
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.Impact">
+            <summary>
+            系统影响程度的定义
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.Urgency">
+            <summary>
+            系统紧急程度的定义
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.Constants">
+            <summary>
+            常量信息定义
+            </summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.YESNO_YES">
+            <summary>字符串"Y"</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.YESNO_NO">
+            <summary>字符串"N"</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.YESNO_YES_CN">
+            <summary>字符串"是"</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.YESNO_NO_CN">
+            <summary>字符串"否"</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.YESNO_CN">
+            <summary>布尔类型的中文值数组</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.BLANK_LONG_VALUE">
+            <summary>long值-1</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.BLANK_INT_VALUE">
+            <summary>int值-1</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.BLANK_STRING_VALUE">
+            <summary>字符串"-1"</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.ITEM_SEPARATOR">
+            <summary>
+            条目分隔符
+            </summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.VALUE_SEPARATOR">
+            <summary>
+            值分隔符
+            </summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.OT_ALL">
+            <summary>所有单位结构信息，值为0</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.OT_LOCALANDCHILD">
+            <summary>本级单位组织结构信息，值为1</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.OT_LOCAL">
+            <summary>本单位组织结构信息，值为2</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.ADMIN_ALL">
+            <summary>所有单位系统管理权限</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.ADMIN_LOCALANDCHILD">
+            <summary>本级单位系统管理权限</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.ADMIN_LOCAL">
+            <summary>本单位系统管理权限</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.DP_ALL">
+            <summary>所有单位数据查看权限</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.DP_LOCALANDCHILD">
+            <summary>本级单位数据查看权限</summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.DP_LOCAL">
+            <summary>本单位数据查看权限</summary>
+        </member>
+        <member name="M:TSLib.Utils.Constants.GetPriorityCN(System.Int32)">
+            <summary>
+            获得优先级的描述
+            </summary>
+            <param name="priority">优先级的代码</param>
+            <returns>如果优先级的代码正确，则返回该代码所表示意义，否则返回空值</returns>
+        </member>
+        <member name="M:TSLib.Utils.Constants.GetImpactCN(System.Int32)">
+            <summary>
+            获得影响程度的描述
+            </summary>
+            <param name="impact">影响程度的代码</param>
+            <returns>如果影响程度的代码正确，则返回该代码所表示意义，否则返回空值</returns>
+        </member>
+        <member name="M:TSLib.Utils.Constants.GetUrgencyCN(System.Int32)">
+            <summary>
+            获得紧急程度的描述
+            </summary>
+            <param name="urgency">紧急程度的代码</param>
+            <returns>如果紧急程度的代码正确，则返回该代码所表示意义，否则返回空值</returns>
+        </member>
+        <member name="M:TSLib.Utils.Constants.GetPriorityOptions">
+            <summary>
+            获取优先级的可选项数组
+            </summary>
+            <returns>返回优先级可选项数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.Constants.GetImpactOptions">
+            <summary>
+            获取影响程度的可选项数组
+            </summary>
+            <returns>返回影响程度可选项数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.Constants.GetUrgencyOptions">
+            <summary>
+            获取紧急程度的可选项数组
+            </summary>
+            <returns>返回紧急程度可选项数组</returns>
+        </member>
+        <member name="F:TSLib.Utils.Constants.DataTimeFormater">
+            <summary>
+            通用的日期时间的格式化字符串，值为yyyy-MM-dd hh:mm:ss
+            </summary>
+        </member>
+        <member name="F:TSLib.Utils.Constants.DataFormater">
+            <summary>
+            通用的日期格式化字符串，值为yyyy-MM-dd
+            </summary>
+        </member>
+        <member name="T:TSLib.Events.BaseEventService`1">
+            <summary>
+            事件Service基类
+            </summary>
+            <typeparam name="T">类型</typeparam>
+        </member>
+        <member name="T:TSLib.Service.IBaseService`1">
+            <summary>
+            基本Service接口
+            </summary>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Load(System.Int64)">
+            <summary>
+            获取给定主键的对象
+            </summary>
+            <param name="id">主键</param>
+            <returns>给定主键的对象，如果找不到则返回null</returns>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Load(System.String)">
+            <summary>
+            获取给定unid的对象
+            </summary>
+            <param name="unid">unid</param>
+            <returns>给定unid的对象，如果找不到则返回null</returns>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Save(`0)">
+            <summary>
+            保存指定的对象
+            </summary>
+            <param name="obj">所要保存的对象</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Save(System.Collections.IList)">
+            <summary>
+            保存对象集
+            </summary>
+            <param name="objs">要保存的对象集</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Delete(`0)">
+            <summary>
+            删除对象
+            </summary>
+            <param name="obj">要删除的对象</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Delete(System.Int64)">
+            <summary>
+            删除指定主键的对象
+            </summary>
+            <param name="id">要删除的对象的主键</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Delete(System.Int64[])">
+            <summary>
+            删除指定主键的对象
+            </summary>
+            <param name="ids">要删除的对象的主键的数组</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Delete(System.String)">
+            <summary>
+            删除指定unid的对象
+            </summary>
+            <param name="unid">要删除的对象的unid</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Delete(System.String[])">
+            <summary>
+            删除指定unid的对象
+            </summary>
+            <param name="unids">要删除的对象的unid的数组</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.Delete(System.Collections.IList)">
+            <summary>
+            删除的对象集
+            </summary>
+            <param name="objs">要删除的对象集</param>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.DeleteAll">
+            <summary>
+            删除所有对象
+            </summary>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.FindAll">
+            <summary>
+            获取所有对象
+            </summary>
+            <returns>所有对象的集合,如果找不到则返回空的集合</returns>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.GetPage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.GetPage(System.Int32,System.Int32,System.String[],System.String[])">
+            <summary>
+            获取指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortFields">要排序的属性名列表</param>
+            <param name="sortDirs">排序方向值的列表</param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.GetPage(System.Int32,System.Int32,System.String,System.String,System.Collections.IList)">
+            <summary>
+            获取待过滤条件的指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <param name="filters">
+            查询条件列表，元素为
+            <seealso cref="!:Egrand.Util.FilterParameter">FilterParameter</seealso>
+            </param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.GetPage(System.Int32,System.Int32,System.String[],System.String[],System.Collections.IList)">
+            <summary>
+            获取待过滤条件的指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortFields">要排序的属性名列表</param>
+            <param name="sortDirs">排序方向值的列表</param>
+            <param name="filters">
+            查询条件列表，元素为
+            <seealso cref="!:Egrand.Util.FilterParameter">FilterParameter</seealso>
+            </param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Service.IBaseService`1.IsUnique(`0,System.String[])">
+            <summary>
+            判断对象某些属性的值在数据库中是否唯一
+            </summary>
+            <param name="entity">要判断的对象</param>
+            <param name="propertyNames">不能重复的属性的名称数组</param>
+            <returns>对象某些属性的值在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="P:TSLib.Service.BaseService`1.BaseDao">
+            <summary>
+            设置BaseDao
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.StringUtils">
+            <summary>
+            字符串操作常用方法
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.Capitalize(System.String)">
+            <summary>
+             将首字母转为大写
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.Uncapitalize(System.String)">
+            <summary>
+            将首字母转为小写
+            </summary>
+            <param name="value">要转换的字符串</param>
+            <returns>首字母转为小写后的字符串</returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.Split(System.String,System.String)">
+            <summary>
+            将指定的字符串用指定的分隔符进行分隔
+            </summary>
+            <param name="source">源字符串</param>
+            <param name="delimiter">分隔符</param>
+            <returns>将源字符串按分隔符分隔后的字符串数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.Combine(System.String[],System.String)">
+            <summary>
+            用指定的连接符连接数组中的所有字符串
+            </summary>
+            <param name="source">字符串数组</param>
+            <param name="delimiter">连接符</param>
+            <returns>合并后的字符串</returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.Combine2(System.String[],System.String)">
+            <summary>
+            用指定的连接符连接数组中的所有字符串(连接后的字符串前后均会添加对应的连接符)
+            </summary>
+            <param name="arrayStrings">字符串数组</param>
+            <param name="connector">连接符</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.GetOneIndex(System.String)">
+            <summary>
+            获得字符串的首字母
+            </summary>
+            <param name="OneIndexTxt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.GetX(System.Int32)">
+            <summary>
+            根据区位得到首字母
+            </summary>
+            <param name="GBCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.CompareStrGetNoSame(System.String,System.String,System.String)">
+            <summary>
+            返回两个字符串用分隔符分开后，不相同部分
+            </summary>
+            <param name="str">字符串</param>
+            <param name="oStr">字符串</param>
+            <param name="splitStr">分隔符</param>
+            <returns>用分隔符隔开的字符串</returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.StringArray2IntArray(System.String[])">
+            <summary>
+            将字符串数组转换成int数组
+            </summary>
+            <param name="sArray">要转换的字符串数组</param>
+            <returns>int数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.StringArray2LongArray(System.String[])">
+            <summary>
+            将字符串数组转换成long数组
+            </summary>
+            <param name="sArray">要转换的字符串数组</param>
+            <returns>long数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.StringArray2BoolArray(System.String[])">
+            <summary>
+            将字符串数组转换成bool数组
+            </summary>
+            <param name="sArray">要转换的字符串数组</param>
+            <returns>bool数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.StringUtils.ObjectToStringArray(System.Object[])">
+            <summary>
+            将包含字符串的集合转换为字符串数组
+            </summary>
+            <param name="source">包含字符串的集合</param>
+            <returns>字符串数组,若集合为null返回null,集合为空则返回长度为0的字符串数组</returns>
+        </member>
+        <member name="T:TSLib.Utils.ObjectUtils">
+            <summary>
+            操作bean的类
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.IsEmpty(System.Object)">
+            <summary>
+            判断是否为空
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.IsEmpty(System.String)">
+            <summary>
+            判断是否为空
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.CreateInstance(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="typeName"></param>
+            <param name="assemblyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.CreateInstance(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fullTypeName">fotmat type name , assembly name</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetDeclaredField(System.Object,System.String)">
+            <summary>
+            循环向上转型,获取对象的Field.
+            </summary>
+            <param name="bean"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetDeclaredField(System.Type,System.String)">
+            <summary>
+            循环向上转型,获取对象的Field.
+            </summary>
+            <param name="type"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetDeclaredField(System.Type,System.String,System.Type)">
+            <summary>
+            循环向上转型,获取对象的Field.
+            </summary>
+            <param name="type"></param>
+            <param name="fieldName"></param>
+            <param name="originalType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetProperty(System.Object,System.String)">
+            <summary>
+            循环向上转型,获取对象的Property.
+            </summary>
+            <param name="bean"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetProperty(System.Type,System.String)">
+            <summary>
+            循环向上转型,获取对象的Property.
+            </summary>
+            <param name="type"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetProperty(System.Type,System.String,System.Type)">
+            <summary>
+            循环向上转型,获取对象的Property.
+            </summary>
+            <param name="type"></param>
+            <param name="propertyName"></param>
+            <param name="originalType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.ForceGetProperty(System.Object,System.String)">
+            <summary>
+            暴力获取对象变量值,忽略private,protected修饰符的限制.如果没有该Field时抛出.
+            </summary>
+            <param name="bean"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.ForceSetProperty(System.Object,System.String,System.Object)">
+            <summary>
+            暴力设置对象变量值,忽略private,protected修饰符的限制.如果没有该Field时抛出.
+            </summary>
+            <param name="bean"></param>
+            <param name="propertyName"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.InvokePrivateMethod(System.Object,System.String,System.Object[])">
+            <summary>
+            暴力调用对象函数,忽略private,protected修饰符的限制. 如果没有该Method时抛出
+            </summary>
+            <param name="bean"></param>
+            <param name="methodName"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetFieldsByType(System.Object,System.Type)">
+            <summary>
+            按Filed的类型取得Field列表.
+            </summary>
+            <param name="bean"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.GetFieldType(System.Type,System.String)">
+            <summary>
+            按FiledName获得Field的类型
+            </summary>
+            <param name="type"></param>
+            <param name="name">FiledName</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ObjectUtils.CopyProperties(System.Object,System.Object)">
+            <summary>
+            对象属性互拷,将源对象中的属性值复制到目标对象对应的属性
+            </summary>
+            <param name="desc">目标对象</param>
+            <param name="orig">源对象</param>
+        </member>
+        <member name="T:TSLib.Utils.FileUtils">
+            <summary>
+            文件帮助类
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.GetAbsolutePathName(System.String)">
+            <summary>
+            将指定文件名转换为包含应用程序绝对路径的文件名
+            </summary>
+            <param name="pFileName">要处理的文件名</param>
+            <returns>包含应用程序绝对路径的文件名</returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.IsExistsFile(System.String)">
+            <summary>
+            判断文件是否存在
+            </summary>
+            <param name="pFilePath">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.IsExistsDirectory(System.String)">
+            <summary>
+            判断目录是否存在
+            </summary>
+            <param name="pDirectoryPath">目录路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.IsDirectoryExistsAndCreate(System.String)">
+            <summary>
+            判断目录是否存在,不存在则创建
+            </summary>
+            <param name="pDirectoryPath">目录路径</param>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.IsDirectoryEmpty(System.String)">
+            <summary>
+            判断目录是否为空
+            </summary>
+            <param name="pDirectoryPath"></param>
+            <returns>如果目录为空返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.FormatePath(System.String)">
+            <summary>
+            格式化路径，如果路径没有以"\"结束，则加上"\"
+            </summary>
+            <param name="p_strPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.GetDirectory(System.String)">
+            <summary>
+            返回目录路径，如果不存在在创建
+            </summary>
+            <param name="p_strDirectory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.SplitPath(System.String)">
+            <summary>
+            分解文件路径
+            </summary>
+            <param name="p_strFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.SplitPathName(System.String)">
+            <summary>
+            分解文件名
+            </summary>
+            <param name="p_strFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.DeleteFile(System.String)">
+            <summary>
+            删除指定文件
+            </summary>
+            <param name="p_strFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.DeleteEmptyDirectory(System.String)">
+            <summary>
+            删除空目录，非空目录不删除
+            </summary>
+            <param name="p_strDirectory"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.DeleteDirectory(System.String,System.Boolean)">
+            <summary>
+            删除目录，p_bRecursive决定是否删除下面的子目录(递归删除)
+            </summary>
+            <param name="p_strDirectory"></param>
+            <param name="p_bRecursive"></param>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.CopyDirectory(System.String,System.String,System.Boolean)">
+            <summary>
+            目录拷贝
+            </summary>
+            <param name="p_strSource">源目录(绝对路径)</param>
+            <param name="p_strTarget">目标目录(绝对路径)</param>
+            <param name="p_bOverWrite">是否复盖源文件</param>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.SplitExtend(System.String)">
+            <summary>
+            获得文件扩展名
+            </summary>
+            <param name="m_strFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.FindFileInfos(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定目录下的所有匹配文件(可控制是否包括所有子目录下的文件)，列表中的文件已按文件名的升序顺序排列好
+            </summary>
+            <param name="rootDir">根目录名</param>
+            <param name="searchPattern">搜索字符串（如“SimpleResources*.xml”）</param>
+            <param name="includeChildDir">是否包括所有子目录下的文件</param>
+            <returns>
+            指定目录下与给定的 searchPattern 匹配的资源文件列表,
+            列表已按按文件名的升序顺序排列好
+            </returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.FindFileInfos(System.IO.DirectoryInfo,System.String,System.Boolean)">
+            <summary>
+            获取指定目录下的所有匹配文件(可控制是否包括所有子目录下的文件)
+            </summary>
+            <param name="rootDir">根目录名</param>
+            <param name="searchPattern">搜索字符串（如“*.txt”）。</param>
+            <param name="includeChildDir">是否包括所有子目录下的文件</param>
+            <returns>文件列表</returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.FindAllMatchFileInfos(System.String)">
+            <summary>
+            获取匹配指定路径文件名的所有文件（不包括文件所在路径的子目录下的文件，列表中的文件已按文件名的升序顺序排列好）
+            </summary>
+            <param name="filePathName">带路径的文件名</param>
+            <returns>匹配指定路径文件名的所有文件</returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.FindAllMatchFileInfos(System.String,System.Boolean)">
+            <summary>
+            获取匹配指定路径文件名的所有文件（列表中的文件已按文件名的升序顺序排列好）
+            </summary>
+            <param name="filePathName">带路径的文件名</param>
+            <param name="includeChildDir">是否包括所有子目录下的文件</param>
+            <returns>匹配指定路径文件名的所有文件</returns>
+        </member>
+        <member name="M:TSLib.Utils.FileUtils.LoadFileContent(System.String,System.Text.Encoding)">
+            <summary>
+            获取文件的内容
+            </summary>
+            <param name="file">文件全名</param>
+            <param name="encoding">编码</param>
+            <returns>文件的内容</returns>
+        </member>
+        <member name="T:TSLib.Utils.TextHelper">
+            <summary>
+            文本文件工具类
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.TextHelper.ReadTextByReadLine(System.String)">
+            <summary>
+            以行为最小单位读取文本文件(行内容发＃开头的行会认为是注释)
+            </summary>
+            <param name="pFilePath">文件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.TextHelper.AddMarkToTextFile(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            向文本文件添加头标记
+            </summary>
+            <param name="pFilePath">文本文件路径</param>
+            <param name="pMark">标记集合</param>
+        </member>
+        <member name="T:TSLib.Utils.Properties">
+            <summary>
+            使用属性文件实现的有序IDictionary(根据键/索引排序的键/值对的集合)
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.IProperties">
+            <summary>
+            使用属性文件实现的有序IDictionary(根据键/索引排序的键/值对的集合),
+            属性文件内的键和值之间可以使用" "、"="、":"中的任意一个进行分隔.
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.IProperties.Load(System.IO.Stream)">
+            <summary>
+            加载属性文件
+            </summary>
+            <param name="inputStream">属性文件的文件流对象</param>
+        </member>
+        <member name="M:TSLib.Utils.IProperties.Load(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            加载属性文件
+            </summary>
+            <param name="inputStream">属性文件的文件流对象</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:TSLib.Utils.IProperties.Load(System.String)">
+            <summary>
+            加载属性文件
+            </summary>
+            <param name="inputFile">属性文件的文件名</param>
+        </member>
+        <member name="M:TSLib.Utils.IProperties.Load(System.String,System.String)">
+            <summary>
+             加载属性文件
+            </summary>
+            <param name="inputFile">属性文件的文件名</param>
+            <param name="encodeingName">字符编码的名称</param>
+        </member>
+        <member name="F:TSLib.Utils.Properties.splitSymbols">
+            <summary>
+            键和值的分隔符
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.Properties.Load(System.IO.Stream)">
+            <summary>
+            加载属性文件
+            </summary>
+            <param name="inputStream">属性文件的文件流对象</param>
+        </member>
+        <member name="M:TSLib.Utils.Properties.Load(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            加载属性文件
+            </summary>
+            <param name="inputStream">属性文件的文件流对象</param>
+            <param name="encoding">字符编码</param>
+        </member>
+        <member name="M:TSLib.Utils.Properties.Load(System.String)">
+            <see cref="!:Egrand.Util.IProperties.Load(string)"/>
+        </member>
+        <member name="M:TSLib.Utils.Properties.Load(System.String,System.String)">
+            <summary>
+            加载属性文件
+            </summary>
+            <param name="inputFile">属性文件的文件名</param>
+            <param name="encodingName">字符编码的名称(UTF-7,UTF-8,UTF-16,UTF-32,ASCII,)</param>
+        </member>
+        <member name="T:TSLib.Utils.ConfigurationUtils">
+            <summary>
+            配置文件帮助类
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.ConfigurationUtils.GetAddPartString(System.String)">
+            <summary>
+            获取配置文件ADD节KEY为pAddString的值
+            </summary>
+            <param name="pAddString">KEY</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ConfigurationUtils.GetConnectionString(System.String)">
+            <summary>
+            获取配置文件ADD节KEY为pConnectionString的值
+            </summary>
+            <param name="pConnectionString">KEY</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.ConfigurationUtils.GetConnection(System.String)">
+            <summary>
+            获取配置文件ADD节KEY为pConnectionString的值
+            </summary>
+            <param name="pConnectionString">KEY</param>
+            <returns></returns>
+        </member>
+        <member name="T:TS.Exceptions.AuthorizeException">
+            <summary>
+            用户验证异常
+            <author>CD826</author>
+            </summary>
+        </member>
+        <member name="M:TS.Exceptions.AuthorizeException.#ctor">
+            <summary>
+            默认构造函数定义
+            </summary>
+        </member>
+        <member name="T:TSLib.HtmlOption">
+            <summary>
+            该类为Form类中的select等提供了选择条目的基本信息
+            </summary>
+        </member>
+        <member name="M:TSLib.HtmlOption.#ctor">
+            <summary>
+            默认构造函数
+            </summary>        
+        </member>
+        <member name="M:TSLib.HtmlOption.#ctor(System.String,System.String)">
+            <summary>
+            根据参数中的信息构造一个HtmlOption
+            </summary>
+            <param name="name">option的name信息</param>
+            <param name="value">option的value信息</param>
+        </member>
+        <member name="M:TSLib.HtmlOption.GetBlankHtmlOption">
+            <summary>
+            产生一个长度为1的空白HtmlOption[] 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.StringArray2HtmlOptions(System.String[])">
+            <summary>
+            从字符串数组转换为HtmlOption数组 
+            </summary>
+            <param name="sourceValues">字符串数组</param>
+            <returns>返回生成好的HtmlOption数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.StringArray2HtmlOptions(System.String[],System.Boolean)">
+            <summary>
+            从字符串数组转换为HtmlOption数组 
+            </summary>
+            <param name="sourceValues">字符串数组</param>
+            <param name="isAddBlank">是否添加一个空白值</param>
+            <returns>返回生成好的HtmlOption数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.List2HtmlOptions(System.Collections.IList)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.List2HtmlOptions(System.Collections.IList,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.List2HtmlOptions(System.Collections.IList,System.String)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <param name="preString">Option Value值的前缀</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.List2HtmlOptions(System.Collections.IList,System.String,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <param name="preString">Option Value值的前缀</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList,System.String)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <param name="preString">Option Value值的前缀</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSLib.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList,System.String,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <param name="preString">Option Value值的前缀</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="T:TS.Exceptions.ResourceException">
+            <summary>
+            通用资源异常
+            </summary>
+            <author>dragon</author>
+            <date>2007-10-19</date>
+            <version>2.0.0</version>
+        </member>
+        <member name="M:TS.Exceptions.ResourceException.#ctor(System.String)">
+            <summary>
+            根据指定的资源构造一个异常
+            </summary>
+            <param name="resourceKey">资源键值</param>
+        </member>
+        <member name="M:TS.Exceptions.ResourceException.#ctor(System.String,System.String)">
+            <summary>
+            根据指定的资源构造一个异常
+            </summary>
+            <param name="resourceKey">资源键值</param>
+            <param name="arg">格式化参数</param>
+        </member>
+        <member name="M:TS.Exceptions.ResourceException.#ctor(System.String,System.String[])">
+            <summary>
+            根据指定的资源构造一个异常
+            </summary>
+            <param name="resourceKey">资源键值</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:TS.Exceptions.ResourceException.#ctor(System.String,System.Exception)">
+            <summary>
+            根据指定资源构造一个异常
+            </summary>
+            <param name="resourceKey">资源键值</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:TS.Exceptions.ResourceException.#ctor(System.String,System.String[],System.Exception)">
+            <summary>
+            根据指定资源构造一个异常
+            </summary>
+            <param name="resourceKey">资源键值</param>
+            <param name="args">格式化参数</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="P:TS.Exceptions.ResourceException.ResourceKey">
+            <summary>
+            异常对应的资源键值
+            </summary>
+        </member>
+        <member name="P:TS.Exceptions.ResourceException.Args">
+            <summary>
+            资源的格式化参数
+            </summary>
+        </member>
+        <member name="P:TS.Exceptions.ResourceException.Message">
+            <summary>
+            异常的描述信息
+            </summary>
+        </member>
+        <member name="T:TSLib.Events.EventListenerManager">
+            <summary>
+            事件订阅管理器
+            </summary>
+        </member>
+        <member name="T:TSLib.Events.IEventListener">
+            <summary>
+            为面向对象的事件订阅和取消提供统一的接口
+            </summary>
+        </member>
+        <member name="M:TSLib.Events.IEventListener.Subscribe">
+            <summary>
+            订阅事件
+            </summary>
+        </member>
+        <member name="M:TSLib.Events.IEventListener.UnSubscribe">
+            <summary>
+            取消订阅事件
+            </summary>
+        </member>
+        <member name="P:TSLib.Events.EventListenerManager.Listeners">
+            <summary>
+            事件订阅者列表
+            </summary>
+        </member>
+        <member name="P:TSLib.Events.EventListenerManager.Managers">
+            <summary>
+            级联的事件订阅管理列表
+            </summary>
+        </member>
+        <member name="T:TS.Exceptions.EgrandException">
+            <summary>
+            系统异常的通用定义
+            </summary>
+        </member>
+        <member name="F:TS.Exceptions.EgrandException.messageId">
+            <summary>
+            异常对应的提示信息id,从外部读取
+            </summary>
+        </member>
+        <member name="M:TS.Exceptions.EgrandException.#ctor">
+            <summary>
+            默认构造函数定义
+            </summary>
+        </member>
+        <member name="M:TS.Exceptions.EgrandException.#ctor(System.String)">
+            <summary>
+            根据指定的错误信息构造一个异常信息
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:TS.Exceptions.EgrandException.#ctor(System.String,System.String[])">
+            <summary>
+            根据指定的错误信息构造一个异常信息
+            </summary>
+            <param name="messageId">错误信息的标示号</param>
+            <param name="args">格式化参数</param>
+        </member>
+        <member name="M:TS.Exceptions.EgrandException.#ctor(System.Exception)">
+            <summary>
+            根据指定的异常信息构造一个异常信息
+            </summary>
+            <param name="innerException">内部异常信息</param>
+        </member>
+        <member name="M:TS.Exceptions.EgrandException.#ctor(System.String,System.Exception)">
+            <summary>
+            根据指定信息构造一个异常
+            </summary>
+            <param name="messageId">错误信息的标示号</param>
+            <param name="innerException">内部异常信息</param>
+        </member>
+        <member name="M:TS.Exceptions.EgrandException.InitSource(System.String,System.String)">
+            <summary>
+            定制用户的异常信息
+            </summary>
+            <param name="sourceTitle">异常提示信息的标题</param>
+            <param name="sourceInfo">异常提示信息的内容</param>
+        </member>
+        <member name="T:Lib.Entry">
+            <summary>
+            为需要持久化Domain类的基类
+            </summary>
+        </member>
+        <member name="F:Lib.Entry.EmptyId">
+            <summary>空的数据库主键值</summary>
+        </member>
+        <member name="F:Lib.Entry.EmptyStringId">
+            <summary>空的数据库主键值</summary>
+        </member>
+        <member name="M:Lib.Entry.Clone">
+            <summary>
+            创建当前对象的浅表副本
+            </summary>
+        </member>
+        <member name="M:Lib.Entry.IsEmptyId(System.Int64)">
+            <summary>
+            判断指定的主键值是否是空值
+            </summary>
+            <param name="id">要判断的主键值</param>
+            <returns>如果主键值为空的主键值，返回true，否则返回false</returns>
+        </member>
+        <member name="M:Lib.Entry.EmptyStringToNull(System.String)">
+            <summary>
+            将空字符串转换为null值的函数(主要用于兼容oracle数据库)
+            </summary>
+            <returns>如果输入的字符串为空字符串，则返回null，否则返回与原字符串相同的字符串</returns>
+        </member>
+        <member name="P:Lib.Entry.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Lib.Entry.Unid">
+            <summary>
+            对象的Unid
+            </summary>
+        </member>
+        <member name="P:Lib.Entry.IsNew">
+            <summary>
+            判断对象的主键是否已被分配
+            </summary>
+        </member>
+        <member name="P:Lib.Entry.UnidLen">
+            <summary>
+            获取系统生成的Unid的长度
+            </summary>
+            <returns>如果输入的字符串为空字符串，则返回null，否则返回与原字符串相同的字符串</returns>
+        </member>
+        <member name="P:Lib.Entry.NewUnid">
+            <summary>
+            获取一个新的Unid
+            </summary>
+            <returns>系统自动生成的Unid</returns>
+        </member>
+        <member name="T:TS.Exceptions.MsgException">
+            <summary>
+            通用消息异常
+            </summary>
+            <author>dragon</author>
+            <date>2007-10-19</date>
+            <version>2.0.0</version>
+        </member>
+        <member name="M:TS.Exceptions.MsgException.#ctor">
+            <summary>
+            默认构造函数定义
+            </summary>
+        </member>
+        <member name="M:TS.Exceptions.MsgException.#ctor(System.String)">
+            <summary>
+            根据指定的信息构造一个异常信息
+            </summary>
+            <param name="message">信息</param>
+        </member>
+        <member name="M:TS.Exceptions.MsgException.#ctor(System.String,System.Exception)">
+            <summary>
+            根据指定的异常信息构造一个异常信息
+            </summary>
+            <param name="message">信息</param>
+            <param name="innerException">内部异常信息</param>
+        </member>
+        <member name="T:TSLib.Session.LocalSessionFactory">
+            <summary>
+            本地NHibernate SessionFactory的Spring封装
+            </summary>
+            <author>dragon</author>
+            <date>2006-11-28</date>
+            <remarks>
+            可使用加密的Hibernate属性配置文件,同时可以指定hibernate的相关明文属性,
+            如果指定的相关明文属性与加密属性文件中的属性相同,则以明文属性为准,
+            映射文件通过指定目录进行加载
+            </remarks>
+        </member>
+        <member name="F:TSLib.Session.LocalSessionFactory.hibernateProperties">
+            <summary>
+            TODO: consider changing to NamevalueCollection for easier
+            cut-n-paste from existing App.config based configurations.
+            </summary>
+        </member>
+        <member name="M:TSLib.Session.LocalSessionFactory.Dispose">
+            <summary>
+            Close the SessionFactory on application context shutdown.
+            </summary>
+        </member>
+        <member name="P:TSLib.Session.LocalSessionFactory.MappingDirectories">
+            <summary>
+            Sets the directories to load that contain mapping files.
+            </summary>
+            <value>The mapping assemblies.</value>
+        </member>
+        <member name="P:TSLib.Session.LocalSessionFactory.Configuration">
+            <summary>
+            Return the Configuration object used to build the SessionFactory.
+            Allows access to configuration metadata stored there (rarely needed).
+            </summary>
+            <value>The hibernate configuration.</value>
+        </member>
+        <member name="P:TSLib.Session.LocalSessionFactory.HibernateProperties">
+            <summary>
+            Set NHibernate configuration properties, like "hibernate.dialect".
+            </summary>
+            <value>The hibernate properties.</value>
+            <remarks>
+            	<p>Can be used to override values in a NHibernate XML config file,
+            or to specify all necessary properties locally.
+            </p>
+            	<p>Note: Do not specify a transaction provider here when using
+            Spring-driven transactions. It is also advisable to omit connection
+            provider settings and use a Spring-set IDbProvider instead.
+            </p>
+            </remarks>
+        </member>
+        <member name="P:TSLib.Session.LocalHibernateProperties.HibernateProperties">
+            <summary>
+            获取属性配置文件内的属性集
+            </summary>
+        </member>
+        <member name="P:TSLib.Session.LocalHibernateProperties.PropertiesFile">
+            <summary>
+            属性配置文件
+            </summary>
+        </member>
+        <member name="T:TSLib.Events.BaseEventArgs`1">
+            <summary>
+            事件参数基类
+            </summary>
+            <typeparam name="T">实体</typeparam>
+        </member>
+        <member name="F:TSLib.Events.BaseEventArgs`1.t">
+            <summary>
+            事件参数的实体
+            </summary>
+        </member>
+        <member name="F:TSLib.Events.BaseEventArgs`1.dateTime">
+            <summary>
+            事件发生时间
+            </summary>
+        </member>
+        <member name="T:TSLib.Events.BaseEventHandler`1">
+            <summary>
+            事件基类委托
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="sender"></param>
+            <param name="t">实体</param>
+        </member>
+        <member name="T:TSLib.Events.SaveEventHandler`1">
+            <summary>
+            保存事件委托
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="sender"></param>
+            <param name="t">实体</param>
+        </member>
+        <member name="T:TSLib.Events.DeleteEventHandler`1">
+            <summary>
+            删除事件委托
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="sender"></param>
+            <param name="t">实体</param>
+        </member>
+        <member name="T:TSLib.DBUtils.HqlCreator">
+            <summary>
+            查询语句生成器
+            </summary>
+            <author>Dragon</author>
+            <date>2007-02-13</date>
+        </member>
+        <member name="F:TSLib.DBUtils.HqlCreator.DefaultAlias">
+            <summary>对象的默认查询别名</summary>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.GetInstance">
+            <summary>
+            获取hibernate查询语句生成器的单一实例
+            </summary>
+            <returns>hibernate查询语句生成器的单一实例</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.Create(System.Type)">
+            <summary>
+            创建指定类名的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.Create(System.Type,System.String)">
+            <summary>
+            创建绑定参数的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="paramName">要绑定的持久化对象的属性名</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.Create(System.Type,System.String,System.String)">
+            <summary>
+            创建绑定参数和排序属性的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="paramName">要绑定的持久化对象的属性名</param>
+            <param name="paramOrder">要进行排序的持久化对象的属性名</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.Create(System.Type,System.String,System.String,System.Boolean)">
+            <summary>
+            创建绑定参数和排序属性的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="paramName">要绑定的持久化对象的属性名</param>
+            <param name="paramOrder">要进行排序的持久化对象的属性名</param>
+            <param name="descendOrder">对应要进行排序的属性名对应的排序方向(true:降序,false/null:升序)</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.Create(System.Type,System.String[])">
+            <summary>
+            创建绑定参数的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="paramNames">要绑定的持久化对象的属性名的数组</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.Create(System.Type,System.String[],System.String[])">
+            <summary>
+            创建绑定参数和排序属性的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="paramNames">要绑定的持久化对象的属性名的数组</param>
+            <param name="paramOrders">要进行排序的持久化对象的属性名的数组</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.Create(System.Type,System.String[],System.String[],System.Boolean[])">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="paramNames">要绑定的持久化对象的属性名的数组</param>
+            <param name="paramOrders">要进行排序的持久化对象的属性名的数组</param>
+            <param name="descendOrders">对应要进行排序的属性名对应的排序方向(true:降序,false/null:升序)</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateWithSelect(System.Type,System.String[])">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="selectNames">要获取的域名称数组</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateWithSelect(System.Type,System.String[],System.String)">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="selectNames">要获取的域名称数组</param>
+            <param name="paramName">要绑定的持久化对象的属性名</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateWithSelect(System.Type,System.String[],System.String,System.String)">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="selectNames">要获取的域名称数组</param>
+            <param name="paramName">要绑定的持久化对象的属性名</param>
+            <param name="paramOrder">要进行排序的持久化对象的属性名</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateWithSelect(System.Type,System.String[],System.String,System.String,System.Boolean)">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="selectNames">要获取的域名称数组</param>
+            <param name="paramName">要绑定的持久化对象的属性名</param>
+            <param name="paramOrder">要进行排序的持久化对象的属性名</param>
+            <param name="descendOrder">对应要进行排序的属性名对应的排序方向(true:降序,false/null:升序)</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateWithSelect(System.Type,System.String[],System.String[])">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="selectNames">要获取的域名称数组</param>
+            <param name="paramNames">要绑定的持久化对象的属性名的数组</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateWithSelect(System.Type,System.String[],System.String[],System.String[])">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="selectNames">要获取的域名称数组</param>
+            <param name="paramNames">要绑定的持久化对象的属性名的数组</param>
+            <param name="paramOrders">要进行排序的持久化对象的属性名的数组</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateWithSelect(System.Type,System.String[],System.String[],System.String[],System.Boolean[])">
+            <summary>
+            创建绑定参数和排序方向的数据库查询字符串
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <param name="selectNames">要获取的域名称数组</param>
+            <param name="paramNames">要绑定的持久化对象的属性名的数组</param>
+            <param name="paramOrders">要进行排序的持久化对象的属性名的数组</param>
+            <param name="descendOrders">对应要进行排序的属性名对应的排序方向(true:降序,false/null:升序)</param>
+            <returns>hql查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.GetClassName(System.Type)">
+            <summary>
+            根据生成器的配置获取类的查询名
+            </summary>
+            <param name="type">持久化对象的类型</param>
+            <returns>类的查询名</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.RemoveSelect(System.String)">
+            <summary>
+            去除查询语句的select 子句,未考虑union的情况
+            </summary>
+            <param name="query">查询语句</param>
+            <returns>无select 子句的查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.RemoveOrders(System.String)">
+            <summary>
+            去除查询语句的order by 子句
+            </summary>
+            <param name="query">查询语句</param>
+            <returns>无sorder by 子句的查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateSumQuery(System.String,System.String)">
+            <summary>
+            获取统计求和的查询语句
+            </summary>
+            <param name="query">不包含统计子句的以from开头的查询语句</param>
+            <param name="sumName">持久化对象要求和的属性名(属性对应的映射类型必须为Integer)</param>
+            <returns>包含统计求和子句的查询语句</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.HqlCreator.CreateSumQuery(System.String,System.String[])">
+            <summary>
+            获取统计求和的查询语句
+            </summary>
+            <param name="query">不包含统计子句的以from开头的查询语句</param>
+            <param name="sumNames">持久化对象要求和的属性名的数组(这些属性对应的映射类型必须为Integer)</param>
+            <returns>包含统计求和子句的查询语句</returns>
+        </member>
+        <member name="P:TSLib.DBUtils.HqlCreator.Alias">
+            <summary>
+            获取或设置当前查询语句生成器所使用的别名
+            </summary>
+        </member>
+        <member name="P:TSLib.DBUtils.HqlCreator.UseFullClassName">
+            <summary>
+            获取或设置当前查询语句生成器创建查询语句时是否使用类的全名
+            </summary>
+        </member>
+        <member name="M:TSLib.Session.SessionFactoryHelper.CreateSessionFactory(System.String,System.String)">
+            <summary>
+            根据指定的属性配置文件及hbm文件路径创建ISessionFactory的新实例
+            </summary>
+            <param name="configFileName">属性配置文件名称</param>
+            <param name="hbmDirectoryName">包含hbm映射文件的路径名</param>
+            <returns>ISessionFactory的新实例</returns>
+        </member>
+        <member name="M:TSLib.Session.SessionFactoryHelper.CreateConfiguration(System.String,System.String)">
+            <summary>
+            根据指定的属性配置文件及hbm文件路径创建NHibernate.Cfg.Configuration的新实例
+            </summary>
+            <param name="configFileName">属性配置文件名称</param>
+            <param name="hbmDirectoryName">包含hbm映射文件的路径名</param>
+            <returns>NHibernate.Cfg.Configuration的新实例</returns>
+        </member>
+        <member name="M:TSLib.Session.SessionFactoryHelper.AddDirectoryHbmFile(NHibernate.Cfg.Configuration,System.IO.DirectoryInfo)">
+            <summary>
+            添加指定目录及其子目录下的所有*.hbm.xml文件到指定的NHibernate.Cfg.Configuration
+            </summary>
+            <param name="cfg">指定的NHibernate.Cfg.Configuration</param>
+            <param name="dir">指定的目录</param>
+        </member>
+        <member name="M:TSLib.Session.SessionFactoryHelper.GetSession(NHibernate.ISessionFactory)">
+            <summary>
+            根据指定的ISessionFactory返回ISession的实例
+            </summary>
+            <param name="sessionFactory">指定的ISessionFactory</param>
+            <returns>会话服务</returns>
+        </member>
+        <member name="M:TSLib.Session.SessionFactoryHelper.GetSession(NHibernate.ISessionFactory,System.Boolean)">
+            <summary>
+            根据指定的ISessionFactory返回ISession的实例
+            </summary>
+            <param name="sessionFactory">指定的ISessionFactory</param>
+            <param name="mustReturnNew">是否重建ISession的标记</param>
+            <returns>会话服务</returns>
+        </member>
+        <member name="M:TSLib.Session.SessionFactoryHelper.ReleaseSession(NHibernate.ISession)">
+            <summary>
+            释放指定的会话服务
+            </summary>
+            <param name="session">要释放的会话服务</param>
+        </member>
+        <member name="M:TSLib.Session.SessionFactoryHelper.DoClose(NHibernate.ISession)">
+            <summary>
+            关闭指定的会话服务
+            </summary>
+            <param name="session"></param>
+        </member>
+        <member name="T:TSLib.ImportData.ExecuteImportData">
+            <summary>
+            执行导入方法
+            </summary>
+        </member>
+        <member name="M:TSLib.ImportData.ExecuteImportData.#ctor(System.String)">
+            <summary>
+            导入文件列表
+            </summary>
+            <param name="pFileListFilePath"></param>
+        </member>
+        <member name="M:TSLib.ImportData.ExecuteImportData.Execute">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:TSLib.Events.IBaseEvents`1">
+            <summary>
+            事件接口基类
+            </summary>
+        </member>
+        <member name="E:TSLib.Events.IBaseEvents`1.EvSave">
+            <summary>
+            保存事件
+            </summary>
+        </member>
+        <member name="E:TSLib.Events.IBaseEvents`1.EvDelete">
+            <summary>
+            删除事件
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.TSUtils">
+            <summary>
+            通用辅助工具类
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.TSUtils.GetSafeInt(System.String,System.Int32)">
+            <summary>
+            整型的安全转换
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.TSUtils.GetSafeFloat(System.String,System.Single)">
+            <summary>
+            单精度浮点型的安全转换
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.TSUtils.GetSafeBool(System.String,System.Boolean)">
+            <summary>
+            Bool类型的安全转换
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.TSUtils.GetSafeDecimal(System.String,System.Decimal)">
+            <summary>
+            decimal的安全转换
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.TSUtils.GetSafeDouble(System.String,System.Double)">
+            <summary>
+            double的安全转换
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.TSUtils.GetSafeLong(System.String,System.Int64)">
+            <summary>
+            long的安全转换
+            </summary>
+            <param name="value"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.TSUtils.GetValue(System.String,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            根据Key获得指定NameValueCollection中的值，如果为空则返回默认值
+            </summary>
+            <param name="p_strKey">The P_STR key.</param>
+            <param name="p_parameters">The p_parameters.</param>
+            <param name="p_strDefaultValue">The P_STR default value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:TSLib.Utils.ListUtils">
+            <summary>
+            集合操作常用方法
+            <author>Dragon</author>
+            <date>2007-02-21</date>
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.ListToGenericList``1(System.Collections.IList)">
+            <summary>
+            将指定的IList转换为支持泛型的IList
+            </summary>
+            <param name="source">源IList</param>
+            <returns>支持泛型的IList</returns>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.GenericListToList``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            将指定的泛型IList转换为IList
+            </summary>
+            <param name="source">源泛型IList</param>
+            <returns>IList</returns>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.ListToStringArray(System.Collections.IList)">
+            <summary>
+            将包含字符串的集合转换为字符串数组
+            </summary>
+            <param name="source">包含字符串的集合</param>
+            <returns>字符串数组,若集合为null返回null,集合为空则返回长度为0的字符串数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.ListToStringArray(System.Collections.Generic.IList{System.String})">
+            <summary>
+            将包含字符串的集合转换为字符串数组
+            </summary>
+            <param name="source">包含字符串的集合</param>
+            <returns>字符串数组,若集合为null返回null,集合为空则返回长度为0的字符串数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.ListToObjectArray(System.Collections.IList)">
+            <summary>
+            将集合转换为对象数组
+            </summary>
+            <param name="source">集合</param>
+            <returns>对象数组,若集合为null返回null,集合为空则返回长度为0的字符串数组</returns>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.WeedList(System.Collections.IList,System.Collections.IList)">
+            <summary>
+            把指定的List中的内容剔除，注意参数中的两个List中的类型均需要相同，并且是从Entry中继承的
+            </summary>
+            <param name="sourceList">原List</param>
+            <param name="memberList">所要剔除的内容</param>
+            <returns>剔除后的内容</returns>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.ExpandList(System.Collections.IList,System.Collections.IList)">
+            <summary>
+            把指定的List中的内容追加到指定的List后
+            </summary>
+            <param name="sourceList">原List</param>
+            <param name="toAddList">所要扩展的元素的集合</param>
+        </member>
+        <member name="M:TSLib.Utils.ListUtils.ExpandList``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0})">
+            <summary>
+            把指定的List中的内容追加到指定的List后
+            </summary>
+            <param name="sourceList">原List</param>
+            <param name="toAddList">所要扩展的元素的集合</param>
+        </member>
+        <member name="T:TSLib.SimpleResourceHelper">
+            <summary>
+            简单信息配置辅助处理类
+            </summary>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.Initialize">
+            <summary>
+            初始化资源的加载
+            </summary>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.GetString(System.String)">
+            <summary>
+            获取指定KeyName所配置的值
+            </summary>
+            <param name="keyName">关键字</param>
+            <returns>资源中所配置的值</returns>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.GetString(System.String,System.Object[])">
+            <summary>
+            获取指定KeyName所配置的值
+            </summary>
+            <param name="keyName">关键字</param>
+            <param name="args">格式化参数的值组成的数组</param>
+            <returns>资源中所配置的值</returns>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.GetString(System.String,System.Object)">
+            <summary>
+            获取指定KeyName所配置的值
+            </summary>
+            <param name="keyName">关键字</param>
+            <param name="arg">格式化参数的值</param>
+            <returns>资源中所配置的值</returns>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.GetSystemTitle">
+            <summary>
+            获取系统标题
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.GetSystemShortTitle">
+            <summary>
+            获取系统标题
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.LoadResource(System.String)">
+            <summary>
+            根据指定根路径，分析xml并获NameValueCollection的信息
+            </summary>
+            <param name="resourceFileDir">资源文件的名称</param>
+            <returns>所解析得到的资源配置数据的信息集合</returns>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.LoadSingleResource(System.String)">
+            <summary>
+            根据指定.xml路径，分析xml并获NameValueCollection的信息
+            </summary>
+            <param name="resourceFileName">资源文件的名称</param>
+            <returns>所解析得到的资源配置数据的信息集合</returns>
+        </member>
+        <member name="M:TSLib.SimpleResourceHelper.GetXmlDocument(System.String)">
+            <summary>
+            加载一个XML文件
+            </summary>
+            <param name="resourceFileName">文件全路径名</param>
+            <returns></returns>
+        </member>
+        <member name="P:TSLib.SimpleResourceHelper.Resources">
+            <summary>
+            资源列表
+            </summary>
+        </member>
+        <member name="P:TSLib.SimpleResourceHelper.RootDir">
+            <summary>
+            资源文件所在的路径
+            </summary>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.CreateQuery(NHibernate.ISession,System.String,System.Object[])">
+            <summary>
+            创建查询对象
+            </summary>
+            <param name="session">会话</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定的参数数组</param>
+            <returns>查询对象</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.CreateSQLQuery(NHibernate.ISession,System.String,System.Object[])">
+            <summary>
+            创建SQL查询对象
+            </summary>
+            <param name="session">会话</param>
+            <param name="sql">sql查询语句</param>
+            <param name="values">绑定的参数数组</param>
+            <returns>查询对象</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.CreateCriteria(NHibernate.ISession,System.Type,NHibernate.Criterion.ICriterion[])">
+            <summary>
+            创建创建Criteria对象
+            </summary>
+            <param name="session">会话</param>
+            <param name="type">sql查询语句</param>
+            <param name="criterions">约束条件数组</param>
+            <returns>查询对象</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.GetCount(NHibernate.ISession,System.String,System.Object[])">
+            <summary>
+            获取查询的数量
+            </summary>
+            <param name="session">会话</param>
+            <param name="query">查询语句(无需写select count(*))</param>
+            <param name="values">绑定的参数数组</param>
+            <returns>查询的数量</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.Find(NHibernate.ISession,System.Int32,System.Int32,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的结果集,该方法不声明事务,但必须由事务方法调用
+            </summary>
+            <param name="session">会话</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的最大记录数</param>
+            <returns>查询语句对应的结果集,如果找不到则返回空的集合</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.Find(NHibernate.ISession,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的结果集,该方法不声明事务,但必须由事务方法调用
+            </summary>
+            <param name="session">会话</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的结果集,如果找不到则返回空的集合</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.FindBySQL(NHibernate.ISession,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的结果集,该方法不声明事务,但必须由事务方法调用
+            </summary>
+            <param name="session">会话</param>
+            <param name="sqlQuery">sql查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的结果集,如果找不到则返回空的集合</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.GetPage(NHibernate.ISession,System.Int32,System.Int32,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的结果集,该方法不声明事务,但必须由事务方法调用
+            </summary>
+            <param name="session">会话</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的最大记录数</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的结果集,如果找不到则返回空的集合</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.GetPage(NHibernate.ISession,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Object[],System.String)">
+            <summary>
+            获取查询语句对应的结果集,该方法不声明事务,但必须由事务方法调用
+            </summary>
+            <param name="session">会话</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向,asc | desc</param>
+            <param name="aliasName">所要查询的Domain在查询语句中的别名</param>
+            <param name="query">主查询语句，请不要包含order by</param>
+            <param name="args">查询的参数</param>
+            <param name="defaultSortField">缺省排序的字段名称</param>
+            <returns>
+            查询语句对应的结果集,如果找不到则返回空的集合,
+            如果sortField和defaultSortField均为空，则查询语句不会添加order by子句
+            </returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.GetPage(NHibernate.ISession,System.Int32,System.Int32,System.String[],System.String[],System.String,System.String,System.Object[],System.String)">
+            <summary>
+            获取查询语句对应的结果集,该方法不声明事务,但必须由事务方法调用
+            </summary>
+            <param name="session">会话</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortFields">要排序的属性名列表</param>
+            <param name="sortDirs">排序方向列表,asc | desc</param>
+            <param name="aliasName">所要查询的Domain在查询语句中的别名</param>
+            <param name="query">主查询语句，请不要包含order by</param>
+            <param name="args">查询的参数</param>
+            <param name="defaultSortField">缺省排序的字段名称</param>
+            <returns>
+            查询语句对应的结果集,如果找不到则返回空的集合,
+            如果sortField和defaultSortField均为空，则查询语句不会添加order by子句
+            </returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.FindUnique(NHibernate.ISession,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的唯一结果
+            </summary>
+            <param name="session">会话对象</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的唯一结果,如果找不到则返回null,如果找到多个结果则抛出异常</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.IsUnique(NHibernate.ISession,System.Object,System.String[])">
+            <summary>
+            判断对象某些属性的值在数据库中是否唯一
+            </summary>
+            <param name="session">会话对象</param>
+            <param name="entity">要判断的对象</param>
+            <param name="propertyNames">不能重复的属性列表</param>
+            <returns>对象某些属性的值在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.GetIdValue(NHibernate.Metadata.IClassMetadata,System.Object)">
+            <summary>
+            取得对象的主键值
+            </summary>
+            <param name="metadata">对象的类型对应的NHibernate元数据对象</param>
+            <param name="entity">要处理的对象</param>
+            <returns>对象的主键值</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.GetIdName(NHibernate.Metadata.IClassMetadata,System.Type)">
+            <summary>
+            取得对象主键对应的属性名
+            </summary>
+            <param name="metadata">对象的类型对应的NHibernate元数据对象</param>
+            <param name="type">对象的类型</param>
+            <returns>对象主键对应的属性名，如果对象没有定义主键将抛出<code>System.ArgumentNullException</code>异常</returns>
+        </member>
+        <member name="M:TSLib.DBUtils.NHibernateHelper.GetClassMetadata(NHibernate.ISession,System.Type)">
+            <summary>
+            取得指定类型的NHibernate元数据对象
+            </summary>
+            <param name="session">实现NHibernate的ISession接口的会话对象</param>
+            <param name="type">对象的类型</param>
+            <returns>对象主键对应的属性名，如果对象没有定义主键将抛出<code>System.ArgumentNullException</code>异常</returns>
+        </member>
+        <member name="T:TSLib.Dao.IBaseDao`1">
+            <summary>
+            基本DAO接口
+            </summary>
+            <author>Dragon</author>
+            <date>2007-02-21</date>
+            <history>
+            2008-05-31 Dragon 添加支持多重属性排序的功能
+            </history>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Load(System.Int64)">
+            <summary>
+            获取给定主键的对象
+            </summary>
+            <param name="id">主键</param>
+            <returns>给定主键的对象，如果找不到则返回null</returns>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Load(System.String)">
+            <summary>
+            获取给定unid的对象
+            </summary>
+            <param name="unid">unid</param>
+            <returns>给定unid的对象，如果找不到则返回null</returns>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Save(`0)">
+            <summary>
+            保存对象,如果对象的主键未分配,则自动先为对象分配唯一的主键.
+            </summary>
+            <param name="obj">要保存的对象</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Save(System.Collections.IList)">
+            <summary>
+            保存对象集
+            </summary>
+            <param name="objs">要保存的对象集</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Delete(`0)">
+            <summary>
+            删除对象
+            </summary>
+            <param name="obj">要删除的对象</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Delete(System.Int64)">
+             <summary>
+            删除指定主键的对象
+             </summary>
+             <param name="id">要删除的对象的主键</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Delete(System.Int64[])">
+             <summary>
+            删除指定主键的对象
+             </summary>
+             <param name="ids">要删除的对象的主键的数组</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Delete(System.String)">
+             <summary>
+            删除指定unid的对象
+             </summary>
+             <param name="unid">要删除的对象的unid</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Delete(System.String[])">
+             <summary>
+            删除指定unid的对象
+             </summary>
+             <param name="unids">要删除的对象的unid的数组</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.Delete(System.Collections.IList)">
+             <summary>
+            删除对象集
+             </summary>
+             <param name="objs">要删除的对象集</param>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.DeleteAll">
+             <summary>
+            删除所有对象
+             </summary>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.FindAll">
+            <summary>
+            获取所有对象
+            </summary>
+            <returns>所有对象的集合,如果找不到则返回空的集合</returns>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.GetPage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向值</param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.GetPage(System.Int32,System.Int32,System.String[],System.String[])">
+            <summary>
+            获取指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortFields">要排序的属性名列表</param>
+            <param name="sortDirs">排序方向值的列表</param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.GetPage(System.Int32,System.Int32,System.String,System.String,System.Collections.IList)">
+            <summary>
+            获取待过滤条件的指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向值</param>
+            <param name="filters">
+            查询条件列表，元素为
+            <seealso cref="!:Egrand.Util.FilterParameter">FilterParameter</seealso>
+            </param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.GetPage(System.Int32,System.Int32,System.String[],System.String[],System.Collections.IList)">
+            <summary>
+            获取待过滤条件的指定页码的分页对象，起始页码从1开始。
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortFields">要排序的属性名列表</param>
+            <param name="sortDirs">排序方向值的列表</param>
+            <param name="filters">
+            查询条件列表，元素为
+            <seealso cref="!:Egrand.Util.FilterParameter">FilterParameter</seealso>
+            </param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="M:TSLib.Dao.IBaseDao`1.IsUnique(`0,System.String[])">
+            <summary>
+            判断对象某些属性的值在数据库中是否唯一
+            </summary>
+            <param name="entity">要判断的对象</param>
+            <param name="propertyNames">不能重复的属性的名称数组</param>
+            <returns>对象某些属性的值在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="T:TSLib.Utils.MD5Utils">
+            <summary>
+            MD5Util 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.MD5Utils.MD5String(System.String)">
+            <summary>
+            计算输入字符串经MD5加密,再进行内部规则包装后的对应字符串
+            *经标准MD5加密后将字符串全部转换为大写，并且在前后添加括号。
+            </summary>
+            <param name="sourceString">加密前的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Utils.MD5Utils.byteArrayToString(System.Byte[])">
+            <summary>
+            将byte数组转换成字符串
+            </summary>
+            <param name="byteArray">所要转换的byte数组</param>
+            <returns></returns>
+        </member>
+        <member name="T:TSLib.Utils.FilterParameter">
+            <summary>
+            过滤条件信息
+            </summary>
+            <author>dragon</author>
+            <date>2007-09-14</date>
+            <version>2.0.0</version>
+        </member>
+        <member name="M:TSLib.Utils.FilterParameter.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.FilterParameter.#ctor(System.String,System.String,TSLib.Utils.FilterType)">
+            <summary>
+            带条件构造函数
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.FilterParameter.#ctor(System.String,System.String,System.String)">
+            <summary>
+            带条件构造函数
+            </summary>
+        </member>
+        <member name="M:TSLib.Utils.FilterParameter.GetFilterStatement(System.String,System.Collections.IList)">
+            <summary>
+            组合过滤条件
+            </summary>
+            <param name="baseName">查询所用的别名</param>
+            <param name="args">包含要绑定的参数的列表，要绑定的参数由该方法内部自行注入</param>
+            <returns>组合过滤条件后的查询字符串</returns>
+        </member>
+        <member name="M:TSLib.Utils.FilterParameter.GetFiltersStatement(System.String,System.Collections.IList,System.Collections.IList)">
+            <summary>
+            组合过滤条件
+            </summary>
+            <param name="baseName">查询所用的别名</param>
+            <param name="filters">
+            查询条件列表，元素为
+            <seealso cref="!:Egrand.Util.FilterParameter">FilterParameter</seealso>
+            </param>
+            <param name="args">包含要绑定的参数的列表，要绑定的参数由该方法内部自行注入</param>
+            <returns>组合过滤条件后的查询字符串</returns>
+        </member>
+        <member name="P:TSLib.Utils.FilterParameter.Type">
+            <summary>
+            条件的类型,参考<see cref="!:Egrand.Util.FilterType"/>
+            </summary>
+        </member>
+        <member name="P:TSLib.Utils.FilterParameter.FieldName">
+            <summary>
+            查询的字段名称
+            </summary>
+        </member>
+        <member name="P:TSLib.Utils.FilterParameter.FieldValue">
+            <summary>
+            文本匹配或所有等值匹配条件的值
+            </summary>
+        </member>
+        <member name="P:TSLib.Utils.FilterParameter.MinValue">
+            <summary>
+            范围匹配条件的起始值
+            </summary>
+        </member>
+        <member name="P:TSLib.Utils.FilterParameter.MaxValue">
+            <summary>
+            范围匹配条件的终结值
+            </summary>
+        </member>
+        <member name="T:TSLib.Utils.FilterType">
+            <summary>
+            过滤条件的类型
+            </summary>
+        </member>
+        <member name="F:TSLib.Utils.FilterType.Undefined">
+            <summary>未定义</summary>
+        </member>
+        <member name="F:TSLib.Utils.FilterType.Equal">
+            <summary>相等匹配的任何类型</summary>
+        </member>
+        <member name="F:TSLib.Utils.FilterType.NotEqual">
+            <summary>不相等匹配任何类型</summary>
+        </member>
+        <member name="F:TSLib.Utils.FilterType.TxtLike">
+            <summary>左右两侧模糊匹配的文本</summary>
+        </member>
+        <member name="F:TSLib.Utils.FilterType.TxtLikeLeft">
+            <summary>左侧模糊匹配的文本</summary>
+        </member>
+        <member name="F:TSLib.Utils.FilterType.TxtLikeRight">
+            <summary>右侧模糊匹配的文本</summary>
+        </member>
+        <member name="F:TSLib.Utils.FilterType.Range">
+            <summary>范围匹配的任何类型</summary>
+        </member>
+        <member name="M:TSLib.ImportData.ImportDataBase.GetObject(System.String)">
+            <summary>
+            获取Spring配置文件中定义的指定名称的对象
+            </summary>
+            <param name="objectName">对象名</param>
+            <returns>Spring配置文件中定义的指定名称的对象</returns>
+        </member>
+        <member name="T:TSLib.Dao.Hibernate.BaseDao`1">
+            <summary>
+            基本DAO接口的NHibernate实现
+            </summary>
+            <remarks>
+            通过在子类中重写或运行时改写<c>DefaultQueryString</c>的值来改变默认的查询语句
+            （默认为："from " + typeof(T).Name + " " + HqlCreator.DefaultAlias），受影响的接口包括：
+            FindAll,FindAllEx,Find,FindEx,GetPage
+            </remarks>
+            <author>Dragon</author>
+            <date>2007-02-21</date>
+        </member>
+        <member name="F:TSLib.Dao.Hibernate.BaseDao`1.IdKey">
+            <summary>主键的属性名称</summary>
+        </member>
+        <member name="F:TSLib.Dao.Hibernate.BaseDao`1.UnidKey">
+            <summary>Unid属性的名称</summary>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.GetSimpleQueryString">
+            <summary>
+            获取泛型T对应的简单查询语句(类似：from User user)
+            </summary>
+            <returns>简单查询语句</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.CreateQuery(System.String,System.Object[])">
+            <summary>
+            创建查询对象
+            </summary>
+            <param name="query">查询语句</param>
+            <param name="values">绑定的参数数组</param>
+            <returns>查询对象</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.CreateSQLQuery(System.String,System.Object[])">
+            <summary>
+            创建查询对象
+            </summary>
+            <param name="sql">sql查询语句</param>
+            <param name="values">绑定的参数数组</param>
+            <returns>查询对象</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.CreateCriteria(NHibernate.Criterion.ICriterion[])">
+            <summary>
+            创建Criteria对象
+            </summary>
+            <param name="criterions">约束条件数组</param>
+            <returns>查询对象</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.GetCount(System.String,System.Collections.IList)">
+            <summary>
+            获取查询的数量
+            </summary>
+            <param name="query">查询语句(无需写select count(*))</param>
+            <param name="values">绑定的参数列表</param>
+            <returns>查询的数量</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.GetCount(System.String,System.Object[])">
+            <summary>
+            获取查询的数量
+            </summary>
+            <param name="query">查询语句(无需写select count(*))</param>
+            <param name="values">绑定的参数数组</param>
+            <returns>查询的数量</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.Find(System.Int32,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的结果集
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的结果集,如果找不到则返回空的集合</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.GetPage(System.Int32,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的结果集
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的结果集,如果找不到则返回空的集合</returns>
+            <remarks>
+            当删除后刷新时，怕不够一页，也就是用户把最后一页所有文件都删除了，那么刷新的时候传回的参数还是当前的页面数，
+            但是本页已经没有数据了，如果还是显示这页肯定不好，所以会循环取前一页的内容
+            </remarks>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.GetPage(System.Int32,System.Int32,System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的结果集
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页最多显示的条目数</param>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的结果集,如果找不到则返回空的集合</returns>
+            <remarks>
+            当删除后刷新时，怕不够一页，也就是用户把最后一页所有文件都删除了，那么刷新的时候传回的参数还是当前的页面数，
+            但是本页已经没有数据了，如果还是显示这页肯定不好，所以会循环取前一页的内容
+            </remarks>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.GetPage(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Collections.IList,System.String)">
+            <summary>
+            获取查询语句对应的结果集,该方法不声明事务,但必须由事务方法调用
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向,asc | desc</param>
+            <param name="aliasName">所要查询的Domain在查询语句中的别名</param>
+            <param name="query">主查询语句，请不要包含order by</param>
+            <param name="args">查询的参数</param>
+            <param name="defaultSortField">缺省排序的字段名称</param>
+            <returns>
+            查询语句对应的结果集,如果找不到则返回空的集合,
+            如果sortField和defaultSortField均为空，则查询语句不会添加order by子句
+            </returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.FindUnique(System.String,System.Object[])">
+            <summary>
+            获取查询语句对应的唯一结果
+            </summary>
+            <param name="query">查询语句</param>
+            <param name="values">绑定参数值的数组</param>
+            <returns>查询语句对应的唯一结果,如果找不到则返回null,如果找到多个结果则抛出异常</returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.IsUnique(System.String,System.Object[])">
+            <summary>
+            判断是否唯一
+            </summary>
+            <param name="query"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLib.Dao.Hibernate.BaseDao`1.BuildDataScope(System.String,System.String[],System.Collections.IList)">
+            <summary>
+            添加数据范围查询语句
+            </summary>
+            <param name="aliasName">查询的别名</param>
+            <param name="unitUnids">可查询单位的Unid列表</param>
+            <param name="args">out参数，返回参数列表</param>
+            <returns>组合后的查询语句</returns>
+        </member>
+        <member name="P:TSLib.Dao.Hibernate.BaseDao`1.DefaultQueryString">
+            <summary>默认的查询语句,类似：from User user</summary>
+        </member>
+    </members>
+</doc>

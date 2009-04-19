@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<struts-config>
+  <form-objects>
+    <form-object name="optionItemForm" type="TSCommon_Core.OptionItemCfg.Domain.OptionItem,TSCommon_Core">
+    </form-object>
+  </form-objects>
+  <action-mappings>
+    <!-- 可选项 -->
+    <action path="/optionItem"
+          type="TSCommon_Web.OptionItemCfg.action.OptionItemAction, TSCommon_Web"
+          name="optionItemForm"
+          parameter="action">
+      <forward name="viewOptionItem" path="/OptionItemCfg/OptionItemView.aspx" />
+      <forward name="editOptionItem" path="/OptionItemCfg/OptionItemForm.aspx" />
+      <forward name="readOptionItem" path="/OptionItemCfg/OptionItemForm.aspx" />
+    </action>
+  </action-mappings>
+</struts-config>

@@ -1,0 +1,76 @@
+/*
+	广州市忆科计算机系统有限公司 版权所有 2006-
+	作者：CSM | www.ico.com.cn  csm@ico.com.cn
+	作者：CD826	cd826@ico.com.cn
+	日期：2006-08-02
+	功能：
+*/
+a:link { text-decoration:none; COLOR:#000000; }
+a:visited { text-decoration:none; COLOR:#000000; }
+a:active { text-decoration:none; COLOR:#000000; }
+a:hover { text-decoration:underline; COLOR:#454545; }
+BODY
+{
+	margin:0px;
+	height: 100%;
+	font: 12px Tahoma,verdana,arial,helvetica,"sans-serif"; 
+	background-image:url(../images/login/bg.gif);
+	overflow:hidden;
+}
+div,td{
+font: 12px Tahoma,verdana,arial,helvetica,"sans-serif"; 
+}
+body,html{height: 100%;}
+.test{
+	width:60px; height:19px; float:left; text-align:right; line-height:19px; font-weight:bold; color:#065FA4;
+}
+.form_textbg{
+	width:86px;
+	height:19px;
+	border:0px;
+	background-image:url(../images/login/textbg.png);
+	background-repeat:no-repeat;
+	float:left;
+	
+
+}
+.form_text
+{
+	font: 12px Tahoma,verdana,arial,helvetica,"sans-serif"; 
+	width:84px;
+	height:19px;
+	border:1px;
+	padding-left:2px;
+	padding-right:2px;
+	background:transparent;
+}
+#TxtPassword
+{
+	padding-top:4px !important;
+	padding-top:0px;
+}
+.form_button
+{
+	background-image:url(../images/login/loginbtn.png);
+	border:0px;
+	width:60px;
+	height:19px;
+	float:left;
+	margin-left:5px;
+}
+.Message
+{
+	font: 12px Tahoma,verdana,arial,helvetica,"sans-serif"; 
+	text-align:center; 
+	color:#FF9900;
+}
+.loginTop{
+	height:88px; background-image:url(../images/login/loginTop.png);
+}
+.loginMain1{
+	height:143px; background-image:url(../images/login/loginMain1.png);
+}
+.loginMain2{
+	height:60px; background-image:url(../images/login/loginMain2.png);
+}
+

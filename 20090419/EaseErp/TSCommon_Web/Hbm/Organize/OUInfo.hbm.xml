@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="TSCommon_Core.Organize.Domain.OUInfo, TSCommon_Core" table="SYS_OUINFO">
+    <id name="ID" unsaved-value="-1">
+      <column name="ID" not-null="true"/>
+      <generator class="identity" />
+    </id>
+    <property name="Unid" type="String">
+      <column name="UNID" length="32" not-null="true" index="OUINFO_UNID"/>
+    </property>
+    <property name="OUStatus">
+      <column name="STATUS" not-null="true"/>
+    </property>
+    <property name="ParentOUUnid" type="String">
+      <column name="PARENT_OUUNID" length="32"/>
+    </property>
+    <property name="UnitUnid" type="String">
+      <column name="UNIT_UNID" length="32"/>
+    </property>
+    <property name="UnitName" type="String">
+      <column name="UNIT_NAME" length="255"/>
+    </property>
+    <property name="UnitFullName" type="String">
+      <column name="UNIT_FULL_Name" length="255"/>
+    </property>
+    <property name="UnitFullCode" type="String">
+      <column name="UNIT_FULL_CODE" length="255"/>
+    </property>
+    <property name="Name" type="String">
+      <column name="NAME" length="255" not-null="true"/>
+    </property>
+    <property name="Code" type="String">
+      <column name="CODE" length="32"/>
+    </property>
+    <property name="Description" type="String">
+      <column name="DESCRIPTION" length="255"/>
+    </property>
+    <property name="Type" type="String">
+      <column name="TYPE" length="4"/>
+    </property>
+    <property name="Level">
+      <column name="LEVEL" not-null="true"/>
+    </property>
+    <property name="LevelName" type="String">
+      <column name="LEVEL_NAME" length="255"/>
+    </property>
+    <property name="FullName" type="String">
+      <column name="FULL_NAME" length="255"/>
+    </property>
+    <property name="FullCode" type="String">
+      <column name="FULL_CODE" length="255"/>
+    </property>
+    <property name="IsTmpOU" type="String">
+      <column name="IS_TMP_OU" length="2" not-null="true"/>
+    </property>
+    <property name="OrderNo">
+      <column name="ORDER_NO"/>
+    </property>
+    <property name="OldImportDataID" type="String">
+      <column name="OLDIMPORTDATAID" length="32" />
+    </property>
+    <property name="Field_1" type="String">
+      <column name="FIELD_1" length="255"/>
+    </property>
+    <property name="Field_2" type="String">
+      <column name="FIELD_2" length="255"/>
+    </property>
+    <property name="Field_3" type="String">
+      <column name="FIELD_3" length="255"/>
+    </property>
+    <property name="Field_4" type="String">
+      <column name="FIELD_4" length="255"/>
+    </property>
+  </class>
+</hibernate-mapping>

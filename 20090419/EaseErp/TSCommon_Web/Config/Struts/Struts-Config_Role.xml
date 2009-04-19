@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<struts-config>
+  <form-objects>
+    <form-object name="role" type="TSCommon_Core.Security.Domain.Role,TSCommon_Core">
+    </form-object>
+  </form-objects>
+  <action-mappings>
+    <action path="/role"
+          type="TSCommon_Web.Security.action.RoleAction, TSCommon_Web"
+          name="role"
+          scope="context"
+          parameter="action">
+      <forward name="viewRole" path="/Security/RoleView.aspx" />
+      <forward name="readRole" path="/Security/RoleForm.aspx" />
+      <forward name="editRole" path="/Security/RoleForm.aspx" />
+    </action>
+  </action-mappings>
+</struts-config>

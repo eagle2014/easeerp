@@ -1,0 +1,30 @@
+﻿/*
+ * 自动完成组件样式配置
+ * @author dragon
+ * @date 2007-10-30
+ */
+
+/* 容器 */ 
+.egd-autoComplete-container{
+    position:absolute;
+    overflow:auto;
+    border:solid 1px black;
+    background-color:White;
+    padding:0px;
+    margin:0px;
+}
+/* 行 */ 
+.egd-autoComplete-item
+{
+	height:20px; 
+	line-height:20px;
+    padding:0px;
+    margin:0px;
+    border-bottom:solid 0px gray;
+}
+
+/* 高亮区 */ 
+.egd-autoComplete-matchRegion
+{
+	color: Red;
+}

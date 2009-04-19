@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="TSCommon_Core.Organize.Domain.JobTitle, TSCommon_Core" table="SYS_JOBTITLE">
+    <id name="ID" unsaved-value="-1">
+      <column name="ID" not-null="true"/>
+      <generator class="identity" />
+    </id>
+    <property name="Unid">
+      <column name="UNID" length="32" not-null="true" index="JOBTITLE_UNID"/>
+    </property>
+    <property name="Name">
+      <column name="JOBTITLE_NAME" length="256" not-null="true"/>
+    </property>
+    <property name="Code">
+      <column name="JOBTITLE_CODE" length="32"/>
+    </property>
+    <property name="Level">
+      <column name="JOBTITLE_LEVEL" length="32"/>
+    </property>
+  </class>
+</hibernate-mapping>

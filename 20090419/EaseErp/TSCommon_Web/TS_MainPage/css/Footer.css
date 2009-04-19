@@ -1,0 +1,19 @@
+a:link { text-decoration:none; COLOR:#000000; }
+a:visited { text-decoration:none; COLOR:#000000; }
+a:active { text-decoration:none; COLOR:#000000; }
+a:hover { text-decoration:underline; COLOR:#454545; }
+BODY 
+{
+	margin:0px;
+	height: 100%;
+	font: 12px Tahoma,verdana,arial,helvetica,"sans-serif"; 
+	background-color:#276685;
+}
+td{
+	font: 12px Tahoma,verdana,arial,helvetica,"sans-serif"; 
+}
+.bottom{
+	width:100%;
+	height:20px;
+	background-image:url(../images/bottom/bottombg.gif);
+}

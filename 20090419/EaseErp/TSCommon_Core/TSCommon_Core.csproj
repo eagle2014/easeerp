@@ -1,0 +1,157 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D7E8AB3-4202-41B3-8804-50778E5C08EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSCommon_Core</RootNamespace>
+    <AssemblyName>TSCommon_Core</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Lib\TSCommon_Core.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.0.0.3001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
+    <Reference Include="Spring.Core, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate20, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Spring.Data.NHibernate20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TSLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\TSLib.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLibStruts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="TSLibWeb, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ATM\Service\ATMEvent.cs" />
+    <Compile Include="ATM\Service\ATMHandlerAction.cs" />
+    <Compile Include="ATM\Dao\Hibernate\ATMDao.cs" />
+    <Compile Include="ATM\Dao\IATMDao.cs" />
+    <Compile Include="ATM\Domain\ATM.cs" />
+    <Compile Include="ATM\Service\ATMEventArgs.cs" />
+    <Compile Include="ATM\Service\ATMService.cs" />
+    <Compile Include="ATM\Service\IATMService.cs" />
+    <Compile Include="Controls\ATM.cs" />
+    <Compile Include="FileEntry.cs" />
+    <Compile Include="HtmlOption.cs" />
+    <Compile Include="OptionItemCfg\Dao\Hibernate\OptionItemDao.cs" />
+    <Compile Include="OptionItemCfg\Dao\IOptionItemDao.cs" />
+    <Compile Include="OptionItemCfg\Domain\OptionItem.cs" />
+    <Compile Include="OptionItemCfg\Service\IOptionItemService.cs" />
+    <Compile Include="OptionItemCfg\Service\OptionItemService.cs" />
+    <Compile Include="Organize\Dao\Hibernate\GroupDao.cs" />
+    <Compile Include="Organize\Dao\Hibernate\JobTitleDao.cs" />
+    <Compile Include="Organize\Dao\Hibernate\OUInfoDao.cs" />
+    <Compile Include="Organize\Dao\Hibernate\OULevelDao.cs" />
+    <Compile Include="Organize\Dao\Hibernate\RelationShipDao.cs" />
+    <Compile Include="Organize\Dao\Hibernate\UserDao.cs" />
+    <Compile Include="Organize\Dao\IGroupDao.cs" />
+    <Compile Include="Organize\Dao\IJobTitleDao.cs" />
+    <Compile Include="Organize\Dao\IOUInfoDao.cs" />
+    <Compile Include="Organize\Dao\IOULevelDao.cs" />
+    <Compile Include="Organize\Dao\IRelationShipDao.cs" />
+    <Compile Include="Organize\Dao\IUserDao.cs" />
+    <Compile Include="Organize\Domain\Group.cs" />
+    <Compile Include="Organize\Domain\GroupRank.cs" />
+    <Compile Include="Organize\Domain\JobTitle.cs" />
+    <Compile Include="Organize\Domain\OUInfo.cs" />
+    <Compile Include="Organize\Domain\OULevel.cs" />
+    <Compile Include="Organize\Domain\RelationShip.cs" />
+    <Compile Include="Organize\Domain\RelationShipItem.cs" />
+    <Compile Include="Organize\Domain\User.cs" />
+    <Compile Include="Organize\Service\GroupService.cs" />
+    <Compile Include="Organize\Service\IGroupService.cs" />
+    <Compile Include="Organize\Service\IJobTitleService.cs" />
+    <Compile Include="Organize\Service\IOUInfoService.cs" />
+    <Compile Include="Organize\Service\IOULevelService.cs" />
+    <Compile Include="Organize\Service\IRelationShipService.cs" />
+    <Compile Include="Organize\Service\IUserService.cs" />
+    <Compile Include="Organize\Service\JobTitleService.cs" />
+    <Compile Include="Organize\Service\OUInfoService.cs" />
+    <Compile Include="Organize\Service\OULevelService.cs" />
+    <Compile Include="Organize\Service\RelationShipService.cs" />
+    <Compile Include="Organize\Service\UserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Dao\Hibernate\ModelDao.cs" />
+    <Compile Include="Security\Dao\Hibernate\PrivilegeDao.cs" />
+    <Compile Include="Security\Dao\Hibernate\RoleDao.cs" />
+    <Compile Include="Security\Dao\IModelDao.cs" />
+    <Compile Include="Security\Dao\IPrivilegeDao.cs" />
+    <Compile Include="Security\Dao\IRoleDao.cs" />
+    <Compile Include="Security\Domain\Model.cs" />
+    <Compile Include="Security\Domain\Privilege.cs" />
+    <Compile Include="Security\Domain\PrivilegeComparer.cs" />
+    <Compile Include="Security\Domain\Role.cs" />
+    <Compile Include="Security\Service\IModelService.cs" />
+    <Compile Include="Security\Service\IPrivilegeService.cs" />
+    <Compile Include="Security\Service\IRoleService.cs" />
+    <Compile Include="Security\Service\ModelService.cs" />
+    <Compile Include="Security\Service\PrivilegeService.cs" />
+    <Compile Include="Security\Service\RoleService.cs" />
+    <Compile Include="SystemPolicy\Dao\Hibernate\PolicyDao.cs" />
+    <Compile Include="SystemPolicy\Dao\IPolicyDao.cs" />
+    <Compile Include="SystemPolicy\Domain\Policy.cs" />
+    <Compile Include="SystemPolicy\PolicyHelper.cs" />
+    <Compile Include="SystemPolicy\Service\IPolicyService.cs" />
+    <Compile Include="SystemPolicy\Service\PolicyService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

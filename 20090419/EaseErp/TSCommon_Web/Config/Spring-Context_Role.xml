@@ -1,0 +1,16 @@
+﻿<objects xmlns="http://www.springframework.net">
+  <description>Spring Context配置文件</description>
+  <!-- 组织架构：级别 -->
+  <object id="RoleDao" type="TSCommon_Core.Security.Dao.Hibernate.RoleDao, TSCommon_Core">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="RoleServiceTarget" type="TSCommon_Core.Security.Service.RoleService, TSCommon_Core">
+    <property name="RoleDao" ref="RoleDao" />
+    <property name="OUInfoService" ref="OUInfoService" />
+    <property name="GroupDao" ref="GroupDao" />
+  </object>
+  <object id="RoleService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="RoleServiceTarget"/>
+    <property name="ProxyInterfaces" value="TSCommon_Core.Security.Service.IRoleService"/>
+  </object>
+</objects>
