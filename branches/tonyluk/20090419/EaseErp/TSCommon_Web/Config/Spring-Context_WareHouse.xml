@@ -1,0 +1,49 @@
+﻿<objects xmlns="http://www.springframework.net">
+  <description>Spring Context配置文件</description>
+  <!-- 仓库管理：仓库 -->
+  <object id="WareHouseDao" type="EaseErp_WareHouse.WareHouse.Dao.Hibernate.WareHouseDao, EaseErp_WareHouse">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="WareHouseServiceTarget" type="EaseErp_WareHouse.WareHouse.Service.WareHouseService, EaseErp_WareHouse">
+    <property name="WareHouseDao" ref="WareHouseDao" />
+    <property name="RelationShipService" ref="RelationShipService" />
+  </object>
+  <object id="WareHouseService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="WareHouseServiceTarget"/>
+    <property name="ProxyInterfaces" value="EaseErp_WareHouse.WareHouse.Service.IWareHouseService"/>
+  </object>
+  <!--地点相关配置-->
+  <object id="PlaceDao" type="EaseErp_WareHouse.WareHouse.Dao.Hibernate.PlaceDao, EaseErp_WareHouse">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="PlaceServiceTarget" type="EaseErp_WareHouse.WareHouse.Service.PlaceService, EaseErp_WareHouse">
+    <property name="PlaceDao" ref="PlaceDao" />
+  </object>
+  <object id="PlaceService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="PlaceServiceTarget"/>
+    <property name="ProxyInterfaces" value="EaseErp_WareHouse.WareHouse.Service.IPlaceService"/>
+  </object>
+<!--物品相关配置-->
+  <object id="ThingDao" type="EaseErp_WareHouse.WareHouse.Dao.Hibernate.ThingDao, EaseErp_WareHouse">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="ThingServiceTarget" type="EaseErp_WareHouse.WareHouse.Service.ThingService, EaseErp_WareHouse">
+    <property name="ThingDao" ref="ThingDao" />
+  </object>
+  <object id="ThingService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="ThingServiceTarget"/>
+    <property name="ProxyInterfaces" value="EaseErp_WareHouse.WareHouse.Service.IThingService"/>
+  </object>
+<!--仓库物品单位配置-->
+  <object id="WHUnitDao" type="EaseErp_WareHouse.WareHouse.Dao.Hibernate.WHUnitDao, EaseErp_WareHouse">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="WHUnitServiceTarget" type="EaseErp_WareHouse.WareHouse.Service.WHUnitService, EaseErp_WareHouse">
+    <property name="WHUnitDao" ref="WHUnitDao" />
+  </object>
+  <object id="WHUnitService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="WHUnitServiceTarget"/>
+    <property name="ProxyInterfaces" value="EaseErp_WareHouse.WareHouse.Service.IWHUnitService"/>
+  </object>
+  
+</objects>

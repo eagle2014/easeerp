@@ -1,0 +1,13 @@
+/*对话框中的添加、全添加、删除等...*/
+.dlg_add{
+	background-image:url(../images/dlg/add.gif); width:59px; height:19px; border:0px; cursor:pointer;
+}
+.dlg_all_add{
+	background-image:url(../images/dlg/all_add.gif); width:59px; height:19px; border:0px;cursor:pointer;
+}
+.dlg_del{
+	background-image:url(../images/dlg/del.gif); width:59px; height:19px; border:0px;cursor:pointer;
+}
+.dlg_all_del{
+	background-image:url(../images/dlg/all_del.gif); width:59px; height:19px; border:0px;cursor:pointer;
+}

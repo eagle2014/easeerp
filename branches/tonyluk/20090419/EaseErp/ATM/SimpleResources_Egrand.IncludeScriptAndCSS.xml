@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- 标准表单页面必须引用的js文件 -->
+  <resource name="INCLUDE.FORM_PAGE.JS">
+    ~/egd_platform/js/Prototype.js;
+    ~/egd_platform/js/scriptaculous/scriptaculous.js?load=effects;
+    ~/egd_platform/js/Egd.js;
+    ~/Egd_Organize/js/Egd-Org.js;
+    ~/egd_platform/js/Egd-MainPageUtils.js;
+    ~/egd_platform/js/ItemSelectFunction.js;
+    ~/egd_platform/widgets/toolbar/toolbar.js;
+    ~/egd_platform/widgets/tabPanel/tabPanel.js
+  </resource>
+
+  <!-- 标准表单页面必须引用的css文件 -->
+  <resource name="INCLUDE.FORM_PAGE.CSS">
+    ~/egd_platform/css/Common.css;
+    ~/egd_platform/css/Page.css;
+    ~/egd_platform/widgets/toolbar/css/default/toolbar.css;
+    ~/egd_platform/widgets/toolbar/css/default/buttons.css;
+    ~/egd_platform/widgets/tabPanel/css/default/tabs.css
+  </resource>
+
+  <!-- 标准视图页面必须引用的js文件 -->
+  <resource name="INCLUDE.VIEW_PAGE.JS">
+    ~/egd_platform/js/Prototype.js;
+    ~/egd_platform/js/scriptaculous/scriptaculous.js?load=effects;
+    ~/egd_platform/js/Egd.js;
+    ~/Egd_Organize/js/Egd-Org.js;
+    ~/egd_platform/js/Egd-MainPageUtils.js;
+    ~/egd_platform/js/ItemSelectFunction.js;
+    ~/egd_platform/widgets/toolbar/toolbar.js;
+    ~/egd_platform/widgets/tabPanel/tabPanel.js;
+    ~/egd_platform/widgets/grid/grid.js;
+    ~/egd_platform/widgets/tree/Tree.js
+  </resource>
+
+  <!-- 标准视图页面必须引用的css文件 -->
+  <resource name="INCLUDE.VIEW_PAGE.CSS">
+    ~/egd_platform/css/Common.css;
+    ~/egd_platform/css/Page.css;
+    ~/egd_platform/widgets/toolbar/css/default/toolbar.css;
+    ~/egd_platform/widgets/toolbar/css/default/buttons.css;
+    ~/egd_platform/widgets/tabPanel/css/default/tabs.css;
+    ~/egd_platform/widgets/grid/css/default/grid.css;
+    ~/egd_platform/widgets/toolbar/css/page/toolbar.css;
+    ~/egd_platform/widgets/toolbar/css/page/buttons.css;
+    ~/egd_platform/widgets/tree/css/default/Tree.css
+  </resource>
+
+  <!-- 日历Web组件必须引用的js文件 -->
+  <resource name="INCLUDE.CALENDAR.JS">
+    ~/egd_platform/widgets/calendar/Date.js;
+    ~/egd_platform/widgets/calendar/Calendar.js?preinit=true
+  </resource>
+
+  <!-- 日历Web组件必须引用的css文件 -->
+  <resource name="INCLUDE.CALENDAR.CSS">
+    ~/egd_platform/widgets/calendar/css/default/Calendar.css
+  </resource>
+
+  <!-- 自动完成Web组件必须引用的js文件 -->
+  <resource name="INCLUDE.AUTO_COMPLETE.JS">
+    ~/egd_platform/widgets/autoComplete/autoComplete.js
+  </resource>
+
+  <!-- 自动完成Web组件必须引用的css文件 -->
+  <resource name="INCLUDE.AUTO_COMPLETE.CSS">
+    ~/egd_platform/widgets/autoComplete/css/default/autoComplete.css
+  </resource>
+</root>
