@@ -11,9 +11,9 @@ using System.Text;
 using TSLib.Dao;
 using System.Collections;
 using TSLib;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.Organize.Dao
+namespace TSCommon.Core.Organize.Dao
 {
     /// <summary>
     /// 单位组织信息的DAO接口定义

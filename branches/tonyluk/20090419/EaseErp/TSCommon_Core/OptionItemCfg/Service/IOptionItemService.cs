@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TSCommon_Core.OptionItemCfg.Domain;
+using TSCommon.Core.OptionItemCfg.Domain;
 using TSLib.Service;
 using System.Collections;
 using TSLib;
 
-namespace TSCommon_Core.OptionItemCfg.Service
+namespace TSCommon.Core.OptionItemCfg.Service
 {
     public interface IOptionItemService:IBaseService<OptionItem>
     {

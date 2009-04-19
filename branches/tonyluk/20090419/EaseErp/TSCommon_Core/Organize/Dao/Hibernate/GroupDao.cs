@@ -12,9 +12,9 @@ using Common.Logging;
 using TSLib;
 using TSLib.DBUtils;
 using TSLib.Utils;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.Organize.Dao.Hibernate
+namespace TSCommon.Core.Organize.Dao.Hibernate
 {
     /// <summary>
     /// 岗位配置Dao的NHbernate的实现

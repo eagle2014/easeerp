@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Dao;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using System.Collections;
 
-namespace TSCommon_Core.Organize.Dao
+namespace TSCommon.Core.Organize.Dao
 {
     /// <summary>
     /// 级别Dao接口的定义

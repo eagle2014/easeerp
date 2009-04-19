@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TSCommon_Core.OptionItemCfg.Domain;
+using TSCommon.Core.OptionItemCfg.Domain;
 using TSLib.Dao;
 using System.Collections;
 using TSLib;
 
-namespace TSCommon_Core.OptionItemCfg.Dao
+namespace TSCommon.Core.OptionItemCfg.Dao
 {
     public interface IOptionItemDao:IBaseDao<OptionItem>
     {

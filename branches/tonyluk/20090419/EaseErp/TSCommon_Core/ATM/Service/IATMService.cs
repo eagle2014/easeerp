@@ -5,7 +5,7 @@ using TSLib.Service;
 using TSLib;
 using System.Collections;
 
-namespace TSCommon_Core.ATM.Service
+namespace TSCommon.Core.ATM.Service
 {
     public interface IATMService:IBaseService<ATM.Domain.ATM>
     {

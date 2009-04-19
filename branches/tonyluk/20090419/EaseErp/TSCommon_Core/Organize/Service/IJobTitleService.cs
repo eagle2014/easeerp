@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Service;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using System.Collections;
 
-namespace TSCommon_Core.Organize.Service
+namespace TSCommon.Core.Organize.Service
 {
     public interface IJobTitleService : IBaseService<JobTitle>
     {

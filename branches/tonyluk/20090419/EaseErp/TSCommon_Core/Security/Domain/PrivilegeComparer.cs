@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections;
 
-namespace TSCommon_Core.Security.Domain
+namespace TSCommon.Core.Security.Domain
 {
     public class PrivilegeComparer : IComparer 
     {

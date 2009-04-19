@@ -11,9 +11,9 @@ using System.Text;
 using System.Collections;
 using Common.Logging;
 using TSLib.Dao.Hibernate;
-using TSCommon_Core.Security.Domain;
+using TSCommon.Core.Security.Domain;
 
-namespace TSCommon_Core.Security.Dao.Hibernate
+namespace TSCommon.Core.Security.Dao.Hibernate
 {
     /// <summary>
     /// 权限Dao接口的NHibernate实现

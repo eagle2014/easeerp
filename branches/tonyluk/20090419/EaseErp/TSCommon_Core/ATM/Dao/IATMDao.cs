@@ -5,7 +5,7 @@ using TSLib.Dao;
 using TSLib;
 using System.Collections;
 
-namespace TSCommon_Core.ATM.Dao
+namespace TSCommon.Core.ATM.Dao
 {
     public interface IATMDao : IBaseDao<ATM.Domain.ATM>
     {

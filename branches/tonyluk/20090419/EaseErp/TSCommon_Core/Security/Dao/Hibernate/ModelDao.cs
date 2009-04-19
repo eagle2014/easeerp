@@ -4,9 +4,9 @@ using System.Text;
 using System.Collections;
 using TSLib.Dao.Hibernate;
 using Common.Logging;
-using TSCommon_Core.Security.Domain;
+using TSCommon.Core.Security.Domain;
 
-namespace TSCommon_Core.Security.Dao.Hibernate
+namespace TSCommon.Core.Security.Dao.Hibernate
 {
     /// <summary>
     /// 模块Dao接口Hibernate的实现

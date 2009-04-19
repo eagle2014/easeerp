@@ -7,15 +7,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Service;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using Common.Logging;
-using TSCommon_Core.Organize.Dao;
+using TSCommon.Core.Organize.Dao;
 using System.Collections;
 using TSLib;
 using TSLib.Utils;
 using TS.Exceptions;
 
-namespace TSCommon_Core.Organize.Service
+namespace TSCommon.Core.Organize.Service
 {
     /// <summary>
     /// 组织单位信息Service的实现

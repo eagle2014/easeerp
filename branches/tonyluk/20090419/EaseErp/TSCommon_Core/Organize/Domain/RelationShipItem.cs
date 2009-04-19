@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TSCommon_Core.Organize.Domain
+namespace TSCommon.Core.Organize.Domain
 {
     public class RelationShipItem
     {

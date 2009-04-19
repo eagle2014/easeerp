@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Lib;
 
-namespace TSCommon_Core.ATM.Domain
+namespace TSCommon.Core.ATM.Domain
 {
     /// <summary>
     /// 附件实体类

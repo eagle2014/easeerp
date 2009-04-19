@@ -5,9 +5,9 @@ using System.Text.RegularExpressions;
 using TSLib.Utils;
 using System.Collections;
 using TSLib;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.SystemPolicy.Domain
+namespace TSCommon.Core.SystemPolicy.Domain
 {
     public class Policy : FileEntry
     {

@@ -4,14 +4,14 @@ using System.Text;
 using System.Collections.Specialized;
 using System.Web;
 using TS.Exceptions;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using System.Collections;
 using TSLibWeb;
-using TSCommon_Core.Security.Domain;
+using TSCommon.Core.Security.Domain;
 using System.Text.RegularExpressions;
 using TSLib.Utils;
 
-namespace TSCommon_Core.TSWebContext
+namespace TSCommon.Core.TSWebContext
 {
     /// <summary>
     /// WEBиообнд

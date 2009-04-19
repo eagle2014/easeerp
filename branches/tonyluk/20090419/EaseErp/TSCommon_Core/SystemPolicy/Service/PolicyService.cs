@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using TSCommon_Core.SystemPolicy.Domain;
+using TSCommon.Core.SystemPolicy.Domain;
 using TSLib.Service;
 using Common.Logging;
-using TSCommon_Core.SystemPolicy.Dao;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.SystemPolicy.Dao;
+using TSCommon.Core.Organize.Domain;
 using System.Collections;
 using Spring.Caching;
 
-namespace TSCommon_Core.SystemPolicy.Service
+namespace TSCommon.Core.SystemPolicy.Service
 {
     public class PolicyService : BaseService<Policy>, IPolicyService
     {

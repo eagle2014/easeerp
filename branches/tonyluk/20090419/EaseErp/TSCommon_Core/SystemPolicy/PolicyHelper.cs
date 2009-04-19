@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Common.Logging;
-using TSCommon_Core.SystemPolicy.Service;
-using TSCommon_Core.SystemPolicy.Domain;
+using TSCommon.Core.SystemPolicy.Service;
+using TSCommon.Core.SystemPolicy.Domain;
 
-namespace TSCommon_Core.SystemPolicy
+namespace TSCommon.Core.SystemPolicy
 {
     /// <summary>
     /// 系统策略类的辅助类

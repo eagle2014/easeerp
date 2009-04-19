@@ -4,9 +4,9 @@ using System.Text;
 using System.Collections;
 using TSLib.Dao;
 using TSLib;
-using TSCommon_Core.Security.Domain;
+using TSCommon.Core.Security.Domain;
 
-namespace TSCommon_Core.Security.Dao
+namespace TSCommon.Core.Security.Dao
 {
     /// <summary>
     /// 角色配置Dao的接口定义

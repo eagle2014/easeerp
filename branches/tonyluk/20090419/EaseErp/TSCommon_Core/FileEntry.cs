@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Lib;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core
+namespace TSCommon.Core
 {
     /// <summary>
     /// 文档基类，包括创建者和修改者

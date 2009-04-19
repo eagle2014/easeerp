@@ -11,11 +11,11 @@ using System.Collections;
 using TSLib;
 using TSLib.Utils;
 using TS.Exceptions;
-using TSCommon_Core.Organize.Domain;
-using TSCommon_Core.Organize.RelationShips;
-using TSCommon_Core.Organize.Dao;
+using TSCommon.Core.Organize.Domain;
+using TSCommon.Core.Organize.RelationShips;
+using TSCommon.Core.Organize.Dao;
 
-namespace TSCommon_Core.Organize.Service
+namespace TSCommon.Core.Organize.Service
 {
     /// <summary>
     /// 人员配置信息Service的实现

@@ -4,7 +4,7 @@ using System.Text;
 using Lib;
 using TSLib.Utils;
 
-namespace TSCommon_Core.Security.Domain
+namespace TSCommon.Core.Security.Domain
 {
     /// <summary>
     /// 权限定义

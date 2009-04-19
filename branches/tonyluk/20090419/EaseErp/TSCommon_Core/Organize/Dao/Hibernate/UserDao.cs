@@ -12,9 +12,9 @@ using System.Collections;
 using TSLib;
 using TSLib.Utils;
 using TSLib.DBUtils;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.Organize.Dao.Hibernate
+namespace TSCommon.Core.Organize.Dao.Hibernate
 {
     /// <summary>
     /// 人员配置信息Dao Hibernate的实现

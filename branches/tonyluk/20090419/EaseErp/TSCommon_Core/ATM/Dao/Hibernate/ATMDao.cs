@@ -4,7 +4,7 @@ using System.Text;
 using TSLib.Dao.Hibernate;
 using System.Collections;
 
-namespace TSCommon_Core.ATM.Dao.Hibernate
+namespace TSCommon.Core.ATM.Dao.Hibernate
 {
     public class ATMDao : BaseDao<ATM.Domain.ATM>, IATMDao
     {

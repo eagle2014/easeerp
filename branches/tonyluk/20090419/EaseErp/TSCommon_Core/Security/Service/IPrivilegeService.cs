@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections;
 using TSLib.Service;
-using TSCommon_Core.Security.Domain;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Security.Domain;
+using TSCommon.Core.Organize.Domain;
 
-namespace TSCommon_Core.Security.Service
+namespace TSCommon.Core.Security.Service
 {
     /// <summary>
     /// 权限配置Service的接口定义

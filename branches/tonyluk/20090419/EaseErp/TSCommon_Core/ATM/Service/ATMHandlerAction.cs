@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Common.Logging;
-using TSCommon_Core.ATM.Service;
+using TSCommon.Core.ATM.Service;
 using TSLib.Utils;
 using TSLib;
 
-namespace TSCommon_Core.ATM.Service
+namespace TSCommon.Core.ATM.Service
 {
     public class ATMHandlerAction
     {

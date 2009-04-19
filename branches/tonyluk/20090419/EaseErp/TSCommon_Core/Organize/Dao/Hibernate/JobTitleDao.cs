@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using Common.Logging;
 using TSLib.Dao.Hibernate;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using System.Collections;
 
-namespace TSCommon_Core.Organize.Dao.Hibernate
+namespace TSCommon.Core.Organize.Dao.Hibernate
 {
     public class JobTitleDao : BaseDao<JobTitle>, IJobTitleDao
     {

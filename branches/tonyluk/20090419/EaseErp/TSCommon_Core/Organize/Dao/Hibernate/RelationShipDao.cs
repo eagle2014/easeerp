@@ -12,10 +12,10 @@ using NHibernate;
 using TSLib.DBUtils;
 using NHibernate.Type;
 using TSLib.Utils;
-using TSCommon_Core.Organize.Domain;
+using TSCommon.Core.Organize.Domain;
 using TSLib.Dao.Hibernate;
 
-namespace TSCommon_Core.Organize.Dao.RelationShips
+namespace TSCommon.Core.Organize.Dao.RelationShips
 {
     /// <summary>
     /// 关联关系DAO Hibernate的实现

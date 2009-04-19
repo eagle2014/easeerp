@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using TSLib.Dao;
-using TSCommon_Core.SystemPolicy.Domain;
+using TSCommon.Core.SystemPolicy.Domain;
 
-namespace TSCommon_Core.SystemPolicy.Dao
+namespace TSCommon.Core.SystemPolicy.Dao
 {
     /// <summary>
     /// 系统策略DAO的接口定义

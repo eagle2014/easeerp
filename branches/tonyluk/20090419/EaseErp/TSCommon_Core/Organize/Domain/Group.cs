@@ -5,7 +5,7 @@ using System.Collections;
 using Lib;
 using TSLib.Utils;
 
-namespace TSCommon_Core.Organize.Domain
+namespace TSCommon.Core.Organize.Domain
 {
     /// <summary>
     /// ¸ÚÎ»×´Ì¬¶¨Òå
