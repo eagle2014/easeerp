@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<project name="EaseErp.IC" xmlns="http://nant.sf.net/schemas/nant.xsd" basedir=".">
+  <include buildfile="Build.properties.xml"/>
+
+  <!--复制所依赖的dll！-->
+  <target name="copyDll"> 
+  	<copy todir="${bin.dir}" flatten="true">
+      <fileset basedir="${easeErpLib.dir}">
+        <include name="TSCommon.Core\1.0.0.0\TSCommon.Core.*"/>
+   		</fileset>
+   	</copy>
+  <!--copy公共组件-->
+    <copy todir="${bin.dir}" flatten="true"> 
+      <fileset basedir="${commonLib.dir}">
+        <include name="antlr.runtime/2.7.6.2/*.*"/>
+        <include name="Castle.DynamicProxy2/2.0.3.4831/*.*"/>
+        <include name="Common.Logging/1.2.0.0/*.*"/>
+        <include name="Common.Logging.Log4Net/1.2.0.2/*.*"/>
+        <include name="Iesi.Collections/2.0.0.3001/*.*"/>
+        <include name="log4net/1.2.10.0/*.*"/>
+        <include name="Newtonsoft.Json/1.1.1.0/*.*"/>
+        <include name="NHibernate/2.0.0.3001/*.*"/>
+        <include name="nunit.framework/2.4.1.0/*.*"/>
+        <include name="Spring/1.2.2.20226/*.*"/>
+        <include name="TSLib/1.0.0.0/*.*"/>
+        <include name="TSLibStruts/1.0.0.0/*.*"/>
+        <include name="TSLibWeb/1.0.0.0/*.*"/>
+        <!--排除复制测试组件-->
+        <exclude name="**/*Test*.*"/>
+        <exclude name="**/*.pdb"/>
+      </fileset>
+    </copy>
+    </target>
+</project>

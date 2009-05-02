@@ -1,0 +1,10 @@
+#格式：导入的文件类,程序集名;数据文件
+TSCommon.Web.importData.cs.importModel,TSCommon.Web;importData/importData/importModel.txt
+TSCommon.Web.importData.cs.importGroupRank,TSCommon.Web;importData/importData/importGroupRank.txt
+TSCommon.Web.importData.cs.importJobTitle,TSCommon.Web;importData/importData/importJobTitle.txt
+TSCommon.Web.importData.cs.importOULevel,TSCommon.Web;importData/importData/importOULevel.txt
+TSCommon.Web.importData.cs.importOUInfo,TSCommon.Web;importData/importData/importOUInfo.txt
+TSCommon.Web.importData.cs.importPrivilege,TSCommon.Web;importData/importData/importPrivilege.txt
+TSCommon.Web.importData.cs.importRole,TSCommon.Web;importData/importData/importRole.txt
+TSCommon.Web.importData.cs.importGroup,TSCommon.Web;importData/importData/importGroup.txt
+TSCommon.Web.importData.cs.importUser,TSCommon.Web;importData/importData/importUser.txt

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- 附件资源信息定义 -->
+  <!-- 附件保存到的路径，可以为绝对路径或相对于程序目录下的路径 -->
+  <resource name="ATM.DIRECTORY">data</resource>
+  <resource name="ATTACHMENT.DELETE.WEB.SUCCESS">成功删除{0}个附件！</resource>
+
+  <resource name="ATTACHMENT.EXCEPTION.ATM_NOT_EXIST">所要下载的附件信息在系统中不存在！</resource>
+  <resource name="ATTACHMENT.EXCEPTION.FILE_NOT_EXIST">所要下载的附件文件在系统中不存在！</resource>
+
+  <!-- 附件控件：整体模板 -->
+  <resource name="ATM.WEB_CONTROL.TPL">
+    <table id='{MAIN_ID}' class="egd-atm-contaner-table" style="{STYLE}"  border='0' cellpadding='0' cellspacing='0' >
+      <tr class="egd-atm-tb-tr">
+        <td class="egd-atm-tb-td">{TB}</td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td>
+          <table id='{MAIN_ID}_DATAS' class="egd-atm-data-table" border='0' cellpadding='0' cellspacing='0'>
+            <tr class="egd-atm-header-tr" id="{MAIN_ID}_HEADER">
+              <td class="egd-atm-header-td" style="width:25;">{EMPTY}</td>
+              <td class="egd-atm-header-td">名称</td>
+              <td class="egd-atm-header-td" style="width:80;">大小</td>
+              <td class="egd-atm-header-td" style="width:80;">上传日期</td>
+              <td class="egd-atm-header-td-end" style="width:100;">上传者</td>
+            </tr>
+            {DATA_TRS}
+          </table>
+        </td>
+      </tr>
+    </table>
+  </resource>
+  <!-- 附件控件：标题的模板 -->
+  <resource name="ATM.WEB_CONTROL.TPL.TB.SUBJECT">
+    <div id="{MAIN_ID}_SUBJECT" class="egd-atm-title">{SUBJECT}</div>
+  </resource>
+  <!-- 附件控件：上传按钮的模板 -->
+  <resource name="ATM.WEB_CONTROL.TPL.TB.BUTTON.UPLOAD">
+    <div id="{MAIN_ID}_UPNLOAD" class="egd-atm-btn uploadATM"
+      onmouseover="this.className='egd-atm-btn uploadATM-mouseOver'"
+      onmouseout="this.className='egd-atm-btn uploadATM'"
+      onclick="TS.ATM.uploadFile({caller:'{MAIN_ID}',type:'{TYPE}',punid:'{PUNID}'});">
+      上传
+    </div>
+  </resource>
+  <!-- 附件控件：下载按钮的模板 -->
+  <resource name="ATM.WEB_CONTROL.TPL.TB.BUTTON.DOWNLOAD">
+    <div id="{MAIN_ID}_DOWNLOAD" class="egd-atm-btn downloadATM"
+      onmouseover="this.className='egd-atm-btn downloadATM-mouseOver'"
+      onmouseout="this.className='egd-atm-btn downloadATM'"
+      onclick="TS.ATM.downloadFile({caller:'{MAIN_ID}'});">
+      下载
+    </div>
+  </resource>
+  <!-- 附件控件：删除按钮的模板 -->
+  <resource name="ATM.WEB_CONTROL.TPL.TB.BUTTON.DELETE">
+    <div id="{MAIN_ID}_DELETE" class="egd-atm-btn deleteATM"
+      onmouseover="this.className='egd-atm-btn deleteATM-mouseOver'"
+      onmouseout="this.className='egd-atm-btn deleteATM'"
+      onclick="TS.ATM.deleteFile({caller:'{MAIN_ID}'});">
+      删除
+    </div>
+  </resource>
+  <!-- 附件控件：数据行的模板 -->
+  <resource name="ATM.WEB_CONTROL.TPL.DATA_TR">
+    <tr class="egd-atm-data-tr{N}" id="{UNID}">
+      <td class="egd-atm-data-td" style="width:25;text-align:center;">
+        <input name="{MAIN_ID}_SELECT" type="radio" />
+      </td>
+      <td class="egd-atm-data-td">{DATA_SUBJECT}</td>
+      <td class="egd-atm-data-td" style="width:80;">{DATA_FILESIZE}</td>
+      <td class="egd-atm-data-td" style="width:80;">{DATA_FILEDATE}</td>
+      <td class="egd-atm-data-td-end" style="width:100;">{DATA_AUTHOR}</td>
+    </tr>
+  </resource>
+</root>
