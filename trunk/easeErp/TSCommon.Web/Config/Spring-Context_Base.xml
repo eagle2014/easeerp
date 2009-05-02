@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object id="HibernateProperties" type="TSLib.SimpleResourceHelper,TSLib">
+    <property name="RootDir" value="~/Config/Resources" />
+  </object>
+</objects>

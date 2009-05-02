@@ -1,0 +1,2469 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TSCommon.Core</name>
+    </assembly>
+    <members>
+        <member name="M:TSCommon.Core.ATM.Dao.IATMDao.GetATM(System.String)">
+            <summary>
+            通过父文档的Unid得到所有的附件信息
+            </summary>
+            <param name="parentUnid">父文档的Unid</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Dao.IATMDao.GetATM(System.String,System.String)">
+            <summary>
+            通过父文档的Unid和相应的附件类别得到所有的附件信息
+            </summary>
+            <param name="parentUnid">父文档的Unid</param>
+            <param name="type">附件类别</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Dao.IATMDao.DeleteAll(System.Collections.IList)">
+            <summary>
+            删除附件信息集合
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Dao.IATMDao.DeleteAll(System.String)">
+            <summary>
+            删除父文档的Unid得到所有的附件
+            </summary>
+            <param name="parentUnid"></param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Dao.IATMDao.DeleteAll(System.String,System.String)">
+            <summary>
+            删除父文档的Unid得到所有的指定类型的附件
+            </summary>
+            <param name="parent"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Dao.IATMDao.GetPage(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+             通过父文档的Unid和相应的附件类别得到所有的附件信息
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <param name="parent"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TSCommon.Core.ATM.Domain.ATM">
+            <summary>
+            附件实体类
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.FileEntry">
+            <summary>
+            文档基类，包括创建者和修改者
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.FileEntry.#ctor">
+            <summary>
+            默认构造函数
+            </summary>        
+        </member>
+        <member name="M:TSCommon.Core.FileEntry.#ctor(TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            根据指定用户新建一个文档
+            </summary>
+            <param name="userInfo">用户信息</param>
+        </member>
+        <member name="M:TSCommon.Core.FileEntry.Init(TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            使用指定的用户信息初始化当前文档，并将<c>FileDate</c>属性设置为当前时间
+            </summary>
+            <param name="userInfo">用户信息</param>
+        </member>
+        <member name="M:TSCommon.Core.FileEntry.SetLastModifiedInfo(TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            设置最后修改的信息
+            </summary>
+            <param name="changer">修改人</param>
+        </member>
+        <member name="M:TSCommon.Core.FileEntry.SetAuthorInfo(TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            设置作者信息
+            </summary>
+            <param name="author">作者</param>
+        </member>
+        <member name="P:TSCommon.Core.FileEntry.Author">
+            <summary>
+            文件作者
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.FileEntry.LastChanger">
+            <summary>
+            文件最后修改人
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.FileEntry.FileDate">
+            <summary>
+            文件日期
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.FileEntry.FileDateTime">
+            <summary>
+            文件日期，返回格式为yyyy-MM-dd hh:mm的时间字符串
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.FileEntry.LastModifiedDate">
+            <summary>
+            文件最后修改时间，要设置该属性可调用SetLastModifiedInfo(changer)。
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.FileEntry.LastModifiedDateTime">
+            <summary>
+            文件最后修改时间，返回格式为yyyy-MM-dd hh:mm的时间字符串，要设置该属性可调用SetLastModifiedInfo(changer)。
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Domain.ATM.Subject">
+            <summary>
+            附件中文件名称
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Domain.ATM.FileName">
+            <summary>
+            附件文件保存的名字
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Domain.ATM.Type">
+            <summary>
+            附件类别
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Domain.ATM.FileFormat">
+            <summary>
+            附件中文件的格式
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Domain.ATM.FileSize">
+            <summary>
+            附件的大小
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Domain.ATM.ParentUnid">
+            <summary>
+            所属文件的unid
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Domain.ATM.SavePath">
+            <summary>
+            附件存放路径
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Service.ATMEventArgs.OldParentUnid">
+            <summary>
+            原来的父unid
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Service.ATMEventArgs.ATMData">
+            <summary>
+            要操作的附件信息（标识,fileName）
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Service.ATMEventArgs.NewParentUnid">
+            <summary>
+            要转移到的父unid
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.ATM.Service.ATMEventArgs.ProceAction">
+            <summary>
+            是拷比、剪切或者删除 （Copy，Move，Delete）
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.ATMHandlerAction.GetCurrentRunPath">
+            <summary>
+            获得当前运行路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.ATMHandlerAction.FormatePath(System.String)">
+            <summary>
+            格式化路径，如果路径没有以"\"结束，则加上"\"
+            </summary>
+            <param name="p_strPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.GetATM(System.String)">
+            <summary>
+            通过父文档的Unid得到所有的附件信息
+            </summary>
+            <param name="parentUnid">父文档的Unid</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.GetATM(System.String,System.String)">
+            <summary>
+            通过父文档的Unid和相应的附件类别得到所有的附件信息
+            </summary>
+            <param name="parentUnid">父文档的Unid</param>
+            <param name="type">附件类别</param>
+            <returns>附件信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.DeleteAll(System.Collections.Generic.IList{TSCommon.Core.ATM.Domain.ATM})">
+            <summary>
+            删除附件信息集合
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.DeleteAll(System.String)">
+            <summary>
+            删除父文档的Unid得到所有的附件
+            </summary>
+            <param name="parentUnid"></param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.DeleteAll(System.String,System.String)">
+            <summary>
+            删除父文档的Unid得到所有的指定类型的附件
+            </summary>
+            <param name="parent"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.Copy(System.String,System.String,System.String)">
+            <summary>
+            将指定的附件信息拷贝到另外一个指定文档中
+            </summary>
+            <param name="sourceParentUnid">原附件信息所属文件的Unid</param>
+            <param name="newParentUnid">新文档的Unid</param>
+            <param name="type">所要拷贝成的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.CopyAll(System.String,System.String,System.String,System.String)">
+            <summary>
+            将指定文档的附件信息拷贝到另外一个指定文档中
+            </summary>
+            <param name="sourceParentUnid">原附件信息所属文件的Unid</param>
+            <param name="sourceType">所需要拷贝文件的原类型</param>
+            <param name="newParentUnid">新文档的Unid</param>
+            <param name="destType">所要拷贝成的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.SwapParentUnid(System.String,System.String)">
+            <summary>
+            将指定附件的parentUnid替换成新的Unid
+            </summary>
+            <param name="sourceParentUnid">旧的Unid</param>
+            <param name="newParentUnid">新的Unid</param>
+        </member>
+        <member name="M:TSCommon.Core.ATM.Service.IATMService.GetPage(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+             通过父文档的Unid和相应的附件类别得到所有的附件信息
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <param name="parent"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TSCommon.Core.Controls.ATM">
+            <summary>
+            附件控件
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Controls.ATM.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Controls.ATM.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            呈现控件的内容
+            </summary>
+            <param name="writer">要在客户端呈现 HTML 内容的输出流</param>
+        </member>
+        <member name="P:TSCommon.Core.Controls.ATM.Subject">
+            <summary>
+            附件标题
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Controls.ATM.Type">
+            <summary>
+            附件类型
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Controls.ATM.PUnid">
+            <summary>
+            附件所属文档的Unid
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Controls.ATM.ReadOnly">
+            <summary>
+            附件所属文档的Unid
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Controls.ATM.Style">
+            <summary>
+            总样式
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Dao.IOptionItemDao.FindAll(System.String)">
+            <summary>
+            获取指定类型的业务对象配置项
+            </summary>
+            <param name="type">业务对象类型</param>
+            <returns>符合条件的业务对象类型列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Dao.IOptionItemDao.GetPage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取指定页面中业务对象配置项
+            </summary>
+            <param name="firstNo"></param>
+            <param name="maxResult"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Dao.IOptionItemDao.GetPage(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取指定类型的业务对象配置项
+            </summary>
+            <param name="firstNo"></param>
+            <param name="maxResult"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <param name="type">业务对象类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Dao.IOptionItemDao.FindAllType">
+            <summary>
+            获取所有可选的类型信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:TSCommon.Core.OptionItemCfg.Domain.OptionItem.CACHE_FQN">
+            <summary>
+            业务对象配置在缓存中的全局名称
+            </summary>
+            <remarks>
+            值为：OPTION_ITEM_CFG
+            </remarks>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Domain.OptionItem.InsertPleaseSelectOptionItemToFirst(System.Collections.IList)">
+            <summary>
+            插入“== 请选择 ==”的空白选项到指定列表的最前端
+            </summary>
+            <param name="optionItems">源选项列表</param>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Domain.OptionItem.InsertAnyOptionItemToFirst(System.Collections.IList)">
+            <summary>
+            插入“== 任意 ==”的空白选项到指定列表的最前端
+            </summary>
+            <param name="optionItems">源选项列表</param>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Domain.OptionItem.InsertBlankOptionItemToFirst(System.Collections.IList)">
+            <summary>
+            插入空白选项到指定列表的最前端
+            </summary>
+            <param name="optionItems">源选项列表</param>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Domain.OptionItem.InsertOptionItemToFirst(System.Collections.IList,System.String,System.String)">
+            <summary>
+            插入指定选项到指定列表的最前端
+            </summary>
+            <param name="optionItems">源选项列表</param>
+            <param name="emptyLabel">空白选项显示的文本</param>
+            <param name="emptyValue">空白选项对应的值</param>
+        </member>
+        <member name="P:TSCommon.Core.OptionItemCfg.Domain.OptionItem.Type">
+            <summary>
+            配置所属的分类
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.OptionItemCfg.Domain.OptionItem.TypeName">
+            <summary>
+            配置所属分类的名称
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.OptionItemCfg.Domain.OptionItem.Name">
+            <summary>
+            配置的名称
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.OptionItemCfg.Domain.OptionItem.Code">
+            <summary>
+            配置的代码
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.FindAll(System.String)">
+            <summary>
+            获取指定类型的业务对象配置项
+            </summary>
+            <param name="type">业务对象类型</param>
+            <returns>符合条件的业务对象类型列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.GetPage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取指定页面中业务对象配置项
+            </summary>
+            <param name="firstNo"></param>
+            <param name="maxResult"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.GetPage(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取指定类型的业务对象配置项
+            </summary>
+            <param name="firstNo"></param>
+            <param name="maxResult"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <param name="type">业务对象类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.DeleteAll">
+            <summary>
+            删除所有的业务对象配置项
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.DeleteAll(System.String)">
+            <summary>
+            删除指定类型的业务对象配置项
+            </summary>
+            <param name="type">指定的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.GetOptions(System.String)">
+            <summary>
+            取得指定类型业务对象配置的选项列表
+            </summary>
+            <param name="type">类型</param>
+            <returns>业务对象的选项列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.GetOptions(System.String,System.String)">
+            <summary>
+            取得指定类型业务对象配置的选项列表
+            </summary>
+            <param name="type">类型</param>
+            <param name="curValue">当前所选择的值，如果在配置列表中没有该值那么添加一个选项，否则不添加</param>
+            <returns>业务对象的选项列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.GetTypeName(System.String)">
+            <summary>
+            获取类型的名称
+            </summary>
+            <param name="type">类型的值</param>
+            <returns>该类型的描述</returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.FindAllType">
+            <summary>
+            获取所有可选的类型信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.OptionItemCfg.Service.IOptionItemService.GetTypeOptions">
+            <summary>
+            获取所有可选的类型信息选项列表 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TSCommon.Core.OptionItemCfg.Service.OptionItemService.OptionItemDao">
+            <summary>
+            业务对象配置的Dao
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.Hibernate.GroupDao">
+            <summary>
+            岗位配置Dao的NHbernate的实现
+            </summary>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.IGroupDao">
+            <summary>
+            岗位配置DAO的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindByOU(System.String)">
+            <summary>
+            根据所属OU的Unid查询所配置的岗位信息
+            </summary>
+            <param name="ouUnid">所属OU的Unid</param>
+            <returns>返回符合条件的岗位配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindByOU(System.String[])">
+            <summary>
+            根据所属OU的Unid查询所配置的岗位信息
+            </summary>
+            <param name="ouUnids">所属OU的Unid列表</param>
+            <returns>返回符合条件的岗位配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindByOU(System.String[],System.Boolean)">
+            <summary>
+            根据所属OU的Unid查询所配置的岗位信息
+            </summary>
+            <param name="ouUnids">所属OU的Unid列表</param>
+            <param name="isCanDispatch">是否可以派单</param>
+            <returns>返回符合条件的岗位配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindByOU(System.String[],System.String)">
+            <summary>
+            根据所属OU的Unid查询所配置的岗位信息
+            </summary>
+            <param name="ouUnids">所属OU的Unid列表</param>
+            <param name="groupType">岗位类型：0--全部类型，1--可派单岗位，2--不可派单岗位</param>
+            <returns>返回符合条件的岗位配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindByName(System.String,System.String)">
+            <summary>
+            获取指定OU中所配置的指定名称的岗位信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="groupName">岗位名称</param>
+            <returns>返回符合条件的岗位信息集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindAllSendTo(System.String)">
+            <summary>
+            根据所属OU的Unid查询所配置的可派单的岗位信息
+            </summary>
+            <param name="ouUnid">所属OU的Unid</param>
+            <returns>返回符合条件的岗位配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindAllSendTo(System.String[])">
+            <summary>
+            根据所属OU的Unid查询所配置的可派单的岗位信息
+            </summary>
+            <param name="ouUnid">所属OU的Unid</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.FindByUser(System.String)">
+            <summary>
+            查找指定人员所拥有的岗位列表
+            </summary>
+            <param name="userUnid">人员的Unid</param>
+            <returns>返回符合条件的岗位配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.GetPageByOU(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取岗位配置的配置信息
+            </summary>
+            <param name="ouUnid">所属OU的UNID</param>
+            <param name="pageNo">所要获取的页面数</param>
+            <param name="pageSize"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <returns>该页的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.IsUnique(TSCommon.Core.Organize.Domain.Group)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="group">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.GetSysDefaultGroup">
+            <summary>
+            获取系统的默认岗位，当人员没有配置任何岗位信息时系统默认该人员拥有该岗位
+            </summary>
+            <returns>系统的默认岗位</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.DoHaveGroupByCode(System.String,System.String)">
+            <summary>
+            按照岗位编码和组织OUCode判断是否有该岗位
+            </summary>
+            <param name="code"></param>
+            <param name="ouCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IGroupDao.LoadByCode(System.String)">
+            <summary>
+            根据Code加载岗位配置配置信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Dao.Hibernate.GroupDao.SysDefaultGroupCode">
+            <summary>
+            获取或设置系统默认岗位的编码的值
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IJobTitleDao.LoadByCode(System.String)">
+            <summary>
+            根据职务编码获得职务信息
+            </summary>
+            <param name="jobTitleCode">职务编码</param>
+            <returns>指定编码的职务信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IJobTitleDao.FindAllByLevel(System.String[])">
+            <summary>
+            获取指定级别范围的所有职务信息
+            </summary>
+            <param name="levels">级别的值列表，为空则返回空的集合</param>
+            <returns>指定级别范围的所有职务信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IJobTitleDao.IsUnique(TSCommon.Core.Organize.Domain.JobTitle)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="jobTitle">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.Hibernate.OUInfoDao">
+            <summary>
+            组织架构Dao的NHibernate的实现
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.IOUInfoDao">
+            <summary>
+            单位组织信息的DAO接口定义
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindAll">
+            <summary>
+            获取全部组织架构的配置信息
+            </summary>
+            <returns>所有配置的组织架构信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindAllByType(System.String)">
+            <summary>
+            获取指定类型的组织结构配置信息
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindChildByParentUnid(System.String,System.String)">
+            <summary>
+            获取指定OU下指定类型的所有子OU的配置信息
+            </summary>
+            <param name="parentUnid">上级OU的Unid</param>
+            <param name="ouType">OU的类型，为null表示查询所有类型</param>
+            <returns>指定OU下指定类型的所有子OU的配置信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindChildByParentUnid(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定OU下指定类型的所有子OU的配置信息
+            </summary>
+            <param name="parentUnid">上级OU的Unid</param>
+            <param name="ouType">OU的类型，为null表示查询所有类型</param>
+            <param name="includeChildOU">是否包含下级OU（包含下级的下级等）的信息</param>
+            <returns>指定OU下指定类型的所有子OU的配置信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindChildByParentCode(System.String,System.String)">
+            <summary>
+            获取指定OU下指定类型的所有子OU的配置信息
+            </summary>
+            <param name="parentCode">上级OU的编码(编码全称)</param>
+            <param name="ouType">OU的类型</param>
+            <returns>指定OU下指定类型的所有子OU的配置信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindByLevel(System.Int32,System.Boolean)">
+            <summary>
+            获取指定级别的组织架构配置信息
+            </summary>
+            <param name="level">组织架构级别编码</param>
+            <param name="hasChild">是否包含子集</param>
+            <returns>符合条件的组织架构集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindAllDepartment(System.String)">
+            <summary>
+            取得指定单位下所有部门的信息
+            </summary>
+            <param name="unitUnid">单位的UNID</param>
+            <returns>返回符合条件的集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.LoadByFullCode(System.String)">
+            <summary>
+            根据组织架构的代码加载相应的组织架构信息
+            </summary>
+            <param name="fullCode">组织架构的代码</param>
+            <returns>相应组织架构的配置信息，如果没有则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.IsUnique(TSCommon.Core.Organize.Domain.OUInfo)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="ouInfo">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.GetPageByType(System.String,System.Int32,System.Int32,System.String,System.String,System.Object[])">
+            <summary>
+            获取指定类型组织架构的页面信息
+            </summary>
+            <param name="type">组织架构的类型</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <param name="ouStatuses">状态列表，为空代表所有状态</param>
+            <returns>符合条件的页面信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.GetDepartmentPage(System.String,System.Int32,System.Int32,System.String,System.String,System.Object[])">
+            <summary>
+            获取指定类型组织架构的页面信息
+            </summary>
+            <param name="unitUnid">部门所属单位的Unid</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <param name="ouStatuses">状态列表，为空代表所有状态</param>
+            <returns>符合条件的页面信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindOUInfoByOldImportDataID(System.String)">
+            <summary>
+            查找数据库中原来导入的数据
+            </summary>
+            <param name="oldImportDataID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.GetAllOldImportDataID">
+            <summary>
+            获得所有的原来DeparmentId,用逗号隔开
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindDepartmentByUnit(System.String,System.Boolean)">
+            <summary>
+            获取指定单位中所包含的所有部门信息
+            </summary>
+            <param name="parentUnid">所属单位的Unid</param>
+            <param name="firstLevel">是否是第一层的部门信息</param>
+            <returns>如果存在子那么返回，否则返回空值</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOUInfoDao.FindAll_OrgSync">
+            <summary>
+            用于数据同步，搜索出所有组织架构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.Hibernate.OUInfoDao.FindAll">
+            <summary>
+            所有单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.Hibernate.OUInfoDao.FindAll_OrgSync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.Hibernate.OUInfoDao.expandStatusCondition(System.Object[],System.Text.StringBuilder,System.Collections.ArrayList)">
+            <summary>
+            扩展OU状态的查询条件
+            </summary>
+            <param name="statuses">状态列表</param>
+            <param name="hql">要扩展的查询字符串，该值不能为空</param>
+            <param name="args">要扩展的绑定参数，该值不能为空</param>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.IOULevelDao">
+            <summary>
+            级别Dao接口的定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-05-25</date>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOULevelDao.FindByCodes(System.String[])">
+            <summary>
+            获取指定级别编码集的所有级别信息
+            </summary>
+            <param name="codes">级别的Level集</param>
+            <returns>指定级别集的所有级别信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOULevelDao.LoadByCode(System.String)">
+            <summary>
+            根据级别编码得到相应的级别配置
+            </summary>
+            <param name="code">级别编码</param>
+            <returns>如果在数据库中进行了配置，则返回该配置，否则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IOULevelDao.IsUnique(TSCommon.Core.Organize.Domain.OULevel)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="ouLevel">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.RelationShips.RelationShipDao">
+            <summary>
+            关联关系DAO Hibernate的实现
+            <author>CD826</author>
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.IRelationShipDao">
+            <summary>
+            关联关系DAO接口的定义
+            <author>CD826</author>
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.Get(System.String,System.String)">
+            <summary>
+            获取一个关联关系
+            </summary>
+            <param name="parentUnid">关联关系父文档的UNID</param>
+            <param name="childUnid">关联关系子文档的UNID</param>
+            <returns>如果存在则返回相应的关联关系，否则返回一个NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.GetByChild(System.String,System.String)">
+            <summary>
+            获取关联关系
+            </summary>
+            <param name="childUnid">子文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+            <returns>如果存在则返回相应的关联关系，否则返回一个NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.GetByParent(System.String,System.String)">
+            <summary>
+            获取关联关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+            <returns>如果存在则返回相应的关联关系，否则返回一个NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.Delete(System.String,System.String)">
+            <summary>
+            根据给定的父文档和子文档的UNID，删除他们直接的关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="childUnid">子文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.Delete(System.String,System.String[])">
+            <summary>
+            根据给定的父文档和子文档的UNID，删除他们直接的关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="childUnids">子文档的UNID集</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.DeleteAllByParent(System.String)">
+            <summary>
+            删除指定关联到父文档的所有关联关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.DeleteAllByParent(System.String,System.String)">
+            <summary>
+            删除指定关联到父文档和类型的所有关联关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.DeleteAllByChild(System.String)">
+            <summary>
+            删除和指定子文档的所有关联关系
+            </summary>
+            <param name="childUnid">子文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.DeleteAllByChild(System.String,System.String)">
+            <summary>
+            删除和指定子文档、关联关系的所有关联关系
+            </summary>
+            <param name="childUnid">子文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.DeleteAll(System.String)">
+            <summary>
+            删除和指定文档的所有关联关系
+            </summary>
+            <param name="unid">文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.IRelationShipDao.DeleteAll(System.String,System.String)">
+            <summary>
+            删除和指定文档、关联关系的所有关联关系
+            </summary>
+            <param name="unid">文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.Hibernate.UserDao">
+            <summary>
+            人员配置信息Dao Hibernate的实现
+            </summary>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Dao.IUserDao">
+            <summary>
+            人员配置DAO的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindByOU(System.String)">
+            <summary>
+            根据所属OU的Unid查询所配置的人员信息
+            </summary>
+            <param name="ouUnid">所属OU的Unid，</param>
+            <returns>返回符合条件的人员配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindByOU(System.String,System.String)">
+            <summary>
+            获取指定OU中指定类型的人员信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="userType">用户类型</param>
+            <returns>该OU中所配置的人员配置的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindByOU(System.String[],System.String)">
+            <summary>
+            获取指定OU中指定类型的人员信息
+            </summary>
+            <param name="ouUnids">OU的Unid列表</param>
+            <param name="userType">用户类型</param>
+            <returns>该OU中所配置的人员配置的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindByGroup(System.String)">
+            <summary>
+            查找指定岗位中所包含的人员列表
+            </summary>
+            <param name="groupUnid">群组的Unid</param>
+            <returns>返回符合条件的人员配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindByGroup(System.String,System.String)">
+            <summary>
+            查找指定岗位中所包含的指定类型的人员列表
+            </summary>
+            <param name="groupUnid">群组的Unid</param>
+            <param name="userType">用户类型</param>
+            <returns>返回符合条件的人员配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.GetPageByOU(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取指定OU下的人员信息
+            </summary>
+            <param name="ouUnid">所属OU的UNID，为空代表忽略</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <returns>该页的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.LoadByLoginID(System.String)">
+            <summary>
+            根据用户的登录名加载相应的人员信息
+            </summary>
+            <param name="loginID">用户的登录ID</param>
+            <returns>如果存在该用户的信息则返回，否则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.IsUnique(TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="userInfo">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindAllWithOutMessageUser(System.String,System.String)">
+            <summary>
+            查找在messageGroupUser中不存在的人
+            </summary>
+            <param name="ouUnid"></param>
+            <param name="userUnid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindAllByTelephone(System.String)">
+            <summary>
+            根据电话号码查询指定的人员信息
+            </summary>
+            <param name="telephoneNo">所要查询的电话号码</param>
+            <returns>符合条件的人员信息列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindAllByLoginID(System.String)">
+            <summary>
+            根据登录姓名查询人员信息
+            </summary>
+            <param name="loginID">登录姓名</param>
+            <returns>符合条件的人员信息列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindAllByName(System.String)">
+            <summary>
+            根据姓名查询人员信息
+            </summary>
+            <param name="name">姓名</param>
+            <returns>符合条件的人员信息列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.GetUserInfoByEmployeeID(System.String)">
+            <summary>
+            根据原先employeeID查找数据
+            </summary>
+            <param name="employeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.GetAllEmployeeID">
+            <summary>
+            获得所有EmployeeID,用逗号隔开
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindByUnids(System.String[])">
+            <summary>
+            获取指定Unid集的所有人员信息
+            </summary>
+            <param name="unids">人员Unid集</param>
+            <returns>指定Unid集的所有人员信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.IUserDao.FindAllByRelationShipParentUnid(System.String,System.Int32,System.Int32)">
+            <summary>
+            根据关系的parentUnid返回用户列表
+            </summary>
+            <param name="relationShipParentUnid"></param>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Dao.Hibernate.UserDao.FindAllByRelationShipParentUnid(System.String,System.Int32,System.Int32)">
+            <summary>
+            根据关系的parentUnid返回用户列表
+            </summary>
+            <param name="relationShipParentUnid"></param>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.GroupStatuses">
+            <summary>
+            岗位状态定义
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.GroupStatusConverter">
+            <summary>
+            用于岗位状态的Struts转换器
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.Group">
+            <summary>
+            岗位配置的Domain
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.GroupRank">
+            <summary>
+            岗位级别Domain定义
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.JobTitle">
+            <summary>
+            职务Domain定义
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.JobTitle.LevelName">
+            <summary>
+            级别名称
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.OUStatuses">
+            <summary>
+            组织状态
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.OUStatusConverter">
+            <summary>
+            用于组织状态的Struts转换器
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.OUInfo">
+            <summary>
+            单位、部门等信息的Domain
+            <author>CD826</author>
+            </summary>
+        </member>
+        <member name="F:TSCommon.Core.Organize.Domain.OUInfo.OT_UNIT">
+            <summary>OU类型：单位</summary>
+        </member>
+        <member name="F:TSCommon.Core.Organize.Domain.OUInfo.OT_DEPARTMENT">
+            <summary>OU类型：部门</summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.OULevel">
+            <summary>
+            单位级别的Domain
+            <author>CD826</author>
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.RelationShip">
+            <summary>
+            关联关系的记录的Domain
+            </summary>
+        </member>
+        <member name="F:TSCommon.Core.Organize.Domain.RelationShip.RS_SPLITFLAG">
+            <summary>
+            分隔符
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.RelationShip.#ctor">
+            <summary>
+            默认构造函数
+            </summary>        
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.RelationShip.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据指定信息创建一个关联关系的记录
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="parentType">父文档的类型</param>
+            <param name="childUnid">子文档的UNID</param>
+            <param name="childType">子文档的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.RelationShip.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            根据指定信息创建一个关联关系的记录
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="parentType">父文档的类型</param>
+            <param name="childUnid">子文档的UNID</param>
+            <param name="childType">子文档的类型</param>
+            <param name="relationShipType">关联关系描述，一般为parentType.childType</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.RelationShip.BuildRelationShipCode(System.String,System.String)">
+            <summary>
+            构造关联关系
+            </summary>
+            <param name="parentType">父文档的类型</param>
+            <param name="childType">子文档的类型</param>
+            <returns>关联关系</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.RelationShip.Copy(TSCommon.Core.Organize.Domain.RelationShip)">
+            <summary>
+            复制关联关系信息
+            </summary>
+            <param name="relationShip">要复制的关联关系</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.RelationShip.Update(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新关联关系信息
+            </summary>
+            <param name="parentUnid"></param>
+            <param name="parentType"></param>
+            <param name="childUnid"></param>
+            <param name="childType"></param>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShip.ParentUnid">
+            <summary>
+            父文档的UNID
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShip.ParentType">
+            <summary>
+            父文档的类型
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShip.ChildUnid">
+            <summary>
+            子文档的UNID
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShip.ChildType">
+            <summary>
+            子文档的类型
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShip.RelationShipType">
+            <summary>
+            关联关系描述，一般为parentType.childType
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.RelationShipItem.#ctor">
+            <summary>
+            默认构造函数
+            </summary>        
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShipItem.Name">
+            <summary>
+            关联名称
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShipItem.Url">
+            <summary>
+            关联页面的url
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.RelationShipItem.Type">
+            <summary>
+            关联类型
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.UserStatuses">
+            <summary>
+            人员状态
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.UserStatusConverter">
+            <summary>
+            用于人员状态的Struts转换器
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Domain.User">
+            <summary>
+            用户配置Domain
+            </summary>
+        </member>
+        <member name="F:TSCommon.Core.Organize.Domain.User.RELATIONSHIP_CODE">
+            <summary>关联关系的定义,值为userInfo</summary>
+        </member>
+        <member name="F:TSCommon.Core.Organize.Domain.User.T_CLIENT">
+            <summary>普通用户类型,值为0</summary>
+        </member>
+        <member name="F:TSCommon.Core.Organize.Domain.User.T_HELPDESK">
+            <summary>服务台用户类型,值为1</summary>
+        </member>
+        <member name="F:TSCommon.Core.Organize.Domain.User.T_SUPPORT">
+            <summary>服务支持用户类型,值为2</summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.User.GetUserGroupUnids">
+            <summary>
+            取得人员所属岗位Unid的列表
+            </summary>
+            <returns>返回用户所属岗位Unid的列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.User.HasPrivilege(System.String)">
+            <summary>
+            判断当前用户是否拥有指定的权限
+            </summary>
+            <remarks>
+            注意，用户的权限是在当用户登录系统时由登录验证代码设置用户权限的privilegeMap的，本类不负责处理该事情。
+            </remarks>
+            <param name="privilegeCode">所要检测的权限代码</param>
+            <returns>如果拥有则返回true，否则返回false</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Domain.User.CreateEncryptPassword(System.String,System.String)">
+            <summary>
+            对口令进行加密
+            </summary>
+            <param name="password">明文口令</param>
+            <param name="key">特殊键值</param>
+            <returns>加密后的口令</returns>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.User.UserType">
+            <summary>
+            用户类型：0--普通用户(默认)，1--服务台用户，2--服务支持用户
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.User.UserTypeDesc">
+            <summary>
+            用户类型的描述
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Domain.User.Privileges">
+            <summary>
+            用户所拥有的权限列表
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Service.GroupService">
+            <summary>
+            岗位配置Service的实现
+            </summary>
+            <author>CD826</author>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Service.IGroupService">
+            <summary>
+            岗位配置Service的接口定义
+            </summary>
+            <author>CD826</author>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindByOU(System.String,System.Boolean)">
+            <summary>
+            获取指定OU中所配置的岗位信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="includeUnit">是否包含所属单位的岗位信息</param>
+            <returns>返回符合条件的岗位信息集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindAllSendTo(System.String)">
+            <summary>
+            根据所属OU的Unid查询所配置的可派单的岗位信息
+            </summary>
+            <param name="ouUnid">所属OU的Unid</param>
+            <returns>返回符合条件的岗位配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindAllSendTo(System.String,System.Boolean)">
+            <summary>
+            根据所属OU的Unid查询所配置的可派单的岗位信息
+            </summary>
+            <param name="ouUnid">所属OU的Unid</param>
+            <param name="includeChild">是否搜索子部门的岗位</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindByOU(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            获取指定OU中所配置的岗位信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="includeUnit">是否包含所属单位的岗位信息</param>
+            <param name="isCanDispatch">是否是查询需要派单的岗位, false表示查询所有</param>
+            <returns>返回符合条件的岗位信息集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindByOU(System.String,System.Boolean,System.String)">
+            <summary>
+            获取指定OU中所配置的岗位信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="includeUnit">是否包含所属单位的岗位信息</param>
+            <param name="groupType">岗位类型：0--全部类型，1--可派单岗位，2--不可派单岗位</param>
+            <returns>返回符合条件的岗位信息集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindByOU(System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            获取指定OU中所配置的岗位信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="includeUnit">是否包含所属单位的岗位信息</param>
+            <param name="groupType">岗位类型：0--全部类型，1--可派单岗位，2--不可派单岗位</param>
+            <param name="includeChildOUGroup">是否包含下级部门（包含部门的子部门）的岗位信息</param>
+            <returns>返回符合条件的岗位信息集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindByName(System.String,System.String)">
+            <summary>
+            获取指定OU中所配置的指定名称的岗位信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="groupName">岗位名称</param>
+            <returns>返回符合条件的岗位信息集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.FindByName(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定OU中所配置的指定名称的岗位信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="groupName">岗位名称</param>
+            <param name="continueFindByUpperOU">如果在指定的部门中找不到该岗位，是否在其上级部门中继续向上找，直到单位为止</param>
+            <returns>返回符合条件的岗位信息集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.GetPageByOU(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取岗位配置的配置信息
+            </summary>
+            <param name="ouUnid">所属OU的UNID</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <returns>该页的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.LoadByCode(System.String)">
+            <summary>
+            根据Code加载岗位配置配置信息
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.ParseSave(TSCommon.Core.Organize.Domain.User,TSCommon.Core.Organize.Domain.Group)">
+            <summary>
+            为人员同步提供保存操作
+            </summary>
+            <param name="userInfo"></param>
+            <param name="group"></param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.DoHaveGroupByCode(System.String,System.String)">
+            <summary>
+            按照岗位编码和组织OUCode判断是否有该岗位
+            </summary>
+            <param name="code"></param>
+            <param name="ouCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IGroupService.DeleteAllByOU(System.String)">
+            <summary>
+            按照ouUnid删除所有岗位
+            </summary>
+            <param name="ouUnid"></param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IJobTitleService.LoadByCode(System.String)">
+            <summary>
+            根据职务编码获得职务信息
+            </summary>
+            <param name="jobTitleCode">职务编码</param>
+            <returns>指定编码的职务信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IJobTitleService.FindAllByLevel(System.String)">
+            <summary>
+            获取指定级别的所有职务信息
+            </summary>
+            <param name="level">级别的值</param>
+            <returns>指定级别的所有职务信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IJobTitleService.FindAllByLevel(System.String[])">
+            <summary>
+            获取指定级别范围的所有职务信息
+            </summary>
+            <param name="levels">级别的值列表</param>
+            <returns>指定级别范围的所有职务信息</returns>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Service.IOUInfoService">
+            <summary>
+            组织架构Service的接口定义
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.GetPageByType(TSCommon.Core.Organize.Domain.User,System.String,System.Int32,System.Int32,System.String,System.String,System.Object[])">
+            <summary>
+            获取组织架构的配置信息
+            </summary>
+            <param name="userInfo">当前操作的人员</param>
+            <param name="type">组织架构的类型</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <param name="ouStatuses">状态列表，为空代表所有状态</param>
+            <returns>该页的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.GetDepartmentPage(System.String,System.Int32,System.Int32,System.String,System.String,System.Object[])">
+            <summary>
+            获取组织架构的配置信息
+            </summary>        
+            <param name="unitUnid">部门所属单位的Unid</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <param name="ouStatuses">状态列表，为空代表所有状态</param>
+            <returns>该页的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.GetUnitTree(TSCommon.Core.Organize.Domain.User,System.Int32)">
+            <summary>
+            获取指定的单位结构信息
+            </summary>
+            <param name="userInfo"></param>
+            <param name="privilegeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.GetOUTree(TSCommon.Core.Organize.Domain.User,System.String)">
+            <summary>
+            获取指定单位的树型结构列表
+            </summary>
+            <param name="userInfo"></param>
+            <param name="unitUnid">单位的Unid</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.GetOUTree(TSCommon.Core.Organize.Domain.User,System.Int32)">
+            <summary>
+            获取组织架构的树型结构信息
+            </summary>
+            <param name="userInfo"></param>
+            <param name="privilegeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindAllByType(TSCommon.Core.Organize.Domain.User,System.String)">
+            <summary>
+            获取指定的组织架构信息列表
+            </summary>
+            <param name="userInfo"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindUnitByParentUnid(System.String,System.Boolean)">
+            <summary>
+            查询指定单位下所包含的所有子单位
+            </summary>
+            <param name="parentUnid">当前单位的Unid</param>
+            <param name="includeSelf">返回值中是否包含本单位</param>
+            <returns>符合条件的单位列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindAllDepartment(System.String)">
+            <summary>
+            取得指定单位下所有部门的信息
+            </summary>
+            <param name="unitUnid">单位的UNID</param>
+            <returns>返回符合条件的集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindOUInfoByParentUnid(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            取得指定OU中所包含的所有OU的信息
+            </summary>
+            <param name="parentUnid">该OU的Unid</param>
+            <param name="hasDepartment">如果该OU是一个单位，则指示是否需要获取其下的部门</param>
+            <param name="hasChildDepartment">如果该OU是一个部门，则指示是否需要获取其子部门</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.LoadByFullCode(System.String)">
+            <summary>
+            根据组织架构的代码加载相应的组织架构信息
+            </summary>
+            <param name="fullCode">组织架构的代码</param>
+            <returns>相应组织架构的配置信息，如果没有则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindOUInfoByOldImportDataID(System.String)">
+            <summary>
+            查找数据库中原来导入的数据
+            </summary>
+            <param name="oldImportDataID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.GetAllOldImportDataID">
+            <summary>
+            获得所有的原来DeparmentId,用逗号隔开
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.DeleteByOldImportDataID(System.String)">
+            <summary>
+            根据原来的编号删除记录 
+            </summary>
+            <param name="oldImportDataID"></param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindChilds(System.String,System.String)">
+            <summary>
+            获取指定OU下指定类型的所有子OU的配置信息
+            </summary>
+            <param name="parentUnid">上级OU的Unid</param>
+            <param name="ouType">OU的类型，为null表示查询所有类型</param>
+            <returns>指定OU下指定类型的所有子OU的配置信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindChilds(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定OU下指定类型的所有子OU的配置信息
+            </summary>
+            <param name="parentUnid">上级OU的Unid</param>
+            <param name="ouType">OU的类型，为null表示查询所有类型</param>
+            <param name="includeChildOU">是否包含下级OU（包含下级的下级等）的信息</param>
+            <returns>指定OU下指定类型的所有子OU的配置信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindChilds(System.String)">
+            <summary>
+            获取指定OU下的所有子OU的配置信息
+            </summary>
+            <param name="parentUnid">上级OU的Unid</param>
+            <returns>指定OU下的所有子OU的配置信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindDepartmentByUnit(System.String,System.Boolean)">
+            <summary>
+            获取指定单位中所包含的所有部门信息
+            </summary>
+            <param name="parentUnid">所属单位的Unid</param>
+            <param name="firstLevel">是否是第一层的部门信息</param>
+            <returns>如果存在子那么返回，否则返回空值</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOUInfoService.FindAll_OrgSync">
+            <summary>
+            用于数据同步，搜索出所有组织架构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IOULevelService.FindByLevels(System.String[])">
+            <summary>
+            获取指定级别集的所有级别信息
+            </summary>
+            <param name="levels">级别的Level集</param>
+            <returns>指定级别集的所有级别信息</returns>
+        </member>
+        <member name="T:TSCommon.Core.Organize.RelationShips.IRelationShipService">
+            <summary>
+            关联关系Service接口的定义
+            <author>CD826</author>
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.UpdateRelationByParent(System.String,System.String,System.Collections.IList)">
+            <summary>
+            根据父文档的UNID更新所有的关联关系
+            </summary>
+            <param name="parentUnid"></param>
+            <param name="relationShipType"></param>
+            <param name="relationShips"></param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.UpdateRelationByChild(System.String,System.String,System.Collections.IList)">
+            <summary>
+            根据父文档的UNID更新所有的关联关系
+            </summary>
+            <param name="childUnid"></param>
+            <param name="relationShipType"></param>
+            <param name="relationShips"></param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.UpdateRelation(System.String,System.Collections.IList,System.String)">
+            <summary>
+            根据父文档的UNID更新所有的关联关系
+            </summary>
+            <param name="parentUnid"></param>
+            <param name="relationShips"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.Get(System.String,System.String)">
+            <summary>
+            获取一个关联关系
+            </summary>
+            <param name="parentUnid">关联关系父文档的UNID</param>
+            <param name="childUnid">关联关系子文档的UNID</param>
+            <returns>如果存在则返回相应的关联关系，否则返回一个NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.GetByChild(System.String,System.String)">
+            <summary>
+            获取关联关系
+            </summary>
+            <param name="childUnid">子文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+            <returns>如果存在则返回相应的关联关系，否则返回一个NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.GetByParent(System.String,System.String)">
+            <summary>
+            获取关联关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+            <returns>如果存在则返回相应的关联关系，否则返回一个NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.Delete(System.String,System.String)">
+            <summary>
+            根据给定的父文档和子文档的UNID，删除他们直接的关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="childUnid">子文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.Delete(System.String,System.String[])">
+            <summary>
+            根据给定的父文档和子文档的UNID，删除他们直接的关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="childUnids">子文档的UNID集</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.DeleteAllByParent(System.String)">
+            <summary>
+            删除指定关联到父文档的所有关联关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.DeleteAllByParent(System.String,System.String)">
+            <summary>
+            删除指定关联到父文档和类型的所有关联关系
+            </summary>
+            <param name="parentUnid">父文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.DeleteAllByChild(System.String)">
+            <summary>
+            删除和指定子文档的所有关联关系
+            </summary>
+            <param name="childUnid">子文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.DeleteAllByChild(System.String,System.String)">
+            <summary>
+            删除和指定子文档、关联关系的所有关联关系
+            </summary>
+            <param name="childUnid">子文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.DeleteAll(System.String)">
+            <summary>
+            删除和指定文档的所有关联关系
+            </summary>
+            <param name="unid">文档的UNID</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.DeleteAll(System.String,System.String)">
+            <summary>
+            删除和指定文档、关联关系的所有关联关系
+            </summary>
+            <param name="unid">文档的UNID</param>
+            <param name="type">关联关系的类型</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.RelationShips.IRelationShipService.Build(System.String,System.String,System.String[],System.String)">
+            <summary>
+            根据父文档和子文档信息构建关联关系
+            </summary>
+            <param name="parentUnid">父文档unid</param>
+            <param name="parentType">父文档关联代码</param>
+            <param name="childUnids">子文档unid集</param>
+            <param name="childType">子文档关联代码</param>
+            <returns>成功构建的关联关系的数量</returns>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Service.IUserService">
+            <summary>
+            人员配置Service的接口定义
+            </summary>
+            <author>CD826</author>
+            <author>zzh</author>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindByOU(System.String)">
+            <summary>
+            获取指定OU中所有人员配置的配置信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <returns>该OU中所配置的人员配置的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindByOU(System.String,System.String)">
+            <summary>
+            获取指定OU中指定类型的人员信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="userType">用户类型</param>
+            <returns>该OU中所配置的人员配置的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindByOU(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定OU中指定类型的人员信息
+            </summary>
+            <param name="ouUnid">OU的Unid</param>
+            <param name="userType">用户类型</param>
+            <param name="includeChildOU">是否包含下级及下级的下级OU的用户</param>
+            <returns>该OU中所配置的人员配置的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.GetPageByOU(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取人员配置的配置信息
+            </summary>
+            <param name="ouUnid">所属OU的UNID</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <returns>该页的信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.Authorize(System.String,System.String)">
+            <summary>
+            验证指定的信息是否正确  
+            </summary>
+            <param name="loginName">所要验证的用户名</param>
+            <param name="password">验证的口令</param>
+            <returns>如果验证成功返回该用户的信息，否则抛出AuthorizeException</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.EnabledUser(TSCommon.Core.Organize.Domain.User,TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            激活指定的人员配置配置信息
+            </summary>
+            <param name="curUser">当前操作的人员</param>
+            <param name="userInfo">所要激活的人员配置配置信息</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.DisabledUser(TSCommon.Core.Organize.Domain.User,TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            禁用指定的人员配置配置信息
+            </summary>
+            <param name="curUser">当前操作的人员</param>
+            <param name="userInfo">所要禁用的人员配置配置信息</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.ChangeUserPassword(TSCommon.Core.Organize.Domain.User,System.Int64,System.String)">
+            <summary>
+            直接修改用户的口令
+            </summary>
+            <param name="curUser">当前操作的用户</param>
+            <param name="userInfoID">所要修改用户的ID</param>
+            <param name="password">新的password</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.ChangeUserPassword(TSCommon.Core.Organize.Domain.User,System.Int64,System.String,System.String)">
+            <summary>
+            修改用户的口令
+            </summary>
+            <param name="curUser">当前操作的用户</param>
+            <param name="userInfoID">所要修改用户的ID</param>
+            <param name="password">新的password</param>
+            <param name="oldPassword">该用户原来的口令</param>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindAllWithOutMessageUser(System.String,System.String)">
+            <summary>
+            查找在messageGroupUser中不存在的人
+            </summary>
+            <param name="ouUnid"></param>
+            <param name="userUnid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindAllByTelephone(System.String)">
+            <summary>
+            根据电话号码查询指定的人员信息
+            </summary>
+            <param name="telephoneNo">所要查询的电话号码</param>
+            <returns>符合条件的人员信息列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindAllByLoginID(System.String)">
+            <summary>
+            根据登录姓名查询人员信息
+            </summary>
+            <param name="loginID">登录姓名</param>
+            <returns>符合条件的人员信息列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindAllByName(System.String)">
+            <summary>
+            根据姓名查询人员信息
+            </summary>
+            <param name="name">姓名</param>
+            <returns>符合条件的人员信息列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindByGroup(System.String)">
+            <summary>
+            查找指定岗位中所包含的人员列表
+            </summary>
+            <param name="groupUnid">群组的Unid</param>
+            <returns>返回符合条件的人员配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindByGroup(System.String,System.String)">
+            <summary>
+            查找指定岗位中所包含的指定类型的人员列表
+            </summary>
+            <param name="groupUnid">群组的Unid</param>
+            <param name="userType">用户类型</param>
+            <returns>返回符合条件的人员配置信息的集合</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindDataScope(TSCommon.Core.Organize.Domain.User,System.String)">
+            <summary>
+            获取用户的数据权限范围
+            </summary>
+            <param name="userInfo">当前操作的人员</param>
+            <param name="privilege">数据权限名称</param>
+            <returns>该人员所具有的数据权限范围，如果是全部则返回一个空的数组，默认返回当前用户所在单位的Unid</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.GetUserInfoByEmployeeID(System.String)">
+            <summary>
+            根据原先employeeID查找数据
+            </summary>
+            <param name="employeeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.GetAllEmployeeID">
+            <summary>
+            获得所有EmployeeID,用逗号隔开
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.ChangeUserPasswordOne(TSCommon.Core.Organize.Domain.User,System.Int64,System.String)">
+            <summary>
+            更改用户的密码
+            </summary>
+            <param name="curUser"></param>
+            <param name="userInfoID"></param>
+            <param name="password">明文密码</param>
+            <returns>新的已加密的密码</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.LoadByLoginID(System.String)">
+            <summary>
+            根据用户的登录名加载相应的人员信息
+            </summary>
+            <param name="loginID">用户的登录ID</param>
+            <returns>如果存在该用户的信息则返回，否则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindByUnids(System.String[])">
+            <summary>
+            获取指定Unid集的所有人员信息
+            </summary>
+            <param name="unids">人员Unid集</param>
+            <returns>指定Unid集的所有人员信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.IUserService.FindAllByRelationShipParentUnid(System.String,System.Int32,System.Int32)">
+            <summary>
+            根据关系的parentUnid返回用户列表
+            </summary>
+            <param name="relationShipParentUnid"></param>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Service.JobTitleService.JobTitleDao">
+            <summary>
+            职务的DAO
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Service.OUInfoService">
+            <summary>
+            组织单位信息Service的实现
+            <author>CD826</author>
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.Organize.Service.OULevelService.OULevelDao">
+            <summary>
+            级别的Dao
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.RelationShips.RelationShipService">
+            <summary>
+            关联关系Service的实现
+            <author>CD826</author>
+            <author>Tony</author>
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Organize.Service.UserService">
+            <summary>
+            人员配置信息Service的实现
+            </summary>
+            <author>CD826</author>
+            <author>Tony</author>
+            <date>2008-05-31</date>
+        </member>
+        <member name="M:TSCommon.Core.Organize.Service.UserService.EncryptPassword(TSCommon.Core.Organize.Domain.User,System.String)">
+            <summary>
+            对口令进行加密
+            </summary>
+            <param name="userInfo">当前用户的信息</param>
+            <param name="password">新的口令</param>
+            <returns>加密后的口令</returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Dao.Hibernate.ModelDao">
+            <summary>
+            模块Dao接口Hibernate的实现
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="T:TSCommon.Core.Security.Dao.IModelDao">
+            <summary>
+            模块Dao的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IModelDao.FindAllWithExclude(System.Int64)">
+            <summary>
+            获取除指定模块以外的全部模块的配置信息
+            </summary>
+            <param name="id">所要排除的模块配置信息</param>
+            <returns>所有配置的模块信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IModelDao.IsUnique(TSCommon.Core.Security.Domain.Model)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="model">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IModelDao.FindAllMaster">
+            <summary>
+            获取全部主模块
+            </summary>
+            <returns>全部主模块</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IModelDao.FindChildren(System.Int64)">
+            <summary>
+            获取指定模块的所有子模块
+            </summary>
+            <param name="modelID">指定模块的主键</param>
+            <returns>指定模块的所有子模块，如果modelID不大于0，则返回所有主模块</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IModelDao.FindChildren(System.String)">
+            <summary>
+            获取指定模块的所有子模块
+            </summary>
+            <param name="modelUnid">指定模块的Unid</param>
+            <returns>指定模块的所有子模块，如果modelUnid为空，则返回所有主模块</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IModelDao.GetByCode(System.String)">
+            <summary>
+            根据编码返回模块
+            </summary>
+            <param name="code">模块编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Dao.Hibernate.PrivilegeDao">
+            <summary>
+            权限Dao接口的NHibernate实现
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="T:TSCommon.Core.Security.Dao.IPrivilegeDao">
+            <summary>
+            权限Dao的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IPrivilegeDao.FindByType(System.String)">
+            <summary>
+            获取指定类型的权限配置信息
+            </summary>
+            <param name="privilegeType">权限类型</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IPrivilegeDao.FindByModel(System.Int64)">
+            <summary>
+            获取指定模块下的所有权限列表
+            </summary>
+            <param name="modelID">模块的ID</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IPrivilegeDao.FindByModelAndType(System.Int64,System.String)">
+            <summary>
+            获取指定模块下指定类型的所有权限列表
+            </summary>
+            <param name="modelID">模块的ID</param>
+            <param name="type">要获取的权限的类型</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IPrivilegeDao.FindByModelAndType(System.String,System.String)">
+            <summary>
+            获取指定模块下指定类型的所有权限列表
+            </summary>
+            <param name="modelUnid">模块的Unid，为空则返回空的权限列表</param>
+            <param name="type">要获取的权限的类型，为空代表全部</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IPrivilegeDao.LoadByCode(System.String)">
+            <summary>
+            根据权限的代码加载相应的权限信息
+            </summary>
+            <param name="code">权限的代码</param>
+            <returns>相应权限的配置信息，如果没有则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IPrivilegeDao.IsUnique(TSCommon.Core.Security.Domain.Privilege)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="privilege">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Dao.Hibernate.RoleDao">
+            <summary>
+            角色Dao的Hibernate的实现
+            </summary>
+            <author>Tony</author>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="T:TSCommon.Core.Security.Dao.IRoleDao">
+            <summary>
+            角色配置Dao的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IRoleDao.FindByLevel(System.String,System.Boolean)">
+            <summary>
+            获取指定级别的角色配置信息
+            </summary>
+            <param name="level">角色级别编码</param>
+            <param name="hasChild">是否包含子集</param>
+            <returns>符合条件的角色集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IRoleDao.FindByGroup(System.String)">
+            <summary>
+            获取指定岗位中所包含的角色信息
+            </summary>
+            <param name="grouUnid">岗位的Unid</param>
+            <returns>符合条件的角色集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IRoleDao.FindByUser(System.String)">
+            <summary>
+            获取指定人员所拥有的角色信息
+            </summary>
+            <param name="userInfoUnid">人员的Unid</param>
+            <returns>符合条件的角色集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IRoleDao.LoadByCode(System.String)">
+            <summary>
+            根据角色的代码加载相应的角色信息
+            </summary>
+            <param name="code">角色的代码</param>
+            <returns>相应角色的配置信息，如果没有则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IRoleDao.IsUnique(TSCommon.Core.Security.Domain.Role)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="role">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Dao.IRoleDao.GetPage(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获取指定级别的角色的分页信息。
+            </summary>
+            <param name="level">角色的级别代码</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向值</param>
+            <returns>指定页码的分页对象,如果找不到任何结果则返回空页</returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Domain.ModelTypes">
+            <summary>
+            模块类型
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Security.Domain.ModelTypeConverter">
+            <summary>
+            用于模块类型的Struts转换器
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.Security.Domain.Model">
+            <summary>
+            模块Domain定义
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Security.Domain.Model.#ctor">
+            <summary>
+            默认构造函数
+            </summary>        
+        </member>
+        <member name="M:TSCommon.Core.Security.Domain.Model.#ctor(System.Int64,System.String)">
+            <summary>
+            根据指定条件创建一个模块
+            </summary>
+            <param name="id"></param>
+            <param name="modelName"></param>
+        </member>
+        <member name="M:TSCommon.Core.Security.Domain.Model.GetTypeName">
+            <summary>
+            获取模块类型的名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Domain.Model.GetParentName">
+            <summary>
+            获取模块所属模块的名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Domain.Privilege">
+            <summary>
+            权限定义
+            </summary>
+        </member>
+        <member name="F:TSCommon.Core.Security.Domain.Privilege.RELATIONSHIP_CODE">
+            <summary>关联关系的定义，值为“privilege”</summary>
+        </member>
+        <member name="F:TSCommon.Core.Security.Domain.Privilege.PRIVILEGETYPE_BUTTON">
+            <summary>功能按钮权限，值为“btn”</summary>
+        </member>
+        <member name="F:TSCommon.Core.Security.Domain.Privilege.PRIVILEGETYPE_MODEL">
+            <summary>功能模块权限，值为“url”</summary>
+        </member>
+        <member name="T:TSCommon.Core.Security.Domain.Role">
+            <summary>
+            角色Domain的定义
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.Security.Domain.Role.SetPrivilegeIDs(System.String[])">
+            <summary>
+            设置角色所拥有的权限信息
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="T:TSCommon.Core.Security.Service.IModelService">
+            <summary>
+            模块Service的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IModelService.FindAllWithExclude(System.Int64)">
+            <summary>
+            获取除指定模块以外的全部模块的配置信息
+            </summary>
+            <param name="id">所要排除的模块配置信息</param>
+            <returns>所有配置的模块信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IModelService.FindAllMaster">
+            <summary>
+            获取全部主模块
+            </summary>
+            <returns>全部主模块</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IModelService.FindChildren(System.Int64)">
+            <summary>
+            获取指定模块的所有子模块
+            </summary>
+            <param name="modelID">指定模块的主键</param>
+            <returns>指定模块的所有子模块，如果modelID不大于0，则返回所有主模块</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IModelService.FindChildren(System.String)">
+            <summary>
+            获取指定模块的所有子模块
+            </summary>
+            <param name="modelUnid">指定模块的Unid</param>
+            <returns>指定模块的所有子模块，如果modelUnid为空，则返回所有主模块</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IModelService.GetByCode(System.String)">
+            <summary>
+            根据编码返回模块
+            </summary>
+            <param name="code">模块编码</param>
+            <returns></returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Service.IPrivilegeService">
+            <summary>
+            权限配置Service的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.FindByType(System.String)">
+            <summary>
+            获取指定类型的权限配置信息
+            </summary>
+            <param name="privilegeType">权限类型</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.FindByModel(System.Int64)">
+            <summary>
+            获取指定模块下的所有权限列表
+            </summary>
+            <param name="modelID">模块的ID</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.FindByModelAndType(System.Int64,System.String)">
+            <summary>
+            获取指定模块下指定类型的所有权限列表
+            </summary>
+            <param name="modelID">模块的ID</param>
+            <param name="type">要获取的权限的类型</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.FindByModelAndType(System.String,System.String)">
+            <summary>
+            获取指定模块下指定类型的所有权限列表
+            </summary>
+            <param name="modelUnid">模块的Unid，为空则返回空的权限列表</param>
+            <param name="type">要获取的权限的类型，为空代表全部</param>
+            <returns>符合条件的权限集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.LoadByCode(System.String)">
+            <summary>
+            根据权限的代码加载相应的权限信息
+            </summary>
+            <param name="code">权限的代码</param>
+            <returns>相应权限的配置信息，如果没有则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.HasPrivilege(TSCommon.Core.Organize.Domain.User,System.String)">
+            <summary>
+            判断指定的用户是否拥有指定的权限
+            </summary>
+            <param name="userInfo">要判断的用户</param>
+            <param name="privilegeKey">权限编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.HasAnyPrivilege(TSCommon.Core.Organize.Domain.User,System.String[])">
+            <summary>
+            判断指定的用户是否拥有指定的权限集中的任一权限
+            </summary>
+            <param name="userInfo">要判断的用户</param>
+            <param name="privilegeKeys">权限编码列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.HasAnyPrivilege(TSCommon.Core.Organize.Domain.Group,System.String[])">
+            <summary>
+            判断指定的岗位是否拥有指定的权限集中的任一权限
+            </summary>
+            <param name="group">要判断的岗位</param>
+            <param name="privilegeKeys">权限编码列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IPrivilegeService.HasAnyPrivilege(TSCommon.Core.Security.Domain.Role,System.String[])">
+            <summary>
+            判断指定的角色是否拥有指定的权限集中的任一权限
+            </summary>
+            <param name="role">要判断的角色</param>
+            <param name="privilegeKeys">权限编码列表</param>
+            <returns></returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Service.IRoleService">
+            <summary>
+            角色配置Service的接口定义
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IRoleService.FindByOU(System.String)">
+            <summary>
+            获取指定组织中角色的配置信息
+            </summary>
+            <param name="ouUnid">组织的Unid</param>
+            <returns>相应配置的角色信息</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IRoleService.FindByLevel(System.String,System.Boolean)">
+            <summary>
+            获取指定级别的角色配置信息
+            </summary>
+            <param name="level">角色级别编码</param>
+            <param name="hasChild">是否包含子集</param>
+            <returns>符合条件的角色集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IRoleService.FindByUser(System.String)">
+            <summary>
+            获取指定人员所拥有的角色信息
+            </summary>
+            <param name="userInfoUnid">人员的Unid</param>
+            <returns>符合条件的角色集合列表</returns>
+        </member>
+        <member name="M:TSCommon.Core.Security.Service.IRoleService.LoadByCode(System.String)">
+            <summary>
+            根据角色的代码加载相应的角色信息
+            </summary>
+            <param name="code">角色的代码</param>
+            <returns>相应角色的配置信息，如果没有则返回NULL</returns>
+        </member>
+        <member name="T:TSCommon.Core.Security.Service.ModelService">
+            <summary>
+            模块Service的实现
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="T:TSCommon.Core.Security.Service.PrivilegeService">
+            <summary>
+            权限Service的实现
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="T:TSCommon.Core.Security.Service.RoleService">
+            <summary>
+            角色Service的实现
+            </summary>
+            <author>Tony</author>
+            <date>2008-06-01</date>
+        </member>
+        <member name="T:TSCommon.Core.SystemPolicy.Dao.Hibernate.PolicyDao">
+            <summary>
+            系统策略DAO Hibernate的实现
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.SystemPolicy.Dao.IPolicyDao">
+            <summary>
+            系统策略DAO的接口定义
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.SystemPolicy.Dao.IPolicyDao.LoadByCode(System.String)">
+            <summary>
+            装载指定编码的系统策略信息
+            </summary>
+            <param name="code">系统策略的编码</param>
+            <returns>相应的策略，如果没有则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.SystemPolicy.Dao.IPolicyDao.IsUnique(TSCommon.Core.SystemPolicy.Domain.Policy)">
+            <summary>
+            判断对象在数据库中是否唯一
+            </summary>
+            <param name="policy">所要判断的对象</param>
+            <returns>在数据库中是唯一的就返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSCommon.Core.SystemPolicy.Domain.Policy.#ctor">
+            <summary>
+            默认构造函数
+            </summary>        
+        </member>
+        <member name="M:TSCommon.Core.SystemPolicy.Domain.Policy.#ctor(TSCommon.Core.Organize.Domain.User)">
+            <summary>
+            根据指定用户新建一个系统策略
+            </summary>
+            <param name="userInfo">用户信息</param>
+        </member>
+        <member name="P:TSCommon.Core.SystemPolicy.Domain.Policy.BelongModule">
+            <summary>
+            所属模块,如系统管理、事件管理
+            </summary>
+        </member>
+        <member name="P:TSCommon.Core.SystemPolicy.Domain.Policy.OrderNo">
+            <summary>
+            排序序号
+            </summary>
+        </member>
+        <member name="T:TSCommon.Core.SystemPolicy.Service.IPolicyService">
+            <summary>
+            系统策略
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.SystemPolicy.Service.IPolicyService.LoadByCode(System.String)">
+            <summary>
+            装载指定编码的系统策略信息
+            </summary>
+            <param name="code">系统策略的编码</param>
+            <returns>相应的策略，如果没有则返回NULL</returns>
+        </member>
+        <member name="M:TSCommon.Core.SystemPolicy.Service.IPolicyService.Save(TSCommon.Core.Organize.Domain.User,TSCommon.Core.SystemPolicy.Domain.Policy)">
+            <summary>
+            保存
+            </summary>
+            <param name="user"></param>
+            <param name="policy"></param>
+        </member>
+        <member name="T:TSCommon.Core.SystemPolicy.PolicyHelper">
+            <summary>
+            系统策略类的辅助类
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.SystemPolicy.PolicyHelper.GetPolicyValue(System.String)">
+            <summary>
+            得到指定策略的值
+            </summary>
+            <param name="policyCode">系统策略的编码</param>
+            <returns>如果没有则返回一个空字符串</returns>
+        </member>
+        <member name="T:TSCommon.Core.HtmlOption">
+            <summary>
+            为select提供选择项
+            </summary>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.#ctor">
+            <summary>
+            默认构造函数
+            </summary>        
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.#ctor(System.String,System.String)">
+            <summary>
+            根据参数中的信息构造一个HtmlOption
+            </summary>
+            <param name="name">option的name信息</param>
+            <param name="value">option的value信息</param>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.GetBlankHtmlOption">
+            <summary>
+            产生一个长度为1的空白HtmlOption[] 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.StringArray2HtmlOptions(System.String[])">
+            <summary>
+            从字符串数组转换为HtmlOption数组 
+            </summary>
+            <param name="sourceValues">字符串数组</param>
+            <returns>返回生成好的HtmlOption数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.StringArray2HtmlOptions(System.String[],System.Boolean)">
+            <summary>
+            从字符串数组转换为HtmlOption数组 
+            </summary>
+            <param name="sourceValues">字符串数组</param>
+            <param name="isAddBlank">是否添加一个空白值</param>
+            <returns>返回生成好的HtmlOption数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.List2HtmlOptions(System.Collections.IList)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.List2HtmlOptions(System.Collections.IList,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.List2HtmlOptions(System.Collections.IList,System.String)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <param name="preString">Option Value值的前缀</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.List2HtmlOptions(System.Collections.IList,System.String,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表</param>
+            <param name="preString">Option Value值的前缀</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList,System.String)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <param name="preString">Option Value值的前缀</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+        <member name="M:TSCommon.Core.HtmlOption.ArrayList2HtmlOptions(System.Collections.IList,System.String,System.Boolean)">
+            <summary>
+            将值列表转换成HtmlOption数组
+            </summary>
+            <param name="sourceList">值列表，每一个列表项为一个数组，第一个元素为OptionName的值，第二个元素为OptionValue的值</param>
+            <param name="preString">Option Value值的前缀</param>
+            <param name="isAddBlank">是否添加空白选项</param>
+            <returns>返回转换好的HtmlOption数组，如果原来的列表为空，那么返回一个空白HtmlOption的数组</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,883 @@
+2009-04-19 14:54:32,190 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-04-19 14:54:32,232 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_ATM.xml
+2009-04-19 14:54:32,233 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_Base.xml
+2009-04-19 14:54:32,234 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_Group.xml
+2009-04-19 14:54:32,235 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_JobTitle.xml
+2009-04-19 14:54:32,236 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_Model.xml
+2009-04-19 14:54:32,237 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_NHibernate.xml
+2009-04-19 14:54:32,238 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_OptionItemCfg.xml
+2009-04-19 14:54:32,239 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_OUInfo.xml
+2009-04-19 14:54:32,240 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_OULevel.xml
+2009-04-19 14:54:32,240 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_Privilege.xml
+2009-04-19 14:54:32,241 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_RelationShip.xml
+2009-04-19 14:54:32,242 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_Role.xml
+2009-04-19 14:54:32,243 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_SystemPolicy.xml
+2009-04-19 14:54:32,244 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_User.xml
+2009-04-19 14:54:32,245 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Context_WareHouse.xml
+2009-04-19 14:54:32,245 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Spring-Web_Login.xml
+2009-04-19 14:54:36,873 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file0:F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Model.xml
+2009-04-19 14:54:36,874 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file1:F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_OptionItemCfg.xml
+2009-04-19 14:54:36,875 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file2:F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Organize.xml
+2009-04-19 14:54:36,876 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file3:F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Policy.xml
+2009-04-19 14:54:36,877 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file4:F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Privilege.xml
+2009-04-19 14:54:36,878 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file5:F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Role.xml
+2009-04-19 14:54:36,879 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file6:F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_WareHouse.xml
+2009-04-19 14:54:47,841 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_ATM.xml
+2009-04-19 14:54:47,844 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_Base.xml
+2009-04-19 14:54:47,845 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_MainPage.xml
+2009-04-19 14:54:47,847 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_OptionItemCfg.xml
+2009-04-19 14:54:47,848 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_Security.xml
+2009-04-19 14:54:47,978 [8] WARN  TSCommon_Web.TS_MainPage._Default [(null)] - hello
+2009-04-19 15:00:08,031 [8] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[EaseErp_WareHouse.WareHouse.Domain.WareHouse, EaseErp_WareHouse, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - 值不能为空。
+参数名: String
+System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Int64.Parse(String s)
+   在 TSCommon_Web.WareHouse.action.WareHouseAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\develop\EaseErp\TSCommon_Web\WareHouse\action\WareHouseAction.cs:行号 75
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 273
+2009-04-19 15:00:08,214 [8] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 288
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\DispatchAction.cs:行号 44
+2009-04-19 15:00:08,305 [8] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/wareHouse
+2009-04-19 15:10:20,219 [8] WARN  TSCommon_Web.TS_MainPage._Default [(null)] - hello
+2009-04-19 15:10:23,844 [8] WARN  TSCommon_Web.TS_MainPage._Default [(null)] - hello
+2009-04-19 15:10:41,188 [8] WARN  TSCommon_Web.TS_MainPage._Default [(null)] - hello
+2009-04-19 15:26:34,968 [4] ERROR Spring.Objects.Factory.Support.WebObjectUtils [(null)] - Unable to instantiate page [/WareHouse/ThingForm.aspx]: ID“WHUnit_ID”已被其他控件使用。
+System.Web.HttpParseException: ID“WHUnit_ID”已被其他控件使用。 ---> System.Web.HttpParseException: ID“WHUnit_ID”已被其他控件使用。 ---> System.Web.HttpException: ID“WHUnit_ID”已被其他控件使用。
+   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseInternal()
+   在 System.Web.UI.TemplateParser.Parse()
+   在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+   在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreatePageInstance(String pageUrl)
+2009-04-19 15:26:35,025 [4] ERROR TSLibStruts.ActionHandler [(null)] - 为 /WareHouse/ThingForm.aspx 执行子请求时出错。
+System.Web.HttpException: 为 /WareHouse/ThingForm.aspx 执行子请求时出错。 ---> Spring.Objects.Factory.ObjectCreationException: Error creating object with name '' : Unable to instantiate page [/WareHouse/ThingForm.aspx]: ID“WHUnit_ID”已被其他控件使用。 ---> System.Web.HttpParseException: ID“WHUnit_ID”已被其他控件使用。 ---> System.Web.HttpParseException: ID“WHUnit_ID”已被其他控件使用。 ---> System.Web.HttpException: ID“WHUnit_ID”已被其他控件使用。
+   在 System.Web.UI.TemplateParser.ProcessError(String message)
+   在 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseInternal()
+   在 System.Web.UI.TemplateParser.Parse()
+   在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+   在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreatePageInstance(String pageUrl)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreatePageInstance(String pageUrl)
+   在 Spring.Web.Support.PageHandlerWrapper.CreatePageInstance()
+   在 Spring.Web.Support.PageHandlerWrapper.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   在 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   在 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   在 System.Web.HttpServerUtility.Execute(String path, Boolean preserveForm)
+   在 TSLibStruts.Action.RequestProcessor.ProcessForward(HttpContext context, ForwardConfig forward) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 357
+   在 TSLibStruts.Action.RequestProcessor.LoadAndExecuteAction(HttpContext context, String path) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 175
+   在 TSLibStruts.Action.RequestProcessor.ProcessRequest(HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 398
+   在 TSLibStruts.ActionHandler.ProcessRequest(HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\ActionHandler.cs:行号 222
+2009-04-19 15:27:48,017 [9] ERROR TSLibStruts.ActionHandler [(null)] - 为 /WareHouse/ThingForm.aspx 执行子请求时出错。
+System.Web.HttpException: 为 /WareHouse/ThingForm.aspx 执行子请求时出错。 ---> System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> Spring.Core.NullValueInNestedPathException: Cannot initialize property or field node 'ID' because the specified context is null.
+   在 Spring.Expressions.PropertyOrFieldNode.InitializeNode(Object context)
+   在 Spring.Expressions.PropertyOrFieldNode.Get(Object context, EvaluationContext evalContext)
+   在 Spring.Expressions.Expression.Get(Object context, EvaluationContext evalContext)
+   在 Spring.Expressions.BaseNode.GetValue(Object context, IDictionary variables)
+   在 Spring.Expressions.BaseNode.Spring.Expressions.IExpression.GetValue(Object context, IDictionary variables)
+   在 Spring.DataBinding.SimpleExpressionBinding.GetTargetValue(Object target, IDictionary variables)
+   在 Spring.DataBinding.AbstractSimpleBinding.DoBindTargetToSource(Object source, Object target, IDictionary variables)
+   在 Spring.DataBinding.AbstractSimpleBinding.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors, IDictionary variables)
+   在 Spring.DataBinding.AbstractBinding.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors)
+   在 Spring.DataBinding.BaseBindingContainer.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors, IDictionary variables)
+   在 Spring.DataBinding.BaseBindingContainer.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors)
+   在 Spring.Web.UI.Page.BindFormData()
+   在 Spring.Web.UI.Page.OnPreRender(EventArgs e)
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.warehouse_thingform_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\tony\AppData\Local\Temp\Temporary ASP.NET Files\root\c49d216c\38d85001\App_Web__3_dgq1n.0.cs:行号 0
+   在 Spring.Web.Support.PageHandlerWrapper.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   在 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   在 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   在 System.Web.HttpServerUtility.Execute(String path, Boolean preserveForm)
+   在 TSLibStruts.Action.RequestProcessor.ProcessForward(HttpContext context, ForwardConfig forward) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 357
+   在 TSLibStruts.Action.RequestProcessor.LoadAndExecuteAction(HttpContext context, String path) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 175
+   在 TSLibStruts.Action.RequestProcessor.ProcessRequest(HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 398
+   在 TSLibStruts.ActionHandler.ProcessRequest(HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\ActionHandler.cs:行号 222
+2009-04-19 15:27:51,287 [9] ERROR TSLibStruts.ActionHandler [(null)] - 为 /WareHouse/ThingForm.aspx 执行子请求时出错。
+System.Web.HttpException: 为 /WareHouse/ThingForm.aspx 执行子请求时出错。 ---> System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> Spring.Core.NullValueInNestedPathException: Cannot initialize property or field node 'ID' because the specified context is null.
+   在 Spring.Expressions.PropertyOrFieldNode.InitializeNode(Object context)
+   在 Spring.Expressions.PropertyOrFieldNode.Get(Object context, EvaluationContext evalContext)
+   在 Spring.Expressions.Expression.Get(Object context, EvaluationContext evalContext)
+   在 Spring.Expressions.BaseNode.GetValue(Object context, IDictionary variables)
+   在 Spring.Expressions.BaseNode.Spring.Expressions.IExpression.GetValue(Object context, IDictionary variables)
+   在 Spring.DataBinding.SimpleExpressionBinding.GetTargetValue(Object target, IDictionary variables)
+   在 Spring.DataBinding.AbstractSimpleBinding.DoBindTargetToSource(Object source, Object target, IDictionary variables)
+   在 Spring.DataBinding.AbstractSimpleBinding.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors, IDictionary variables)
+   在 Spring.DataBinding.AbstractBinding.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors)
+   在 Spring.DataBinding.BaseBindingContainer.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors, IDictionary variables)
+   在 Spring.DataBinding.BaseBindingContainer.BindTargetToSource(Object source, Object target, IValidationErrors validationErrors)
+   在 Spring.Web.UI.Page.BindFormData()
+   在 Spring.Web.UI.Page.OnPreRender(EventArgs e)
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.warehouse_thingform_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\tony\AppData\Local\Temp\Temporary ASP.NET Files\root\c49d216c\38d85001\App_Web__3_dgq1n.0.cs:行号 0
+   在 Spring.Web.Support.PageHandlerWrapper.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   在 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   在 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   在 System.Web.HttpServerUtility.Execute(String path, Boolean preserveForm)
+   在 TSLibStruts.Action.RequestProcessor.ProcessForward(HttpContext context, ForwardConfig forward) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 357
+   在 TSLibStruts.Action.RequestProcessor.LoadAndExecuteAction(HttpContext context, String path) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 175
+   在 TSLibStruts.Action.RequestProcessor.ProcessRequest(HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\RequestProcessor.cs:行号 398
+   在 TSLibStruts.ActionHandler.ProcessRequest(HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\ActionHandler.cs:行号 222
+2009-04-20 23:18:03,574 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-04-20 23:18:03,613 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_ATM.xml
+2009-04-20 23:18:03,614 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Base.xml
+2009-04-20 23:18:03,615 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Group.xml
+2009-04-20 23:18:03,616 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_JobTitle.xml
+2009-04-20 23:18:03,617 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Model.xml
+2009-04-20 23:18:03,618 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_NHibernate.xml
+2009-04-20 23:18:03,619 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_OptionItemCfg.xml
+2009-04-20 23:18:03,620 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_OUInfo.xml
+2009-04-20 23:18:03,621 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_OULevel.xml
+2009-04-20 23:18:03,622 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Privilege.xml
+2009-04-20 23:18:03,623 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_RelationShip.xml
+2009-04-20 23:18:03,624 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Role.xml
+2009-04-20 23:18:03,625 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_SystemPolicy.xml
+2009-04-20 23:18:03,626 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_User.xml
+2009-04-20 23:18:03,627 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_WareHouse.xml
+2009-04-20 23:18:03,628 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Web_Login.xml
+2009-04-20 23:18:05,433 [4] ERROR Spring.Objects.Factory.Support.WebObjectUtils [(null)] - Unable to instantiate page [~/TS_MainPage/Default.aspx]: f:\编程\Work\easeerp\EaseErp\TSCommon_Web\TS_MainPage\Default.aspx(94): error CS0234: The type or namespace name 'TSWebContext' does not exist in the namespace 'TSCommon_Core' (are you missing an assembly reference?)
+System.Web.HttpCompileException: f:\编程\Work\easeerp\EaseErp\TSCommon_Web\TS_MainPage\Default.aspx(94): error CS0234: The type or namespace name 'TSWebContext' does not exist in the namespace 'TSCommon_Core' (are you missing an assembly reference?)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreatePageInstance(String pageUrl)
+2009-04-20 23:18:05,499 [4] ERROR Spring.Context.Support.WebApplicationContext [(null)] - failed creating context 'spring.root'
+System.Configuration.ConfigurationErrorsException: Error creating context 'spring.root': f:\编程\Work\easeerp\EaseErp\TSCommon_Web\TS_MainPage\Default.aspx(94): error CS0234: The type or namespace name 'TSWebContext' does not exist in the namespace 'TSCommon_Core' (are you missing an assembly reference?) ---> Spring.Util.FatalReflectionException: Cannot instantiate Type [TSLibWeb.WEB.SpringWebApplicationContext] using ctor [Void .ctor(System.String, Boolean, System.String[])] : '调用的目标发生了异常。' ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Unexpected exception parsing XML document from file [F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Web_Login.xml]Inner exception message= Failed parsing object definition '<object type="~/TS_MainPage/Default.aspx" xmlns="http://www.springframework.net"><property name="UserService" ref="UserService" /></object>' ---> Spring.Objects.Factory.ObjectDefinitionStoreException: Failed parsing object definition '<object type="~/TS_MainPage/Default.aspx" xmlns="http://www.springframework.net"><property name="UserService" ref="UserService" /></object>' ---> Spring.Objects.Factory.ObjectCreationException: Error creating object with name '' : Unable to instantiate page [~/TS_MainPage/Default.aspx]: f:\编程\Work\easeerp\EaseErp\TSCommon_Web\TS_MainPage\Default.aspx(94): error CS0234: The type or namespace name 'TSWebContext' does not exist in the namespace 'TSCommon_Core' (are you missing an assembly reference?) ---> System.Web.HttpCompileException: f:\编程\Work\easeerp\EaseErp\TSCommon_Web\TS_MainPage\Default.aspx(94): error CS0234: The type or namespace name 'TSWebContext' does not exist in the namespace 'TSCommon_Core' (are you missing an assembly reference?)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(String virtualPath, Type requiredBaseType)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreatePageInstance(String pageUrl)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Objects.Factory.Support.WebObjectUtils.CreatePageInstance(String pageUrl)
+   在 Spring.Objects.Factory.Xml.WebObjectsNamespaceParser.CalculateId(XmlElement element, ArrayList aliases)
+   在 Spring.Objects.Factory.Xml.ObjectsNamespaceParser.ParseObjectDefinitionElement(XmlElement element, ParserContext parserContext, Boolean nestedDefinition)
+   在 Spring.Objects.Factory.Xml.ObjectsNamespaceParser.RegisterObjectDefinition(XmlElement element, ParserContext parserContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Objects.Factory.Xml.ObjectsNamespaceParser.RegisterObjectDefinition(XmlElement element, ParserContext parserContext)
+   在 Spring.Objects.Factory.Xml.ObjectsNamespaceParser.ParseElement(XmlElement element, ParserContext parserContext)
+   在 Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader.ParseObjectDefinitions(XmlElement root, ObjectDefinitionParserHelper helper)
+   在 Spring.Objects.Factory.Xml.DefaultObjectDefinitionDocumentReader.RegisterObjectDefinitions(XmlDocument doc, XmlReaderContext readerContext)
+   在 Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.RegisterObjectDefinitions(XmlDocument doc, IResource resource)
+   在 Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.DoLoadObjectDefinitions(Stream stream, IResource resource)
+   在 Spring.Objects.Factory.Xml.XmlObjectDefinitionReader.LoadObjectDefinitions(IResource resource)
+   在 Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String location)
+   在 Spring.Objects.Factory.Support.AbstractObjectDefinitionReader.LoadObjectDefinitions(String[] locations)
+   在 Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(XmlObjectDefinitionReader objectDefinitionReader)
+   在 Spring.Context.Support.AbstractXmlApplicationContext.LoadObjectDefinitions(DefaultListableObjectFactory objectFactory)
+   在 Spring.Context.Support.AbstractXmlApplicationContext.RefreshObjectFactory()
+   在 Spring.Context.Support.AbstractApplicationContext.Refresh()
+   在 Spring.Context.Support.WebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations)
+   在 TSLibWeb.WEB.SpringWebApplicationContext..ctor(String name, Boolean caseSensitive, IApplicationContext parentContext, String[] configurationLocations) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\WEB\SpringWebApplicationContext.cs:行号 59
+   在 TSLibWeb.WEB.SpringWebApplicationContext..ctor(String name, Boolean caseSensitive, String[] configurationLocations) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\WEB\SpringWebApplicationContext.cs:行号 66
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeConstructor(Object[] args, SignatureStruct& signature, IntPtr declaringType)
+   在 System.RuntimeMethodHandle.InvokeConstructor(Object[] args, SignatureStruct signature, RuntimeTypeHandle declaringType)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 Spring.Util.ObjectUtils.InstantiateType(ConstructorInfo constructor, Object[] arguments)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Util.ObjectUtils.InstantiateType(ConstructorInfo constructor, Object[] arguments)
+   在 Spring.Context.Support.ContextHandler.RootContextInstantiator.InvokeContextConstructor(ConstructorInfo ctor)
+   在 Spring.Context.Support.ContextHandler.ContextInstantiator.InstantiateContext()
+   在 Spring.Context.Support.ContextHandler.InstantiateContext(IApplicationContext parentContext, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources)
+   在 Spring.Context.Support.WebContextHandler.InstantiateContext(IApplicationContext parent, Object configContext, String contextName, Type contextType, Boolean caseSensitive, String[] resources)
+   在 Spring.Context.Support.ContextHandler.Create(Object parent, Object configContext, XmlNode section)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Configuration.BaseConfigurationRecord.EvaluateOne(String[] keys, SectionInput input, Boolean isTrusted, FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult)
+   在 System.Configuration.BaseConfigurationRecord.Evaluate(FactoryRecord factoryRecord, SectionRecord sectionRecord, Object parentResult, Boolean getLkg, Boolean getRuntimeObject, Object& result, Object& resultRuntimeObject)
+   在 System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)
+   在 System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)
+   在 System.Configuration.BaseConfigurationRecord.GetSection(String configKey)
+   在 System.Web.HttpContext.GetSection(String sectionName)
+   在 System.Web.Configuration.HttpConfigurationSystem.GetSection(String sectionName)
+   在 System.Web.Configuration.HttpConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String configKey)
+   在 System.Configuration.ConfigurationManager.GetSection(String sectionName)
+   在 Spring.Util.ConfigurationUtils.GetSection(String sectionName)
+   在 Spring.Context.Support.WebApplicationContext.GetContextInternal(String virtualPath)
+2009-04-20 23:31:36,864 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-04-20 23:31:36,898 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_ATM.xml
+2009-04-20 23:31:36,899 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Base.xml
+2009-04-20 23:31:36,900 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Group.xml
+2009-04-20 23:31:36,901 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_JobTitle.xml
+2009-04-20 23:31:36,902 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Model.xml
+2009-04-20 23:31:36,903 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_NHibernate.xml
+2009-04-20 23:31:36,904 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_OptionItemCfg.xml
+2009-04-20 23:31:36,904 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_OUInfo.xml
+2009-04-20 23:31:36,906 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_OULevel.xml
+2009-04-20 23:31:36,907 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Privilege.xml
+2009-04-20 23:31:36,908 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_RelationShip.xml
+2009-04-20 23:31:36,909 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_Role.xml
+2009-04-20 23:31:36,910 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_SystemPolicy.xml
+2009-04-20 23:31:36,910 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_User.xml
+2009-04-20 23:31:36,911 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Context_WareHouse.xml
+2009-04-20 23:31:36,912 [9] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Spring-Web_Login.xml
+2009-04-20 23:31:40,769 [9] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file0:F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Model.xml
+2009-04-20 23:31:40,770 [9] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file1:F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_OptionItemCfg.xml
+2009-04-20 23:31:40,771 [9] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file2:F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Organize.xml
+2009-04-20 23:31:40,772 [9] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file3:F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Policy.xml
+2009-04-20 23:31:40,773 [9] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file4:F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Privilege.xml
+2009-04-20 23:31:40,774 [9] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file5:F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_Role.xml
+2009-04-20 23:31:40,775 [9] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file6:F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Struts\Struts-Config_WareHouse.xml
+2009-04-20 23:31:41,251 [9] DEBUG TSCommon.Web.importData.cs.importModel [(null)] - 开始导入模块数据
+2009-04-20 23:31:41,957 [9] DEBUG TSCommon.Web.importData.cs.importGroupRank [(null)] - 开始导入岗位级别
+2009-04-20 23:31:41,959 [9] DEBUG TSCommon.Web.importData.cs.importJobTitle [(null)] - 开始导入职务
+2009-04-20 23:31:42,046 [9] DEBUG TSCommon.Web.importData.cs.importOULevel [(null)] - 开始导入单位级别
+2009-04-20 23:31:42,095 [9] DEBUG TSCommon.Web.importData.cs.importOUInfo [(null)] - 开始导入单位、部门等信息
+2009-04-20 23:31:42,245 [9] DEBUG TSCommon.Web.importData.cs.importPrivilege [(null)] - 开始导入权限数据
+2009-04-20 23:31:42,455 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - 开始导入角色数据
+2009-04-20 23:31:42,457 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_FWQQ_\w*
+2009-04-20 23:31:42,458 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_FWQQ_*”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,459 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_BTN_FWQQ_XJQQ
+2009-04-20 23:31:42,460 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_BTN_FWQQ_XJQQ”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,461 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_ZSK_JJFA
+2009-04-20 23:31:42,462 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_ZSK_JJFA”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,463 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_ZSK_WQQJJFA
+2009-04-20 23:31:42,464 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_ZSK_WQQJJFA”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,465 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_ZSK_RMJJFA
+2009-04-20 23:31:42,466 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_ZSK_RMJJFA”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,467 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_ZSK_ZXJJFA
+2009-04-20 23:31:42,468 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_ZSK_ZXJJFA”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,468 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_BTN_ZSK_XJJJFA
+2009-04-20 23:31:42,469 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_BTN_ZSK_XJJJFA”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,470 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_FZGJ_DZGG
+2009-04-20 23:31:42,471 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_FZGJ_DZGG”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,472 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_FZGJ_CYGG
+2009-04-20 23:31:42,473 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_FZGJ_CYGG”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,474 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_FZGJ_WD
+2009-04-20 23:31:42,475 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_FZGJ_WD”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,476 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_FZGJ_GDTS
+2009-04-20 23:31:42,477 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_FZGJ_GDTS”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,478 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_BTN_GZPT_XJTX
+2009-04-20 23:31:42,479 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_BTN_GZPT_XJTX”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,480 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_BTN_XTGL_BDWSJ
+2009-04-20 23:31:42,481 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_ZCGL_ZCLL_MY
+2009-04-20 23:31:42,482 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_ZCGL_ZCLL_MY”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,483 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_ZCGL_ZCLL_USE
+2009-04-20 23:31:42,484 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_ZCGL_ZCLL_USE”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,484 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=GN_URL_ZCGL_ZCLL_OU
+2009-04-20 23:31:42,485 [9] ERROR TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”所要拥有的权限“GN_URL_ZCGL_ZCLL_OU”在系统中找不到对应的匹配权限。该角色不会拥有该权限!
+2009-04-20 23:31:42,487 [9] INFO  TSCommon.Web.importData.cs.importRole [(null)] - 角色“系统默认角色[ROLE_DEFAULT]”共拥有的权限个数为：1
+2009-04-20 23:31:42,540 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=\w*
+2009-04-20 23:31:42,541 [9] INFO  TSCommon.Web.importData.cs.importRole [(null)] - 角色“超级管理员[ROLE_SUPPERADMIN]”共拥有的权限个数为：24
+2009-04-20 23:31:42,572 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=\w*
+2009-04-20 23:31:42,573 [9] INFO  TSCommon.Web.importData.cs.importRole [(null)] - 角色“本级单位管理员[ROLE_ADMIN_BDXS]”共拥有的权限个数为：24
+2009-04-20 23:31:42,592 [9] DEBUG TSCommon.Web.importData.cs.importRole [(null)] - ----privilegeRegExCode=\w*
+2009-04-20 23:31:42,593 [9] INFO  TSCommon.Web.importData.cs.importRole [(null)] - 角色“本单位管理员[ROLE_ADMIN_BD]”共拥有的权限个数为：24
+2009-04-20 23:31:42,684 [9] DEBUG TSCommon.Web.importData.cs.importGroup [(null)] - 开始导入岗位
+2009-04-20 23:31:42,733 [9] DEBUG TSCommon.Web.importData.cs.importUser [(null)] - 开始导入用户配置
+2009-04-20 23:32:07,311 [9] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_ATM.xml
+2009-04-20 23:32:07,315 [9] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_Base.xml
+2009-04-20 23:32:07,316 [9] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_MainPage.xml
+2009-04-20 23:32:07,318 [9] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_OptionItemCfg.xml
+2009-04-20 23:32:07,319 [9] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\EaseErp\TSCommon_Web\Config\Resources\SimpleResources_Security.xml
+2009-04-20 23:32:07,488 [9] WARN  TSCommon.Web.TS_MainPage._Default [(null)] - hello
+2009-04-20 23:32:12,174 [8] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[EaseErp.IC.Domain.WareHouse, EaseErp.IC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - 值不能为空。
+参数名: String
+System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Int64.Parse(String s)
+   在 TSCommon.Web.WareHouse.action.WareHouseAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\EaseErp\TSCommon_Web\WareHouse\action\WareHouseAction.cs:行号 75
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 273
+2009-04-20 23:32:12,225 [8] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 288
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\DispatchAction.cs:行号 44
+2009-04-20 23:32:12,271 [8] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/wareHouse
+2009-04-20 23:35:00,882 [4] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[EaseErp.IC.Domain.WareHouse, EaseErp.IC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - 值不能为空。
+参数名: String
+System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Int64.Parse(String s)
+   在 TSCommon.Web.WareHouse.action.WareHouseAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\EaseErp\TSCommon_Web\WareHouse\action\WareHouseAction.cs:行号 75
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 273
+2009-04-20 23:35:00,886 [4] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 288
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\DispatchAction.cs:行号 44
+2009-04-20 23:35:00,888 [4] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/wareHouse
+2009-04-20 23:35:05,757 [4] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[EaseErp.IC.Domain.WareHouse, EaseErp.IC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - 值不能为空。
+参数名: String
+System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Int64.Parse(String s)
+   在 TSCommon.Web.WareHouse.action.WareHouseAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\EaseErp\TSCommon_Web\WareHouse\action\WareHouseAction.cs:行号 75
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 273
+2009-04-20 23:35:05,761 [4] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext) 位置 E:\编程\c#练习\TonySoft\TS\TSLibWeb\Struts\StrutsEntityAction.cs:行号 288
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context) 位置 E:\编程\c#练习\TonySoft\TS\TSLibStruts\Action\DispatchAction.cs:行号 44
+2009-04-20 23:35:05,763 [4] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/wareHouse
+2009-04-21 00:14:58,088 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-04-21 00:14:58,237 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_ATM.xml
+2009-04-21 00:14:58,239 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_Base.xml
+2009-04-21 00:14:58,239 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_Group.xml
+2009-04-21 00:14:58,240 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_JobTitle.xml
+2009-04-21 00:14:58,241 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_Model.xml
+2009-04-21 00:14:58,242 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_NHibernate.xml
+2009-04-21 00:14:58,243 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_OptionItemCfg.xml
+2009-04-21 00:14:58,244 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_OUInfo.xml
+2009-04-21 00:14:58,245 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_OULevel.xml
+2009-04-21 00:14:58,246 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_Privilege.xml
+2009-04-21 00:14:58,247 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_RelationShip.xml
+2009-04-21 00:14:58,248 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_Role.xml
+2009-04-21 00:14:58,249 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_SystemPolicy.xml
+2009-04-21 00:14:58,250 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_User.xml
+2009-04-21 00:14:58,251 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Context_WareHouse.xml
+2009-04-21 00:14:58,252 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Spring-Web_Login.xml
+2009-04-21 00:15:02,471 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file0:F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Struts\Struts-Config_Model.xml
+2009-04-21 00:15:02,473 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file1:F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Struts\Struts-Config_OptionItemCfg.xml
+2009-04-21 00:15:02,473 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file2:F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Struts\Struts-Config_Organize.xml
+2009-04-21 00:15:02,474 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file3:F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Struts\Struts-Config_Policy.xml
+2009-04-21 00:15:02,475 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file4:F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Struts\Struts-Config_Privilege.xml
+2009-04-21 00:15:02,476 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file5:F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Struts\Struts-Config_Role.xml
+2009-04-21 00:15:02,477 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file6:F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Struts\Struts-Config_WareHouse.xml
+2009-04-21 00:15:14,508 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Resources\SimpleResources_ATM.xml
+2009-04-21 00:15:14,511 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Resources\SimpleResources_Base.xml
+2009-04-21 00:15:14,513 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Resources\SimpleResources_MainPage.xml
+2009-04-21 00:15:14,515 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Resources\SimpleResources_OptionItemCfg.xml
+2009-04-21 00:15:14,517 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\CSharp\EaseErp2008\TSCommon.Web\Config\Resources\SimpleResources_Security.xml
+2009-04-21 00:15:14,663 [4] WARN  TSCommon.Web.TS_MainPage._Default [(null)] - hello
+2009-04-28 23:28:37,380 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-04-28 23:28:37,473 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_ATM.xml
+2009-04-28 23:28:37,474 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Base.xml
+2009-04-28 23:28:37,475 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Group.xml
+2009-04-28 23:28:37,476 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_JobTitle.xml
+2009-04-28 23:28:37,477 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Model.xml
+2009-04-28 23:28:37,478 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_NHibernate.xml
+2009-04-28 23:28:37,480 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OptionItemCfg.xml
+2009-04-28 23:28:37,481 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OUInfo.xml
+2009-04-28 23:28:37,482 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OULevel.xml
+2009-04-28 23:28:37,483 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Privilege.xml
+2009-04-28 23:28:37,484 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_RelationShip.xml
+2009-04-28 23:28:37,485 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Role.xml
+2009-04-28 23:28:37,486 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_SystemPolicy.xml
+2009-04-28 23:28:37,487 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_User.xml
+2009-04-28 23:28:37,488 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_WareHouse.xml
+2009-04-28 23:28:37,489 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Web_Login.xml
+2009-04-28 23:28:43,164 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file0:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Model.xml
+2009-04-28 23:28:43,165 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file1:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_OptionItemCfg.xml
+2009-04-28 23:28:43,166 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file2:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Organize.xml
+2009-04-28 23:28:43,167 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file3:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Policy.xml
+2009-04-28 23:28:43,168 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file4:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Privilege.xml
+2009-04-28 23:28:43,169 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file5:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Role.xml
+2009-04-28 23:28:43,170 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file6:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_WareHouse.xml
+2009-04-28 23:28:54,940 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_ATM.xml
+2009-04-28 23:28:54,942 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Base.xml
+2009-04-28 23:28:54,944 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_MainPage.xml
+2009-04-28 23:28:54,945 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_OptionItemCfg.xml
+2009-04-28 23:28:54,946 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Security.xml
+2009-04-28 23:28:55,096 [8] WARN  TSCommon.Web.TS_MainPage._Default [(null)] - hello
+2009-04-28 23:30:35,221 [10] ERROR TSLibStruts.ActionHandler [(null)] - 为 /OptionItemCfg/OptionItemView.aspx 执行子请求时出错。
+System.Web.HttpException: 为 /OptionItemCfg/OptionItemView.aspx 执行子请求时出错。 ---> System.Web.HttpParseException: 未能加载类型“TSCommon_Web.OptionItemCfg.OptionItemView”。 ---> System.Web.HttpParseException: 未能加载类型“TSCommon_Web.OptionItemCfg.OptionItemView”。 ---> System.Web.HttpException: 未能加载类型“TSCommon_Web.OptionItemCfg.OptionItemView”。
+   在 System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseInternal()
+   在 System.Web.UI.TemplateParser.Parse()
+   在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+   在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.GetCompiledPageType(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   在 System.Web.HttpServerUtility.Execute(String path, Boolean preserveForm)
+   在 TSLibStruts.Action.RequestProcessor.ProcessForward(HttpContext context, ForwardConfig forward)
+   在 TSLibStruts.Action.RequestProcessor.LoadAndExecuteAction(HttpContext context, String path)
+   在 TSLibStruts.Action.RequestProcessor.ProcessRequest(HttpContext context)
+   在 TSLibStruts.ActionHandler.ProcessRequest(HttpContext context)
+2009-04-28 23:30:36,465 [10] ERROR TSLibStruts.Action.RequestProcessor [(null)] - Action /systemLog not found!
+System.Exception: Action /systemLog not found!
+2009-04-28 23:30:36,467 [10] ERROR TSLibStruts.ActionHandler [(null)] - Action /systemLog not found!
+System.Exception: Action /systemLog not found!
+   在 TSLibStruts.Action.RequestProcessor.ProcessMapping(HttpContext context, String actionName)
+   在 TSLibStruts.Action.RequestProcessor.LoadAndExecuteAction(HttpContext context, String path)
+   在 TSLibStruts.Action.RequestProcessor.ProcessRequest(HttpContext context)
+   在 TSLibStruts.ActionHandler.ProcessRequest(HttpContext context)
+2009-04-28 23:30:51,615 [10] ERROR TSLibStruts.ActionHandler [(null)] - 为 /OptionItemCfg/OptionItemView.aspx 执行子请求时出错。
+System.Web.HttpException: 为 /OptionItemCfg/OptionItemView.aspx 执行子请求时出错。 ---> System.Web.HttpParseException: 未能加载类型“TSCommon_Web.OptionItemCfg.OptionItemView”。 ---> System.Web.HttpParseException: 未能加载类型“TSCommon_Web.OptionItemCfg.OptionItemView”。 ---> System.Web.HttpException: 未能加载类型“TSCommon_Web.OptionItemCfg.OptionItemView”。
+   在 System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   在 System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   在 System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   在 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   在 System.Web.UI.TemplateParser.ParseReader(StreamReader reader, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   在 System.Web.UI.TemplateParser.ParseInternal()
+   在 System.Web.UI.TemplateParser.Parse()
+   在 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+   在 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   在 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   在 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   在 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   在 Spring.Objects.Factory.Support.WebObjectUtils.GetCompiledPageType(String pageUrl)
+   在 Spring.Web.Support.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String url, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.HttpServerUtility.Execute(String path, TextWriter writer, Boolean preserveForm)
+   在 System.Web.HttpServerUtility.Execute(String path, Boolean preserveForm)
+   在 TSLibStruts.Action.RequestProcessor.ProcessForward(HttpContext context, ForwardConfig forward)
+   在 TSLibStruts.Action.RequestProcessor.LoadAndExecuteAction(HttpContext context, String path)
+   在 TSLibStruts.Action.RequestProcessor.ProcessRequest(HttpContext context)
+   在 TSLibStruts.ActionHandler.ProcessRequest(HttpContext context)
+2009-04-28 23:31:42,931 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-04-28 23:31:42,967 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_ATM.xml
+2009-04-28 23:31:42,968 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Base.xml
+2009-04-28 23:31:42,969 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Group.xml
+2009-04-28 23:31:42,970 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_JobTitle.xml
+2009-04-28 23:31:42,971 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Model.xml
+2009-04-28 23:31:42,973 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_NHibernate.xml
+2009-04-28 23:31:42,974 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OptionItemCfg.xml
+2009-04-28 23:31:42,975 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OUInfo.xml
+2009-04-28 23:31:42,976 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OULevel.xml
+2009-04-28 23:31:42,977 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Privilege.xml
+2009-04-28 23:31:42,978 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_RelationShip.xml
+2009-04-28 23:31:42,979 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Role.xml
+2009-04-28 23:31:42,980 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_SystemPolicy.xml
+2009-04-28 23:31:42,982 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_User.xml
+2009-04-28 23:31:42,983 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_WareHouse.xml
+2009-04-28 23:31:42,984 [10] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Web_Login.xml
+2009-04-28 23:31:46,982 [10] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file0:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Model.xml
+2009-04-28 23:31:46,984 [10] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file1:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_OptionItemCfg.xml
+2009-04-28 23:31:46,984 [10] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file2:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Organize.xml
+2009-04-28 23:31:46,985 [10] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file3:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Policy.xml
+2009-04-28 23:31:46,986 [10] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file4:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Privilege.xml
+2009-04-28 23:31:46,987 [10] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file5:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Role.xml
+2009-04-28 23:31:46,988 [10] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file6:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_WareHouse.xml
+2009-04-28 23:31:55,332 [10] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_ATM.xml
+2009-04-28 23:31:55,334 [10] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Base.xml
+2009-04-28 23:31:55,335 [10] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_MainPage.xml
+2009-04-28 23:31:55,337 [10] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_OptionItemCfg.xml
+2009-04-28 23:31:55,338 [10] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Security.xml
+2009-04-28 23:32:00,456 [10] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[TSCommon.Core.OptionItemCfg.Domain.OptionItem, TSCommon.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 NHibernate.Impl.AbstractQueryImpl.SetParameter(Int32 position, Object val)
+   在 TSLib.DBUtils.NHibernateHelper.CreateQuery(ISession session, String query, Object[] values)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String[] sortFields, String[] sortDirs, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String sortField, String sortDir, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSCommon.Core.OptionItemCfg.Dao.Hibernate.OptionItemDao.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Core.OptionItemCfg.Service.OptionItemService.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 Spring.DynamicReflection.Method_GetPage_ebb43dfea1fd4e43973cb9fe852f98ef.Invoke(Object target, Object[] args)
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_2494cd135c7e4bd1b6da866d44c829c5.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Web.OptionItemCfg.action.OptionItemAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\OptionItemCfg\action\OptionItemAction.cs:行号 99
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+2009-04-28 23:32:00,512 [10] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context)
+2009-04-28 23:32:00,516 [10] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/optionItem
+2009-04-28 23:32:02,985 [10] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[TSCommon.Core.OptionItemCfg.Domain.OptionItem, TSCommon.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 NHibernate.Impl.AbstractQueryImpl.SetParameter(Int32 position, Object val)
+   在 TSLib.DBUtils.NHibernateHelper.CreateQuery(ISession session, String query, Object[] values)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String[] sortFields, String[] sortDirs, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String sortField, String sortDir, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSCommon.Core.OptionItemCfg.Dao.Hibernate.OptionItemDao.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Core.OptionItemCfg.Service.OptionItemService.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 Spring.DynamicReflection.Method_GetPage_ebb43dfea1fd4e43973cb9fe852f98ef.Invoke(Object target, Object[] args)
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_2494cd135c7e4bd1b6da866d44c829c5.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Web.OptionItemCfg.action.OptionItemAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\OptionItemCfg\action\OptionItemAction.cs:行号 99
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+2009-04-28 23:32:02,989 [10] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context)
+2009-04-28 23:32:02,992 [10] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/optionItem
+2009-04-28 23:32:05,063 [10] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[TSCommon.Core.OptionItemCfg.Domain.OptionItem, TSCommon.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 NHibernate.Impl.AbstractQueryImpl.SetParameter(Int32 position, Object val)
+   在 TSLib.DBUtils.NHibernateHelper.CreateQuery(ISession session, String query, Object[] values)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String[] sortFields, String[] sortDirs, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String sortField, String sortDir, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSCommon.Core.OptionItemCfg.Dao.Hibernate.OptionItemDao.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Core.OptionItemCfg.Service.OptionItemService.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 Spring.DynamicReflection.Method_GetPage_ebb43dfea1fd4e43973cb9fe852f98ef.Invoke(Object target, Object[] args)
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_2494cd135c7e4bd1b6da866d44c829c5.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Web.OptionItemCfg.action.OptionItemAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\OptionItemCfg\action\OptionItemAction.cs:行号 99
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+2009-04-28 23:32:05,068 [10] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context)
+2009-04-28 23:32:05,073 [10] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/optionItem
+2009-04-28 23:32:05,492 [10] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[TSCommon.Core.OptionItemCfg.Domain.OptionItem, TSCommon.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 NHibernate.Impl.AbstractQueryImpl.SetParameter(Int32 position, Object val)
+   在 TSLib.DBUtils.NHibernateHelper.CreateQuery(ISession session, String query, Object[] values)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String[] sortFields, String[] sortDirs, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String sortField, String sortDir, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSCommon.Core.OptionItemCfg.Dao.Hibernate.OptionItemDao.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Core.OptionItemCfg.Service.OptionItemService.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 Spring.DynamicReflection.Method_GetPage_ebb43dfea1fd4e43973cb9fe852f98ef.Invoke(Object target, Object[] args)
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_2494cd135c7e4bd1b6da866d44c829c5.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Web.OptionItemCfg.action.OptionItemAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\OptionItemCfg\action\OptionItemAction.cs:行号 99
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+2009-04-28 23:32:05,499 [10] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context)
+2009-04-28 23:32:05,501 [10] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/optionItem
+2009-04-28 23:32:15,873 [8] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[TSCommon.Core.OptionItemCfg.Domain.OptionItem, TSCommon.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 NHibernate.Impl.AbstractQueryImpl.SetParameter(Int32 position, Object val)
+   在 TSLib.DBUtils.NHibernateHelper.CreateQuery(ISession session, String query, Object[] values)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String[] sortFields, String[] sortDirs, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String sortField, String sortDir, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSCommon.Core.OptionItemCfg.Dao.Hibernate.OptionItemDao.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Core.OptionItemCfg.Service.OptionItemService.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 Spring.DynamicReflection.Method_GetPage_ebb43dfea1fd4e43973cb9fe852f98ef.Invoke(Object target, Object[] args)
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_2494cd135c7e4bd1b6da866d44c829c5.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Web.OptionItemCfg.action.OptionItemAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\OptionItemCfg\action\OptionItemAction.cs:行号 99
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+2009-04-28 23:32:15,882 [8] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context)
+2009-04-28 23:32:15,885 [8] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/optionItem
+2009-04-28 23:33:13,745 [8] WARN  TSCommon.Web.TS_MainPage._Default [(null)] - hello
+2009-04-28 23:33:18,185 [8] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[TSCommon.Core.OptionItemCfg.Domain.OptionItem, TSCommon.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 NHibernate.Impl.AbstractQueryImpl.SetParameter(Int32 position, Object val)
+   在 TSLib.DBUtils.NHibernateHelper.CreateQuery(ISession session, String query, Object[] values)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String[] sortFields, String[] sortDirs, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSLib.DBUtils.NHibernateHelper.GetPage(ISession session, Int32 pageNo, Int32 pageSize, String sortField, String sortDir, String aliasName, String query, Object[] args, String defaultSortField)
+   在 TSCommon.Core.OptionItemCfg.Dao.Hibernate.OptionItemDao.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Core.OptionItemCfg.Service.OptionItemService.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 Spring.DynamicReflection.Method_GetPage_ebb43dfea1fd4e43973cb9fe852f98ef.Invoke(Object target, Object[] args)
+   在 Spring.Reflection.Dynamic.SafeMethod.Invoke(Object target, Object[] arguments)
+   在 Spring.Aop.Framework.DynamicMethodInvocation.InvokeJoinpoint()
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Transaction.Interceptor.TransactionInterceptor.Invoke(IMethodInvocation invocation)
+   在 Spring.Aop.Framework.AbstractMethodInvocation.Proceed()
+   在 Spring.Aop.Framework.DynamicProxy.AdvisedProxy.Invoke(Object proxy, Object target, Type targetType, MethodInfo targetMethod, MethodInfo proxyMethod, Object[] args, IList interceptors)
+   在 CompositionAopProxy_2494cd135c7e4bd1b6da866d44c829c5.GetPage(Int32 firstNo, Int32 maxResult, String sortField, String sortDir, String type)
+   在 TSCommon.Web.OptionItemCfg.action.OptionItemAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\OptionItemCfg\action\OptionItemAction.cs:行号 99
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+2009-04-28 23:33:18,191 [8] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: A type specific Set(position, val) should be called because the Type can not be guessed from a null value.
+参数名: val
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context)
+2009-04-28 23:33:18,196 [8] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/optionItem
+2009-05-02 13:54:23,195 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-05-02 13:54:23,354 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_ATM.xml
+2009-05-02 13:54:23,355 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Base.xml
+2009-05-02 13:54:23,356 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Group.xml
+2009-05-02 13:54:23,357 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_JobTitle.xml
+2009-05-02 13:54:23,357 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Model.xml
+2009-05-02 13:54:23,358 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_NHibernate.xml
+2009-05-02 13:54:23,359 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OptionItemCfg.xml
+2009-05-02 13:54:23,360 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OUInfo.xml
+2009-05-02 13:54:23,361 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OULevel.xml
+2009-05-02 13:54:23,362 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Privilege.xml
+2009-05-02 13:54:23,363 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_RelationShip.xml
+2009-05-02 13:54:23,364 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Role.xml
+2009-05-02 13:54:23,364 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_SystemPolicy.xml
+2009-05-02 13:54:23,365 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_User.xml
+2009-05-02 13:54:23,366 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_WareHouse.xml
+2009-05-02 13:54:23,367 [4] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Web_Login.xml
+2009-05-02 13:54:26,983 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file0:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Model.xml
+2009-05-02 13:54:26,984 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file1:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_OptionItemCfg.xml
+2009-05-02 13:54:26,985 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file2:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Organize.xml
+2009-05-02 13:54:26,986 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file3:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Policy.xml
+2009-05-02 13:54:26,987 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file4:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Privilege.xml
+2009-05-02 13:54:26,987 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file5:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Role.xml
+2009-05-02 13:54:26,988 [4] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file6:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_WareHouse.xml
+2009-05-02 13:54:41,281 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_ATM.xml
+2009-05-02 13:54:41,290 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Base.xml
+2009-05-02 13:54:41,306 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_MainPage.xml
+2009-05-02 13:54:41,317 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_OptionItemCfg.xml
+2009-05-02 13:54:41,325 [4] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Security.xml
+2009-05-02 13:54:41,567 [4] WARN  TSCommon.Web.TS_MainPage._Default [(null)] - hello
+2009-05-02 13:55:12,135 [8] ERROR TSLibWeb.Struts.StrutsEntityAction`1[[EaseErp.IC.Domain.WareHouse, EaseErp.IC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] [(null)] - 值不能为空。
+参数名: String
+System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   在 System.Int64.Parse(String s)
+   在 TSCommon.Web.WareHouse.action.WareHouseAction.GetPageInfo(ActionContext actionContext, HttpContext httpContext, Int32 pageNo, Int32 pageSize, String sortField, String sortDir) 位置 F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\WareHouse\action\WareHouseAction.cs:行号 75
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+2009-05-02 13:55:12,281 [8] ERROR TSLibStruts.Action.DispatchAction [(null)] - 调用的目标发生了异常。
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentNullException: 值不能为空。
+参数名: String
+   在 TSLibWeb.Struts.StrutsEntityAction`1.View(ActionContext actionContext, HttpContext httpContext)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 TSLibStruts.Action.DispatchAction.Execute(ActionContext actionContext, HttpContext context)
+2009-05-02 13:55:12,288 [8] ERROR TSLibStruts.Action.RequestProcessor [(null)] - ProcessException By mapping.Path:/wareHouse
+2009-05-02 13:59:58,843 [8] WARN  TSCommon.Web.TS_MainPage._Default [(null)] - hello
+2009-05-02 14:01:53,443 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:01:53,457 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:01:53,472 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:01:53,482 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:01:53,484 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:01:53,495 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:04:13,946 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:04:13,951 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:04:13,953 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:04:13,954 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:04:13,956 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:04:13,957 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:09:21,007 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:09:21,055 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:09:21,057 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:09:21,058 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:09:21,060 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:09:21,062 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:14:20,098 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:14:20,139 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:14:20,141 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:14:20,142 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:14:20,144 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:14:20,146 [8] ERROR TSLib.SimpleResourceHelper [(null)] - 没有配置键值为“AUTHORIZE_EXCEPTION_INFO”的资源！
+2009-05-02 14:17:04,695 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - 加载的Spring配置文件列表如下：
+2009-05-02 14:17:04,731 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_ATM.xml
+2009-05-02 14:17:04,732 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Base.xml
+2009-05-02 14:17:04,733 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Group.xml
+2009-05-02 14:17:04,734 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_JobTitle.xml
+2009-05-02 14:17:04,734 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Model.xml
+2009-05-02 14:17:04,735 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_NHibernate.xml
+2009-05-02 14:17:04,736 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OptionItemCfg.xml
+2009-05-02 14:17:04,737 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OUInfo.xml
+2009-05-02 14:17:04,739 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_OULevel.xml
+2009-05-02 14:17:04,739 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Privilege.xml
+2009-05-02 14:17:04,740 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_RelationShip.xml
+2009-05-02 14:17:04,741 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_Role.xml
+2009-05-02 14:17:04,742 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_SystemPolicy.xml
+2009-05-02 14:17:04,743 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_User.xml
+2009-05-02 14:17:04,744 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Context_WareHouse.xml
+2009-05-02 14:17:04,745 [8] WARN  TSLibWeb.WEB.SpringWebApplicationContext [(null)] - file:///F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Spring-Web_Login.xml
+2009-05-02 14:17:08,690 [8] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file0:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Model.xml
+2009-05-02 14:17:08,719 [8] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file1:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_OptionItemCfg.xml
+2009-05-02 14:17:08,720 [8] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file2:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Organize.xml
+2009-05-02 14:17:08,721 [8] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file3:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Policy.xml
+2009-05-02 14:17:08,722 [8] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file4:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Privilege.xml
+2009-05-02 14:17:08,723 [8] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file5:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_Role.xml
+2009-05-02 14:17:08,724 [8] WARN  TSLibStruts.Config.Configuration [(null)] - Load struts config file6:F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Struts\Struts-Config_WareHouse.xml
+2009-05-02 14:17:12,676 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_ATM.xml
+2009-05-02 14:17:12,678 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Base.xml
+2009-05-02 14:17:12,680 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_MainPage.xml
+2009-05-02 14:17:12,682 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_OptionItemCfg.xml
+2009-05-02 14:17:12,684 [8] WARN  TSLib.SimpleResourceHelper [(null)] - 成功加载资源文件：F:\编程\Work\easeerp\trunk\easeErp\TSCommon.Web\Config\Resources\SimpleResources_Security.xml

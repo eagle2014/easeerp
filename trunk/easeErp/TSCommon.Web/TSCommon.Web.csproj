@@ -1,0 +1,1561 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E886CFAE-4502-4F7A-92F3-C70A412B8179}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSCommon.Web</RootNamespace>
+    <AssemblyName>TSCommon.Web</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="antlr.runtime, Version=2.7.6.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\antlr.runtime\2.7.6.2\antlr.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Castle.DynamicProxy2\2.0.3.4831\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Common.Logging\1.2.0.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net, Version=1.2.0.2, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Common.Logging.Log4Net\1.2.0.2\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EaseErp.IC, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\easeErpLib\EaseErp.IC\1.0.0.0\EaseErp.IC.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Iesi.Collections\2.0.0.3001\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\log4net\1.2.10.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Newtonsoft.Json\1.1.1.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.0.0.3001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\NHibernate\2.0.0.3001\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.1.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\nunit.framework\2.4.1.0\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate20, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Data.NHibernate20.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Testing.NUnit, Version=1.1.0.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Testing.NUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TSCommon.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\easeErpLib\TSCommon.Core\1.0.0.0\TSCommon.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\TSLib\1.0.0.0\TSLib.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLibStruts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\TSLibStruts\1.0.0.0\TSLibStruts.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLibWeb, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\TSLibWeb\1.0.0.0\TSLibWeb.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ATM\css\default\attachment.css" />
+    <Content Include="ATM\DownloadFile.aspx" />
+    <Content Include="ATM\images\default\Attachmenticon.gif" />
+    <Content Include="ATM\images\default\btn-Attachment.png" />
+    <Content Include="ATM\images\default\delFile.gif" />
+    <Content Include="ATM\images\default\fileicon.gif" />
+    <Content Include="ATM\images\default\header_bg.gif" />
+    <Content Include="ATM\images\default\toolbar_bg.gif" />
+    <Content Include="ATM\js\ATM.js" />
+    <Content Include="ATM\UploadFile.aspx" />
+    <Content Include="Config\Log4NET.xml" />
+    <Content Include="Config\Resources\SimpleResources_ATM.xml" />
+    <Content Include="Config\Resources\SimpleResources_Base.xml" />
+    <Content Include="Config\Resources\SimpleResources_MainPage.xml" />
+    <Content Include="Config\Resources\SimpleResources_OptionItemCfg.xml" />
+    <Content Include="Config\Resources\SimpleResources_Security.xml" />
+    <Content Include="Config\Spring-Context_ATM.xml" />
+    <Content Include="Config\Spring-Context_Base.xml" />
+    <Content Include="Config\Spring-Context_OptionItemCfg.xml" />
+    <Content Include="Config\Spring-Context_Group.xml" />
+    <Content Include="Config\Spring-Context_JobTitle.xml" />
+    <Content Include="Config\Spring-Context_Model.xml" />
+    <Content Include="Config\Spring-Context_NHibernate.xml" />
+    <Content Include="Config\Spring-Context_OUInfo.xml" />
+    <Content Include="Config\Spring-Context_OULevel.xml" />
+    <Content Include="Config\Spring-Context_Privilege.xml" />
+    <Content Include="Config\Spring-Context_RelationShip.xml" />
+    <Content Include="Config\Spring-Context_Role.xml" />
+    <Content Include="Config\Spring-Context_SystemPolicy.xml" />
+    <Content Include="Config\Spring-Context_User.xml" />
+    <Content Include="Config\Spring-Context_WareHouse.xml" />
+    <Content Include="Config\Spring-Web_Login.xml" />
+    <Content Include="Config\Struts\Struts-Config_Model.xml" />
+    <Content Include="Config\Struts\Struts-Config_OptionItemCfg.xml" />
+    <Content Include="Config\Struts\Struts-Config_Policy.xml" />
+    <Content Include="Config\Struts\Struts-Config_Privilege.xml" />
+    <Content Include="Config\Struts\Struts-Config_Role.xml" />
+    <Content Include="Config\Struts\Struts-Config_Organize.xml" />
+    <Content Include="Config\Struts\Struts-Config_WareHouse.xml" />
+    <Content Include="Hbm\ATM\ATM.hbm.xml" />
+    <Content Include="Hbm\OptionItemCfg\OptionItem.hbm.xml" />
+    <Content Include="Hbm\Organize\Group.hbm.xml" />
+    <Content Include="Hbm\Organize\GroupRank.hbm.xml" />
+    <Content Include="Hbm\Organize\JobTitle.hbm.xml" />
+    <Content Include="Hbm\Organize\OUInfo.hbm.xml" />
+    <Content Include="Hbm\Organize\OULevel.hbm.xml" />
+    <Content Include="Hbm\Organize\RelationShip.hbm.xml" />
+    <Content Include="Hbm\Security\Model.hbm.xml" />
+    <Content Include="Hbm\Security\Privilege.hbm.xml" />
+    <Content Include="Hbm\Security\Role.hbm.xml" />
+    <Content Include="Hbm\SystemPolicy\Policy.hbm.xml" />
+    <Content Include="Hbm\WareHouse\Place.hbm.xml" />
+    <Content Include="Hbm\WareHouse\Thing.hbm.xml" />
+    <Content Include="Hbm\WareHouse\WareHouse.hbm.xml" />
+    <Content Include="Hbm\WareHouse\WHUnit.hbm.xml" />
+    <Content Include="importData\ImportData.aspx" />
+    <Content Include="importData\ImportDataFileList.txt" />
+    <Content Include="importData\importData\importGroup.txt" />
+    <Content Include="importData\importData\importGroupRank.txt" />
+    <Content Include="importData\importData\importJobTitle.txt" />
+    <Content Include="importData\importData\importModel.txt" />
+    <Content Include="importData\importData\importOUInfo.txt" />
+    <Content Include="importData\importData\importOULevel.txt" />
+    <Content Include="importData\importData\importPrivilege.txt" />
+    <Content Include="importData\importData\importRole.txt" />
+    <Content Include="importData\importData\importUser.txt" />
+    <Content Include="LoginSuccess.aspx" />
+    <Content Include="OptionItemCfg\js\OptionItemForm.js" />
+    <Content Include="OptionItemCfg\js\OptionItemView.js" />
+    <Content Include="OptionItemCfg\OptionItemForm.aspx" />
+    <Content Include="OptionItemCfg\OptionItemView.aspx" />
+    <Content Include="Organize\common\Dlg_ChangePassword.aspx" />
+    <Content Include="Organize\common\Dlg_InputPassword.aspx" />
+    <Content Include="Organize\DepartmentForm.aspx" />
+    <Content Include="Organize\DepartmentView.aspx" />
+    <Content Include="Organize\dialog\SelectGroupByOU.aspx" />
+    <Content Include="Organize\dialog\SelectOUInfo.aspx" />
+    <Content Include="Organize\dialog\SelectUserByGroup.aspx" />
+    <Content Include="Organize\dialog\SelectUserInfoByOU.aspx" />
+    <Content Include="Organize\GroupForm.aspx" />
+    <Content Include="Organize\GroupView.aspx" />
+    <Content Include="Organize\JobTitleForm.aspx" />
+    <Content Include="Organize\JobTitleView.aspx" />
+    <Content Include="Organize\JS\DepartmentForm.js" />
+    <Content Include="Organize\JS\DepartmentView.js" />
+    <Content Include="Organize\JS\TS-Org.js" />
+    <Content Include="Organize\JS\FindUser.js" />
+    <Content Include="Organize\JS\GroupForm.js" />
+    <Content Include="Organize\JS\GroupView.js" />
+    <Content Include="Organize\JS\JobTitleForm.js" />
+    <Content Include="Organize\JS\JobTitleView.js" />
+    <Content Include="Organize\JS\OULevelForm.js" />
+    <Content Include="Organize\JS\OULevelView.js" />
+    <Content Include="Organize\JS\PersonalSettingForm.js" />
+    <Content Include="Organize\JS\Sch_UserInfo.js" />
+    <Content Include="Organize\JS\SelectGroupByOU.js" />
+    <Content Include="Organize\JS\SelectOUInfo.js" />
+    <Content Include="Organize\JS\SelectUserInfoByGroup.js" />
+    <Content Include="Organize\JS\SelectUserInfoByOU.js" />
+    <Content Include="Organize\JS\UnitForm.js" />
+    <Content Include="Organize\JS\UnitView.js" />
+    <Content Include="Organize\JS\UserForm.js" />
+    <Content Include="Organize\JS\UserSelect.js" />
+    <Content Include="Organize\JS\UserTab.js" />
+    <Content Include="Organize\JS\UserView.js" />
+    <Content Include="Organize\OULevelForm.aspx" />
+    <Content Include="Organize\OULevelView.aspx" />
+    <Content Include="Organize\PersonalSettingForm.aspx" />
+    <Content Include="Organize\select\UserSelect.aspx" />
+    <Content Include="Organize\tab\UserTab.aspx" />
+    <Content Include="Organize\UnitForm.aspx" />
+    <Content Include="Organize\UnitView.aspx" />
+    <Content Include="Security\JS\ModelForm.js" />
+    <Content Include="Security\JS\ModelView.js" />
+    <Content Include="Security\JS\PrivilegeView.js" />
+    <Content Include="Security\JS\RoleForm.js" />
+    <Content Include="Security\JS\RoleView.js" />
+    <Content Include="Security\ModelForm.aspx" />
+    <Content Include="Security\ModelView.aspx" />
+    <Content Include="Security\PrivilegeForm.aspx" />
+    <Content Include="Security\JS\PrivilegeForm.js" />
+    <Content Include="Security\PrivilegeView.aspx" />
+    <Content Include="Security\RoleForm.aspx" />
+    <Content Include="Security\RoleView.aspx" />
+    <Content Include="SystemPolicy\js\FormPage.js" />
+    <Content Include="SystemPolicy\js\ViewPage.js" />
+    <Content Include="SystemPolicy\PolicyForm.aspx" />
+    <Content Include="SystemPolicy\PolicyView.aspx" />
+    <Content Include="TS_MainPage\css\Common.css" />
+    <Content Include="TS_MainPage\css\Dlg.css" />
+    <Content Include="TS_MainPage\css\FirstPage.css" />
+    <Content Include="TS_MainPage\css\Footer.css" />
+    <Content Include="TS_MainPage\css\Form.css" />
+    <Content Include="TS_MainPage\css\Index.css" />
+    <Content Include="TS_MainPage\css\Login.css" />
+    <Content Include="TS_MainPage\css\TabCloseMenu.css" />
+    <Content Include="TS_MainPage\css\Top.css" />
+    <Content Include="TS_MainPage\Default.aspx" />
+    <Content Include="Hbm\Organize\User.hbm.xml" />
+    <Content Include="TS_MainPage\FirstPage.aspx" />
+    <Content Include="TS_MainPage\FirstPage_Simple.aspx" />
+    <Content Include="TS_MainPage\images\bottom\bottombg.gif" />
+    <Content Include="TS_MainPage\images\bottom\pbe.gif" />
+    <Content Include="TS_MainPage\images\bulletin.gif" />
+    <Content Include="TS_MainPage\images\close.gif" />
+    <Content Include="TS_MainPage\images\close_all.gif" />
+    <Content Include="TS_MainPage\images\close_other.gif" />
+    <Content Include="TS_MainPage\images\dlgIcon_default.gif" />
+    <Content Include="TS_MainPage\images\FirstPage\bt-bg.png" />
+    <Content Include="TS_MainPage\images\FirstPage\bt-cz.png" />
+    <Content Include="TS_MainPage\images\FirstPage\bt-dbsx.png" />
+    <Content Include="TS_MainPage\images\FirstPage\bt-right-Icon.gif" />
+    <Content Include="TS_MainPage\images\FirstPage\bt-st.png" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b01_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b01_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b02_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b02_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b03_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b03_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b04_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b04_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b05_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b05_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b06_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b06_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b07_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b07_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b08_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b08_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b09_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b09_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b10_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b10_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b11_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b11_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b12_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b12_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b13_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b13_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b14_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b14_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b15_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b15_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b16_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b16_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b17_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b17_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b18_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b18_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b19_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b19_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b20_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b20_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b21_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b21_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b22_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b22_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b23_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b23_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b24_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b24_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b51_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b51_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b52_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b52_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b53_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b53_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b54_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b54_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b55_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b55_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b56_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b56_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b57_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b57_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b58_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b58_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b59_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b59_b.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b60_a.jpg" />
+    <Content Include="TS_MainPage\images\FirstPage\btn\b60_b.jpg" />
+    <Content Include="TS_MainPage\images\left\1.gif" />
+    <Content Include="TS_MainPage\images\left\10.gif" />
+    <Content Include="TS_MainPage\images\left\11.gif" />
+    <Content Include="TS_MainPage\images\left\12.gif" />
+    <Content Include="TS_MainPage\images\left\13.gif" />
+    <Content Include="TS_MainPage\images\left\14.gif" />
+    <Content Include="TS_MainPage\images\left\15.gif" />
+    <Content Include="TS_MainPage\images\left\16.gif" />
+    <Content Include="TS_MainPage\images\left\17.gif" />
+    <Content Include="TS_MainPage\images\left\18.gif" />
+    <Content Include="TS_MainPage\images\left\19.gif" />
+    <Content Include="TS_MainPage\images\left\2.gif" />
+    <Content Include="TS_MainPage\images\left\20.gif" />
+    <Content Include="TS_MainPage\images\left\21.gif" />
+    <Content Include="TS_MainPage\images\left\22.gif" />
+    <Content Include="TS_MainPage\images\left\23.gif" />
+    <Content Include="TS_MainPage\images\left\24.gif" />
+    <Content Include="TS_MainPage\images\left\25.gif" />
+    <Content Include="TS_MainPage\images\left\26.gif" />
+    <Content Include="TS_MainPage\images\left\27.gif" />
+    <Content Include="TS_MainPage\images\left\28.gif" />
+    <Content Include="TS_MainPage\images\left\29.gif" />
+    <Content Include="TS_MainPage\images\left\3.gif" />
+    <Content Include="TS_MainPage\images\left\30.gif" />
+    <Content Include="TS_MainPage\images\left\31.gif" />
+    <Content Include="TS_MainPage\images\left\32.gif" />
+    <Content Include="TS_MainPage\images\left\33.gif" />
+    <Content Include="TS_MainPage\images\left\34.gif" />
+    <Content Include="TS_MainPage\images\left\35.gif" />
+    <Content Include="TS_MainPage\images\left\36.gif" />
+    <Content Include="TS_MainPage\images\left\4.gif" />
+    <Content Include="TS_MainPage\images\left\5.gif" />
+    <Content Include="TS_MainPage\images\left\6.gif" />
+    <Content Include="TS_MainPage\images\left\7.gif" />
+    <Content Include="TS_MainPage\images\left\8.gif" />
+    <Content Include="TS_MainPage\images\left\9.gif" />
+    <Content Include="TS_MainPage\images\left\icon_content.gif" />
+    <Content Include="TS_MainPage\images\left\icon_search.gif" />
+    <Content Include="TS_MainPage\images\left\topbg.gif" />
+    <Content Include="TS_MainPage\images\loading32.gif" />
+    <Content Include="TS_MainPage\images\loading64.gif" />
+    <Content Include="TS_MainPage\images\login\bg.GIF" />
+    <Content Include="TS_MainPage\images\login\login.swf" />
+    <Content Include="TS_MainPage\images\login\loginbtn.png" />
+    <Content Include="TS_MainPage\images\login\loginMain1.png" />
+    <Content Include="TS_MainPage\images\login\loginMain2.png" />
+    <Content Include="TS_MainPage\images\login\loginTop.png" />
+    <Content Include="TS_MainPage\images\login\textbg.png" />
+    <Content Include="TS_MainPage\images\mainbg.JPG" />
+    <Content Include="TS_MainPage\images\main_t_bg.gif" />
+    <Content Include="TS_MainPage\images\msgbox\icon-error.gif" />
+    <Content Include="TS_MainPage\images\msgbox\icon-info.gif" />
+    <Content Include="TS_MainPage\images\msgbox\icon-question.gif" />
+    <Content Include="TS_MainPage\images\msgbox\icon-warning.gif" />
+    <Content Include="TS_MainPage\images\msgbox\wait-create.gif" />
+    <Content Include="TS_MainPage\images\msgbox\wait-delete.gif" />
+    <Content Include="TS_MainPage\images\msgbox\wait-loading.gif" />
+    <Content Include="TS_MainPage\images\msgbox\wait-save.gif" />
+    <Content Include="TS_MainPage\images\msgbox\wait.gif" />
+    <Content Include="TS_MainPage\images\nav.gif" />
+    <Content Include="TS_MainPage\images\nav.png" />
+    <Content Include="TS_MainPage\images\search.gif" />
+    <Content Include="TS_MainPage\images\search.png" />
+    <Content Include="TS_MainPage\images\SystemMessage.gif" />
+    <Content Include="TS_MainPage\images\tabbg.gif" />
+    <Content Include="TS_MainPage\images\tabCloseMenuItem_close.png" />
+    <Content Include="TS_MainPage\images\tabCloseMenuItem_closeAll.png" />
+    <Content Include="TS_MainPage\images\tabCloseMenuItem_closeOthers.png" />
+    <Content Include="TS_MainPage\images\tabIcon_egrand.gif" />
+    <Content Include="TS_MainPage\images\tabIcon_egrand.ico" />
+    <Content Include="TS_MainPage\images\tabIcon_egrand_home.gif" />
+    <Content Include="TS_MainPage\images\tabIcon_egrand_qt.gif" />
+    <Content Include="TS_MainPage\images\tabIcon_privilege.ico" />
+    <Content Include="TS_MainPage\images\top\exit.gif" />
+    <Content Include="TS_MainPage\images\top\help.gif" />
+    <Content Include="TS_MainPage\images\top\logo.jpg" />
+    <Content Include="TS_MainPage\images\top\logobg.swf" />
+    <Content Include="TS_MainPage\images\top\topbg.jpg" />
+    <Content Include="TS_MainPage\images\top\topbottombg.jpg" />
+    <Content Include="TS_MainPage\images\top\topright.jpg" />
+    <Content Include="TS_MainPage\images\tree.gif" />
+    <Content Include="TS_MainPage\js\Default.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Organize\UserForm.aspx" />
+    <Content Include="Organize\UserView.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="TS_MainPage\js\TS_swfobject.js" />
+    <Content Include="TS_MainPage\js\TabCloseMenu.js" />
+    <Content Include="TS_platform\css\Common.css" />
+    <Content Include="TS_platform\css\dlg.css" />
+    <Content Include="TS_platform\css\MsgBox.css" />
+    <Content Include="TS_platform\css\Page.css" />
+    <Content Include="TS_platform\ext\adapter\ext\ext-base.js" />
+    <Content Include="TS_platform\ext\adapter\jquery\ext-jquery-adapter.js" />
+    <Content Include="TS_platform\ext\adapter\prototype\effects.js" />
+    <Content Include="TS_platform\ext\adapter\prototype\ext-prototype-adapter.js" />
+    <Content Include="TS_platform\ext\adapter\prototype\prototype.js" />
+    <Content Include="TS_platform\ext\adapter\prototype\scriptaculous.js" />
+    <Content Include="TS_platform\ext\adapter\yui\ext-yui-adapter.js" />
+    <Content Include="TS_platform\ext\adapter\yui\yui-utilities.js" />
+    <Content Include="TS_platform\ext\ext-all.js" />
+    <Content Include="TS_platform\ext\ext-core.js" />
+    <Content Include="TS_platform\ext\ext-extend.js" />
+    <Content Include="TS_platform\ext\resources\css\egd-tabs.css" />
+    <Content Include="TS_platform\ext\resources\css\ext-all.css" />
+    <Content Include="TS_platform\ext\resources\images\default\box\corners-blue.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\box\corners.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\box\l-blue.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\box\l.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\box\r-blue.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\box\r.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\box\tb-blue.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\box\tb.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\button\btn-arrow.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\button\btn-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\dd\drop-add.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\dd\drop-no.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\dd\drop-yes.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\editor\tb-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\clear-trigger.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\date-trigger.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\error-tip-corners.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\exclamation.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\search-trigger.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\text-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\trigger-tpl.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\form\trigger.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\gradient-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\arrow-left-white.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\arrow-right-white.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\col-move-bottom.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\col-move-top.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\columns.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\dirty.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\done.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\drop-no.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\drop-yes.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\footer-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid-blue-hd.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid-blue-split.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid-hrow.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid-loading.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid-split.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid-vista-hd.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid3-hd-btn.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid3-hrow-over.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid3-hrow.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid3-special-col-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\grid3-special-col-sel-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\group-by.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\group-expand-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\hd-pop.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\hmenu-asc.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\hmenu-desc.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\hmenu-lock.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\hmenu-lock.png" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\hmenu-unlock.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\hmenu-unlock.png" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\invalid_line.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\loading.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\mso-hd.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\nowait.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-first-disabled.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-first.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-last-disabled.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-last.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-next-disabled.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-next.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-prev-disabled.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\page-prev.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\pick-button.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\refresh.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\row-check-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\row-expand-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\row-over.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\row-sel.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\sort_asc.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\sort_desc.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\grid\wait.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\collapse.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\expand.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\gradient-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\mini-bottom.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\mini-left.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\mini-right.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\mini-top.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\ns-collapse.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\ns-expand.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\panel-close.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\panel-title-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\panel-title-light-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\stick.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\stuck.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\tab-close-on.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\layout\tab-close.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\menu\checked.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\menu\group-checked.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\menu\item-over.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\menu\menu-parent.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\menu\menu.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\menu\unchecked.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\corners-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\left-right.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\light-hd.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\tool-sprite-tpl.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\tool-sprites.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\tools-sprites-trans.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\top-bottom.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\top-bottom.png" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\white-corners-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\white-left-right.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\panel\white-top-bottom.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\progress\progress-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\qtip\bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\qtip\close.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\qtip\tip-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\s.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shadow-c.png" />
+    <Content Include="TS_platform\ext\resources\images\default\shadow-lr.png" />
+    <Content Include="TS_platform\ext\resources\images\default\shadow.png" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\blue-loading.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\calendar.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\glass-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\hd-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\large-loading.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\left-btn.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\loading-balls.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\right-btn.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\shared\warning.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\e-handle-dark.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\e-handle.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\ne-handle-dark.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\ne-handle.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\nw-handle-dark.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\nw-handle.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\s-handle-dark.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\s-handle.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\se-handle-dark.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\se-handle.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\square.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\sw-handle-dark.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\sizer\sw-handle.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\egd-tabs-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\scroll-left.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\scroll-right.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\scroller-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-btm-inactive-left-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-btm-inactive-right-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-btm-left-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-btm-right-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-close.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-strip-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-strip-bg.png" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tab-strip-btm-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tabs\tabs-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\toolbar\bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\toolbar\btn-arrow-light.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\toolbar\btn-arrow.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\toolbar\btn-over-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\toolbar\gray-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\toolbar\tb-bg.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\toolbar\tb-btn-sprite.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\drop-add.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\drop-between.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\drop-no.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\drop-over.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\drop-under.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\drop-yes.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-end-minus-nl.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-end-minus.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-end-plus-nl.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-end-plus.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-end.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-line.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-minus-nl.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-minus.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-plus-nl.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow-plus.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\elbow.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\folder-open.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\folder.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\leaf.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\loading.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\tree\s.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\window\icon-error.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\window\icon-info.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\window\icon-question.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\window\icon-warning.gif" />
+    <Content Include="TS_platform\ext\resources\images\default\window\left-corners.png" />
+    <Content Include="TS_platform\ext\resources\images\default\window\left-right.png" />
+    <Content Include="TS_platform\ext\resources\images\default\window\right-corners.png" />
+    <Content Include="TS_platform\ext\resources\images\default\window\top-bottom.png" />
+    <Content Include="TS_platform\ext\source\locale\ext-lang-en.js" />
+    <Content Include="TS_platform\ext\source\locale\ext-lang-en_UK.js" />
+    <Content Include="TS_platform\ext\source\locale\ext-lang-zh_CN.js" />
+    <Content Include="TS_platform\ext\source\locale\ext-lang-zh_TW.js" />
+    <Content Include="TS_platform\images\dlg\add.gif" />
+    <Content Include="TS_platform\images\dlg\all_add.gif" />
+    <Content Include="TS_platform\images\dlg\all_del.gif" />
+    <Content Include="TS_platform\images\dlg\del.gif" />
+    <Content Include="TS_platform\images\dlg\down.gif" />
+    <Content Include="TS_platform\images\dlg\up.gif" />
+    <Content Include="TS_platform\images\egrand.ico" />
+    <Content Include="TS_platform\images\icon\group.gif" />
+    <Content Include="TS_platform\images\icon\help.gif" />
+    <Content Include="TS_platform\images\icon\individual.gif" />
+    <Content Include="TS_platform\images\icon\list001.gif" />
+    <Content Include="TS_platform\images\icon\list002.gif" />
+    <Content Include="TS_platform\images\icon\loading.gif" />
+    <Content Include="TS_platform\images\icon\loading01.gif" />
+    <Content Include="TS_platform\images\icon\more001.gif" />
+    <Content Include="TS_platform\images\icon\more002.gif" />
+    <Content Include="TS_platform\images\icon\more003.gif" />
+    <Content Include="TS_platform\images\icon\more004.gif" />
+    <Content Include="TS_platform\images\icon\msg01.gif" />
+    <Content Include="TS_platform\images\icon\new001.gif" />
+    <Content Include="TS_platform\images\icon\new002.gif" />
+    <Content Include="TS_platform\images\icon\new003.gif" />
+    <Content Include="TS_platform\images\icon\no.png" />
+    <Content Include="TS_platform\images\icon\qt001.gif" />
+    <Content Include="TS_platform\images\icon\qt002.gif" />
+    <Content Include="TS_platform\images\icon\qt003.gif" />
+    <Content Include="TS_platform\images\icon\qt004.gif" />
+    <Content Include="TS_platform\images\icon\qt005.gif" />
+    <Content Include="TS_platform\images\icon\read_no.gif" />
+    <Content Include="TS_platform\images\icon\read_yes.gif" />
+    <Content Include="TS_platform\images\icon\setup.gif" />
+    <Content Include="TS_platform\images\icon\sticky.gif" />
+    <Content Include="TS_platform\images\icon\wgsend_no.gif" />
+    <Content Include="TS_platform\images\icon\wgsend_yes.gif" />
+    <Content Include="TS_platform\images\icon\yes.png" />
+    <Content Include="TS_platform\images\loading.gif" />
+    <Content Include="TS_platform\images\msgbox\bg.JPG" />
+    <Content Include="TS_platform\images\msgbox\buttonbg.GIF" />
+    <Content Include="TS_platform\images\msgbox\critical.JPG" />
+    <Content Include="TS_platform\images\msgbox\error.JPG" />
+    <Content Include="TS_platform\images\msgbox\info.JPG" />
+    <Content Include="TS_platform\images\msgbox\question.JPG" />
+    <Content Include="TS_platform\images\msgbox\successfull.JPG" />
+    <Content Include="TS_platform\images\page\button-default.gif" />
+    <Content Include="TS_platform\images\page\button-tabbg1.gif" />
+    <Content Include="TS_platform\images\page\button-tabbg2.gif" />
+    <Content Include="TS_platform\images\page\button-tabbg3.gif" />
+    <Content Include="TS_platform\images\page\button-tabbg4.gif" />
+    <Content Include="TS_platform\images\page\button2-tabbg1.gif" />
+    <Content Include="TS_platform\images\page\button2-tabbg2.gif" />
+    <Content Include="TS_platform\images\page\button2-tabbg3.gif" />
+    <Content Include="TS_platform\images\page\cleanCondition.gif" />
+    <Content Include="TS_platform\images\page\egd-view-search-bg.png" />
+    <Content Include="TS_platform\images\page\form_headInfo_bg.jpg" />
+    <Content Include="TS_platform\images\page\form_headInfo_left_bg.jpg" />
+    <Content Include="TS_platform\images\page\seperator.gif" />
+    <Content Include="TS_platform\images\page\startSearch.gif" />
+    <Content Include="TS_platform\images\page\title-warpBg.jpg" />
+    <Content Include="TS_platform\images\page\title-warpBgCR.jpg" />
+    <Content Include="TS_platform\images\page\title_topbg.gif" />
+    <Content Include="TS_platform\images\page\toolbar_bg.gif" />
+    <Content Include="TS_platform\images\s.gif" />
+    <Content Include="TS_platform\images\select\add.gif" />
+    <Content Include="TS_platform\images\select\datetime.gif" />
+    <Content Include="TS_platform\images\select\del.gif" />
+    <Content Include="TS_platform\images\select\open.gif" />
+    <Content Include="TS_platform\images\select\search.gif" />
+    <Content Include="TS_platform\images\select\search_1.gif" />
+    <Content Include="TS_platform\images\select\search_2.gif" />
+    <Content Include="TS_platform\images\select\search_3.gif" />
+    <Content Include="TS_platform\images\select\search_4.gif" />
+    <Content Include="TS_platform\images\select\user.gif" />
+    <Content Include="TS_platform\images\tree\treeNode_department.gif" />
+    <Content Include="TS_platform\images\tree\treeNode_unit.gif" />
+    <Content Include="TS_platform\js\Attachment.js" />
+    <Content Include="TS_platform\js\Date.js" />
+    <Content Include="TS_platform\js\ElemFader.js" />
+    <Content Include="TS_platform\js\ItemSelectFunction.js" />
+    <Content Include="TS_platform\js\Prototype.js" />
+    <Content Include="TS_platform\js\scriptaculous\builder.js" />
+    <Content Include="TS_platform\js\scriptaculous\controls.js" />
+    <Content Include="TS_platform\js\scriptaculous\dragdrop.js" />
+    <Content Include="TS_platform\js\scriptaculous\effects.js" />
+    <Content Include="TS_platform\js\scriptaculous\scriptaculous.js" />
+    <Content Include="TS_platform\js\scriptaculous\slider.js" />
+    <Content Include="TS_platform\js\TS-Include-Attachment.js" />
+    <Content Include="TS_platform\js\TS-Include-AutoComplete.js" />
+    <Content Include="TS_platform\js\TS-Include-Calendar.js" />
+    <Content Include="TS_platform\js\TS-Include-Dlg.js" />
+    <Content Include="TS_platform\js\TS-Include-Ext.js" />
+    <Content Include="TS_platform\js\TS-Include-FormPage.js" />
+    <Content Include="TS_platform\js\TS-Include-Tree.js" />
+    <Content Include="TS_platform\js\TS-Include-ViewPage.js" />
+    <Content Include="TS_platform\js\TS-Include-ViewPageInTab.js" />
+    <Content Include="TS_platform\js\TS-LinkSelect.js" />
+    <Content Include="TS_platform\js\TS-MainPageUtils.js" />
+    <Content Include="TS_platform\js\TS.js" />
+    <Content Include="TS_platform\widgets\attachment\attachment.js" />
+    <Content Include="TS_platform\widgets\autoComplete\autoComplete.js" />
+    <Content Include="TS_platform\widgets\autoComplete\css\default\autoComplete.css" />
+    <Content Include="TS_platform\widgets\calendar\Calendar.js" />
+    <Content Include="TS_platform\widgets\calendar\css\default\Calendar.css" />
+    <Content Include="TS_platform\widgets\calendar\Date.js" />
+    <Content Include="TS_platform\widgets\calendar\images\default\calendar.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\glass-bg.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\hd-sprite.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\left-btn.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\left-y-btn.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\right-btn.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\right-y-btn.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\tool-sprites.gif" />
+    <Content Include="TS_platform\widgets\calendar\images\default\topbg.gif" />
+    <Content Include="TS_platform\widgets\grid\css\default\grid.css" />
+    <Content Include="TS_platform\widgets\grid\css\default\readme.txt" />
+    <Content Include="TS_platform\widgets\grid\grid.js" />
+    <Content Include="TS_platform\widgets\grid\images\default\colSeparator.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\extGrid-top-trBg.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\header_bg.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\id_img.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\page_bg.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\row_id_checkbox.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\row_id_img.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\row_id_option.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\sort_asc.gif" />
+    <Content Include="TS_platform\widgets\grid\images\default\sort_desc.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\css\default\readme.txt" />
+    <Content Include="TS_platform\widgets\tabPanel\css\default\tabs.css" />
+    <Content Include="TS_platform\widgets\tabPanel\css\eclipse\readme.txt" />
+    <Content Include="TS_platform\widgets\tabPanel\css\eclipse\tabs.css" />
+    <Content Include="TS_platform\widgets\tabPanel\css\window\readme.txt" />
+    <Content Include="TS_platform\widgets\tabPanel\css\window\tabs.css" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-close-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-close-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-close-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-end-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-end-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-end-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-label-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-label-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-label-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-panel-bg.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-start-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-start-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\default\tab-header-start-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-close-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-close-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-close-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-end-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-end-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-end-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-label-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-label-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-label-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-panel-bg.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-start-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-start-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\eclipse\tab-header-start-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-bg.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-close-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-close-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-close-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-end-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-end-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-end-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-label-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-label-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-label-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-panel-bg.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-start-active.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-start-disabled.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\images\window\tab-header-start-inactive.gif" />
+    <Content Include="TS_platform\widgets\tabPanel\tabPanel.js" />
+    <Content Include="TS_platform\widgets\toolbar\css\default\buttons.css" />
+    <Content Include="TS_platform\widgets\toolbar\css\default\toolbar.css" />
+    <Content Include="TS_platform\widgets\toolbar\css\dlg\toolbar.css" />
+    <Content Include="TS_platform\widgets\toolbar\css\page\buttons.css" />
+    <Content Include="TS_platform\widgets\toolbar\css\page\toolbar.css" />
+    <Content Include="TS_platform\widgets\toolbar\css\tab\toolbar.css" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\accept.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\accept_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\activate.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\activate_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\active.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\active_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\AddAttachment.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\AddAttachment_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\AddLog.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\AddLog_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\approval.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\approval_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\assign.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\assign_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\back.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\back_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\bar.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\bar_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\blankout.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\blankout_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\borrow.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\borrow_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\cancel.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\cancel_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\checknewdata.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\checknewdata_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\clean.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\clean_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\clearRiskFlag.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\clearRiskFlag_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\close.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\close_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\complaint.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\complaint_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Coordinate.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Coordinate_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\default.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\default_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\DelAttachment.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\DelAttachment_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\delete.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\delete_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\disable.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\disable_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\dispatch.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\dispatch_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\doCase.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\doCase_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\download.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\download_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\draw.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\draw_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\edit.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\edit_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\endHandUp.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\endHandUp_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\execute.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\execute_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exit.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exit_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exportToExcell.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exportToExcell_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exportToPdf.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exportToPdf_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exportToTxt.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\exportToTxt_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Finish.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Finish_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\flowretrieve.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\flowretrieve_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\forbid.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\forbid_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\GroupSend.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\GroupSend_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\handUp.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\handUp_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\import.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\import_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\line.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\line_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\link.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\link_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\maintain.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\maintain_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\maintenance.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\maintenance_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\managetype.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\managetype_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\monitor.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\monitor_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\move.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\move_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\new.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\new_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\overdue.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\overdue_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\parser.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\parser_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\password.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\password_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\pie.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\pie_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Preview.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Preview_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\print.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\print_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reassign.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reassign_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\redeploy.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\redeploy_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\refresh.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\refresh_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reject.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reject_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\relationShip.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\relationShip_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\release.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\release_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reopen.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reopen_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Reply.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Reply_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reSend.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\reSend_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\revert.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\revert_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\runReport.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\runReport_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Satisfaction.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Satisfaction_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\save.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\saveAs.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\saveAs_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\save_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\search.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\search_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\send.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\sendbackhd.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\sendbackhd_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\sendcasehd.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\sendcasehd_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\sendsms.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\sendsms_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\send_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\setRiskFlag.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\setRiskFlag_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Submit.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\Submit_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\transfer.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\transferNo.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\transferNo_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\transferYes.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\transferYes_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\transfer_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\unchain.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\unchain_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\undo.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\undo_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\UnLink.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\UnLink_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\unmonitor.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\unmonitor_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\upload.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\upload_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\urgency.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\urgency_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\view.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\viewsms.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\viewsms_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\view_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\waytime.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\buttons\waytTime_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_center.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_center_arrow.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_center_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_center_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_left.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_left_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_left_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_right.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_right_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\button_right_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\toolbar_bg.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\default\toolbar_separator.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_center.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_center_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_center_over.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_left.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_left_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_left_over.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_right.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_right_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\button_right_over.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\toolbar_bg.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\dlg\toolbar_separator.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_bg.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_exportToExcell.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_exportToPdf.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_first.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_first_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_jumpToPage.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_last.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_last_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_next.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_next_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_prev.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_prev_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\page\page_reload.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_center.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_center_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_center_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_left.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_left_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_left_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_right.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_right_disabled.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\button_right_down.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\toolbar_bg.gif" />
+    <Content Include="TS_platform\widgets\toolbar\images\tab\toolbar_separator.gif" />
+    <Content Include="TS_platform\widgets\toolbar\toolbar.js" />
+    <Content Include="TS_platform\widgets\tree\css\default\Tree.css" />
+    <Content Include="TS_platform\widgets\tree\images\default\drop-add.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\drop-between.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\drop-no.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\drop-over.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\drop-under.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\drop-yes.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-end-minus-nl.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-end-minus.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-end-plus-nl.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-end-plus.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-end.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-line.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-minus-nl.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-minus.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-plus-nl.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow-plus.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\elbow.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\folder-open.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\folder.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\leaf.gif" />
+    <Content Include="TS_platform\widgets\tree\images\default\loading.gif" />
+    <Content Include="TS_platform\widgets\tree\Tree.js" />
+    <Content Include="WareHouse\Dlg\js\PlaceSelect.js" />
+    <Content Include="WareHouse\Dlg\PlaceSelect.aspx" />
+    <Content Include="WareHouse\Dlg\PlaceTree.aspx" />
+    <Content Include="WareHouse\Dlg\ThingSelect.aspx" />
+    <Content Include="WareHouse\Dlg\WHUnitSelect.aspx" />
+    <Content Include="WareHouse\js\PlaceForm.js" />
+    <Content Include="WareHouse\js\PlaceView.js" />
+    <Content Include="WareHouse\js\ThingForm.js" />
+    <Content Include="WareHouse\js\ThingView.js" />
+    <Content Include="WareHouse\js\WHUnitForm.js" />
+    <Content Include="WareHouse\js\WHUnitView.js" />
+    <Content Include="WareHouse\js\WareHouseForm.js" />
+    <Content Include="WareHouse\js\WareHouseView.js" />
+    <Content Include="WareHouse\PlaceForm.aspx" />
+    <Content Include="WareHouse\PlaceView.aspx" />
+    <Content Include="WareHouse\ThingForm.aspx" />
+    <Content Include="WareHouse\ThingView.aspx" />
+    <Content Include="WareHouse\WHUnitForm.aspx" />
+    <Content Include="WareHouse\WHUnitView.aspx" />
+    <Content Include="WareHouse\WareHouseForm.aspx" />
+    <Content Include="WareHouse\Dlg\WareHouseSelect.aspx" />
+    <Content Include="WareHouse\WareHouseView.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ATM\action\ATMAction.cs" />
+    <Compile Include="ATM\DownloadFile.aspx.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ATM\DownloadFile.aspx.designer.cs">
+      <DependentUpon>DownloadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ATM\UploadFile.aspx.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ATM\UploadFile.aspx.designer.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="importData\cs\importGroup.cs" />
+    <Compile Include="importData\cs\importGroupRank.cs" />
+    <Compile Include="importData\cs\importJobTitle.cs" />
+    <Compile Include="importData\cs\importModel.cs" />
+    <Compile Include="importData\cs\importOUInfo.cs" />
+    <Compile Include="importData\cs\importOULevel.cs" />
+    <Compile Include="importData\cs\importPrivilege.cs" />
+    <Compile Include="importData\cs\importRole.cs" />
+    <Compile Include="importData\cs\importUser.cs" />
+    <Compile Include="importData\ImportData.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ImportData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="importData\ImportData.aspx.designer.cs">
+      <DependentUpon>ImportData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSuccess.aspx.cs">
+      <DependentUpon>LoginSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginSuccess.aspx.designer.cs">
+      <DependentUpon>LoginSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OptionItemCfg\action\OptionItemAction.cs" />
+    <Compile Include="OptionItemCfg\OptionItemForm.aspx.cs">
+      <DependentUpon>OptionItemForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OptionItemCfg\OptionItemForm.aspx.designer.cs">
+      <DependentUpon>OptionItemForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OptionItemCfg\OptionItemView.aspx.cs">
+      <DependentUpon>OptionItemView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OptionItemCfg\OptionItemView.aspx.designer.cs">
+      <DependentUpon>OptionItemView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\action\DepartmentAction.cs" />
+    <Compile Include="Organize\action\GroupAction.cs" />
+    <Compile Include="Organize\action\JobTitleAction.cs" />
+    <Compile Include="Organize\action\OUInfoAction.cs" />
+    <Compile Include="Organize\action\OULevelAction.cs" />
+    <Compile Include="Organize\action\OUTreeAction.cs" />
+    <Compile Include="Organize\action\PersonalSettingAction.cs" />
+    <Compile Include="Organize\action\UnitAction.cs" />
+    <Compile Include="Organize\action\UnitTreeAction.cs" />
+    <Compile Include="Organize\action\UserAction.cs" />
+    <Compile Include="Organize\common\Dlg_ChangePassword.aspx.cs">
+      <DependentUpon>Dlg_ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\common\Dlg_ChangePassword.aspx.designer.cs">
+      <DependentUpon>Dlg_ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\common\Dlg_InputPassword.aspx.cs">
+      <DependentUpon>Dlg_InputPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\common\Dlg_InputPassword.aspx.designer.cs">
+      <DependentUpon>Dlg_InputPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\DepartmentForm.aspx.cs">
+      <DependentUpon>DepartmentForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\DepartmentForm.aspx.designer.cs">
+      <DependentUpon>DepartmentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\DepartmentView.aspx.cs">
+      <DependentUpon>DepartmentView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\DepartmentView.aspx.designer.cs">
+      <DependentUpon>DepartmentView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectGroupByOU.aspx.cs">
+      <DependentUpon>SelectGroupByOU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectGroupByOU.aspx.designer.cs">
+      <DependentUpon>SelectGroupByOU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectOUInfo.aspx.cs">
+      <DependentUpon>SelectOUInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectOUInfo.aspx.designer.cs">
+      <DependentUpon>SelectOUInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectUserByGroup.aspx.cs">
+      <DependentUpon>SelectUserByGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectUserByGroup.aspx.designer.cs">
+      <DependentUpon>SelectUserByGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectUserInfoByOU.aspx.cs">
+      <DependentUpon>SelectUserInfoByOU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\dialog\SelectUserInfoByOU.aspx.designer.cs">
+      <DependentUpon>SelectUserInfoByOU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\GroupForm.aspx.cs">
+      <DependentUpon>GroupForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\GroupForm.aspx.designer.cs">
+      <DependentUpon>GroupForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\GroupView.aspx.cs">
+      <DependentUpon>GroupView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\GroupView.aspx.designer.cs">
+      <DependentUpon>GroupView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\JobTitleForm.aspx.cs">
+      <DependentUpon>JobTitleForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\JobTitleForm.aspx.designer.cs">
+      <DependentUpon>JobTitleForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\JobTitleView.aspx.cs">
+      <DependentUpon>JobTitleView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\JobTitleView.aspx.designer.cs">
+      <DependentUpon>JobTitleView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\OULevelForm.aspx.cs">
+      <DependentUpon>OULevelForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\OULevelForm.aspx.designer.cs">
+      <DependentUpon>OULevelForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\OULevelView.aspx.cs">
+      <DependentUpon>OULevelView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\OULevelView.aspx.designer.cs">
+      <DependentUpon>OULevelView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\PersonalSettingForm.aspx.cs">
+      <DependentUpon>PersonalSettingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\PersonalSettingForm.aspx.designer.cs">
+      <DependentUpon>PersonalSettingForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\select\UserSelect.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\select\UserSelect.aspx.designer.cs">
+      <DependentUpon>UserSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\tab\UserTab.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserTab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\tab\UserTab.aspx.designer.cs">
+      <DependentUpon>UserTab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\UnitForm.aspx.cs">
+      <DependentUpon>UnitForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\UnitForm.aspx.designer.cs">
+      <DependentUpon>UnitForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\UnitView.aspx.cs">
+      <DependentUpon>UnitView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\UnitView.aspx.designer.cs">
+      <DependentUpon>UnitView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\action\ModelAction.cs" />
+    <Compile Include="Security\action\RoleAction.cs" />
+    <Compile Include="Security\ModelForm.aspx.cs">
+      <DependentUpon>ModelForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\ModelForm.aspx.designer.cs">
+      <DependentUpon>ModelForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\ModelView.aspx.cs">
+      <DependentUpon>ModelView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\ModelView.aspx.designer.cs">
+      <DependentUpon>ModelView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\PrivilegeForm.aspx.cs">
+      <DependentUpon>PrivilegeForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\PrivilegeForm.aspx.designer.cs">
+      <DependentUpon>PrivilegeForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\PrivilegeView.aspx.cs">
+      <DependentUpon>PrivilegeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\PrivilegeView.aspx.designer.cs">
+      <DependentUpon>PrivilegeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\RoleForm.aspx.cs">
+      <DependentUpon>RoleForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\RoleForm.aspx.designer.cs">
+      <DependentUpon>RoleForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\RoleView.aspx.cs">
+      <DependentUpon>RoleView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Security\RoleView.aspx.designer.cs">
+      <DependentUpon>RoleView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemPolicy\action\PolicyAction.cs" />
+    <Compile Include="SystemPolicy\PolicyForm.aspx.cs">
+      <DependentUpon>PolicyForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemPolicy\PolicyForm.aspx.designer.cs">
+      <DependentUpon>PolicyForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemPolicy\PolicyView.aspx.cs">
+      <DependentUpon>PolicyView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemPolicy\PolicyView.aspx.designer.cs">
+      <DependentUpon>PolicyView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TSWebContext\TSWEBContext.cs" />
+    <Compile Include="TS_MainPage\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TS_MainPage\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\UserForm.aspx.cs">
+      <DependentUpon>UserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\UserForm.aspx.designer.cs">
+      <DependentUpon>UserForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organize\UserView.aspx.cs">
+      <DependentUpon>UserView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organize\UserView.aspx.designer.cs">
+      <DependentUpon>UserView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TS_MainPage\FirstPage.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FirstPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TS_MainPage\FirstPage.aspx.designer.cs">
+      <DependentUpon>FirstPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TS_MainPage\FirstPage_Simple.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FirstPage_Simple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TS_MainPage\FirstPage_Simple.aspx.designer.cs">
+      <DependentUpon>FirstPage_Simple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Security\action\PrivilegeAction.cs" />
+    <Compile Include="WareHouse\action\PlaceAction.cs" />
+    <Compile Include="WareHouse\action\ThingAction.cs" />
+    <Compile Include="WareHouse\action\WHUnitAction.cs" />
+    <Compile Include="WareHouse\action\WareHouseAction.cs" />
+    <Compile Include="WareHouse\Dlg\PlaceSelect.aspx.cs">
+      <DependentUpon>PlaceSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\PlaceSelect.aspx.designer.cs">
+      <DependentUpon>PlaceSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\PlaceTree.aspx.cs">
+      <DependentUpon>PlaceTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\PlaceTree.aspx.designer.cs">
+      <DependentUpon>PlaceTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\ThingSelect.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ThingSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\ThingSelect.aspx.designer.cs">
+      <DependentUpon>ThingSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\WHUnitSelect.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WHUnitSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\WHUnitSelect.aspx.designer.cs">
+      <DependentUpon>WHUnitSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\PlaceForm.aspx.cs">
+      <DependentUpon>PlaceForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\PlaceForm.aspx.designer.cs">
+      <DependentUpon>PlaceForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\PlaceView.aspx.cs">
+      <DependentUpon>PlaceView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\PlaceView.aspx.designer.cs">
+      <DependentUpon>PlaceView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\ThingForm.aspx.cs">
+      <DependentUpon>ThingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\ThingForm.aspx.designer.cs">
+      <DependentUpon>ThingForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\ThingView.aspx.cs">
+      <DependentUpon>ThingView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\ThingView.aspx.designer.cs">
+      <DependentUpon>ThingView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\WHUnitForm.aspx.cs">
+      <DependentUpon>WHUnitForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\WHUnitForm.aspx.designer.cs">
+      <DependentUpon>WHUnitForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\WHUnitView.aspx.cs">
+      <DependentUpon>WHUnitView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\WHUnitView.aspx.designer.cs">
+      <DependentUpon>WHUnitView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\WareHouseForm.aspx.cs">
+      <DependentUpon>WareHouseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\WareHouseForm.aspx.designer.cs">
+      <DependentUpon>WareHouseForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\WareHouseSelect.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WareHouseSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\Dlg\WareHouseSelect.aspx.designer.cs">
+      <DependentUpon>WareHouseSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WareHouse\WareHouseView.aspx.cs">
+      <DependentUpon>WareHouseView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WareHouse\WareHouseView.aspx.designer.cs">
+      <DependentUpon>WareHouseView.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\NHibernate.properties" />
+    <None Include="TS_MainPage\images\FirstPage\btn\模板.psd" />
+    <None Include="TS_MainPage\images\login\loginTop.psd" />
+    <None Include="TS_MainPage\images\top\logo.psd" />
+    <None Include="TS_platform\ext\resources\images\default\form\clear-trigger.psd" />
+    <None Include="TS_platform\ext\resources\images\default\form\date-trigger.psd" />
+    <None Include="TS_platform\ext\resources\images\default\form\search-trigger.psd" />
+    <None Include="TS_platform\ext\resources\images\default\form\trigger.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="importData\cs\wareHouse\" />
+    <Folder Include="importData\importData\wareHouse\" />
+    <Folder Include="TS_MainPage\images\select\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3335</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

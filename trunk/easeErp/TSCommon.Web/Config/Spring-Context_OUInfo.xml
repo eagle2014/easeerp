@@ -1,0 +1,14 @@
+﻿<objects xmlns="http://www.springframework.net">
+  <description>Spring Context配置文件</description>
+  <!-- 组织架构：部门级别 -->
+  <object id="OUInfoDao" type="TSCommon.Core.Organize.Dao.Hibernate.OUInfoDao, TSCommon.Core">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="OUInfoServiceTarget" type="TSCommon.Core.Organize.Service.OUInfoService, TSCommon.Core">
+    <property name="OUInfoDao" ref="OUInfoDao" />
+  </object>
+  <object id="OUInfoService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="OUInfoServiceTarget"/>
+    <property name="ProxyInterfaces" value="TSCommon.Core.Organize.Service.IOUInfoService"/>
+  </object>
+</objects>

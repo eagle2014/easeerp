@@ -1,0 +1,267 @@
+﻿/*
+ * 附件组件样式配置
+ * 全称attachment，简称ATM
+ *
+ * @author Tony
+ * @date 2008-08-14
+ *
+ */
+.egd-atm-contaner-wrap{
+	width:100%;
+	height:100%;
+	border:1px solid #97BFDE;
+}
+/* 容器 */ 
+.egd-atm-contaner-table{
+	table-layout:fixed;
+	background-color:#F8FAFD;
+    border:solid 0px #CCCCCC;
+}
+
+/* 附件工具条tr */ 
+.egd-atm-tb-tr
+{
+	height:30px; 
+	line-height:30px;
+    background-repeat:repeat-x;
+    background-image:url("../../images/default/toolbar_bg.gif");
+    vertical-align:middle;
+    overflow:hidden;
+}
+/* 附件工具条td */ 
+.egd-atm-tb-td
+{
+    vertical-align:middle;
+}
+
+/* 附件标题 */ 
+.egd-atm-title
+{
+	cursor:default;
+	float:left; 
+	height:25px; 
+	line-height:25px;
+    vertical-align:middle;
+	margin-left:3px;
+	font-weight:bold;
+}
+
+/* 附件按钮 */ 
+.egd-atm-btn
+{
+	width:60px; 
+	height:21px;
+	cursor:default;
+	float:left; 
+	line-height:21px;
+    vertical-align:middle;
+	text-indent:27px;
+	margin-left:5px;
+	margin-top:1px;
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+
+/* 附件列表 */ 
+.egd-atm-data-table
+{
+	table-layout:fixed;
+	width:100%;
+}
+
+/* 标题行 */ 
+.egd-atm-header-tr
+{
+	width:100%;
+	height:22px; 
+	line-height:22px;
+	background-repeat: repeat-x;
+	background-image: url(../../images/default/header_bg.gif);
+	background-position: bottom;
+	text-align:center;
+}
+
+/* 标题行：单元格 */ 
+.egd-atm-header-td
+{
+	cursor:default;
+	padding:2px;
+	vertical-align:middle;
+	border-right: 1px solid #CCCCCC;
+}
+/* 标题行：最后一列的单元格 */ 
+.egd-atm-header-td-end
+{
+	cursor:default;
+	padding:2px;
+	vertical-align:middle;
+	border-right: 1px solid #CCCCCC;
+}
+
+/* 数据行--奇数行 */ 
+.egd-atm-data-tr
+{
+	height:22px; 
+	line-height:22px;
+	background-color: #FFFFFF;
+}
+/* 数据行--偶数行 */ 
+.egd-atm-data-tr1
+{
+	height:22px; 
+	line-height:22px;
+	background-color: #F5F2F2;
+}
+
+/* 数据行：单元格 */
+.egd-atm-data-td
+{
+	cursor:default;
+	padding:2px;
+	vertical-align:middle;
+	border-bottom:1px solid #E2E1E1;
+	border-right: 1px solid #CCCCCC;
+}
+/* 数据行：最后一列的单元格 */ 
+.egd-atm-data-td-end
+{
+	cursor:default;
+	padding:2px;
+	vertical-align:middle;
+	border-bottom:1px solid #E2E1E1;
+	border-right: 0px solid #CCCCCC;
+}
+
+
+/* 上传按钮 */
+.uploadATM
+{
+	background-image: url(../../images/default/btn-Attachment.png);
+	background-position:0 0;
+}
+.uploadATM-mouseOver
+{
+	background-image: url(../../images/default/btn-Attachment.png);
+	background-position:0 -21;
+}
+
+/* 下载按钮 */
+.downloadATM
+{
+	background-image: url(../../images/default/btn-Attachment.png);
+	background-position:-60 0;
+}
+.downloadATM-mouseOver
+{
+	background-image: url(../../images/default/btn-Attachment.png);
+	background-position:-60 -21;
+}
+
+/* 删除按钮 */
+.deleteATM
+{
+	background-image: url(../../images/default/btn-Attachment.png);
+	background-position:-120 0;
+}
+.deleteATM-mouseOver
+{
+	background-image: url(../../images/default/btn-Attachment.png);
+	background-position:-120 -21;
+}
+
+
+
+
+a.addfile   { 
+	background-image:url(../../images/default/Attachmenticon.gif); 
+	background-repeat:no-repeat; 
+	background-position:0px 4px; 
+	display:block; 
+	float:left; 
+	height:20px; 
+	margin-top:-1px; 
+	position:relative; 
+	text-decoration:none; 
+	top:0pt; 
+	width:80px; 
+	z-index: 10;
+} 
+ 
+input.addfile   { 
+	cursor:pointer!important; 
+	height:18px; 
+	left:-13px; 
+	*left:0px;
+	*right:13px; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+	position:absolute; 
+	top:2px; 
+	width:0px; 
+	border:0px;
+	
+} 
+.subDiv{
+	width:100%;	
+	line-height:20px;
+	text-indent:3px;
+	padding-top:0px!important;
+	padding-top:3px;
+	word-wrap: break-word; word-break: break-all;
+	clear:both;
+}
+#container2 span{
+	text-indent:2px;
+}
+.atmTop{
+	width:100%;
+	height:21px; 
+	background-color:#ECF4F9; 
+	border-bottom:1px solid #D6E6F0;
+}
+.atmTop-left{
+	width:160px; height:21px; text-indent:5px; line-height:21px; float:left;
+}
+.atmTop-right{
+	width:80px;height:21px; float:right;
+}
+.atmMain{
+	width:100%; height:89px;
+}
+.fileList-overflow{
+	width:100%; 
+	height:89px!important;
+	height:100%; 
+	overflow:auto;
+}
+/*文件类型图标*/
+.fileComm{
+	width:13px;
+	height:13px;
+	margin-top:2px;
+	margin-right:2px;
+	margin-left:2px;
+	background-image:url(../../images/default/fileicon.gif);
+	background-position:-2 -3px;
+	background-repeat:no-repeat;
+	float:left;
+}
+
+.file-htm{background-image:url(../../images/default/fileicon.gif);background-position:-2 -16px;}
+.file-html{background-image:url(../../images/default/fileicon.gif);background-position:-2 -17px;}
+.file-mdb{background-image:url(../../images/default/fileicon.gif);background-position:-2 -31px;}
+.file-doc{background-image:url(../../images/default/fileicon.gif);background-position:-2 -45px;}
+.file-ppt{background-image:url(../../images/default/fileicon.gif);background-position:-2 -59px;}
+.file-xls{background-image:url(../../images/default/fileicon.gif);background-position:-2 -73px;}
+.file-txt{background-image:url(../../images/default/fileicon.gif);background-position:-2 -87px;}
+.file-mp3{background-image:url(../../images/default/fileicon.gif);background-position:-2 -101px;}
+.file-zip{background-image:url(../../images/default/fileicon.gif);background-position:-2 -114px;}
+.file-rar{background-image:url(../../images/default/fileicon.gif);background-position:-2 -128px;}
+.file-swf{background-image:url(../../images/default/fileicon.gif);background-position:-2 -142px;}
+.file-exe{background-image:url(../../images/default/fileicon.gif);background-position:-2 -157px;}
+.file-gif{background-image:url(../../images/default/fileicon.gif);background-position:-2 -171;}
+.file-jpg{background-image:url(../../images/default/fileicon.gif);background-position:-2 -171;}
+.file-png{background-image:url(../../images/default/fileicon.gif);background-position:-2 -171;}
+.file-pdf{background-image:url(../../images/default/fileicon.gif);background-position:-2 -185;}
+.file-chm{background-image:url(../../images/default/fileicon.gif);background-position:-2 -199;}
+

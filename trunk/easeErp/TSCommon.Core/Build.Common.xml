@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<project name="TSCommon.Core" xmlns="http://nant.sf.net/schemas/nant.xsd">
+  <include buildfile="Build.properties.xml"/>
+  <target name="help">
+    <echo message="可用的ant任务如下：（使用“nant [任务名]”运行对应的任务）"/>
+    <echo message="clean              ---- 清理编译环境"/>
+    <echo message="compile-all        ---- 编译所有源码(包括测试源码和导入数据的源码)"/>
+    <echo message="compile            ---- 编译各个项目的源码"/>
+    <echo message="compile-import     ---- 编译各个项目的导入数据源码"/>
+    <echo message="compile-test       ---- 编译各个项目的测试代码"/>
+    <echo message="issue              ---- 发布模块的dll到发布库"/>
+    <echo message="copyDll            ---- 复制所依赖的dll到${lib.dir}和${web.dir}/Bin目录"/>
+  </target>
+
+  <target name="clean">
+    <delete>
+      <fileset basedir="${bin.dir}">
+        <include name="*.*"/>
+      </fileset>
+    </delete>
+  </target>
+
+  <target name="compile-all">
+    <call target="compile"/>
+  </target>
+
+  <target name="compile" depends="copyDll">
+    <property name="current.bin.dir" value="${dll.dir}" />
+    <property name="current.dll.name" value="${project::get-name()}" />
+    <property name="current.src.dir" value="${src.dir}"/>
+    <call target="compileBase" if="${directory::exists(property::get-value('current.src.dir'))}"/>
+  </target>
+
+  <target name="compileBase">
+    <property name="_index" value="${string::index-of(current.dll.name, '_')}" />
+    <if test="${_index!='-1'}">
+    	<property name="current.dll.name" value="${string::substring(current.dll.name, 0, int::parse(_index))}" />
+    </if>
+    <echo message="正在编译：${current.dll.name}.dll"/>
+    <mkdir dir="${current.bin.dir}"/>
+    <csc target="library" warnaserror="false" 
+          debug="false"
+          output="${current.bin.dir}/${current.dll.name}.dll"
+          doc="${current.bin.dir}/${current.dll.name}.xml">
+      <nowarn>
+        <warning number="219" />
+        <warning number="162" />
+        <warning number="1591" />
+        <warning number="1570" />
+        <warning number="1572" />
+        <warning number="1573" />
+        <warning number="1574" />
+        <warning number="1587" />
+        <warning number="0618" />
+        <warning number="0414" />
+        <warning number="0467" />
+        <warning number="0168" />
+        <warning number="0169" />
+        <warning number="0108" />
+        <warning number="0114" />
+      </nowarn>
+      <sources>
+        <include name="${current.src.dir}/**/*.cs" />
+				
+        <!--排除临时文件夹-->
+        <exclude name="${current.src.dir}/**/obj/**"/>
+        <exclude name="${current.src.dir}/**/bin/**"/>
+      </sources>
+      <references>
+        <include name="${dll.dir}/**/*.dll" />
+        <include name="${current.bin.dir}/${project::get-name()}.dll" if="${not (property::get-value('current.dll.name') == 'project::get-name()')}"/>
+
+        <!--排除引用测试组件、自身组件及导入数据的组件-->
+        <exclude name="${current.bin.dir}/Debug/**"/>
+        <exclude name="${current.bin.dir}/${current.dll.name}.dll" />
+      </references>
+    </csc>
+  </target>
+
+  <target name="issue" depends="compile">
+    <copy todir="${issue.dir}/${project::get-name()}/${version}">
+      <fileset basedir="${dll.dir}">
+        <include name="${project::get-name()}.dll"/>
+        <include name="${project::get-name()}.xml"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="moveHbm">
+    <move todir="${hbm.dir}">
+      <fileset basedir="${src.dir}">
+        <include name="**/*.hbm.xml"/>
+      </fileset>
+    </move>
+    <delete>
+      <fileset basedir="${src.dir}">
+        <include name="**/Mapping"/>
+      </fileset>
+    </delete>
+  </target>
+</project>
