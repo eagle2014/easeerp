@@ -1,0 +1,98 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{917DD670-6E71-46CD-ADCC-BFD8C5930CF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EaseErp.IC</RootNamespace>
+    <AssemblyName>EaseErp.IC</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NHibernate, Version=2.0.0.3001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\NHibernate\2.0.0.3001\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate20, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Data.NHibernate20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TSCommon.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\easeErpLib\TSCommon.Core\1.0.0.0\TSCommon.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\TSLib\1.0.0.0\TSLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Dao\Hibernate\PlaceDao.cs" />
+    <Compile Include="src\Dao\Hibernate\ThingDao.cs" />
+    <Compile Include="src\Dao\Hibernate\WareHouseDao.cs" />
+    <Compile Include="src\Dao\Hibernate\WHUnitDao.cs" />
+    <Compile Include="src\Dao\IPlaceDao.cs" />
+    <Compile Include="src\Dao\IThingDao.cs" />
+    <Compile Include="src\Dao\IWareHouseDao.cs" />
+    <Compile Include="src\Dao\IWHUnitDao.cs" />
+    <Compile Include="src\Domain\Place.cs" />
+    <Compile Include="src\Domain\Thing.cs" />
+    <Compile Include="src\Domain\WareHouse.cs" />
+    <Compile Include="src\Domain\WHUnit.cs" />
+    <Compile Include="src\Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Service\IPlaceService.cs" />
+    <Compile Include="src\Service\IThingService.cs" />
+    <Compile Include="src\Service\IWareHouseService.cs" />
+    <Compile Include="src\Service\IWHUnitService.cs" />
+    <Compile Include="src\Service\PlaceService.cs" />
+    <Compile Include="src\Service\ThingService.cs" />
+    <Compile Include="src\Service\WareHouseService.cs" />
+    <Compile Include="src\Service\WHUnitService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

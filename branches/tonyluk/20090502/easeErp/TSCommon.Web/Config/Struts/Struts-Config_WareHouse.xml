@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<struts-config>
+  <form-objects>
+    <form-object name="wareHouse" type="EaseErp.IC.Domain.WareHouse,EaseErp.IC">
+      <form-property name="Place" type="EaseErp.IC.Domain.Place,EaseErp.IC" />
+    </form-object>
+    <form-object name="place" type="EaseErp.IC.Domain.Place,EaseErp.IC">
+      <form-property name="Parent" type="EaseErp.IC.Domain.Place,EaseErp.IC" />
+    </form-object>
+    <form-object name="thing" type="EaseErp.IC.Domain.Thing,EaseErp.IC">
+      <form-property name="WHUnit" type="EaseErp.IC.Domain.WHUnit,EaseErp.IC" />
+    </form-object>
+    <form-object name="wHUnit" type="EaseErp.IC.Domain.WHUnit,EaseErp.IC">
+    </form-object>
+  </form-objects>
+  <action-mappings>
+    <action path="/wareHouse"
+          type="TSCommon.Web.WareHouse.action.WareHouseAction, TSCommon.Web"
+          name="wareHouse"
+          parameter="action">
+      <forward name="viewWareHouse" path="/WareHouse/WareHouseView.aspx" />
+      <forward name="readWareHouse" path="/WareHouse/WareHouseForm.aspx" />
+      <forward name="editWareHouse" path="/WareHouse/WareHouseForm.aspx" />
+    </action>
+<!--地方-->
+    <action path="/place"
+          type="TSCommon.Web.WareHouse.action.PlaceAction, TSCommon.Web"
+          name="place"
+          parameter="action">
+      <forward name="viewPlace" path="/WareHouse/PlaceView.aspx" />
+      <forward name="readPlace" path="/WareHouse/PlaceForm.aspx" />
+      <forward name="editPlace" path="/WareHouse/PlaceForm.aspx" />
+    </action>
+<!--物品-->
+    <action path="/thing"
+          type="TSCommon.Web.WareHouse.action.ThingAction, TSCommon.Web"
+          name="thing"
+          parameter="action">
+      <forward name="viewThing" path="/WareHouse/ThingView.aspx" />
+      <forward name="readThing" path="/WareHouse/ThingForm.aspx" />
+      <forward name="editThing" path="/WareHouse/ThingForm.aspx" />
+    </action>
+<!--单位-->
+    <action path="/wHUnit"
+          type="TSCommon.Web.WareHouse.action.WHUnitAction, TSCommon.Web"
+          name="wHUnit"
+          parameter="action">
+      <forward name="viewWHUnit" path="/WareHouse/WHUnitView.aspx" />
+      <forward name="readWHUnit" path="/WareHouse/WHUnitForm.aspx" />
+      <forward name="editWHUnit" path="/WareHouse/WHUnitForm.aspx" />
+    </action>
+  </action-mappings>
+</struts-config>

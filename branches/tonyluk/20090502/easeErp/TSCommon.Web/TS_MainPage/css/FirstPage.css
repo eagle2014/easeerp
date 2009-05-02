@@ -1,0 +1,181 @@
+/*
+	广州市忆科计算机系统有限公司 版权所有 2006-
+	作者：CSM | www.ico.com.cn  csm@ico.com.cn
+	日期：2008-07-21
+	功能：
+*/
+a:link { text-decoration:none; COLOR:#000000; }
+a:visited { text-decoration:none; COLOR:#000000; }
+a:active { text-decoration:none; COLOR:#000000; }
+a:hover { text-decoration:none; COLOR:#454545; }
+body{
+	margin:0;
+	padding:0;
+	overflow:auto;
+	background-color:#EDF1F9;
+	scrollbar-shadow-color: #dee3e7; 
+	scrollbar-3dlight-color: #d1d7dc;
+	scrollbar-arrow-color: #006699;
+	scrollbar-track-color: #efefef;
+	scrollbar-darkshadow-color: #98aab1;
+	scrollbar-face-color: #dee3e7;
+}
+div,td,form{
+	margin:0;
+	padding:0;
+	font:12px "Tahoma","verdana","arial","helvetica","sans-serif";
+}
+.bt-bg{
+	background-image:url(../images/FirstPage/bt-bg.png); background-repeat:repeat-x; width:100%; height:29px;
+}
+.bt-st{
+	background-image:url(../images/FirstPage/bt-st.png);width:212px; height:29px;float:left;
+}
+.bt-cz{
+	background-image:url(../images/FirstPage/bt-cz.png);width:212px; height:29px;float:left;
+}
+.bt-dbsx{
+	background-image:url(../images/FirstPage/bt-dbsx.png);width:400px; height:29px; background-repeat:no-repeat;position:absolute; float:left;
+}
+.bt-text{
+	width:135px; height:29px; float:right; line-height:29px; text-align:center;
+}
+.bt-right-refresh{
+	width:48px; height:18px; line-height:18px; text-indent:16px; float:left; margin-top:4px; cursor:pointer;
+	background-image:url(../images/FirstPage/bt-right-Icon.gif); background-repeat:no-repeat;border:1px solid #EBEFF8; 
+}
+.bt-right-more{
+	width:60px; height:18px; line-height:18px; text-indent:16px; float:left;margin-top:4px;cursor:pointer;
+	background-image:url(../images/FirstPage/bt-right-Icon.gif); background-repeat:no-repeat; background-position:0 -18px; border:1px solid #EBEFF8;
+}
+.bt-right-GX{
+	width:8px; height:18px; float:left;margin-top:4px;
+	background-image:url(../images/FirstPage/bt-right-Icon.gif); background-repeat:no-repeat; background-position:0 -36px;border:1px solid #EBEFF8;
+}
+.bt-right-over{
+	border:1px solid #DFE7F4; background-color:#F5F7FC; 
+}
+
+.view-btn-wrap{
+	width:90px; 	
+	height:114px;	
+	background-repeat:no-repeat;
+	cursor:pointer;
+	float:left;
+}
+.view-btn-common{
+	width:90px; 
+	height:78px; 
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.view-btn-text{width:90px; height:36px; color:#344464; text-align:center;}
+.view-btn-total{width:16px; height:15px; color:#CC6600; text-align:left;}
+
+.view-btn-loading{width:16px; height:15px; color:#CC6600; background-image:url(../../egd_platform/images/icon/loading01.gif); background-position:center center; background-repeat:no-repeat; text-align:left;}
+
+.btn01{background-image:url(../images/FirstPage/btn/b01_a.jpg);}
+.btn01-bg{background-image:url(../images/FirstPage/btn/b01_b.jpg);}
+
+.btn02{background-image:url(../images/FirstPage/btn/b02_a.jpg);}
+.btn02-bg{background-image:url(../images/FirstPage/btn/b02_b.jpg);}
+
+.btn03{background-image:url(../images/FirstPage/btn/b03_a.jpg);}
+.btn03-bg{background-image:url(../images/FirstPage/btn/b03_b.jpg);}
+
+.btn04{background-image:url(../images/FirstPage/btn/b04_a.jpg);}
+.btn04-bg{background-image:url(../images/FirstPage/btn/b04_b.jpg);}
+
+.btn05{background-image:url(../images/FirstPage/btn/b05_a.jpg);}
+.btn05-bg{background-image:url(../images/FirstPage/btn/b05_b.jpg);}
+
+.btn06{background-image:url(../images/FirstPage/btn/b06_a.jpg);}
+.btn06-bg{background-image:url(../images/FirstPage/btn/b06_b.jpg);}
+
+.btn07{background-image:url(../images/FirstPage/btn/b07_a.jpg);}
+.btn07-bg{background-image:url(../images/FirstPage/btn/b07_b.jpg);}
+
+.btn08{background-image:url(../images/FirstPage/btn/b08_a.jpg);}
+.btn08-bg{background-image:url(../images/FirstPage/btn/b08_b.jpg);}
+
+.btn09{background-image:url(../images/FirstPage/btn/b09_a.jpg);}
+.btn09-bg{background-image:url(../images/FirstPage/btn/b09_b.jpg);}
+
+.btn10{background-image:url(../images/FirstPage/btn/b10_a.jpg);}
+.btn10-bg{background-image:url(../images/FirstPage/btn/b10_b.jpg);}
+
+.btn11{background-image:url(../images/FirstPage/btn/b11_a.jpg);}
+.btn11-bg{background-image:url(../images/FirstPage/btn/b11_b.jpg);}
+
+.btn12{background-image:url(../images/FirstPage/btn/b12_a.jpg);}
+.btn12-bg{background-image:url(../images/FirstPage/btn/b12_b.jpg);}
+
+.btn13{background-image:url(../images/FirstPage/btn/b13_a.jpg);}
+.btn13-bg{background-image:url(../images/FirstPage/btn/b13_b.jpg);}
+
+.btn14{background-image:url(../images/FirstPage/btn/b14_a.jpg);}
+.btn14-bg{background-image:url(../images/FirstPage/btn/b14_b.jpg);}
+
+.btn15{background-image:url(../images/FirstPage/btn/b15_a.jpg);}
+.btn15-bg{background-image:url(../images/FirstPage/btn/b15_b.jpg);}
+
+.btn16{background-image:url(../images/FirstPage/btn/b16_a.jpg);}
+.btn16-bg{background-image:url(../images/FirstPage/btn/b16_b.jpg);}
+
+.btn17{background-image:url(../images/FirstPage/btn/b17_a.jpg);}
+.btn17-bg{background-image:url(../images/FirstPage/btn/b17_b.jpg);}
+
+.btn18{background-image:url(../images/FirstPage/btn/b18_a.jpg);}
+.btn18-bg{background-image:url(../images/FirstPage/btn/b18_b.jpg);}
+
+.btn19{background-image:url(../images/FirstPage/btn/b19_a.jpg);}
+.btn19-bg{background-image:url(../images/FirstPage/btn/b19_b.jpg);}
+
+.btn20{background-image:url(../images/FirstPage/btn/b20_a.jpg);}
+.btn20-bg{background-image:url(../images/FirstPage/btn/b20_b.jpg);}
+
+.btn21{background-image:url(../images/FirstPage/btn/b21_a.jpg);}
+.btn21-bg{background-image:url(../images/FirstPage/btn/b21_b.jpg);}
+
+.btn22{background-image:url(../images/FirstPage/btn/b22_a.jpg);}
+.btn22-bg{background-image:url(../images/FirstPage/btn/b22_b.jpg);}
+
+.btn23{background-image:url(../images/FirstPage/btn/b23_a.jpg);}
+.btn23-bg{background-image:url(../images/FirstPage/btn/b23_b.jpg);}
+
+.btn24{background-image:url(../images/FirstPage/btn/b24_a.jpg);}
+.btn24-bg{background-image:url(../images/FirstPage/btn/b24_b.jpg);}
+
+/**********************************/
+
+.btn51{background-image:url(../images/FirstPage/btn/b51_a.jpg);}
+.btn51-bg{background-image:url(../images/FirstPage/btn/b51_b.jpg);}
+
+.btn52{background-image:url(../images/FirstPage/btn/b52_a.jpg);}
+.btn52-bg{background-image:url(../images/FirstPage/btn/b52_b.jpg);}
+
+.btn53{background-image:url(../images/FirstPage/btn/b53_a.jpg);}
+.btn53-bg{background-image:url(../images/FirstPage/btn/b53_b.jpg);}
+
+.btn54{background-image:url(../images/FirstPage/btn/b54_a.jpg);}
+.btn54-bg{background-image:url(../images/FirstPage/btn/b54_b.jpg);}
+
+.btn55{background-image:url(../images/FirstPage/btn/b55_a.jpg);}
+.btn55-bg{background-image:url(../images/FirstPage/btn/b55_b.jpg);}
+
+.btn56{background-image:url(../images/FirstPage/btn/b56_a.jpg);}
+.btn56-bg{background-image:url(../images/FirstPage/btn/b56_b.jpg);}
+
+.btn57{background-image:url(../images/FirstPage/btn/b57_a.jpg);}
+.btn57-bg{background-image:url(../images/FirstPage/btn/b57_b.jpg);}
+
+.btn58{background-image:url(../images/FirstPage/btn/b58_a.jpg);}
+.btn58-bg{background-image:url(../images/FirstPage/btn/b58_b.jpg);}
+
+.btn59{background-image:url(../images/FirstPage/btn/b59_a.jpg);}
+.btn59-bg{background-image:url(../images/FirstPage/btn/b59_b.jpg);}
+
+.btn60{background-image:url(../images/FirstPage/btn/b60_a.jpg);}
+.btn60-bg{background-image:url(../images/FirstPage/btn/b60_b.jpg);}
+
+

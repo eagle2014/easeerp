@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EaseErp.IC</name>
+    </assembly>
+    <members>
+        <member name="M:EaseErp.IC.Dao.IPlaceDao.Load(System.Int64[])">
+            <summary>
+            装载对象
+            </summary>
+            <param name="ids">ids</param>
+            <returns>装载对象</returns>
+        </member>
+        <member name="M:EaseErp.IC.Dao.IPlaceDao.Load(System.String[])">
+            <summary>
+            装载对象
+            </summary>
+            <param name="unids">unids</param>
+            <returns>装载对象</returns>
+        </member>
+        <member name="M:EaseErp.IC.Dao.IPlaceDao.GetPlacesByParentUnid(System.String)">
+            <summary>
+            由父Unid返回地点列表
+            </summary>
+            <param name="parentUnid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EaseErp.IC.Dao.IPlaceDao.GetPageInfoByParentUnid(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            get pageInfo by parentUnid
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <param name="parentUnid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EaseErp.IC.Dao.IWareHouseDao.GetPageByPlace(System.Int32,System.Int32,System.String,System.String,EaseErp.IC.Domain.Place)">
+            <summary>
+            获取WareHouse
+            </summary>
+            <param name="ouUnid">所在地</param>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <returns>该页的信息</returns>
+        </member>
+        <member name="T:EaseErp.IC.Domain.Place">
+            <summary>
+            地方实体
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.Place.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.Place.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.Place.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.Place.Parent">
+            <summary>
+            父级别
+            </summary>
+        </member>
+        <member name="T:EaseErp.IC.Domain.Thing">
+            <summary>
+            物品实体
+            </summary>
+        </member>
+        <member name="F:EaseErp.IC.Domain.WareHouse.STATUS_NEW">
+            <summary>
+            新建
+            </summary>
+        </member>
+        <member name="F:EaseErp.IC.Domain.WareHouse.STATUS_NORMAL">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:EaseErp.IC.Domain.WareHouse.STATUS_INVALID">
+            <summary>
+            作废
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.WareHouse.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.WareHouse.Code">
+            <summary>
+             代码
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.WareHouse.Memo">
+            <summary>
+             备注
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.WareHouse.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.WareHouse.Place">
+            <summary>
+            所在地
+            </summary>
+        </member>
+        <member name="P:EaseErp.IC.Domain.WareHouse.StatusDesc">
+            <summary>
+            状态的描述
+            </summary>
+        </member>
+        <member name="T:EaseErp.IC.Domain.WHUnit">
+            <summary>
+            单位实体
+            </summary>
+        </member>
+        <member name="M:EaseErp.IC.Service.IPlaceService.Load(System.Int64[])">
+            <summary>
+            装载对象
+            </summary>
+            <param name="ids">ids</param>
+            <returns>装载对象</returns>
+        </member>
+        <member name="M:EaseErp.IC.Service.IPlaceService.Load(System.String[])">
+            <summary>
+            装载对象
+            </summary>
+            <param name="unids">unids</param>
+            <returns>装载对象</returns>
+        </member>
+        <member name="M:EaseErp.IC.Service.IPlaceService.GetPlacesByParentUnid(System.String)">
+            <summary>
+            由父Unid返回地点列表
+            </summary>
+            <param name="parentUnid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EaseErp.IC.Service.IPlaceService.GetPageInfoByParentUnid(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            get pageInfo by parentUnid
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="sortField"></param>
+            <param name="sortDir"></param>
+            <param name="parentUnid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EaseErp.IC.Service.IWareHouseService.GetPageByPlace(System.Int32,System.Int32,System.String,System.String,EaseErp.IC.Domain.Place)">
+            <summary>
+            获取WareHouse
+            </summary>
+            <param name="pageNo">页码,起始页码从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <param name="sortField">要排序的属性名</param>
+            <param name="sortDir">排序方向</param>
+            <returns>该页的信息</returns>
+        </member>
+    </members>
+</doc>

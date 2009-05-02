@@ -1,0 +1,363 @@
+﻿/*
+ * 工具条常用按钮样式配置
+ * @author dragon
+ * @date 2007-08-31 
+ */
+
+/* 默认 */
+.egd-button-default {
+	background-image: url(../../images/default/buttons/default.gif);
+}
+.egd-button-container-disabled .egd-button-default {
+	background-image: url(../../images/default/buttons/default_disabled.gif);
+}
+
+/* 新建 */
+.egd-button-new {
+	background-image: url(../../images/default/buttons/new.gif);
+}
+.egd-button-container-disabled .egd-button-new {
+	background-image: url(../../images/default/buttons/new_disabled.gif);
+}
+
+/* 保存 */
+.egd-button-save {
+	background-image: url(../../images/default/buttons/save.gif);
+}
+
+/* 另存为 */
+.egd-button-saveAs {
+	background-image: url(../../images/default/buttons/saveAs.gif);
+}
+
+/* 删除 */
+.egd-button-delete {
+	background-image: url(../../images/default/buttons/delete.gif);
+}
+
+/* 刷新 */
+.egd-button-refresh {
+	background-image: url(../../images/default/buttons/refresh.gif);
+}
+
+/* 编辑 */
+.egd-button-edit {
+	background-image: url(../../images/default/buttons/edit.gif);
+}
+
+/* 搜索|查询 */
+.egd-button-search {
+	background-image: url(../../images/default/buttons/search.gif);
+}
+/* 取消 */
+.egd-button-cancel {
+	background-image: url(../../images/default/buttons/cancel.gif);
+}
+/* 解除 */
+.egd-button-unchain{
+	background-image: url(../../images/default/buttons/unchain.gif);
+}
+
+/* 添加附件 */
+.egd-button-AddAttachment{
+	background-image: url(../../images/default/buttons/AddAttachment.gif);
+}
+/* 删除附件 */
+.egd-button-DelAttachment{
+	background-image: url(../../images/default/buttons/DelAttachment.gif);
+}
+/* 链接 */
+.egd-button-link{
+	background-image: url(../../images/default/buttons/link.gif);
+}
+/* 删除链接 */
+.egd-button-UnLink{
+	background-image: url(../../images/default/buttons/UnLink.gif);
+}
+/* 完成/确定 */
+.egd-button-Finish{
+	background-image: url(../../images/default/buttons/Finish.gif);
+}
+/* 回复 */
+.egd-button-Reply{
+	background-image: url(../../images/default/buttons/Reply.gif);
+}
+/* 返回 */
+.egd-button-Back{
+	background-image: url(../../images/default/buttons/back.gif);
+}
+/* 激活 */
+.egd-button-active{
+	background-image: url(../../images/default/buttons/active.gif);
+}
+/* 禁用 */
+.egd-button-disable{
+	background-image: url(../../images/default/buttons/disable.gif);
+}
+/* 调拨 */
+.egd-button-redeploy{
+	background-image: url(../../images/default/buttons/redeploy.gif);
+}
+/* 领用 */
+.egd-button-draw{
+	background-image: url(../../images/default/buttons/draw.gif);
+}
+/* 受理 */
+.egd-button-accept{
+	background-image: url(../../images/default/buttons/accept.gif);
+}
+
+/* 借用 */
+.egd-button-borrow{
+	background-image: url(../../images/default/buttons/borrow.gif);
+}
+/* 维修 */
+.egd-button-maintain{
+	background-image: url(../../images/default/buttons/maintain.gif);
+}
+/* 报废 */
+.egd-button-blankout{
+	background-image: url(../../images/default/buttons/blankout.gif);
+}
+/* 添加日志 */
+.egd-button-AddLog{
+	background-image: url(../../images/default/buttons/AddLog.gif);
+} 
+/* 分派 */
+.egd-button-dispatch{
+	background-image: url(../../images/default/buttons/dispatch.gif);
+} 
+/* 转单 */
+.egd-button-transfer{
+	background-image: url(../../images/default/buttons/transfer.gif);
+} 
+/*接受转单 */
+.egd-button-transferYes{
+	background-image: url(../../images/default/buttons/transferYes.gif);
+} 
+/* 拒绝转单 */
+.egd-button-transferNo{
+	background-image: url(../../images/default/buttons/transferNo.gif);
+} 
+/* 提交 */
+.egd-button-Submit{
+	background-image: url(../../images/default/buttons/Submit.gif);
+} 
+/* 关闭 */
+.egd-button-close{
+	background-image: url(../../images/default/buttons/close.gif);
+}
+/* 驳回 */
+.egd-button-reject{
+	background-image: url(../../images/default/buttons/reject.gif);
+}
+/* 派单 */
+.egd-button-assign{
+	background-image: url(../../images/default/buttons/assign.gif);
+} 
+/* 密码 */
+.egd-button-password{
+	background-image: url(../../images/default/buttons/password.gif);
+} 
+/* 办理 */
+.egd-button-doCase{
+	background-image: url(../../images/default/buttons/doCase.gif);
+} 
+/* 调整 */
+.egd-button-Coordinate{
+	background-image: url(../../images/default/buttons/Coordinate.gif);
+} 
+/* 预览 */
+.egd-button-Preview{
+	background-image: url(../../images/default/buttons/Preview.gif);
+} 
+/* 评审 */
+.egd-button-approval{
+	background-image: url(../../images/default/buttons/approval.gif);
+} 
+/* 满意度 */
+.egd-button-satisfaction{
+	background-image: url(../../images/default/buttons/Satisfaction.gif);
+} 
+/* 知识库的维护 */
+.egd-button-maintenance{
+	background-image: url(../../images/default/buttons/maintenance.gif);
+} 
+/* 知识库的还原 */
+.egd-button-revert{
+	background-image: url(../../images/default/buttons/revert.gif);
+} 
+/* 知识库的过期 */
+.egd-button-overdue{
+	background-image: url(../../images/default/buttons/overdue.gif);
+} 
+/* 知识库的发布 */
+.egd-button-release{
+	background-image: url(../../images/default/buttons/release.gif);
+} 
+/* 重新派单 */
+.egd-button-reassign{
+	background-image: url(../../images/default/buttons/reassign.gif);
+} 
+/* 退出 */
+.egd-button-exit{
+	background-image: url(../../images/default/buttons/exit.gif);
+}
+/* 重新打开 */
+.egd-button-reopen{
+	background-image: url(../../images/default/buttons/reopen.gif);
+}
+
+/* 发送 */
+.egd-button-send{
+	background-image: url(../../images/default/buttons/send.gif);
+}
+/* 重新发送 */
+.egd-button-reSend{
+	background-image: url(../../images/default/buttons/reSend.gif);
+}
+/* 设为违规消息 */
+.egd-button-setRiskFlag{
+	background-image: url(../../images/default/buttons/setRiskFlag.gif);
+}
+/* 清除违规标志 */
+.egd-button-clearRiskFlag{
+	background-image: url(../../images/default/buttons/clearRiskFlag.gif);
+}
+/* 打印 */
+.egd-button-print{
+	background-image: url(../../images/default/buttons/print.gif);
+}
+
+/* 群发 */
+.egd-button-GroupSend{
+	background-image: url(../../images/default/buttons/GroupSend.gif);
+}
+/* 分析数据 */
+.egd-button-parser{
+	background-image: url(../../images/default/buttons/parser.gif);
+}
+/* 引用公共纬度 */
+.egd-button-relationShip{
+	background-image: url(../../images/default/buttons/relationShip.gif);
+}
+/* 移动到 */
+.egd-button-move{
+	background-image: url(../../images/default/buttons/move.gif);
+}
+/* 类型管理 */
+.egd-button-managetype{
+	background-image: url(../../images/default/buttons/managetype.gif);
+}
+/* 执行 */
+.egd-button-execute{
+	background-image: url(../../images/default/buttons/execute.gif);
+}
+/* 检测 */
+.egd-button-checknewdata{
+	background-image: url(../../images/default/buttons/checknewdata.gif);
+}
+/* 检测 */
+.egd-button-viewsms{
+	background-image: url(../../images/default/buttons/viewsms.gif);
+}
+/* 查看短信 */
+.egd-button-viewsms{
+	background-image: url(../../images/default/buttons/viewsms.gif);
+}
+/* 发送这批短信 */
+.egd-button-sendsms{
+	background-image: url(../../images/default/buttons/sendsms.gif);
+}
+/* 导入数据 */
+.egd-button-import{
+	background-image: url(../../images/default/buttons/import.gif);
+}
+/* 激活 */
+.egd-button-activate{
+	background-image: url(../../images/default/buttons/activate.gif);
+}
+/* 禁止 */
+.egd-button-forbid{
+	background-image: url(../../images/default/buttons/forbid.gif);
+}
+/* 上传 */
+.egd-button-upload{
+	background-image: url(../../images/default/buttons/upload.gif);
+}
+/* 下载 */
+.egd-button-download{
+	background-image: url(../../images/default/buttons/download.gif);
+}
+/* 修改路途时间 */
+.egd-button-waytime{
+	background-image: url(../../images/default/buttons/waytime.gif);
+}
+/* 清空条件 */
+.egd-button-clean{
+	background-image: url(../../images/default/buttons/clean.gif);
+}
+/* 投诉 */
+.egd-button-complaint{
+	background-image: url(../../images/default/buttons/complaint.gif);
+}
+/* 运行报表  */
+.egd-button-runReport{
+	background-image: url(../../images/default/buttons/runReport.gif);
+}
+/* 导出报表为Excell  */
+.egd-button-exportToExcell{
+	background-image: url(../../images/default/buttons/exportToExcell.gif);
+}
+/* 导出报表为Pdf  */
+.egd-button-exportToPdf{
+	background-image: url(../../images/default/buttons/exportToPdf.gif);
+}
+/* 导出报表为文本文件  */
+.egd-button-exportToTxt{
+	background-image: url(../../images/default/buttons/exportToTxt.gif);
+}
+/* 挂起  */
+.egd-button-handUp{
+	background-image: url(../../images/default/buttons/handUp.gif);
+}
+/* 中止挂起*/
+.egd-button-endHandUp{
+	background-image: url(../../images/default/buttons/endHandUp.gif);
+}
+/* 查看 */
+.egd-button-view{
+	background-image: url(../../images/default/buttons/view.gif);
+}
+/* 催办 */
+.egd-button-urgency{
+	background-image: url(../../images/default/buttons/urgency.gif);
+}
+/* 柱状图 */
+.egd-button-bar{
+	background-image: url(../../images/default/buttons/bar.gif);
+}
+/* 饼状图 */
+.egd-button-pie{
+	background-image: url(../../images/default/buttons/pie.gif);
+}
+/* 曲线图 */
+.egd-button-line{
+	background-image: url(../../images/default/buttons/line.gif);
+}
+/* 提取 */
+.egd-button-flowretrieve{
+	background-image: url(../../images/default/buttons/flowretrieve.gif);
+}
+/* 取消监控 */
+.egd-button-unmonitor{
+	background-image: url(../../images/default/buttons/unmonitor.gif);
+}
+/* 监控 */
+.egd-button-monitor{
+	background-image: url(../../images/default/buttons/monitor.gif);
+}
+/* 撤消 */
+.egd-button-undo {
+	background-image: url(../../images/default/buttons/undo.gif);
+}

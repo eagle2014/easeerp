@@ -1,0 +1,136 @@
+﻿/*
+ * 工具条按钮样式配置
+ * @author dragon
+ * @date 2007-08-31
+ */ 
+
+/* 工具条容器 */ 
+.egd-tabToolbar-container{
+    height:30px;
+    padding:0px;
+    margin:5px;
+    background-repeat:repeat-x;
+    background-image:url("../../images/tab/toolbar_bg.gif");
+}
+
+/* 按钮容器 */
+.egd-tabButton-container {
+    cursor:default;
+    float:left;
+    height: 22px;
+    width: auto;
+    padding: 0px;
+    margin: 4px 0px 0px 0px;
+    border: 0px solid blue;
+}
+/* 按钮左圆角区 */
+.egd-tabButton-left {
+    float:left;
+    height: 22px;
+    width: 4px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid blue;
+    background-repeat: no-repeat;
+}
+.egd-tabButton-container-over .egd-tabButton-left {
+    background-image:url(../../images/tab/button_left.gif);
+}
+.egd-tabButton-container-down .egd-tabButton-left {
+    background-image:url(../../images/tab/button_left_down.gif);
+}
+.egd-tabButton-container-disabled .egd-tabButton-left {
+    background-image:url(../../images/tab/button_left_disabled.gif);
+}
+
+/* 按钮右圆角区 */
+.egd-tabButton-right {
+    float:left;
+    height: 22px;
+    width: 4px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid blue;
+    background-repeat: no-repeat;
+}
+.egd-tabButton-container-over .egd-tabButton-right {
+    background-image:url(../../images/tab/button_right.gif);
+}
+.egd-tabButton-container-down .egd-tabButton-right {
+    background-image:url(../../images/tab/button_right_down.gif);
+}
+.egd-tabButton-container-disabled .egd-tabButton-right {
+    background-image:url(../../images/tab/button_right_disabled.gif);
+}
+
+/* 按钮文字区 */
+.egd-tabButton-center { 
+    float:left;
+    height: 22px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid blue;
+    line-height:22px;
+    background-repeat: repeat-x;
+    vertical-align: middle;
+    overflow:hidden;
+}
+
+/* 按钮禁用区 */
+.egd-tabButton-container-disabled .egd-tabButton-center{
+	color:#a0a0a0;
+}
+
+.egd-tabButton-container-over .egd-tabButton-center {
+    background-image:url(../../images/tab/button_center.gif);
+}
+.egd-tabButton-container-down .egd-tabButton-center {
+    background-image:url(../../images/tab/button_center_down.gif);
+    padding-top: 1px;
+}
+.egd-tabButton-container-disabled .egd-tabButton-center {
+    background-image:url(../../images/tab/button_center_disabled.gif);
+    color:#ACA899;
+}
+/* 按钮图片区 */
+.egd-tabButton-center-icon {
+    float:left;
+    height: 16px;
+    width: 16px;
+    padding: 0px;
+    margin: 3px 0px 3px 0px;
+    border: 0px solid blue;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-image: url(../../images/tab/button_defaultIcon.gif);*/
+}
+.egd-tabButton-center-text { 
+    float:left;
+    height: 16px;
+    padding: 1px 0px 0px 1px;
+    margin: 2px 0px 3px 0px;
+    border: 0px solid blue;
+}
+.egd-tabButton-center-arrow {
+    float:left;
+    height: 16px;
+    width: 16px;
+    padding: 0px;
+    margin: 3px 0px 3px 0px;
+    border: 0px solid blue;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/tab/button_center_arrow.gif);
+}
+/* 按钮分隔条 */
+.egd-tabButton-separator {
+    float:left;
+    height: 22px;
+    width: 2px;
+    padding: 0px;
+    margin: 4px 2px 0px 2px;
+    border: 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/tab/toolbar_separator.gif);
+}    
