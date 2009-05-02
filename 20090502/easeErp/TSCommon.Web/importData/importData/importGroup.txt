@@ -1,0 +1,3 @@
+#“岗位”数据格式：[0]名称;[1]编号;[2]所属机构的编码;[3]是否允许派单到本岗位(Y-是,N-否);[4]权限(逗号分开);[5]是否是内建岗位(Y/N);END
+系统默认岗;Sys_DefaultGroup;YJ;N;ROLE_DEFAULT;N;END
+超级管理岗;Sys_SuperGroup;YJ;N;ROLE_SUPPERADMIN;N;END

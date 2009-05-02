@@ -1,0 +1,18 @@
+.form_main_list_body{
+	background-color: #E5EBF8; padding-right:2px;
+}
+.form_main_table{
+	border: #98C0F4 solid 1px;
+}
+.form_main_list_table{
+	border-bottom:1px solid #98C0F4;
+}
+.form_main_list_topR{
+	padding-right: 8px;color:#003366;
+}
+.form_main_list_TableBg{
+	background-color:#DAE6F5;
+}
+.form_main_TableText{
+	height: 20px; line-height: 20px; color:#003366;
+}

@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TSLibStruts</name>
+    </assembly>
+    <members>
+        <member name="M:TSLibStruts.Config.IModuleConfig.GetConfigured">
+            <summary>
+            Has this module been completely configured yet.  Once this flag
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.GetPrefix">
+            <summary>
+             The prefix of the context-relative portion of the request URI, used to
+             select this configuration versus others supported by the controller
+             servlet.  A configuration with a prefix of a zero-length String is the
+            default configuration for this web module.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.SetPrefix(System.String)">
+            <summary>
+             The prefix of the context-relative portion of the request URI, used to
+             select this configuration versus others supported by the controller
+             servlet.  A configuration with a prefix of a zero-length String is the
+            default configuration for this web module.
+            </summary>
+            <param name="prefix"></param>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.GetActionFormObjectClass">
+            <summary>
+            The default class name to be used when creating action form bean
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.SetActionFormObjectClass(System.String)">
+            <summary>
+            The default class name to be used when creating action form bean
+            </summary>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.AddFormObjectConfig(TSLibStruts.Config.FormObjectConfig)">
+            <summary>
+            Add a new <code>FormObjectConfig</code> instance to the set associated
+            with this module.
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.FindFormObjectConfig(System.String)">
+            <summary>
+            Return the form bean configuration for the specified key, if any;
+            otherwise return <code>null</code>.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.FindFormObjectConfigs">
+            <summary>
+            Return the form bean configurations for this module.  If there
+            are none, a zero-length array is returned.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.RemoveFormObjectConfig(TSLibStruts.Config.FormObjectConfig)">
+            <summary>
+            Delete from FormObjectConfig
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.GetConfigDom">
+            <summary>
+            获得配置文件的XmlDocument
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.SetConfigDom(System.Xml.XmlDocument)">
+            <summary>
+            设置配置文件的XmlDocument
+            </summary>
+            <param name="xmlDocument"></param>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.SetActionHandlerConfigurator(TSLibStruts.ActionHandlerConfigurator)">
+            <summary>
+            设置HandlerConfigurator对象
+            </summary>
+            <param name="actionHandlerConfigurator"></param>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.GetActionHandlerConfigurator">
+            <summary>
+            获得HandlerConfigurator对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.IModuleConfig.Freeze">
+            <summary>
+            Freeze the configuration of this module.  After this method
+            returns, any attempt to modify the configuration will return
+            an IllegalStateException.
+            </summary>
+        </member>
+        <member name="M:TSLibStruts.Utils.ObjectUtils.Populate(System.Object,System.Web.HttpRequest)">
+            <summary>
+            将请求中的值组装到对象属性的值
+            </summary>
+            <param name="instance"></param>
+            <param name="request"></param>
+        </member>
+        <member name="M:TSLibStruts.Utils.ObjectUtils.GetpAllPropertyAndType(System.String)">
+            <summary>
+            获得指定Type的所有属性及类型
+            </summary>
+            <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.ObjectUtils.IsEasyType(System.Type)">
+            <summary>
+            判断指定的类型是否是简单类型
+            </summary>
+            <remarks>
+            简单类型是指值类型(int,long,...,bool,DateTime,DateTime?,...)和string类型
+            </remarks>
+            <param name="type">要判断的类型</param>
+            <returns>是简单类型则返回true,否则返回false</returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.ObjectUtils.SplitToRequest(System.Object,System.Web.HttpRequest)">
+            <summary>
+            将form属性值反绑定到请求页面中对应的表单域
+            </summary>
+            <param name="instance">form</param>
+            <param name="request">请求</param>
+        </member>
+        <member name="M:TSLibStruts.Config.Configuration.LoadMatchConfigFiles(System.String)">
+            <summary>
+            加载匹配指定路径下的所有Struts配置文件
+            </summary>
+            <param name="filePath">带通配符文件路径名</param>
+        </member>
+        <member name="M:TSLibStruts.Config.Configuration.ExpandConfigDom(System.Xml.XmlDocument,System.Xml.XmlDocument)">
+            <summary>
+            合并Struts配置文件为一个XmlDocument
+            </summary>
+            <param name="sourceXmlDocument">合并到的XmlDocument</param>
+            <param name="toAddXmlDocument">要合并的XmlDocument</param>
+        </member>
+        <member name="M:TSLibStruts.Utils.StringUtils.Uncapitalize(System.String)">
+            <summary>
+            将首字母转为小写
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.StringUtils.GetDomainName(System.String)">
+            <summary>
+            获得DomainName
+            </summary>
+            <param name="fullTypeName">完整程序集</param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.ModuleUtils.Initialize">
+            <summary>
+            初始化资源的加载
+            </summary>
+        </member>
+        <member name="M:TSLibStruts.Utils.BindUtils.GetFromRequestStartsWith(System.String,System.Web.HttpRequest)">
+            <summary>
+            指定一个格式从request中取得与标识开头的所有name和value的集合
+            </summary>
+            <param name="sign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.BindUtils.GetFromRequestEndWith(System.String,System.String,System.Web.HttpRequest)">
+            <summary>
+            指定一个格式从request中取得与标识结尾的值
+            </summary>
+            <param name="sign"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="F:TSLibStruts.Action.RequestProcessor.SCOPE_APPLICATION">
+            <summary>scope为application范围</summary>
+        </member>
+        <member name="F:TSLibStruts.Action.RequestProcessor.SCOPE_CACHE">
+            <summary>scope为cache范围</summary>
+        </member>
+        <member name="F:TSLibStruts.Action.RequestProcessor.SCOPE_CONTEXT">
+            <summary>scope为context范围，此值为默认的配置值</summary>
+        </member>
+        <member name="F:TSLibStruts.Action.RequestProcessor.SCOPE_SESSION">
+            <summary>scope为session范围</summary>
+        </member>
+        <member name="F:TSLibStruts.Action.RequestProcessor.FORM_OBJECT_KEY">
+            <summary>
+            form-object的key值
+            </summary>
+        </member>
+        <member name="F:TSLibStruts.Action.RequestProcessor.FORM_OBJECT_SCOPE">
+            <summary>
+            form-object的scope值
+            </summary>
+        </member>
+        <member name="M:TSLibStruts.Action.RequestProcessor.LoadAndExecuteAction(System.Web.HttpContext,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="path">当前请求的虚拟路径</param>
+        </member>
+        <member name="M:TSLibStruts.Action.RequestProcessor.ProcessFormObjectCreate(System.Web.HttpContext,TSLibStruts.Config.FormObjectConfig,System.String,System.String)">
+            <summary>
+            通过配置文件中form的定义创建对应的form对象实例
+            </summary>
+            <param name="context"></param>
+            <param name="formObjectNode"></param>
+            <param name="scope"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TSLibStruts.ActionContext">
+            <summary>
+            Struts上下文
+            </summary>
+        </member>
+        <member name="P:TSLibStruts.ActionContext.FormObject">
+            <summary>
+            获取或设置action中配置的form-object对象
+            </summary>
+        </member>
+        <member name="P:TSLibStruts.ActionContext.Parameter">
+            <summary>
+            用户自定义执行动作变量名,默认为action
+            </summary>
+        </member>
+        <member name="P:TSLibStruts.ActionContext.DefaultMethod">
+            <summary>
+            用户自定义默认执行的Action方法名,默认为Unspecified
+            </summary>
+        </member>
+        <member name="M:TSLibStruts.Utils.ConvertUtils.ConvertToDouble(System.Type,System.Object)">
+            <summary>
+            转换为double
+            </summary>
+            <param name="type"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.ConvertUtils.ConvertToFloat(System.Type,System.Object)">
+            <summary>
+            转换为float
+            </summary>
+            <param name="type"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.ConvertUtils.ConvertToDateTime(System.Type,System.Object)">
+            <summary>
+            DateTime类型的转换
+            </summary>
+            <param name="type"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.ConvertUtils.ConvertToDateTimeNull(System.Type,System.Object)">
+            <summary>
+            DateTime?类型的转换
+            </summary>
+            <param name="type"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Action.DispatchAction.Unspecified(TSLibStruts.ActionContext,System.Web.HttpContext)">
+            <summary>
+            当未指定action方法时默认调用的action处理方法
+            </summary>
+            <param name="actionContext">Struts的Action上下文对象</param>
+            <param name="context">HTTP上下文对象</param>
+            <returns>子类如果没有复写该方法则默认返回null</returns>
+        </member>
+        <member name="M:TSLibStruts.ActionHandler.WriteOutNodeInfo(System.Xml.XmlElement,System.String,System.Boolean)">
+            <summary>
+            打印调试信息
+            </summary>
+            <param name="xmlElement"></param>
+            <param name="nodeName">节点名称</param>
+            <param name="single">是否为单一节点</param>
+        </member>
+        <member name="T:TSLibStruts.Utils.FileUtils">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TSLibStruts.Utils.FileUtils.FindAllMatchFileInfos(System.String)">
+            <summary>
+            获取匹配指定路径文件名的所有文件（不包括文件所在路径的子目录下的文件，列表中的文件已按文件名的升序顺序排列好）
+            </summary>
+            <param name="filePathName">带路径的文件名</param>
+            <returns>匹配指定路径文件名的所有文件</returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.FileUtils.FindAllMatchFileInfos(System.String,System.Boolean)">
+            <summary>
+            获取匹配指定路径文件名的所有文件（列表中的文件已按文件名的升序顺序排列好）
+            </summary>
+            <param name="filePathName">带路径的文件名</param>
+            <param name="includeChildDir">是否包括所有子目录下的文件</param>
+            <returns>匹配指定路径文件名的所有文件</returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.FileUtils.GetAbsolutePathName(System.String)">
+            <summary>
+            将指定文件名转换为包含应用程序绝对路径的文件名
+            </summary>
+            <param name="fileName">要处理的文件名</param>
+            <returns>包含应用程序绝对路径的文件名</returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.FileUtils.FindFileInfos(System.String,System.String,System.Boolean)">
+            <summary>
+            获取指定目录下的所有匹配文件(可控制是否包括所有子目录下的文件)，列表中的文件已按文件名的升序顺序排列好
+            </summary>
+            <param name="rootDir">根目录名</param>
+            <param name="searchPattern">搜索字符串（如“SimpleResources*.xml”）。</param>
+            <returns>
+            指定目录下与给定的 searchPattern 匹配的资源文件列表,
+            列表已按按文件名的升序顺序排列好
+            </returns>
+        </member>
+        <member name="M:TSLibStruts.Utils.FileUtils.FindFileInfos(System.IO.DirectoryInfo,System.String,System.Boolean)">
+            <summary>
+            获取指定目录下的所有匹配文件(可控制是否包括所有子目录下的文件)
+            </summary>
+            <param name="rootDir">根目录名</param>
+            <param name="searchPattern">搜索字符串（如“*.txt”）。</param>
+            <param name="includeChildDir">是否包括所有子目录下的文件</param>
+            <returns>文件列表</returns>
+        </member>
+        <member name="F:TSLibStruts.Utils.Constants.INNER_DOMAIN_SPLIT">
+            <summary>
+            内嵌Domain时分隔符
+            </summary>
+        </member>
+        <member name="F:TSLibStruts.Utils.Constants.SAME_CONTROL_SIGN">
+            <summary>
+            页面中存在多个id对应一个Property时标识符
+            </summary>
+        </member>
+        <member name="F:TSLibStruts.Utils.Constants.PAGE_ID_ADD_SIGN">
+            <summary>
+            页面上id域前面多加标识符
+            </summary>
+        </member>
+        <member name="F:TSLibStruts.Utils.Constants.BIND_FORM_SIGN">
+            <summary>
+            判断提交的Form是否执行绑定标志
+            </summary>
+        </member>
+        <member name="M:TSLibStruts.Config.ModuleConfigFactory.CreateModuleConfig(System.String)">
+            <summary>
+             Create and return a newly instansiated {@link IModuleConfig}.
+             This method must be implemented by concrete subclasses.
+            </summary>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.ModuleConfigFactory.GetFactoryClass">
+            <summary>
+            The fully qualified class name that is used for
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TSLibStruts.Config.ModuleConfigFactory.SetFactoryClass(System.String)">
+            <summary>
+            Set the fully qualified class name that is used for
+            </summary>
+            <param name="factoryClass"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TSLibStruts.Web.UI.Page">
+            <summary>
+            Struts和Spring.Web综合应用的页面基类
+            </summary>
+            <author>Tony</author>
+            <date>2008-10-02</date>
+        </member>
+        <member name="P:TSLibStruts.Web.UI.Page.FormObject">
+            <summary>
+            获取Struts上下文中当前Action定义的FormObject
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+    </members>
+</doc>

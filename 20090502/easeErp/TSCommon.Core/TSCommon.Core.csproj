@@ -1,0 +1,170 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D7E8AB3-4202-41B3-8804-50778E5C08EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSCommon.Core</RootNamespace>
+    <AssemblyName>TSCommon.Core</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Common.Logging\1.2.0.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.0.0.3001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\NHibernate\2.0.0.3001\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate20, Version=1.1.2.20226, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\Spring\1.2.2.20226\Spring.Data.NHibernate20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TSLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\TSLib\1.0.0.0\TSLib.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLibStruts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\TSLibStruts\1.0.0.0\TSLibStruts.dll</HintPath>
+    </Reference>
+    <Reference Include="TSLibWeb, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\commonLib\TSLibWeb\1.0.0.0\TSLibWeb.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\ATM\Dao\Hibernate\ATMDao.cs" />
+    <Compile Include="src\ATM\Dao\IATMDao.cs" />
+    <Compile Include="src\ATM\Domain\ATM.cs" />
+    <Compile Include="src\ATM\Service\ATMEvent.cs" />
+    <Compile Include="src\ATM\Service\ATMEventArgs.cs" />
+    <Compile Include="src\ATM\Service\ATMHandlerAction.cs" />
+    <Compile Include="src\ATM\Service\ATMService.cs" />
+    <Compile Include="src\ATM\Service\IATMService.cs" />
+    <Compile Include="src\Controls\ATM.cs" />
+    <Compile Include="src\FileEntry.cs" />
+    <Compile Include="src\HtmlOption.cs" />
+    <Compile Include="src\OptionItemCfg\Dao\Hibernate\OptionItemDao.cs" />
+    <Compile Include="src\OptionItemCfg\Dao\IOptionItemDao.cs" />
+    <Compile Include="src\OptionItemCfg\Domain\OptionItem.cs" />
+    <Compile Include="src\OptionItemCfg\Service\IOptionItemService.cs" />
+    <Compile Include="src\OptionItemCfg\Service\OptionItemService.cs" />
+    <Compile Include="src\Organize\Dao\Hibernate\GroupDao.cs" />
+    <Compile Include="src\Organize\Dao\Hibernate\JobTitleDao.cs" />
+    <Compile Include="src\Organize\Dao\Hibernate\OUInfoDao.cs" />
+    <Compile Include="src\Organize\Dao\Hibernate\OULevelDao.cs" />
+    <Compile Include="src\Organize\Dao\Hibernate\RelationShipDao.cs" />
+    <Compile Include="src\Organize\Dao\Hibernate\UserDao.cs" />
+    <Compile Include="src\Organize\Dao\IGroupDao.cs" />
+    <Compile Include="src\Organize\Dao\IJobTitleDao.cs" />
+    <Compile Include="src\Organize\Dao\IOUInfoDao.cs" />
+    <Compile Include="src\Organize\Dao\IOULevelDao.cs" />
+    <Compile Include="src\Organize\Dao\IRelationShipDao.cs" />
+    <Compile Include="src\Organize\Dao\IUserDao.cs" />
+    <Compile Include="src\Organize\Domain\Group.cs" />
+    <Compile Include="src\Organize\Domain\GroupRank.cs" />
+    <Compile Include="src\Organize\Domain\JobTitle.cs" />
+    <Compile Include="src\Organize\Domain\OUInfo.cs" />
+    <Compile Include="src\Organize\Domain\OULevel.cs" />
+    <Compile Include="src\Organize\Domain\RelationShip.cs" />
+    <Compile Include="src\Organize\Domain\RelationShipItem.cs" />
+    <Compile Include="src\Organize\Domain\User.cs" />
+    <Compile Include="src\Organize\Service\GroupService.cs" />
+    <Compile Include="src\Organize\Service\IGroupService.cs" />
+    <Compile Include="src\Organize\Service\IJobTitleService.cs" />
+    <Compile Include="src\Organize\Service\IOUInfoService.cs" />
+    <Compile Include="src\Organize\Service\IOULevelService.cs" />
+    <Compile Include="src\Organize\Service\IRelationShipService.cs" />
+    <Compile Include="src\Organize\Service\IUserService.cs" />
+    <Compile Include="src\Organize\Service\JobTitleService.cs" />
+    <Compile Include="src\Organize\Service\OUInfoService.cs" />
+    <Compile Include="src\Organize\Service\OULevelService.cs" />
+    <Compile Include="src\Organize\Service\RelationShipService.cs" />
+    <Compile Include="src\Organize\Service\UserService.cs" />
+    <Compile Include="src\Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Security\Dao\Hibernate\ModelDao.cs" />
+    <Compile Include="src\Security\Dao\Hibernate\PrivilegeDao.cs" />
+    <Compile Include="src\Security\Dao\Hibernate\RoleDao.cs" />
+    <Compile Include="src\Security\Dao\IModelDao.cs" />
+    <Compile Include="src\Security\Dao\IPrivilegeDao.cs" />
+    <Compile Include="src\Security\Dao\IRoleDao.cs" />
+    <Compile Include="src\Security\Domain\Model.cs" />
+    <Compile Include="src\Security\Domain\Privilege.cs" />
+    <Compile Include="src\Security\Domain\PrivilegeComparer.cs" />
+    <Compile Include="src\Security\Domain\Role.cs" />
+    <Compile Include="src\Security\Service\IModelService.cs" />
+    <Compile Include="src\Security\Service\IPrivilegeService.cs" />
+    <Compile Include="src\Security\Service\IRoleService.cs" />
+    <Compile Include="src\Security\Service\ModelService.cs" />
+    <Compile Include="src\Security\Service\PrivilegeService.cs" />
+    <Compile Include="src\Security\Service\RoleService.cs" />
+    <Compile Include="src\SystemPolicy\Dao\Hibernate\PolicyDao.cs" />
+    <Compile Include="src\SystemPolicy\Dao\IPolicyDao.cs" />
+    <Compile Include="src\SystemPolicy\Domain\Policy.cs" />
+    <Compile Include="src\SystemPolicy\PolicyHelper.cs" />
+    <Compile Include="src\SystemPolicy\Service\IPolicyService.cs" />
+    <Compile Include="src\SystemPolicy\Service\PolicyService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
