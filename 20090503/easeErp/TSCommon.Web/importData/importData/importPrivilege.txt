@@ -1,0 +1,41 @@
+# “权限”数据格式：[0]权限名称;[1]权限代码;[2]顺序号;[3]所属模块的编码;[4]权限类型;[5]url;[6]Unid;END
+#工作平台----0000
+
+#个人设置功能列表-090; ; ; ; ; ;END
+修改基本信息;GN_URL_GRSZ_XGJBXX;980001;MK_GRSZ;url;../personalSettingAction.do?action=Edit;9AF26025E7154411A32271A873139C03;END
+
+#系统管理---编码：99
+#系统管理.组织架构---编码：9901
+级别配置;GN_URL_ZZJG_DWJCPZ;990101;ZMK_ZZJG;url;../ouLevelAction.do?action=Display;END
+单位配置;GN_URL_ZZJG_DWPZ;990102;ZMK_ZZJG;url;../unitAction.do?action=Display;END
+部门配置;GN_URL_ZZJG_BMPZ;990103;ZMK_ZZJG;url;../departmentAction.do?action=Display;END
+职务配置;GN_URL_ZZJG_ZWPZ;990104;ZMK_ZZJG;url;../jobTitleAction.do?action=Display;END
+人员配置;GN_URL_ZZJG_RYPZ;990105;ZMK_ZZJG;url;../userAction.do?action=Display;END
+岗位配置;GN_URL_ZZJG_GWPZ;990106;ZMK_ZZJG;url;../groupAction.do?action=Display;END
+#
+#系统管理.权限管理---编码：9902
+角色配置;GN_URL_QXGL_JSPZ;990201;ZMK_QXGL;url;../roleAction.do?action=Display;END
+模块配置;GN_URL_QXGL_MKPZ;990202;ZMK_QXGL;url;../modelAction.do?action=Display;END
+权限配置;GN_URL_QXGL_QXPZ;990203;ZMK_QXGL;url;../privilegeAction.do?action=Display;END
+#
+#系统管理.系统配置---编码：9903
+系统策略配置;GN_URL_XTPZ_XTCLPZ;990301;MK_XTGL;url;../policyAction.do?action=Display;END
+可选项配置;GN_URL_XTPZ_KXXPZ;990302;MK_XTGL;url;../optionItemAction.do?action=Display;END
+#
+#系统管理---编码：9949
+系统日志;GN_URL_XTGL_XTRZ;994901;MK_XTGL;url;../systemLogAction.do?action=Display;END
+
+#系统管理按钮功能---编码：9950
+系统管理;GN_BTN_ZZJG_XTGL;995001;MK_XTGL;btn; ;END
+查看系统管理;GN_BTN_XTGL_CKXTGL;995002;MK_XTGL;btn; ;END
+本级系统管理;GN_BTN_XTGL_BJXTGL;995003;MK_XTGL;btn; ;END
+本单位系统管理;GN_BTN_XTGL_BDWXTGL;995004;MK_XTGL;btn; ;END
+本单位数据;GN_BTN_XTGL_BDWSJ;995005;MK_XTGL;btn; ;END
+本级单位数据;GN_BTN_XTGL_BJDWSJ;995006;MK_XTGL;btn; ;END
+所有单位数据;GN_BTN_XTGL_SYDWSJ;995007;MK_XTGL;btn; ;END
+
+#仓库管理---编码9600
+仓库管理;GN_URL_BASECNFIG_QKGL;960101;ZMK_BASECNFIG;url;../wareHouseAction.do?action=Display;END
+地点;GN_URL_BASECNFIG_DD;960102;ZMK_BASECNFIG;url;../placeAction.do?action=Display;END
+物品;GN_URL_BASECNFIG_WP;960103;ZMK_BASECNFIG;url;../thingAction.do?action=Display;END
+单位;GN_URL_BASECNFIG_DW;960104;ZMK_BASECNFIG;url;../wHUnitAction.do?action=Display;END

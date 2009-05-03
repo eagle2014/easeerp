@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="TSCommon.Core.Organize.Domain.User, TSCommon.Core" table="SYS_USER">
+    <id name="ID" unsaved-value="-1">
+      <column name="ID" not-null="true"/>
+      <generator class="identity" />
+    </id>
+    <property name="Unid" type="String">
+      <column name="UNID" length="32" not-null="true" index="USERINFO_UNID"/>
+    </property>
+    <property name="UserStatus">
+      <column name="STATUS" not-null="true"/>
+    </property>
+    <property name="LoginID" type="String">
+      <column name="LOGIN_ID" length="32" not-null="true"/>
+    </property>
+    <property name="Password" type="String">
+      <column name="PASSWORD" length="64" not-null="true"/>
+    </property>
+    <property name="Name" type="String">
+      <column name="USER_NAME" length="255" not-null="true"/>
+    </property>
+    <property name="FullName" type="String" >
+      <column name="FULL_NAME" length="255" not-null="true"/>
+    </property>
+    <property name="Gender" column="GENDER" />
+    <property name="Birthday" type="String">
+      <column name="BIRTHDAY" length="10"/>
+    </property>
+    <property name="Email" type="String">
+      <column name="EMAIL" length="255"/>
+    </property>
+    <property name="Mobile" type="String">
+      <column name="MOBILE" length="255"/>
+    </property>
+    <property name="TelephoneNo" type="String">
+      <column name="TELEPHONE_NO" length="128"/>
+    </property>
+    <property name="OrderNo" type="String">
+      <column name="ORDER_NO" length="16" not-null="true"/>
+    </property>
+    <property name="CardID" type="String">
+      <column name="CARD_ID" length="32"/>
+    </property>
+    <property name="Address" type="String">
+      <column name="ADDRESS" length="255"/>
+    </property>
+    <property name="Office" type="String">
+      <column name="OFFICE" length="255"/>
+    </property>
+    <property name="UnitUnid" type="String">
+      <column name="UNIT_UNID" length="32" not-null="true"/>
+    </property>
+    <property name="UnitName" type="String">
+      <column name="UNIT_NAME" length="255" not-null="true"/>
+    </property>
+    <property name="UnitCode" type="String">
+      <column name="UNIT_CODE" length="255"/>
+    </property>
+    <property name="UnitFullName" type="String">
+      <column name="UNIT_FULL_NAME" length="255"/>
+    </property>
+    <property name="UnitFullCode" type="String">
+      <column name="UNIT_FULL_CODE" length="255"/>
+    </property>
+    <property name="OUUnid" type="String">
+      <column name="OU_UNID" length="32" not-null="true"/>
+    </property>
+    <property name="OUName" type="String">
+      <column name="OU_NAME" length="255" not-null="true"/>
+    </property>
+    <property name="OUCode" type="String">
+      <column name="OU_CODE" length="32" not-null="true"/>
+    </property>
+    <property name="OUFullName" type="String">
+      <column name="OU_FULL_NAME" length="255"/>
+    </property>
+    <property name="OUFullCode" type="String">
+      <column name="OU_FULL_CODE" length="255"/>
+    </property>
+    <property name="JobTypeUnid" type="String">
+      <column name="JOB_TYPE_UNID" length="32"/>
+    </property>
+    <property name="JobTypeName" type="String">
+      <column name="JOB_TYPE_NAME" length="32"/>
+    </property>
+    <property name="JobTitleUnid" type="String">
+      <column name="JOBTITLE_UNID" length="32"/>
+    </property>
+    <property name="JobTitleName" type="String">
+      <column name="JOBTITLE_NAME" length="32"/>
+    </property>
+    <property name="UserLigion" type="String">
+      <column name="USER_LIGION" length="32"/>
+    </property>
+    <property name="IsTmpUser" type="String">
+      <column name="IS_TMPUSER" length="1" not-null="true"/>
+    </property>
+    <property name="ValidityStartDate">
+      <column name="VALIDITY_START_DATE"/>
+    </property>
+    <property name="ValidityEndDate">
+      <column name="VALIDITY_END_DATE"/>
+    </property>
+    <property name="Field_1" type="String">
+      <column name="FIELD_1" length="255"/>
+    </property>
+    <property name="Field_2" type="String">
+      <column name="FIELD_2" length="255"/>
+    </property>
+    <property name="Field_3" type="String">
+      <column name="FIELD_3" length="255"/>
+    </property>
+    <property name="Field_4" type="String">
+      <column name="FIELD_4" length="255"/>
+    </property>
+    <property name="Field_5" type="String">
+      <column name="FIELD_5" length="255"/>
+    </property>
+    <property name="EmployeeID" type="String">
+      <column name="EMPLOYEEID" length="32"/>
+    </property>
+    <property name="DepartmentID" type="String">
+      <column name="DEPARTMENTID" length="32"/>
+    </property>
+    <property name="UserType" type="String">
+      <column name="USER_TYPE" length="1"/>
+    </property>
+  </class>
+</hibernate-mapping>
