@@ -1,0 +1,66 @@
+﻿/* 
+ * 对话框相关样式
+ * 2007-12-03 Tony
+ */
+
+/* msgBox的info图标 */
+.egd-msgBox-info {
+    background:transparent url(../images/msgbox/icon-info.gif) no-repeat top left;
+}
+
+/* msgBox的warning图标 */
+.egd-msgBox-warning {
+    background:transparent url(../images/msgbox/icon-warning.gif) no-repeat top left;
+}
+
+/* msgBox的question图标 */
+.egd-msgBox-question {
+    background:transparent url(../images/msgbox/icon-question.gif) no-repeat top left;
+}
+
+/* msgBox的error图标 */
+.egd-msgBox-error {
+    background:transparent url(../images/msgbox/icon-error.gif) no-repeat top left;
+}
+
+/* msgBox的wait默认图标 */
+.x-window-dlg .egd-msgBox-wait {
+    background:transparent url(../images/msgbox/wait.gif) no-repeat top left;
+    height:46px;
+}
+
+/* msgBox的保存信息时等待的图标 */
+.x-window-dlg .egd-msgBox-wait-saving {
+    background:transparent url(../images/msgbox/wait-save.gif) no-repeat top left;
+    height:46px;
+}
+
+/* msgBox的删除文档时等待的图标 */
+.x-window-dlg .egd-msgBox-wait-deleting {
+    background:transparent url(../images/msgbox/wait-delete.gif) no-repeat top left;
+    height:46px;
+}
+
+/* msgBox的编辑文档时等待的图标 */
+.x-window-dlg .egd-msgBox-wait-editing {
+    background:transparent url(../images/msgbox/wait-loading.gif) no-repeat top left;
+    height:46px;
+}
+
+/* msgBox的创建文档时等待的图标 */
+.x-window-dlg .egd-msgBox-wait-creating {
+    background:transparent url(../images/msgbox/wait-create.gif) no-repeat top left;
+    height:46px;
+}
+
+/* msgBox的打开文档时等待的图标 */
+.x-window-dlg .egd-msgBox-wait-opening {
+    background:transparent url(../images/msgbox/wait-loading.gif) no-repeat top left;
+    height:46px;
+}
+
+/* msgBox的加载文档时等待的图标 */
+.x-window-dlg .egd-msgBox-wait-loading {
+    background:transparent url(../images/msgbox/wait-loading.gif) no-repeat top left;
+    height:46px;
+}
