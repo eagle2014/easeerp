@@ -1,0 +1,137 @@
+﻿/*
+ * 工具条按钮样式配置
+ * @author dragon
+ * @date 2007-08-31
+ */
+
+/* 工具条容器 */ 
+.egd-pageToolbar-container{
+    height:30px;
+    padding:0px;
+    margin:5px;
+    background-repeat:repeat-x;
+    background-image:url("../../images/default/toolbar_bg.gif");
+}
+
+/* 按钮容器 */
+.egd-pageButton-container {
+    cursor:default;
+    float:left;
+    height: 22px;
+    width: auto;
+    padding: 0px;
+    margin: 4px 0px 0px 0px;
+    border: 0px solid blue;
+}
+
+/* 按钮左圆角区 */
+.egd-pageButton-left {
+    float:left;
+    height: 22px;
+    width: 4px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid blue;
+    background-repeat: no-repeat;
+}
+.egd-pageButton-container-over .egd-pageButton-left {
+    background-image:url(../../images/default/button_left.gif);
+}
+.egd-pageButton-container-down .egd-pageButton-left {
+    background-image:url(../../images/default/button_left_down.gif);
+}
+.egd-pageButton-container-disabled .egd-pageButton-left {
+    background-image:url(../../images/default/button_left_disabled.gif);
+}
+
+/* 按钮右圆角区 */
+.egd-pageButton-right {
+    float:left;
+    height: 22px;
+    width: 4px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid blue;
+    background-repeat: no-repeat;
+}
+.egd-pageButton-container-over .egd-pageButton-right {
+    background-image:url(../../images/default/button_right.gif);
+}
+.egd-pageButton-container-down .egd-pageButton-right {
+    background-image:url(../../images/default/button_right_down.gif);
+}
+.egd-pageButton-container-disabled .egd-pageButton-right {
+    background-image:url(../../images/default/button_right_disabled.gif);
+}
+
+/* 按钮文字区 */
+.egd-pageButton-center { 
+    float:left;
+    height: 22px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid blue;
+    line-height:22px;
+    background-repeat: repeat-x;
+    vertical-align: middle;
+    overflow:hidden;
+}
+
+/* 按钮禁用区 */
+.egd-pageButton-container-disabled .egd-pageButton-center{
+	color:#a0a0a0;
+}
+
+.egd-pageButton-container-over .egd-pageButton-center {
+    background-image:url(../../images/default/button_center.gif);
+}
+.egd-pageButton-container-down .egd-pageButton-center {
+    background-image:url(../../images/default/button_center_down.gif);
+    padding-top: 1px;
+}
+.egd-pageButton-container-disabled .egd-pageButton-center-disabled {
+    background-image:url(../../images/default/button_center_disabled.gif);
+    color:#ACA899;
+}
+/* 按钮图片区 */
+.egd-pageButton-center-icon {
+    float:left;
+    height: 16px;
+    width: 16px;
+    padding: 0px;
+    margin: 3px 0px 3px 0px;
+    border: 0px solid blue;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-image: url(../../images/default/button_defaultIcon.gif);*/
+}
+.egd-pageButton-center-text { 
+    float:left;
+    height: 16px;
+    padding: 1px 0px 0px 1px;
+    margin: 3px 0px 3px 0px;
+    border: 0px solid blue;
+}
+.egd-pageButton-center-arrow {
+    float:left;
+    height: 16px;
+    width: 16px;
+    padding: 0px;
+    margin: 3px 0px 3px 0px;
+    border: 0px solid blue;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/default/button_center_arrow.gif);
+}
+/* 按钮分隔条 */
+.egd-pageButton-separator {
+    float:left;
+    height: 22px;
+    width: 2px;
+    padding: 0px;
+    margin: 4px 2px 0px 2px;
+    border: 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/default/toolbar_separator.gif);
+}    

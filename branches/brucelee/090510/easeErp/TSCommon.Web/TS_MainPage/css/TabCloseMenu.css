@@ -1,0 +1,19 @@
+/* 
+ * 页签右键菜单相关样式
+ * 2007-12-01 Tony
+ */
+
+/* 关闭的图�?*/
+.egd-menuItem-close {
+    background-image:url(../images/close.gif);
+}
+
+/* 关闭其它窗口的图�?*/
+.egd-menuItem-close-others {
+    background-image:url(../images/close_other.gif);
+}
+
+/* 关闭所有窗口的图标 */
+.egd-menuItem-close-all {
+    background-image: url(../images/close_all.gif) !important;
+}

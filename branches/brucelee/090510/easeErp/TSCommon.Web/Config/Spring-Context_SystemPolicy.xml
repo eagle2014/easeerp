@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <description>系统策略Spring配置</description>
+
+  <!-- 系统策略 -->
+  <object id="PolicyDao" type="TSCommon.Core.SystemPolicy.Dao.Hibernate.PolicyDao, TSCommon.Core">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="PolicyServiceTarget" type="TSCommon.Core.SystemPolicy.Service.PolicyService, TSCommon.Core">
+    <property name="PolicyDao" ref="PolicyDao"/>
+    <property name="CacheManager" ref="CacheManager"/>
+  </object>
+  <object id="PolicyService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="PolicyServiceTarget"/>
+    <property name="ProxyInterfaces" value="TSCommon.Core.SystemPolicy.Service.IPolicyService"/>
+  </object>
+  <!-- 系统策略 -->
+  <!-- 全局缓存 -->
+  <object id="CacheManager" type="Spring.Caching.NonExpiringCache, Spring.Core">
+  </object>
+  <!-- 全局缓存 -->
+</objects>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="TSCommon.Core.Organize.Domain.GroupRank, TSCommon.Core" table="SYS_GROUPRANK">
+    <id name="ID" unsaved-value="-1">
+      <column name="ID" not-null="true"/>
+      <generator class="identity" />
+    </id>
+    <property name="Unid" type="String">
+      <column name="UNID" length="32" not-null="true" index="GROUPRANK_UNID"/>
+    </property>
+    <property name="Name" type="String">
+      <column name="GROUP_RANK_NAME" length="256" not-null="true"/>
+    </property>
+    <property name="ParentRankUnid" type="String">
+      <column name="PARENT_RANK_UNID" length="32"/>
+    </property>
+    <property name="Memo" type="String">
+      <column name="MEMO" length="256"/>
+    </property>
+  </class>
+</hibernate-mapping>

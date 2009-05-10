@@ -1,0 +1,14 @@
+﻿<objects xmlns="http://www.springframework.net">
+  <description>Spring Context配置文件</description>
+  <!-- 组织架构：级别 -->
+  <object id="PrivilegeDao" type="TSCommon.Core.Security.Dao.Hibernate.PrivilegeDao, TSCommon.Core">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+  <object id="PrivilegeServiceTarget" type="TSCommon.Core.Security.Service.PrivilegeService, TSCommon.Core">
+    <property name="PrivilegeDao" ref="PrivilegeDao" />
+  </object>
+  <object id="PrivilegeService" parent="TxProxyConfigurationTemplate">
+    <property name="Target" ref="PrivilegeServiceTarget"/>
+    <property name="ProxyInterfaces" value="TSCommon.Core.Security.Service.IPrivilegeService"/>
+  </object>
+</objects>

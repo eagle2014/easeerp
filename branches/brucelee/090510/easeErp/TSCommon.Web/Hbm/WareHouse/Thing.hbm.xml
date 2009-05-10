@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="EaseErp.IC.Domain.Thing, EaseErp.IC" table="TS_Thing">
+    <id name="ID" unsaved-value="-1">
+      <column name="ID" not-null="true"/>
+      <generator class="identity" />
+    </id>
+    <property name="Unid">
+      <column name="UNID" length="32" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="NAME" length="256" not-null="true"/>
+    </property>
+    <property name="Code">
+      <column name="CODE" length="32"/>
+    </property>
+    <property name="Memo">
+      <column name="MEMO" length="100"/>
+    </property>
+    <many-to-one lazy="false" name="WHUnit" column="WHUNIT_ID" class="EaseErp.IC.Domain.WHUnit, EaseErp.IC" />
+  </class>
+</hibernate-mapping>

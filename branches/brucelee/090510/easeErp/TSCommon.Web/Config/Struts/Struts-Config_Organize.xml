@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<struts-config>
+  <form-objects>
+    <form-object name="ouLevelForm" type="TSCommon.Core.Organize.Domain.OULevel,TSCommon.Core">
+    </form-object>
+    <form-object name="unitForm" type="TSCommon.Core.Organize.Domain.OUInfo,TSCommon.Core">
+    </form-object>
+    <form-object name="departmentForm" type="TSCommon.Core.Organize.Domain.OUInfo,TSCommon.Core">
+    </form-object>
+    <form-object name="jobTitleForm" type="TSCommon.Core.Organize.Domain.JobTitle,TSCommon.Core">
+    </form-object>
+    <form-object name="userForm" type="TSCommon.Core.Organize.Domain.User,TSCommon.Core">
+    </form-object>
+    <form-object name="groupForm" type="TSCommon.Core.Organize.Domain.Group,TSCommon.Core">
+    </form-object>
+  </form-objects>
+  <action-mappings>
+    <!-- 级别 -->
+    <action path="/ouLevel"
+          type="TSCommon.Web.Organize.action.OULevelAction, TSCommon.Web"
+          name="ouLevelForm"
+          parameter="action">
+      <forward name="viewOULevel" path="/Organize/OULevelView.aspx" />
+      <forward name="editOULevel" path="/Organize/OULevelForm.aspx" />
+      <forward name="readOULevel" path="/Organize/OULevelForm.aspx" />
+    </action>
+
+    <!-- 单位 -->
+    <action path="/unit"
+          type="TSCommon.Web.Organize.action.UnitAction, TSCommon.Web"
+          name="unitForm"
+          parameter="action">
+      <forward name="viewUnit" path="/Organize/UnitView.aspx" />
+      <forward name="editUnit" path="/Organize/UnitForm.aspx" />
+      <forward name="readUnit" path="/Organize/UnitForm.aspx" />
+    </action>
+
+    <!-- 部门 -->
+    <action path="/department"
+          type="TSCommon.Web.Organize.action.DepartmentAction, TSCommon.Web"
+          name="departmentForm"
+          parameter="action">
+      <forward name="viewDepartment" path="/Organize/DepartmentView.aspx" />
+      <forward name="editDepartment" path="/Organize/DepartmentForm.aspx" />
+      <forward name="readDepartment" path="/Organize/DepartmentForm.aspx" />
+    </action>
+
+    <!-- 部门 -->
+    <action path="/ouInfo"
+          type="TSCommon.Web.Organize.action.OUInfoAction, TSCommon.Web"
+          parameter="action">
+    </action>
+
+    <!-- 职务 -->
+    <action path="/jobTitle"
+          type="TSCommon.Web.Organize.action.JobTitleAction, TSCommon.Web"
+          name="jobTitleForm"
+          parameter="action">
+      <forward name="viewJobTitle" path="/Organize/JobTitleView.aspx" />
+      <forward name="editJobTitle" path="/Organize/JobTitleForm.aspx" />
+      <forward name="readJobTitle" path="/Organize/JobTitleForm.aspx" />
+    </action>
+
+    <!-- 人员 -->
+    <action path="/user"
+          type="TSCommon.Web.Organize.Action.UserAction, TSCommon.Web"
+          name="userForm"
+          parameter="action">
+      <forward name="viewUser" path="/Organize/UserView.aspx" />
+      <forward name="editUser" path="/Organize/UserForm.aspx" />
+      <forward name="readUser" path="/Organize/UserForm.aspx" />
+      <forward name="selectUserByGroup" path="/Organize/dialog/SelectUserByGroup.aspx" />
+    </action>
+
+    <!-- 岗位 -->
+    <action path="/group"
+          type="TSCommon.Web.Organize.action.GroupAction, TSCommon.Web"
+          name="groupForm"
+          parameter="action">
+      <forward name="viewGroup" path="/Organize/GroupView.aspx" />
+      <forward name="editGroup" path="/Organize/GroupForm.aspx" />
+      <forward name="readGroup" path="/Organize/GroupForm.aspx" />
+      <forward name="selectGroupByOU" path="/Organize/dialog/SelectGroupByOU.aspx" />
+    </action>
+
+    <!-- 个人设置 -->
+    <action path="/personalSetting"
+          type="TSCommon.Web.Organize.action.PersonalSettingAction, TSCommon.Web"
+          name="userForm"
+          parameter="action">
+      <forward name="editUser" path="/Organize/PersonalSettingForm.aspx" />
+      <forward name="readUser" path="/Organize/PersonalSettingForm.aspx" />
+    </action>
+
+    <action path="/unitTree"
+          type="TSCommon.Web.Organize.action.UnitTreeAction,TSCommon.Web"
+          parameter="action">
+    </action>
+    <action path="/ouTree"
+         type="TSCommon.Web.Organize.action.OUTreeAction,TSCommon.Web"
+         parameter="action">
+    </action>
+  </action-mappings>
+</struts-config>

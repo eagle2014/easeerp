@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<project name="TSCommon.Core" default="help" xmlns="http://nant.sf.net/schemas/nant.xsd" basedir=".">
+  <!-- 模块版本号-->
+  <property name="version" value="1.0.0.0"/>
+  
+  <include  buildfile="Build.Common.xml"/>
+  <include  buildfile="CopyDll.xml"/>
+</project>

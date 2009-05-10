@@ -1,0 +1,12 @@
+#数据格式：[0]模块名称;[1]模块代码;[2]模块类型(0-主模块,1-子模块);[3]模块顺序号;[4]所属模块代码(模块为子模块时填写);END
+工作平台;MK_GZPT;0;0000; ;END
+辅助工具;MK_FZGJ;0;9700; ;END
+个人设置;MK_GRSZ;0;9800; ;END
+#系统配置管理
+系统管理;MK_XTGL;0;9900; ;END
+组织架构;ZMK_ZZJG;1;9901;MK_XTGL;END
+权限管理;ZMK_QXGL;1;9902;MK_XTGL;END
+系统配置;ZMK_XTPZ;1;9903;MK_XTGL;END
+#仓库管理
+仓库管理;MK_WAREGUSE;0;9600;;END
+基础数据配置;ZMK_BASECNFIG;1;9601;MK_WAREGUSE;END

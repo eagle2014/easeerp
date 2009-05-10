@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <resource name="OPTIONITEM.EXCEPTION.HAD_EXIST">所属分类“{0}[{1}]”下已经配置有“{2}[{3}]”的可选项配置信息！</resource>
+</root>
